@@ -1,0 +1,46 @@
+body{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.navbar-default{
+    background-color: white;
+    border:none;
+    box-shadow: 0px 2px 8px 0px rgba(50,50,50,0.75)
+}
+
+.navbar-default .navbar-brand{
+    font-size: 28px;
+    font-weight: bold;
+    color:#40d281;
+    height: 70px;
+    line-height: 35px;
+}
+
+.navbar-default .navbar-nav>li>a{
+    font-size: 16px;
+    font-weight: bold;
+    color:#666;
+    height: 70px;
+    line-height: 35px;
+}
+
+.navbar-default .navbar-toggle .icon-bar{
+    background-color: #1c9982
+}
+
+.navbar-default .navbar-toggle:hover{
+    border-color:#40d281;
+    background-color: #40d281;
+}
+
+.navbar-toggle{
+    margin-top: 17px;
+}
+
+/* footer */
+footer{
+    font-weight: 400;
+    text-align: center;
+    padding: 20px;
+}

@@ -1,0 +1,247 @@
+{% extends "base.html" %} {% block main %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">   
+            <div id="chexingPanel" class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><span class="glyphicon glyphicon-cog"></span> 车型库 &nbsp;&nbsp; 广告位：显示推荐车型</h3>
+                </div>
+                <div class="panel-body">
+                    <!-- 图标导航-->
+                    <div class="i_con2">
+                        <div class="chexinglist">
+                            <ul class="list-unstyled list-inline">
+                                <li><a href=""><img src="http://img.rv58.com/w/rv/za.png"><span>自行式A</span></a> </li>
+                                <li><a href=""><img src="http://img.rv58.com/w/rv/zb.png"> <span>自行式B</span></a></li>
+                                <li><a href=""><img src="http://img.rv58.com/w/rv/zc.png"> <span>自行式C</span></a></li>
+                                <li><a href=""><img src="http://img.rv58.com/w/rv/td.png"><span>皮卡房车</span></a></li>
+                                <li><a href=""><img src="http://img.rv58.com/w/rv/ta.png"><span>拖挂式A</span></a></li>
+                                <li><a href=""><img src="http://img.rv58.com/w/rv/tb.png"> <span>拖挂式B</span></a></li>
+                                <li><a href=""><img src="http://img.rv58.com/w/rv/tc.png"> <span>拖挂式C</span></a></li>
+                                <li><a href=""><img src="http://img.rv58.com/w/rv/ydt.png"><span>营地拖挂</span></a></li>
+                                <li><a href=""><img src="http://img.rv58.com/w/rv/yy.png"><span>越野房车</span></a></li>
+                                <li><a href=""><img src="http://img.rv58.com/w/rv/yd.png"><span>移动木屋</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                        <nav class="navbar navbar-chexing">
+            
+                            <div class="navbar-header">
+                                <!-- 小屏幕导航按钮和logo -->
+                                <button class="navbar-toggle" role="button" data-toggle="collapse" href="#chexingTab" aria-expanded="false" aria-controls="collapseExample">
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                                <a href="/" class="navbar-brand">选车导航</a>
+                            </div>
+            
+                            <!-- 顶部导航项目 -->
+                            <div id="chexingTab" class="navbar-collapse collapse">
+                                <ul class="nav nav-pills navbar-chexing">
+                                    <li class="active"><a href="#bytype" data-toggle="tab">按车型</a></li>
+                                    <li><a href="#byprice" data-toggle="tab">按价格</a></li>
+                                    <li><a href="#bylogo" data-toggle="tab">按品牌</a></li>
+                                    <li><a href="#by1-3" data-toggle="tab">10-30万</a></li>
+                                    <li><a href="#by3-5" data-toggle="tab">30-50万</a></li>
+                                    <li><a href="#by5-10" data-toggle="tab">50-100万</a></li>
+                                </ul>
+                            </div>
+            
+                            <!-- 导航栏正文 -->
+                            <div id="chexingTabContent" class="tab-content chexing-tab-content">
+                                <div class="tab-pane fade in active" id="bytype">
+                                    <div class="row chexing-row">
+                                        <div class="col-xs-4 col-md-2"> <a class="chexing-a" href="">自行式B型:</a></div>
+                                        <div class="col-xs-4 col-md-2"> <a href="">新星自在系</a></div>
+                                        <div class="col-xs-4 col-md-2"> <a href="">雅升大通豪</a></div>
+                                        <div class="col-xs-4 col-md-2"> <a href="">雅升大通旗</a></div>
+                                        <div class="col-xs-4 col-md-2"> <a href="">红日尊尚</a></div>
+                                        <div class="col-xs-4 col-md-2"> <a href="">顺旅大通乐</a></div>
+                                    </div>
+                                    <div class="row chexing-row">
+                                        <div class="col-xs-4 col-md-2"> <a class="chexing-a" href="">自行式C型:</a></div>
+                                        <div class="col-xs-4 col-md-2"> <a href="">拓锐斯特大</a></div>
+                                        <div class="col-xs-4 col-md-2"> <a href="">戴德隆翠哆</a></div>
+                                        <div class="col-xs-4 col-md-2"> <a href="">新星罗马假</a></div>
+                                        <div class="col-xs-4 col-md-2"> <a href="">中天NEWDAL</a></div>
+                                        <div class="col-xs-4 col-md-2"> <a href="">中天季风单</a></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-4 col-md-2"> <a class="chexing-a" href="">拖挂式A型:</a></div>
+                                        <div class="col-xs-4 col-md-2"> <a href="">戈士达460拖</a></div>
+                                        <div class="col-xs-4 col-md-2"> <a href="">春田泰悦拖</a></div>
+                                        <div class="col-xs-4 col-md-2"> <a href="">杰克 云雀</a></div>
+                                        <div class="col-xs-4 col-md-2"> <a href="">海姆诺瓦</a></div>
+                                        <div class="col-xs-4 col-md-2"> <a href="">科诺斯500Q</a></div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="byprice">
+                                    <div class="row chexing-row">
+                                        <div class="col-xs-4 col-md-2"> <a class="chexing-a" href="">10-30万:</a></div>
+                                        <div class="col-xs-4 col-md-2"> <a href="">嵘野8米单拓</a></div>
+                                        <div class="col-xs-4 col-md-2"> <a href="">戈士达460拖</a></div>
+                                        <div class="col-xs-4 col-md-2"> <a href="">戈士达460拖</a></div>
+                                        <div class="col-xs-4 col-md-2"> <a href="">耐克萨斯星</a></div>
+                                        <div class="col-xs-4 col-md-2"> <a href="">梦之旅牛刀</a></div>
+                                    </div>
+                                    <div class="row chexing-row">
+                                        <div class="col-xs-4 col-md-2"> <a class="chexing-a" href="">30-50万:</a></div>
+                                        <div class="col-xs-4 col-md-2"> <a href="">拓锐斯特大</a></div>
+                                        <div class="col-xs-4 col-md-2"> <a href="">戴德隆翠哆</a></div>
+                                        <div class="col-xs-4 col-md-2"> <a href="">海驰房车C2</a></div>
+                                        <div class="col-xs-4 col-md-2"> <a href="">梦之旅牛二</a></div>
+                                        <div class="col-xs-4 col-md-2"> <a href="">新星自在系</a></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-4 col-md-2"> <a class="chexing-a" href="">50-100万:</a></div>
+                                        <div class="col-xs-4 col-md-2"> <a href="">览众赛拉维</a></div>
+                                        <div class="col-xs-4 col-md-2"> <a href="">中天新驭风</a></div>
+                                        <div class="col-xs-4 col-md-2"> <a href="">中天季风双</a></div>
+                                        <div class="col-xs-4 col-md-2"> <a href="">中天季风单</a></div>
+                                        <div class="col-xs-4 col-md-2"> <a href="">中天NEWDAL</a></div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="bylogo">
+                                    <div class="row">
+                                        <div class="col-xs-2 chexing-logo">
+                                            <A href=""><img width=60 src="http://img.rv58.com/w/qiyelogo/junan.jpg" alt="钧安房车">
+                                                <br>
+                                                <span>钧安</span>
+                                            </A>
+                                        </div>
+                                        <div class="col-xs-2 chexing-logo">
+                                            <A class="pinpaiimg" href=""><img width=60 src="http://img.rv58.com/w/qiyelogo/rongye.jpg"
+                                                    alt="嵘野房车">
+                                                <br><span>嵘野</span>
+                                            </A>
+                                        </div>
+                                        <div class="col-xs-2 chexing-logo">
+                                            <A class="pinpaiimg" href=""><img width=60 src="http://img.rv58.com/w/qiyelogo/hongtai120.jpg"
+                                                    calt="宏泰房车">
+                                                <br><span>宏泰</span>
+                                            </A>
+                                        </div>
+                                        <div class="col-xs-2 chexing-logo">
+                                            <A class="pinpaiimg" href=""><img width=60 src="http://img.rv58.com/w/qiyelogo/jiangling120.jpg"
+                                                    alt="江铃旅居车">
+                                                <br><span>江铃</span>
+                                            </A>
+                                        </div>
+                                        <div class="col-xs-2 chexing-logo">
+                                            <A class="pinpaiimg" href=""><img width=60 src="http://img.rv58.com/w/qiyelogo/gsd120.jpg"
+                                                    alt="戈士达房车">
+                                                <br><span>戈士达</span>
+                                            </A>
+                                        </div>
+                                        <div class="col-xs-2 chexing-logo">
+                                            <A class="pinpaiimg" href=""><img width=60 src="http://img.rv58.com/w/qiyelogo/jinghang.jpg"
+                                                    alt="旌航房车">
+                                                <br><span>旌航</span></A></div>
+                                        <div class="col-xs-2 chexing-logo">
+                                            <A class="pinpaiimg" href=""><img width=60 src="http://img.rv58.com/w/qiyelogo/caravelair.jpg"
+                                                    alt="卡莱尔房车">
+                                                <br><span>卡莱尔</span></A></div>
+                                        <div class="col-xs-2 chexing-logo">
+                                            <A class="pinpaiimg" href=""><img width=60 src="http://img.rv58.com/w/qiyelogo/xinxinglogo.jpg"
+                                                    alt="新星房车">
+                                                <br><span>新星</span></A></div>
+                                        <div class="col-xs-2 chexing-logo">
+                                            <A class="pinpaiimg" href=""><img width=60 src="http://img.rv58.com/w/qiyelogo/mengzhilvlogo.jpg"
+                                                    alt="梦之旅房车">
+                                                <br><span>梦之旅</span></A></div>
+                                        <div class="col-xs-2 chexing-logo">
+                                            <A class="pinpaiimg" href=""><img width=60 src="http://img.rv58.com/w/qiyelogo/lanzhonglogo.jpg"
+                                                    alt="览众房车">
+                                                <br><span>览众</span>
+                                            </A>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="by1-3">
+                                    <p>iOS 是一个由苹果公司开发和发布的手机操作系统。最初是于 2007 年首次发布 iPhone、iPod Touch 和 Apple TV。iOS 派生自 OS X，它们共享 Darwin
+                                        基础。OS X 操作系统是用在苹果电脑上，iOS 是苹果的移动版本。
+                                    </p>
+                                </div>
+                                <div class="tab-pane fade" id="by3-5">
+                                    <p>iOS 是一个由苹果公司开发和发布的手机操作系统。最初是于 2007 年首次发布 iPhone、iPod Touch 和 Apple TV。iOS 派生自 OS X，它们共享 Darwin
+                                        基础。OS X 操作系统是用在苹果电脑上，iOS 是苹果的移动版本。
+                                    </p>
+                                </div>
+                                <div class="tab-pane fade" id="by5-10">
+                                    <p>iOS 是一个由苹果公司开发和发布的手机操作系统。最初是于 2007 年首次发布 iPhone、iPod Touch 和 Apple TV。iOS 派生自 OS X，它们共享 Darwin
+                                        基础。OS X 操作系统是用在苹果电脑上，iOS 是苹果的移动版本。
+                                    </p>
+                                </div>
+                            </div>
+                        </nav>
+                        <script>
+                                $(function () {
+                                    $('#chexingTab li:eq(0) a').tab('show');
+                                });
+                        </script>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><span class="glyphicon glyphicon-hd-video"></span> Video training</h3>
+                </div>
+                <div class="panel-body">
+                    <video width="100%" controls="controls">
+                        <source src="https://github.com/michaelliao/learn-javascript/raw/master/video/vscode-nodejs.mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Get more courses...</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">JavaScript</h3>
+                </div>
+                <div class="panel-body">
+                    <p>full-stack JavaScript course</p>
+                    <p><a target="_blank" href="http://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000">Read more</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Python</h3>
+                </div>
+                <div class="panel-body">
+                    <p>the latest Python course</p>
+                    <p><a target="_blank" href="http://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000">Read more</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">git</h3>
+                </div>
+                <div class="panel-body">
+                    <p>A course about git version control</p>
+                    <p><a target="_blank" href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000">Read more</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
