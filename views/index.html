@@ -1,30 +1,30 @@
 {% extends "base.html" %} {% block main %}
-<div class="container">
+<div class="container-fluid">
     <div class="row">
-        <div class="col-md-8">   
+        <div class="col-md-7 col-md-offset-1">   
             <div id="chexingPanel" class="panel panel-default">
                 <div class="panel-heading">
                     <h3 class="panel-title"><span class="glyphicon glyphicon-cog"></span> 车型库 &nbsp;&nbsp; 广告位：显示推荐车型</h3>
                 </div>
-                <div class="panel-body">
+                <div class="panel-body" style="padding-top:0px;">
                     <!-- 图标导航-->
-                    <div class="i_con2">
+                    <div class="i_con2 hidden-xs">
                         <div class="chexinglist">
                             <ul class="list-unstyled list-inline">
-                                <li><a href=""><img src="http://img.rv58.com/w/rv/za.png"><span>自行式A</span></a> </li>
-                                <li><a href=""><img src="http://img.rv58.com/w/rv/zb.png"> <span>自行式B</span></a></li>
-                                <li><a href=""><img src="http://img.rv58.com/w/rv/zc.png"> <span>自行式C</span></a></li>
-                                <li><a href=""><img src="http://img.rv58.com/w/rv/td.png"><span>皮卡房车</span></a></li>
-                                <li><a href=""><img src="http://img.rv58.com/w/rv/ta.png"><span>拖挂式A</span></a></li>
-                                <li><a href=""><img src="http://img.rv58.com/w/rv/tb.png"> <span>拖挂式B</span></a></li>
-                                <li><a href=""><img src="http://img.rv58.com/w/rv/tc.png"> <span>拖挂式C</span></a></li>
-                                <li><a href=""><img src="http://img.rv58.com/w/rv/ydt.png"><span>营地拖挂</span></a></li>
-                                <li><a href=""><img src="http://img.rv58.com/w/rv/yy.png"><span>越野房车</span></a></li>
-                                <li><a href=""><img src="http://img.rv58.com/w/rv/yd.png"><span>移动木屋</span></a></li>
+                                <li><a href=""><img class="img-responsive" src="http://img.rv58.com/w/rv/za.png"><span>自行式A</span></a> </li>
+                                <li><a href=""><img class="img-responsive" src="http://img.rv58.com/w/rv/zb.png"> <span>自行式B</span></a></li>
+                                <li><a href=""><img class="img-responsive" src="http://img.rv58.com/w/rv/zc.png"> <span>自行式C</span></a></li>
+                                <li><a href=""><img class="img-responsive" src="http://img.rv58.com/w/rv/td.png"><span>皮卡房车</span></a></li>
+                                <li><a href=""><img class="img-responsive" src="http://img.rv58.com/w/rv/ta.png"><span>拖挂式A</span></a></li>
+                                <li><a href=""><img class="img-responsive" src="http://img.rv58.com/w/rv/tb.png"> <span>拖挂式B</span></a></li>
+                                <li><a href=""><img class="img-responsive" src="http://img.rv58.com/w/rv/tc.png"> <span>拖挂式C</span></a></li>
+                                <li><a href=""><img class="img-responsive" src="http://img.rv58.com/w/rv/ydt.png"><span>营地拖挂</span></a></li>
+                                <li><a href=""><img class="img-responsive" src="http://img.rv58.com/w/rv/yy.png"><span>越野房车</span></a></li>
+                                <li><a href=""><img class="img-responsive" src="http://img.rv58.com/w/rv/yd.png"><span>移动木屋</span></a></li>
                             </ul>
                         </div>
                     </div>
-                    
+                    <div class="chexing-nav">
                         <nav class="navbar navbar-chexing">
             
                             <div class="navbar-header">
@@ -35,11 +35,12 @@
                                     <span class="icon-bar"></span>
                                 </button>
                                 <a href="/" class="navbar-brand">选车导航</a>
+                                
                             </div>
             
                             <!-- 顶部导航项目 -->
-                            <div id="chexingTab" class="navbar-collapse collapse">
-                                <ul class="nav nav-pills navbar-chexing">
+                            <div id="chexingTab" class="navbar-collapse collapse navbar-chexing">
+                                <ul class="nav nav-tabs">
                                     <li class="active"><a href="#bytype" data-toggle="tab">按车型</a></li>
                                     <li><a href="#byprice" data-toggle="tab">按价格</a></li>
                                     <li><a href="#bylogo" data-toggle="tab">按品牌</a></li>
@@ -160,19 +161,253 @@
                                     </div>
                                 </div>
                                 <div class="tab-pane fade" id="by1-3">
-                                    <p>iOS 是一个由苹果公司开发和发布的手机操作系统。最初是于 2007 年首次发布 iPhone、iPod Touch 和 Apple TV。iOS 派生自 OS X，它们共享 Darwin
-                                        基础。OS X 操作系统是用在苹果电脑上，iOS 是苹果的移动版本。
-                                    </p>
+                                    <div class="row chexing-row">
+                                        <div class=" col-xs-4 col-md-3">
+                                            <a class="a1" href="">卫航特顺旅居车</a> <br/>
+                                            <span class="zt3a">
+                                                <a href="">参数</a>
+                                                <a href="">图片</a>
+                                                <a href="">商家</a> 
+                                            </span>
+                                        </div>
+
+                                        <div class=" col-xs-4 col-md-3">
+                                                <a class="a1" href="">卫航大通短轴旅居车</a> 
+                                                <br/>
+                                                <span class="zt3a">
+                                                    <a href="">参数</a>
+                                                    <a href="">图片</a>
+                                                    <a href="">商家</a> 
+                                                </span>
+                                        </div>
+
+                                        <div class=" col-xs-4 col-md-3">
+                                                <a class="a1" href="">嵘野8米单拓双卧双卫版</a> 
+                                                <br/>
+                                                <span class="zt3a">
+                                                    <a href="">参数</a>
+                                                    <a href="">图片</a>
+                                                    <a href="">商家</a> 
+                                                </span>
+                                        </div>
+
+                                        <div class=" col-xs-4 col-md-3">
+                                                <a class="a1" href="">嵘野8米复式营地版</a> 
+                                                <br/>
+                                                <span class="zt3a">
+                                                    <a href="">参数</a>
+                                                    <a href="">图片</a>
+                                                    <a href="">商家</a> 
+                                                </span>
+                                        </div>     
+                                    </div>
+
+                                    <div class="row chexing-row">
+                                            <div class=" col-xs-4 col-md-3">
+                                                <a class="a1" href="">卫航特顺旅居车</a> <br/>
+                                                <span class="zt3a">
+                                                    <a href="">参数</a>
+                                                    <a href="">图片</a>
+                                                    <a href="">商家</a> 
+                                                </span>
+                                            </div>
+    
+                                            <div class=" col-xs-4 col-md-3">
+                                                    <a class="a1" href="">卫航大通短轴旅居车</a> 
+                                                    <br/>
+                                                    <span class="zt3a">
+                                                        <a href="">参数</a>
+                                                        <a href="">图片</a>
+                                                        <a href="">商家</a> 
+                                                    </span>
+                                            </div>
+    
+                                            <div class=" col-xs-4 col-md-3">
+                                                    <a class="a1" href="">嵘野8米单拓双卧双卫版</a> 
+                                                    <br/>
+                                                    <span class="zt3a">
+                                                        <a href="">参数</a>
+                                                        <a href="">图片</a>
+                                                        <a href="">商家</a> 
+                                                    </span>
+                                            </div>
+    
+                                            <div class=" col-xs-4 col-md-3">
+                                                    <a class="a1" href="">嵘野8米复式营地版</a> 
+                                                    <br/>
+                                                    <span class="zt3a">
+                                                        <a href="">参数</a>
+                                                        <a href="">图片</a>
+                                                        <a href="">商家</a> 
+                                                    </span>
+                                            </div>     
+                                    </div>
                                 </div>
                                 <div class="tab-pane fade" id="by3-5">
-                                    <p>iOS 是一个由苹果公司开发和发布的手机操作系统。最初是于 2007 年首次发布 iPhone、iPod Touch 和 Apple TV。iOS 派生自 OS X，它们共享 Darwin
-                                        基础。OS X 操作系统是用在苹果电脑上，iOS 是苹果的移动版本。
-                                    </p>
+                                        <div class="row chexing-row">
+                                                <div class=" col-xs-4 col-md-3">
+                                                    <a class="a1" href="">卫航特顺旅居车</a> <br/>
+                                                    <span class="zt3a">
+                                                        <a href="">参数</a>
+                                                        <a href="">图片</a>
+                                                        <a href="">商家</a> 
+                                                    </span>
+                                                </div>
+        
+                                                <div class=" col-xs-4 col-md-3">
+                                                        <a class="a1" href="">卫航大通短轴旅居车</a> 
+                                                        <br/>
+                                                        <span class="zt3a">
+                                                            <a href="">参数</a>
+                                                            <a href="">图片</a>
+                                                            <a href="">商家</a> 
+                                                        </span>
+                                                </div>
+        
+                                                <div class=" col-xs-4 col-md-3">
+                                                        <a class="a1" href="">嵘野8米单拓双卧双卫版</a> 
+                                                        <br/>
+                                                        <span class="zt3a">
+                                                            <a href="">参数</a>
+                                                            <a href="">图片</a>
+                                                            <a href="">商家</a> 
+                                                        </span>
+                                                </div>
+        
+                                                <div class=" col-xs-4 col-md-3">
+                                                        <a class="a1" href="">嵘野8米复式营地版</a> 
+                                                        <br/>
+                                                        <span class="zt3a">
+                                                            <a href="">参数</a>
+                                                            <a href="">图片</a>
+                                                            <a href="">商家</a> 
+                                                        </span>
+                                                </div>     
+                                            </div>
+        
+                                            <div class="row chexing-row">
+                                                    <div class=" col-xs-4 col-md-3">
+                                                        <a class="a1" href="">卫航特顺旅居车</a> <br/>
+                                                        <span class="zt3a">
+                                                            <a href="">参数</a>
+                                                            <a href="">图片</a>
+                                                            <a href="">商家</a> 
+                                                        </span>
+                                                    </div>
+            
+                                                    <div class=" col-xs-4 col-md-3">
+                                                            <a class="a1" href="">卫航大通短轴旅居车</a> 
+                                                            <br/>
+                                                            <span class="zt3a">
+                                                                <a href="">参数</a>
+                                                                <a href="">图片</a>
+                                                                <a href="">商家</a> 
+                                                            </span>
+                                                    </div>
+            
+                                                    <div class=" col-xs-4 col-md-3">
+                                                            <a class="a1" href="">嵘野8米单拓双卧双卫版</a> 
+                                                            <br/>
+                                                            <span class="zt3a">
+                                                                <a href="">参数</a>
+                                                                <a href="">图片</a>
+                                                                <a href="">商家</a> 
+                                                            </span>
+                                                    </div>
+            
+                                                    <div class=" col-xs-4 col-md-3">
+                                                            <a class="a1" href="">嵘野8米复式营地版</a> 
+                                                            <br/>
+                                                            <span class="zt3a">
+                                                                <a href="">参数</a>
+                                                                <a href="">图片</a>
+                                                                <a href="">商家</a> 
+                                                            </span>
+                                                    </div>     
+                                            </div>
                                 </div>
                                 <div class="tab-pane fade" id="by5-10">
-                                    <p>iOS 是一个由苹果公司开发和发布的手机操作系统。最初是于 2007 年首次发布 iPhone、iPod Touch 和 Apple TV。iOS 派生自 OS X，它们共享 Darwin
-                                        基础。OS X 操作系统是用在苹果电脑上，iOS 是苹果的移动版本。
-                                    </p>
+                                        <div class="row chexing-row">
+                                                <div class=" col-xs-4 col-md-3">
+                                                    <a class="a1" href="">卫航特顺旅居车</a> <br/>
+                                                    <span class="zt3a">
+                                                        <a href="">参数</a>
+                                                        <a href="">图片</a>
+                                                        <a href="">商家</a> 
+                                                    </span>
+                                                </div>
+        
+                                                <div class=" col-xs-4 col-md-3">
+                                                        <a class="a1" href="">卫航大通短轴旅居车</a> 
+                                                        <br/>
+                                                        <span class="zt3a">
+                                                            <a href="">参数</a>
+                                                            <a href="">图片</a>
+                                                            <a href="">商家</a> 
+                                                        </span>
+                                                </div>
+        
+                                                <div class=" col-xs-4 col-md-3">
+                                                        <a class="a1" href="">嵘野8米单拓双卧双卫版</a> 
+                                                        <br/>
+                                                        <span class="zt3a">
+                                                            <a href="">参数</a>
+                                                            <a href="">图片</a>
+                                                            <a href="">商家</a> 
+                                                        </span>
+                                                </div>
+        
+                                                <div class=" col-xs-4 col-md-3">
+                                                        <a class="a1" href="">嵘野8米复式营地版</a> 
+                                                        <br/>
+                                                        <span class="zt3a">
+                                                            <a href="">参数</a>
+                                                            <a href="">图片</a>
+                                                            <a href="">商家</a> 
+                                                        </span>
+                                                </div>     
+                                            </div>
+        
+                                            <div class="row chexing-row">
+                                                    <div class=" col-xs-4 col-md-3">
+                                                        <a class="a1" href="">卫航特顺旅居车</a> <br/>
+                                                        <span class="zt3a">
+                                                            <a href="">参数</a>
+                                                            <a href="">图片</a>
+                                                            <a href="">商家</a> 
+                                                        </span>
+                                                    </div>
+            
+                                                    <div class=" col-xs-4 col-md-3">
+                                                            <a class="a1" href="">卫航大通短轴旅居车</a> 
+                                                            <br/>
+                                                            <span class="zt3a">
+                                                                <a href="">参数</a>
+                                                                <a href="">图片</a>
+                                                                <a href="">商家</a> 
+                                                            </span>
+                                                    </div>
+            
+                                                    <div class=" col-xs-4 col-md-3">
+                                                            <a class="a1" href="">嵘野8米单拓双卧双卫版</a> 
+                                                            <br/>
+                                                            <span class="zt3a">
+                                                                <a href="">参数</a>
+                                                                <a href="">图片</a>
+                                                                <a href="">商家</a> 
+                                                            </span>
+                                                    </div>
+            
+                                                    <div class=" col-xs-4 col-md-3">
+                                                            <a class="a1" href="">嵘野8米复式营地版</a> 
+                                                            <br/>
+                                                            <span class="zt3a">
+                                                                <a href="">参数</a>
+                                                                <a href="">图片</a>
+                                                                <a href="">商家</a> 
+                                                            </span>
+                                                    </div>     
+                                            </div>
                                 </div>
                             </div>
                         </nav>
@@ -181,35 +416,59 @@
                                     $('#chexingTab li:eq(0) a').tab('show');
                                 });
                         </script>
+                    </div>
                     
                 </div>
             </div>
         </div>
 
-        <div class="col-md-4">
+        <div class="col-md-3">
 
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h3 class="panel-title"><span class="glyphicon glyphicon-hd-video"></span> Video training</h3>
-                </div>
-                <div class="panel-body">
-                    <video width="100%" controls="controls">
-                        <source src="https://github.com/michaelliao/learn-javascript/raw/master/video/vscode-nodejs.mp4">
-                    </video>
-                </div>
-            </div>
+                        <div id="myCarousel" class="carousel slide ad-carousel">
+                                <!-- 轮播（Carousel）指标 -->
+                                <ol class="carousel-indicators">
+                                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                                </ol>   
+                                <!-- 轮播（Carousel）项目 -->
+                                <div class="carousel-inner">
+                                    <div class="item active">
+                                        <img class="img-responsive" src="/static/img/ADS/RVForOld.jpeg" alt="First slide">
+                                        <div class="carousel-caption">RV To Old
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <img src="/static/img/ADS/RVForLove.jpeg" alt="Second slide">
+                                        <div class="carousel-caption">RV For Love</div>
+                                    </div>
+                                    <div class="item">
+                                        <img src="/static/img/ADS/RVToSea.jpeg" alt="Third slide">
+                                        <div class="carousel-caption">RV To Sea</div>
+                                    </div>
+                                </div>
+                                <!-- 轮播（Carousel）导航 -->
+                                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
         </div>
     </div>
 
 
 
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-10 col-md-offset-1">
             <h1>Get more courses...</h1>
         </div>
     </div>
     <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-3 col-md-offset-1">
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h3 class="panel-title">JavaScript</h3>
@@ -231,7 +490,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-3">
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h3 class="panel-title">git</h3>

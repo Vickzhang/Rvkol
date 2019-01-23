@@ -2,19 +2,19 @@
     height: 60px;
     background-color: #fff;
     border-top: 2px solid #ccc;
-    font-size: 10px;
+    font-size: 1rem;
 }
 
 .chexinglist li{ width: 10%; float:left; text-align:center; margin:0;}
 .chexinglist a{display:block;width:auto;height:auto;color:#666; padding-top:10px;}
 .chexinglist li a:hover{ background-color:#f4f4f4; color:#C00}
-.chexinglist img{ width: 30px; height:auto;line-height:auto;}
+/*.chexinglist img{ width: 30px; height:auto;line-height:auto;}  */
 .chexinglist span{
     white-space: nowrap; 
     display:block;
     line-height:auto !important;
     overflow: hidden;
-    text-overflow: clip !important;
+    text-overflow: ellipsis !important;
 }
 
 
@@ -26,11 +26,21 @@
 
 
 /* 车型导航   */
-.navbar-chexing navbar{
+
+.chexing-nav{
+    margin-top: 1.5rem;
+}
+
+.navbar-chexing navbar>{
     background-color: white;
     border:none;
     box-shadow: none;
     margin-bottom:none;
+}
+
+.navbar-chexing>.navbar-collapse{
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
 .navbar-chexing .navbar-brand{
@@ -66,15 +76,15 @@
 
 
 .chexing-a{
-    font-size:12px; 
+    font: size 1.3rem; 
     color:#666; 
     font-weight:bold;
 }
 
 .chexing-tab-content{
-    font-size:12px; 
-    margin-top: 10px;
-    text-overflow: clip;
+    font-size:1.3rem; 
+    margin-top: 1.5rem;
+    text-overflow:ellipsis;
 }
 
 .chexing-row{
@@ -97,3 +107,27 @@
     float: left;
 }
 
+
+.img-responsive{
+    min-width: 30px;
+}
+
+
+/* 10-30 车型*/
+.a2{
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.zt3a  a{ color:#999; font-size: 1rem;}
+.zt3a  a:hover{ color:#F00;}
+
+
+
+
+/*  轮播广告  */
+
+.ad-carousel{
+    height: 220px;
+    overflow: hidden;
+}

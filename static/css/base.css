@@ -38,6 +38,18 @@ body{
     margin-top: 17px;
 }
 
+/* Banner  */
+
+
+#Banner{
+    height: 350px;
+    /*background-image:url("/static/img/ADS/Banner.jpeg");*/
+    /* background-position: center center; 
+    background-repeat: no-repeat;
+    background-size: cover; 
+    margin-bottom: 20px; */
+}
+
 /* footer */
 footer{
     font-weight: 400;
