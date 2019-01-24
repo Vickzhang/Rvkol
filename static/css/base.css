@@ -40,13 +40,21 @@ body{
 
 /* Banner  */
 
+#Bannner{
+    height: 200px;
+    overflow: hidden;
+}
 
-#Banner{
-    /*background-image:url("/static/img/ADS/Banner.jpeg");*/
-    /* background-position: center center; 
-    background-repeat: no-repeat;
-    background-size: cover; 
-    margin-bottom: 20px; */
+.Banner-Div{
+    background:url(/static/img/ADS/Banner.jpeg);
+    display: block;
+    height: 200;
+    overflow: hidden;
+}
+
+#Banner img{
+    min-width: 100%;
+
 }
 
 /* footer */
