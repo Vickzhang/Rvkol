@@ -63,3 +63,9 @@ footer{
     text-align: center;
     padding: 20px;
 }
+
+
+/*全局样式  */
+
+a:focus{text-decoration:none;}
+a:hover{text-decoration: none;}

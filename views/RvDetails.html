@@ -1,0 +1,52 @@
+{% extends "base.html" %} {% block main %} 
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div id="DetailTab" class="row navbar-collapse collapse navbar-DetailTab">
+                    <ul class="nav list-unstyled list-inline">
+                        <li class="active col-xs-6 col-md-3"><a href="#DetailsShow" data-toggle="tab">车型展示</a></li>
+                        <li class="col-xs-6 col-md-3"><a href="#DetailsContext" data-toggle="tab">车型布局</a></li>
+                        <li class="col-xs-6 col-md-3"><a href="#DetailsLayout" data-toggle="tab">技术数据</a></li>
+                        <li class="col-xs-6 col-md-3"><a href="#Details360" data-toggle="tab">360°</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="tab-content col-md-10 col-md-offset-1">
+                <div id="DetailsShow" class="tab-pane fade in active Detail-show">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <img src="/static/img/Details/0001.jpg" class="img-responsive">
+                        </div>
+                        <div class="caption col-md-7">
+                            <h1 class="Detail-biaoti1">大通长轴I型</h1>
+                            <p class="Detail-biaoti2">
+                                1、房车采用AMT手自一体、C照蓝牌。<br> 2、此款房车采用了轻量化的设计，后横床的经典布局，前顶安装吊床以后，最大可实现5座5卧，基本能够满足家庭的出行需要。
+                                <br> 3、储物空间大，后横床下面大部分均为储物空间.另外，排骨式床板可以对折，方便车友搁置超大物件；同时，后床合理的利用了车内空间，使得后部双人床的长度超过了1.85米；
+                                <br> 4、车内厨房、车外厨房、热水、驻车加热均采用安全系数很高的燃气系统；
+                                <br> 5、中门的厨柜设置了两块折叠桌面以增加厨台面积，也可以很方便的在车外取水；
+                                <br> 6、卫生间的设计从实用出发，设置了驻车暖风出风口，十分人性化。
+                            </p>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div id="DetailsContext" class="tab-pane fade Detail-show">
+
+                </div>
+
+                <div id="DetailsLayout" class="tab-pane fade Detail-show">
+
+                </div>
+
+
+                <div id="Details360" class="tab-pane fade Detail-show">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

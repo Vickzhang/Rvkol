@@ -1,0 +1,66 @@
+/* DetailTab  */
+
+.navbar-DetailTab{
+    display: block;
+    margin-top: 80px;
+    height: auto;
+}
+
+.navbar-DetailTab li{
+    height: 7rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.navbar-DetailTab li a{
+    background-color:white;
+    display: block;
+    line-height: 5.5rem;
+    border:1px solid black;
+    border-radius: 4px;
+    width: 80%;
+    height: 7rem;
+    font-size: 2rem;
+    font-family: 黑体;
+}
+
+
+
+.navbar-DetailTab li a:hover{
+    background-color: #45558c;
+    color: #a3a9bd;
+}
+
+
+.navbar-DetailTab li a:active{
+    background-color: #45558c;
+    color: #a3a9bd;
+}
+
+
+.Detail-show{
+    display: block;
+    margin-top: 30px;
+    padding-top:30px;
+    border-top: 1px solid rgb(148, 146, 146);
+}
+
+
+
+.Detail-biaoti1{
+    color: #33395b;
+    font-size: 4rem;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+
+.Detail-biaoti2{
+    color: #9296a8;
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 2.5rem;
+}
+
+
+
