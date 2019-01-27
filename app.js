@@ -7,6 +7,7 @@ const bodyParser = require('koa-bodyparser');
 const controller = require('./controller');
 //判断运行环境
 const isProduction = process.env.NODE_ENV === 'production';
+
 //导入调用Nunjucks
 const templating = require('./templating.js');
 //导入文件读取服务
@@ -53,6 +54,8 @@ app.use(bodyParser());
 //Controller
 app.use(controller());
 
+
+console.log(isProduction);
 
 
 // 在端口3000监听:
