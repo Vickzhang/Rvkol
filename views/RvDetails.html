@@ -5,37 +5,373 @@
                 <div id="DetailTab" class="row navbar-collapse collapse navbar-DetailTab">
                     <ul class="nav list-unstyled list-inline">
                         <li class="active col-xs-6 col-md-3"><a href="#DetailsShow" data-toggle="tab">车型展示</a></li>
-                        <li class="col-xs-6 col-md-3"><a href="#DetailsContext" data-toggle="tab">车型布局</a></li>
-                        <li class="col-xs-6 col-md-3"><a href="#DetailsLayout" data-toggle="tab">技术数据</a></li>
+                        <li class="col-xs-6 col-md-3"><a href="#DetailsContext" data-toggle="tab">技术数据</a></li>
+                        <li class="col-xs-6 col-md-3"><a href="#DetailsLayout" data-toggle="tab">车型布局</a></li>
                         <li class="col-xs-6 col-md-3"><a href="#Details360" data-toggle="tab">360°</a></li>
                     </ul>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="tab-content col-md-10 col-md-offset-1">
-                <div id="DetailsShow" class="tab-pane fade in active Detail-show">
-                    <div class="row">
-                        <div class="col-md-5">
-                            <img src="/static/img/Details/0001.jpg" class="img-responsive">
-                        </div>
-                        <div class="caption col-md-7">
-                            <h1 class="Detail-biaoti1">大通长轴I型</h1>
-                            <p class="Detail-biaoti2">
-                                1、房车采用AMT手自一体、C照蓝牌。<br> 2、此款房车采用了轻量化的设计，后横床的经典布局，前顶安装吊床以后，最大可实现5座5卧，基本能够满足家庭的出行需要。
-                                <br> 3、储物空间大，后横床下面大部分均为储物空间.另外，排骨式床板可以对折，方便车友搁置超大物件；同时，后床合理的利用了车内空间，使得后部双人床的长度超过了1.85米；
-                                <br> 4、车内厨房、车外厨房、热水、驻车加热均采用安全系数很高的燃气系统；
-                                <br> 5、中门的厨柜设置了两块折叠桌面以增加厨台面积，也可以很方便的在车外取水；
-                                <br> 6、卫生间的设计从实用出发，设置了驻车暖风出风口，十分人性化。
-                            </p>
+            <div class="row">
+                <div class="tab-content col-md-10 col-md-offset-1">
+                    <div id="DetailsShow" class="tab-pane fade in active  Detail-show">
+                            <div class="row Detail-biaoti">
+                                <div class="col-md-5">
+                                    <img src="/static/img/Details/0001.jpg" class="img-responsive">
+                                </div>
+                                <div class="caption col-md-7">
+                                    <h1 class="Detail-biaoti1">大通长轴I型</h1>
+                                    <p class="Detail-biaoti2">
+                                        1、房车采用AMT手自一体、C照蓝牌。<br> 2、此款房车采用了轻量化的设计，后横床的经典布局，前顶安装吊床以后，最大可实现5座5卧，基本能够满足家庭的出行需要。
+                                        <br> 3、储物空间大，后横床下面大部分均为储物空间.另外，排骨式床板可以对折，方便车友搁置超大物件；同时，后床合理的利用了车内空间，使得后部双人床的长度超过了1.85米；
+                                        <br> 4、车内厨房、车外厨房、热水、驻车加热均采用安全系数很高的燃气系统；
+                                        <br> 5、中门的厨柜设置了两块折叠桌面以增加厨台面积，也可以很方便的在车外取水；
+                                        <br> 6、卫生间的设计从实用出发，设置了驻车暖风出风口，十分人性化。
+                                    </p>
+                                </div>
+                            </div>
+                
+                            <div class="Detail-Images">
+                                <h2>更多图片：</h2>
+                
+                                <div id="DetailImages" class="row navbar-left navbar-DetailImages">
+                                    <ul class="nav list-unstyled list-inline">
+                                        <li class="active col-xs-4 col-md-3"><a href="#" data-toggle="tab">
+                                                <img style="max-width: 100%;" class="img-thumbnail viewer" src="/static/img/Details/0001/IMG_1.jpg">
+                                            </a></li>
+                                        <li class="col-xs-4 col-md-3"><a href="#" data-toggle="tab">
+                                                <img style="max-width: 100%;" class="img-thumbnail viewer" src="/static/img/Details/0001/IMG_2.jpg" alt="">
+                                            </a></li>
+                                        <li class="col-xs-4 col-md-3"><a href="#" data-toggle="tab">
+                                                <img style="max-width: 100%;" class="img-thumbnail viewer" src="/static/img/Details/0001/IMG_3.jpg" alt="">
+                                            </a></li>
+                                        <li class="col-xs-4 col-md-3"><a href="#" data-toggle="tab">
+                                                <img style="max-width: 100%;" class="img-thumbnail viewer" src="/static/img/Details/0001/IMG_4.jpg" alt="">
+                                            </a></li>
+                                        <li class="col-xs-4 col-md-3"><a href="#" data-toggle="tab">
+                                                <img style="max-width: 100%;" class="img-thumbnail viewer" src="/static/img/Details/0001/IMG_5.jpg" alt="">
+                                            </a></li>
+                                        <li class="col-xs-4 col-md-3"><a href="#" data-toggle="thumbnail">
+                                                <img style="max-width: 100%;" class="img-circle viewer" src="" alt="">
+                                            </a></li>
+                                    </ul>
+                                </div>
+                                <!--放大图的imgModal-->
+                
+                
+                
+                
+                
+                            </div>
+                
+                
+                    </div>
+                    <div id="DetailsContext" class="tab-pane fade Detail-show">
+                        <div class="DetailsContext-Box">
+                            <div class="DetailsContext-Title">外观</div>
+                            <h2 class="Detailscontext-SubTitle">规格配置</h2>
+                            <ul class="row list-unstyled">
+                                    <li class="col-xs-12 col-md-4">
+                                        <label>车型结构：</label>
+                                        <span>承载式</span>
+                                    </li>
+                                    <li class="col-xs-12 col-md-4">
+                                        <label>座位数：</label>
+                                        <span>2-6人</span>
+                                    </li>
+                                    <li class="col-xs-12 col-md-4">
+                                        <label>车长（mm）：</label>
+                                        <span>5700、5895、5980</span>
+                                    </li>            
+                                    <li class="col-xs-12 col-md-4">
+                                        <label>车宽（mm）：</label>
+                                        <span>1998、2028</span>
+                                    </li>
+                
+                                    <li class="col-xs-12 col-md-4">
+                                        <label>车高（mm）：</label>
+                                        <span>2552、2600、2662、 2802、2750、2842</span>
+                                    </li>
+                                    <li class="col-xs-12 col-md-4">
+                                        <label>轴距（mm）：</label>
+                                        <span>3850</span>
+                                    </li>
+                                    <li class="col-xs-12 col-md-4">
+                                        <label>前轮距（mm）：</label>
+                                        <span>1734</span>
+                                    </li>            
+                                    <li class="col-xs-12 col-md-4">
+                                        <label>后轮距（mm）：</label>
+                                        <span>1728</span>
+                                    </li>
+                
+                                    <li class="col-xs-12 col-md-4">
+                                        <label>最小离地间隙（mm）：</label>
+                                        <span>210</span>
+                                    </li>
+                                    <li class="col-xs-12 col-md-4">
+                                        <label>整备质量（kg）：</label>
+                                        <span>3050</span>
+                                    </li>
+                                    <li class="col-xs-12 col-md-4">
+                                        <label>最大质量（kg）：</label>
+                                        <span>3800</span>
+                                    </li>            
+                                    <li class="col-xs-12 col-md-4">
+                                        <label>高度调节：</label>
+                                        <span>有</span>
+                                    </li>
+
+                                    <li class="col-xs-12 col-md-4">
+                                            <label>自动清洗：</label>
+                                            <span>无</span>
+                                    </li>
+                                    <li class="col-xs-12 col-md-4">
+                                        <label>延时关闭：</label>
+                                            <span>无</span>
+                                    </li>
+                                    <li class="col-xs-12 col-md-4">
+                                            <label>光感自动：</label>
+                                            <span>无</span>
+                                    </li>            
+                                    <li class="col-xs-12 col-md-4">
+                                            <label>随动转向：</label>
+                                            <span>无</span>
+                                    </li>
+                            </ul>
+
+                            <h2 class="Detailscontext-SubTitle">车窗/后视镜/雨刷</h2>
+                            <ul class="row list-unstyled">
+                                    <li class="col-xs-12 col-md-4">
+                                        <label>前电动车窗：</label>
+                                        <span>有</span>
+                                    </li>
+                                    <li class="col-xs-12 col-md-4">
+                                        <label>后电动车窗：</label>
+                                        <span>无</span>
+                                    </li>
+                                    <li class="col-xs-12 col-md-4">
+                                        <label>感应雨刷：</label>
+                                        <span>无</span>
+                                    </li>            
+                                    <li class="col-xs-12 col-md-4">
+                                        <label>后雨刷：</label>
+                                        <span>无</span>
+                                    </li>
+                
+                                    <li class="col-xs-12 col-md-4">
+                                        <label>一键车窗防夹手：</label>
+                                        <span>无</span>
+                                    </li>
+                                    <li class="col-xs-12 col-md-4">
+                                        <label>车内调节：</label>
+                                        <span>选装</span>
+                                    </li>
+                                    <li class="col-xs-12 col-md-4">
+                                        <label>前轮距（mm）：</label>
+                                        <span>1734</span>
+                                    </li>            
+                                    <li class="col-xs-12 col-md-4">
+                                        <label>后轮距（mm）：</label>
+                                        <span>1728</span>
+                                    </li>
+                
+                                    <li class="col-xs-12 col-md-4">
+                                        <label>车外加热：</label>
+                                        <span>选装</span>
+                                    </li>
+                                    <li class="col-xs-12 col-md-4">
+                                        <label>防眩晕：</label>
+                                        <span>无</span>
+                                    </li>
+                                    <li class="col-xs-12 col-md-4">
+                                        <label>电动折叠：</label>
+                                        <span>无</span>
+                                    </li>            
+                                    <li class="col-xs-12 col-md-4">
+                                        <label>底盘/动力/燃油：</label>
+                                        <span></span>
+                                    </li>
+
+                                    <li class="col-xs-12 col-md-4">
+                                            <label>悬挂：</label>
+                                            <span>无</span>
+                                    </li>
+                                    <li class="col-xs-12 col-md-4">
+                                        <label>前悬挂形式：</label>
+                                            <span>麦弗逊式悬挂  </span>
+                                    </li>
+                                    <li class="col-xs-12 col-md-4">
+                                            <label>后悬挂形式：</label>
+                                            <span>钢板弹簧非独立悬架</span>
+                                    </li>            
+                                    <li class="col-xs-12 col-md-4">
+                                            <label>可变悬挂：</label>
+                                            <span>无</span>
+                                    </li>
+                            </ul>
+
+                            <h2 class="Detailscontext-SubTitle">轮胎</h2>
+                            <ul class="row list-unstyled">
+                                    <li class="col-xs-12 col-md-4">
+                                        <label>前轮胎规格：</label>
+                                        <span>215/75 R16</span>
+                                    </li>
+                                    <li class="col-xs-12 col-md-4">
+                                        <label>后轮胎规格：</label>
+                                        <span>215/75 R16</span>
+                                    </li>
+                                    <li class="col-xs-12 col-md-4">
+                                        <label>备胎规格：</label>
+                                        <span>全尺寸</span>
+                                    </li>            
+                                    <li class="col-xs-12 col-md-4">
+                                        <label>铝合金轮毂：</label>
+                                        <span>选装</span>
+                                    </li>
+                
+                                    <li class="col-xs-12 col-md-4">
+                                        <label>胎压监测系统：</label>
+                                        <span>无</span>
+                                    </li>
+                                    <li class="col-xs-12 col-md-4">
+                                        <label>防爆轮胎：</label>
+                                        <span>无</span>
+                                    </li>
+                                    
+                            </ul>
+
+                            <h2 class="Detailscontext-SubTitle">驱动/变速箱</h2>
+                            <ul class="row list-unstyled">
+                                    <li class="col-xs-12 col-md-4">
+                                        <label>档位数：</label>
+                                        <span>6档</span>
+                                    </li>
+                                    <li class="col-xs-12 col-md-4">
+                                        <label>变速箱：</label>
+                                        <span>手自一体</span>
+                                    </li>
+                                    <li class="col-xs-12 col-md-4">
+                                        <label>驱动方式：</label>
+                                        <span>前置前驱</span>
+                                    </li>            
+                                    <li class="col-xs-12 col-md-4">
+                                        <label>中央差速器锁：</label>
+                                        <span>无</span>
+                                    </li>
+                
+                                    <li class="col-xs-12 col-md-4">
+                                        <label>前桥差速器锁：</label>
+                                        <span>无</span>
+                                    </li>
+                                    <li class="col-xs-12 col-md-4">
+                                        <label>后桥差速器锁：</label>
+                                        <span>无</span>
+                                    </li>
+                                    
+                            </ul>
+
+                            <h2 class="Detailscontext-SubTitle">发动机</h2>
+                            <ul class="row list-unstyled">
+                                    <li class="col-xs-12 col-md-4">
+                                        <label>发动机厂家型号：</label>
+                                        <span>上柴SC25R</span>
+                                    </li>
+                                    <li class="col-xs-12 col-md-4">
+                                        <label>排量：</label>
+                                        <span>2.5T</span>
+                                    </li>
+                                    <li class="col-xs-12 col-md-4">
+                                        <label>进气形式：</label>
+                                        <span>涡轮增压</span>
+                                    </li>            
+                                    <li class="col-xs-12 col-md-4">
+                                        <label>气缸排列形式：</label>
+                                        <span>L</span>
+                                    </li>
+                
+                                    <li class="col-xs-12 col-md-4">
+                                        <label>气缸数：</label>
+                                        <span>4</span>
+                                    </li>
+                                    <li class="col-xs-12 col-md-4">
+                                        <label>每缸气门数：</label>
+                                        <span>4</span>
+                                    </li>
+                                    <li class="col-xs-12 col-md-4">
+                                        <label>气门形式：</label>
+                                        <span>DOHC</span>
+                                    </li>            
+                                    <li class="col-xs-12 col-md-4">
+                                        <label>压缩比：</label>
+                                        <span>-</span>
+                                    </li>
+                
+                                    <li class="col-xs-12 col-md-4">
+                                        <label>最小离地间隙（mm）：</label>
+                                        <span>210</span>
+                                    </li>
+                                    <li class="col-xs-12 col-md-4">
+                                        <label>发动机功率：</label>
+                                        <span>100</span>
+                                    </li>
+                                    <li class="col-xs-12 col-md-4">
+                                        <label>发动机马力：</label>
+                                        <span>136</span>
+                                    </li>            
+                                    <li class="col-xs-12 col-md-4">
+                                        <label>发动机扭矩：</label>
+                                        <span>330</span>
+                                    </li>
+
+                                    <li class="col-xs-12 col-md-4">
+                                            <label>缸体材料：</label>
+                                            <span>铝合金</span>
+                                    </li>
+                                    <li class="col-xs-12 col-md-4">
+                                        <label>缸盖材料：</label>
+                                            <span>铸铁</span>
+                                    </li>
+                            </ul>
+
+                            <h2 class="Detailscontext-SubTitle">燃油</h2>
+                            <ul class="row list-unstyled">
+                                    <li class="col-xs-12 col-md-4">
+                                        <label>燃油及标号：</label>
+                                        <span>#0柴油</span>
+                                    </li>
+                                    <li class="col-xs-12 col-md-4">
+                                        <label>环保标准：</label>
+                                        <span>国V</span>
+                                    </li>
+                                    <li class="col-xs-12 col-md-4">
+                                        <label>官方油耗(L)：</label>
+                                        <span>-</span>
+                                    </li>            
+                                    <li class="col-xs-12 col-md-4">
+                                        <label>工信部市区(L)：</label>
+                                        <span>-</span>
+                                    </li>
+                
+                                    <li class="col-xs-12 col-md-4">
+                                        <label>工信部综合(L)：</label>
+                                        <span>-</span>
+                                    </li>
+                                    <li class="col-xs-12 col-md-4">
+                                        <label>工信部市郊(L)：</label>
+                                        <span>-</span>
+                                    </li>
+
+                                    <li class="col-xs-12 col-md-4">
+                                            <label>油箱容积(L)：(L)：</label>
+                                            <span>80L</span>
+                                        </li>
+                                    
+                            </ul>
+
+
                         </div>
                     </div>
-                    
-                </div>
-
-                <div id="DetailsContext" class="tab-pane fade Detail-show">
-
-                </div>
 
                 <div id="DetailsLayout" class="tab-pane fade Detail-show">
 
@@ -48,5 +384,13 @@
             </div>
         </div>
     </div>
+
+    <!-- viewer 图片放大功能 -->
+    <script src="/static/js/bootstrap.viewer.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('.viewer').bootstrapViewer();//The default image source file path is the src attribute of the img tag.
+        })
+    </script>
 
 {% endblock %}

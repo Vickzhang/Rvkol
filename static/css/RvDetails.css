@@ -41,11 +41,15 @@
 
 .Detail-show{
     display: block;
-    margin-top: 30px;
-    padding-top:30px;
-    border-top: 1px solid rgb(148, 146, 146);
+    margin-top: 10px;
+    /* border-top: 1px solid #e0e0e0; */
 }
 
+.Detail-biaoti{
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e0e0e0;
+    border-top: 1px solid #e0e0e0;
+}
 
 
 .Detail-biaoti1{
@@ -63,4 +67,53 @@
 }
 
 
+/* #Image部分 */
+
+.Detail-Images{
+    margin-top:20px;
+}
+
+.navbar-DetailImages a {
+    text-align: center;
+
+}
+
+
+
+
+/* 车型详情  */
+
+.DetailsContext-Box li{
+    padding: 5px 1rem 0;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.DetailsContext-Title{
+    background: #d38787;
+    color: #fff;
+    width: 180px;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.Detailscontext-SubTitle{
+    margin-top: 20px;
+    color: #333;
+    font-size: 1.7rem;
+    font-weight: bolder;
+    border-bottom: 1px solid #ccc;
+
+}
+
+
+.DetailsContext-Box ul li {
+    float: left;
+}
+
+label {
+    float: left;
+    width: 40%;
+    font-weight: 500;
+}
 
