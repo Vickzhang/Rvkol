@@ -109,6 +109,7 @@
 
 .DetailsContext-Box ul li {
     float: left;
+    
 }
 
 label {
@@ -116,4 +117,6 @@ label {
     width: 40%;
     font-weight: 500;
 }
+
+
 
