@@ -34,7 +34,7 @@ app.use(async (ctx, next) => {
 
 
 //静态文件
-if (true) {
+if (!isProduction) {
     let staticFiles = require('./static-files');
     app.use(staticFiles('/static/', __dirname + '/static'));
 }
