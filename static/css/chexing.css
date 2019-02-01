@@ -93,8 +93,11 @@
 
 .chexing-logo{
     display: inline;
-    border:solid 1px #eee;
-    align-items: center; 
+    align-content: center; 
+}
+
+.chexing-logo img{
+    max-width: 80%;
 }
 
 .pinpaiimg{
