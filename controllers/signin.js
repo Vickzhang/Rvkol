@@ -1,21 +1,19 @@
+const userModel = require('../mode/mysql')
+
 module.exports={
-    'POST /signin':async (ctx, next) => {
-        var
-            email = ctx.request.body.email || '',
-            password = ctx.request.body.password || '';
-        if (email === 'admin@example.com' && password === '123456') 
-        {
-            // 登录成功:
-            ctx.render('signin-ok.html', {
-                title: 'Sign In OK',
-                name: 'Mr Node'
-            });
-        } 
-        else {
-            // 登录失败:
-            ctx.render('signin-failed.html', {
-                title: 'Sign In Failed'
-            });
-        }
+    'POST /contextUs':async (ctx, next) => {
+        let user = {
+            userName: ctx.request.body.userName,
+            connection: ctx.request.body.connection,
+            createTime: Date.now(),
+            title: ctx.request.body.title,
+            context:ctx.request.body.context
+          }
+        
+          await userModel.insetUser([user.userName,user.connection,user.title,user.context,user.createTime]).then((res)=>{
+              console.log('提交成功!')
+              
+          })
+
     }   
 }

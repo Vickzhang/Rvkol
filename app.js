@@ -11,8 +11,7 @@ const isProduction = process.env.NODE_ENV === 'production';
 //导入调用Nunjucks
 const templating = require('./templating.js');
 //导入文件读取服务
-//const service = require('./webService/webService.js');
-``
+const mysql= require('./mode/mysql');
 //=============================================================================
 
 // 创建一个Koa对象表示web app本身:
@@ -55,7 +54,7 @@ app.use(bodyParser());
 app.use(controller());
 
 
-console.log(isProduction);
+console.log('isProduciton'+isProduction);
 
 
 // 在端口3000监听:
