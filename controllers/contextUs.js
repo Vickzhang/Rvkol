@@ -1,7 +1,7 @@
 const userModel = require('../mode/mysql')
 
 module.exports={
-    'POST /contextUs':async (ctx, next) => {
+    'POST /tellUs':async (ctx, next) => {
         let user = {
             userName: ctx.request.body.userName,
             connection: ctx.request.body.connection,
@@ -11,9 +11,13 @@ module.exports={
           }
         
           await userModel.insetUser([user.userName,user.connection,user.title,user.context,user.createTime]).then((res)=>{
-              console.log('提交成功!')
-              
+            ctx.render('index.html', {
+                    title: '房车情报',
+                    subtitle: '全球房车领袖，最新最全的房车情报'
+                })
           })
+
+        //
 
     }   
 }

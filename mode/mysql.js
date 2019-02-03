@@ -26,13 +26,13 @@ const query = function (sql, val) {
     query(sql, [])
   }
 
-  const usersTable = `CREATE TABLE IF NOT EXISTS users (
+  const usersTable = `CREATE TABLE IF NOT EXISTS RVusers (
     id INT NOT NULL AUTO_INCREMENT,
     userName VARCHAR(16) NOT NULL,
     connection VARCHAR(50) NOT NULL,
     createTime VARCHAR(50) NOT NULL,
-    title VARCHAR,
-    context VARCHAR,
+    title VARCHAR(255),
+    context VARCHAR(255),
     PRIMARY KEY (id) 
  )`;
 
@@ -65,7 +65,7 @@ const query = function (sql, val) {
  createTable(commentTable) // 评论表
 
  const insetUser = (val) => { // 注册
-   let _sql = `INSERT INTO users (userName, connection, title, context,createTime) VALUES (?,?,?,?,?)`
+   let _sql = `INSERT INTO RVusers (userName, connection, title, context,createTime) VALUES (?,?,?,?,?)`
    return query(_sql, val)
  }
 
