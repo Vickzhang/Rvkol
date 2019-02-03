@@ -193,3 +193,7 @@
 #contact input[type='submit']:hover{
     background:rgb(44, 142, 120);
 }
+
+#contact .modal-body{
+    color: black;
+}
