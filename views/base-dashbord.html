@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="全球最新房车咨讯 www.rvkol.com">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/base.css">
+    <link rel="stylesheet" href="/static/css/dashboard.css">
+</head>
+
+<body>
+    <!-- 顶部导航 -->
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header" style="max-height: 150px">
+                <!-- 小屏幕导航按钮和logo -->
+                <button class="navbar-toggle" role="button" data-toggle="collapse" href="#baseBar" aria-expanded="false" aria-controls="collapseExample">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="/" class="navbar-brand"><img src="/static/img/logo.jpeg" style="max-height:50px"  class="img-responsive"></a>
+            </div>
+
+            <!-- 顶部导航项目 -->
+            <div id="baseBar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="/dashbord"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;后台首页</a></li>
+                    <li><a href="/cars-dashbord"><span class="glyphicon glyphicon-resize-vertical"></span>&nbsp;&nbsp;车型库管理</a></li>
+                    <li><a href="/contexts"><span class="glyphicon glyphicon-comment"></span>&nbsp;&nbsp;文章管理</a></li>
+                    <li><a href="/users"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;用户留言</a></li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                                <a id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  admin
+                                  <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="dLabel">
+                                  <li><a href="/"><span class="glyphicon glyphicon-book"></span> &nbsp;&nbsp;前台首页</a></li>
+                                </ul>
+                            </li>
+                    <li><a href="/RvDetails/1">退出</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    {% block main %} {% endblock %}
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <p>Copyright&nbsp;©️&nbsp; 2018-2019 www.rvkol.com &nbsp;京ICP备：130429号-9</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+<!-- 用于防止页面跳转 -->
+<iframe name="frame1" frameborder="0" id="frame" style="display:none;"></iframe>
+
+<script src="/static/js/jquery-3.2.1.min.js"></script>
+<script src="/static/js/bootstrap.min.js"></script>
+<script src="/static/js/Chart.min.js"></script>
+<script src="/static/js/costumChart.js"></script>
+</html>

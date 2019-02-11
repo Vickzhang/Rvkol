@@ -1,16 +1,149 @@
-{% extends "base.html" %} {% block main %}
+{% extends "base-dashbord.html" %} {% block main %}
 
-<div class="container-fluid" style="padding:30px 0; margin:70px 0 30px 0;"">
+<div class="container">
   <div class="row">
-      <div class="col-md-2">
-
+    <div class="col-md-6">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">网站统计数据</h3>
+        </div>
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>统计项目</th>
+              <th>昨日</th>
+              <th>今日</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">访问量
+                </td>
+                <td>20</td>
+                <td>40</td>
+            </tr>
+            <tr>
+              <th scope="row">用户留言
+                </td>
+                <td>1</td>
+                <td>3</td>
+            </tr>
+            <tr>
+              <th scope="row">车型库
+                </td>
+                <td>2</td>
+                <td>6</td>
+            </tr>
+            <tr>
+              <th scope="row">文章总数
+                </td>
+                <td>2</td>
+                <td>7</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="panel panel-success">
+        <div class="panel-heading">
+          <h3 class="panel-title">网站文章</h3>
+        </div>
+        <ul class="list-group">
+          <li class="list-group-item">
+            <a href=""><span class="glyphicon glyphicon-comment"></span>&nbsp;文章测试1 <small class="pull-right">2019-01-02</small></a>
+          </li>
+          <li class="list-group-item">
+            <a href=""><span class="glyphicon glyphicon-comment"></span>&nbsp;文章测试1 <small class="pull-right">2019-01-02</small></a>
+          </li>
+          <li class="list-group-item">
+            <a href=""><span class="glyphicon glyphicon-comment"></span>&nbsp;文章测试1 <small class="pull-right">2019-01-02</small></a>
+          </li>
+          <li class="list-group-item">
+            <a href=""><span class="glyphicon glyphicon-comment"></span>&nbsp;文章测试1 <small class="pull-right">2019-01-02</small></a>
+          </li>
+          <li class="list-group-item">
+            <a href=""><span class="glyphicon glyphicon-comment"></span>&nbsp;文章测试1 <small class="pull-right">2019-01-02</small></a>
+          </li>
+        </ul>
       </div>
 
-
-      <div class="col-md-10">
-
-        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">今日访客统计</h3>
+            </div>
+            <div class="panel-body">
+              <canvas id="myChart" class="col-md-12"></canvas>
+            </div>
+            
+          </div>  
+    </div>
+    <div class="col-md-6">
+          <div class="panel panel-primary">
+              <div class="panel-heading">
+                <h3 class="panel-title">服务器状态</h3>
+              </div>
+              <div class="panel-body">
+                <p>内存使用率：40%</p>
+                  <div class="progress">
+                      <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                        <span class="sr-only">40% Complete (success)</span>
+                      </div>
+                    </div>
+                    <p>数据库使用率：20%</p>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                        <span class="sr-only">20% Complete</span>
+                      </div>
+                    </div>
+                    <p>磁盘使用率：20%</p>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                        <span class="sr-only">60% Complete (warning)</span>
+                      </div>
+                    </div>
+                    <p>CPU使用率：80*</p>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                        <span class="sr-only">80% Complete (danger)</span>
+                      </div>
+                    </div>
+              </div>
+              
+            </div>  
+    </div>
+    <div class="col-md-12">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">用户留言统计</h3>
+            </div>
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th>姓名</th>
+                  <th>联系方式</th>
+                  <th>标题</th>
+                  <th>内容</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">{{name}}
+                    </td>
+                    <td>{{name}}</td>
+                    <td>测试</td>
+                    <td>这是一个测试</td>
+                </tr>
+                
+              </tbody>
+            </table>
+          </div>
+    </div>
   </div>
+
+
 
 
 </div>

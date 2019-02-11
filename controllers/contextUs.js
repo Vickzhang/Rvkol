@@ -1,5 +1,3 @@
-const userModel = require('../mode/mysql')
-
 module.exports={
     'POST /tellUs':async (ctx, next) => {
         let user = {
@@ -10,13 +8,21 @@ module.exports={
             context:ctx.request.body.context
           }
         
-          await userModel.insetUser([user.userName,user.connection,user.title,user.context,user.createTime]).then((res)=>{
-            //ctx.render('index.html', {
-            //    title: '房车情报',
-            //    subtitle: '全球房车领袖，最新最全的房车情报'
-            //})
-            console.log('提交成功!');
-          })
+        //数据库操作
+        const model = require('../model');
+
+        let RVUser = model.RVuser;
+
+
+        (async () => {
+            var RVuser = await RVUser.create({
+                userName: user.userName,
+                connection: user.connection,
+                title: user.title,
+                context: user.context
+            });
+            console.log('created: ' + JSON.stringify(RVuser));
+        })();
 
         //
 

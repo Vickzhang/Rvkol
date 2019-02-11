@@ -23,8 +23,11 @@
         "koa-router": "7.0.0",
         "mime": "^2.4.0",
         "mysql": "^2.16.0",
+        "mysql2": "^1.6.4",
         "mz": "2.4.0",
+        "node-uuid": "^1.4.8",
         "nodemon": "^1.18.9",
-        "nunjucks": "^3.1.7"
+        "nunjucks": "^3.1.7",
+        "sequelize": "^4.42.0"
     }
 }
