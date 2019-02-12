@@ -3,9 +3,8 @@ module.exports={
         let user = {
             userName: ctx.request.body.userName,
             connection: ctx.request.body.connection,
+            targetCar:ctx.request.body.targetCar,
             createTime: Date.now(),
-            title: ctx.request.body.title,
-            context:ctx.request.body.context
           }
         
         //数据库操作
@@ -18,8 +17,7 @@ module.exports={
             var RVuser = await RVUser.create({
                 userName: user.userName,
                 connection: user.connection,
-                title: user.title,
-                context: user.context
+                targetCar:user.targetCar
             });
             console.log('created: ' + JSON.stringify(RVuser));
         })();

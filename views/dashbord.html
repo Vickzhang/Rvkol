@@ -124,25 +124,29 @@
                 <tr>
                   <th>姓名</th>
                   <th>联系方式</th>
-                  <th>标题</th>
-                  <th>内容</th>
+                  <th>意向车型</th>
+                  <th>留咨时间</th>
                 </tr>
               </thead>
+
               <tbody>
+                  {% for f in data %}
                 <tr>
-                  <th scope="row">{{name}}
-                    </td>
-                    <td>{{name}}</td>
-                    <td>测试</td>
-                    <td>这是一个测试</td>
-                </tr>
-                
+                  <td scope="row">{{f.userName}}</td>
+                  <td>{{f.connection}}</td>
+                  <td>{{f.targetCar}}</td>
+                  <td>{{f.createdAt}}</td>
+                </tr> 
+                {% endfor %}
+
               </tbody>
             </table>
           </div>
     </div>
   </div>
 
+  
+      
 
 
 
