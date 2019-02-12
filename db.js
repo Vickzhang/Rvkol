@@ -41,15 +41,15 @@ function defineModel(name, attributes) {
         primaryKey: true
     };
     attrs.createdAt = {
-        type: Sequelize.BIGINT,
+        type: Sequelize.STRING,
         allowNull: false
     };
     attrs.updatedAt = {
-        type: Sequelize.BIGINT,
+        type: Sequelize.STRING,
         allowNull: false
     };
     attrs.version = {
-        type: Sequelize.BIGINT,
+        type: Sequelize.STRING,
         allowNull: false
     };
 
@@ -80,18 +80,19 @@ function defineModel(name, attributes) {
         timestamps: false,
         hooks: {
             beforeValidate: function (obj) {
-                let now = Date.now();
+                var tnow = new Date().toLocaleString();
+
                 if (obj.isNewRecord) {
                     console.log('will create entity...' + obj);
                     if (!obj.id) {
                         obj.id = generateId();
                     }
-                    obj.createdAt = now;
-                    obj.updatedAt = now;
+                    obj.createdAt = tnow;
+                    obj.updatedAt = tnow;
                     obj.version = 0;
                 } else {
                     console.log('will update entity...');
-                    obj.updatedAt = now;
+                    obj.updatedAt = tnow;
                     obj.version++;
                 }
             }
