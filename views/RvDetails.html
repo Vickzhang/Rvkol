@@ -20,19 +20,9 @@
                         <img src="/static/img/Details/0001.jpg" class="img-responsive">
                     </div>
                     <div class="caption col-md-7">
-                        <h1 class="Detail-biaoti1">大通长轴I型</h1>
-                        <p class="Detail-biaoti2">
-                            1、房车采用AMT手自一体、C照蓝牌。
-                            <br> 
-                            2、此款房车采用了轻量化的设计，后横床的经典布局，前顶安装吊床以后，最大可实现5座5卧，基本能够满足家庭的出行需要。
-                            <br> 
-                            3、储物空间大，后横床下面大部分均为储物空间.另外，排骨式床板可以对折，方便车友搁置超大物件；同时，后床合理的利用了车内空间，使得后部双人床的长度超过了1.85米；
-                            <br> 
-                            4、车内厨房、车外厨房、热水、驻车加热均采用安全系数很高的燃气系统；
-                            <br> 
-                            5、中门的厨柜设置了两块折叠桌面以增加厨台面积，也可以很方便的在车外取水；
-                            <br> 
-                            6、卫生间的设计从实用出发，设置了驻车暖风出风口，十分人性化。
+                        <h1 class="Detail-biaoti1">{{data[0].carTitle1}}</h1>
+                        <p id=text_desc_p class="Detail-biaoti2">
+                            {{data[0].carTitle2}}
                         </p>
                     </div>
                 </div>
@@ -81,6 +71,10 @@
                             <label>车型结构：</label>
                             <span>承载式</span>
                         </li>
+                        <li class="col-xs-12 col-md-4">
+                            <label>底盘类型：</label>
+                            <span>科威特</span>
+                        </li>
                         <li class="col-xs-12 col-md-4"><label>准驾类型：</label><span>C1</span></li>
                         <li class="col-xs-12 col-md-4">
                             <label>座位数：</label>
@@ -125,17 +119,12 @@
                             <span>3800</span>
                         </li>
                         <li class="col-xs-12 col-md-4"><label>接近角</label><span>-</span></li>
-                        <li class="col-xs-12 col-md-4"><label>离地角</label><span>-</span></li>
+                        <li class="col-xs-12 col-md-4"><label>离去角</label><span>-</span></li>
                     </ul>
 
                     <h2 class="Detailscontext-SubTitle">底盘参数/动力/燃油/驱动</h2>
                     <ul class="row list-unstyled">
                         
-                        <li class="col-xs-12 col-md-4">
-                            <label>底盘/动力/燃油：</label>
-                            <span></span>
-                        </li>
-
                         <li class="col-xs-12 col-md-4">
                             <label>悬挂：</label>
                             <span>无</span>
@@ -163,15 +152,6 @@
                             <li class="col-xs-12 col-md-4">
                                 <label>进气形式：</label>
                                 <span>涡轮增压</span>
-                            </li>
-                            <li class="col-xs-12 col-md-4">
-                                <label>气缸排列形式：</label>
-                                <span>L</span>
-                            </li>
-    
-                            <li class="col-xs-12 col-md-4">
-                                <label>最小离地间隙（mm）：</label>
-                                <span>210</span>
                             </li>
                             <li class="col-xs-12 col-md-4">
                                 <label>发动机功率：</label>
@@ -206,19 +186,6 @@
                                 <li class="col-xs-12 col-md-4">
                                     <label>驱动方式：</label>
                                     <span>前置前驱</span>
-                                </li>
-                                <li class="col-xs-12 col-md-4">
-                                    <label>中央差速器锁：</label>
-                                    <span>无</span>
-                                </li>
-        
-                                <li class="col-xs-12 col-md-4">
-                                    <label>前桥差速器锁：</label>
-                                    <span>无</span>
-                                </li>
-                                <li class="col-xs-12 col-md-4">
-                                    <label>后桥差速器锁：</label>
-                                    <span>无</span>
                                 </li>
                                 <li class="col-xs-12 col-md-4">
                                         <label>燃油及标号：</label>
@@ -263,10 +230,7 @@
                             <label>胎压监测系统：</label>
                             <span>无</span>
                         </li>
-                        <li class="col-xs-12 col-md-4">
-                            <label>防爆轮胎：</label>
-                            <span>无</span>
-                        </li>
+
 
                     </ul>
 

@@ -1,10 +1,21 @@
 module.exports={
     'GET /RvDetails/:id':async(ctx,next)=>{
         var id =ctx.params.id;
+
+        //数据库操作
+        const model = require('../model');
+        let Car = model.Car;
+
+        var result = await Car.findAll({
+            where: {
+                carID:id,
+            }
+        });
+
+        console.log(JSON.stringify(result));
+
         ctx.render('RvDetails.html',{
-            title:'房车情报',
-            subtitle:'全球房车领袖，最新最全的房车情报',
-            id:id
+            data:result,
         })
     }
 }
