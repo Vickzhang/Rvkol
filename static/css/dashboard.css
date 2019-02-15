@@ -12,3 +12,41 @@
     margin: 0;
     font-size: 16px;
 }
+
+
+/* 车型库 */
+
+.DetailsContext-Box li{
+    padding: 5px 1rem 0;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.DetailsContext-Title{
+    background: #d38787;
+    color: #fff;
+    width: 180px;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.Detailscontext-SubTitle{
+    margin-top: 20px;
+    color: #333;
+    font-size: 1.7rem;
+    font-weight: bolder;
+    border-bottom: 1px solid #ccc;
+
+}
+
+
+.DetailsContext-Box ul li {
+    float: left;
+    
+}
+
+label {
+    float: left;
+    width: 40%;
+    font-weight: 500;
+}

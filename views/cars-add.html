@@ -1,0 +1,428 @@
+{% extends "base-dashbord.html" %} {% block main %}
+
+<div class="container">
+
+        <nav class="navbar navbar-DetailTab">
+                <ul class="nav list-unstyled list-inline">
+                        <li class=" col-xs-6 col-md-3"><a href="/cars-dashbord" class="list-group-item">车型管理</a></li>
+                        <li class=" col-xs-6 col-md-3"><a href="/cars-add" class="list-group-item active">添加车型</a></li>
+                    </ul>
+        </nav>
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class="page-header">
+            <h1>添加车型</h1>
+        </div>
+        <div class="DetailsContext-Box">
+                <div class="DetailsContext-Title">基础信息</div>
+                <h2 class="Detailscontext-SubTitle">车辆信息</h2>
+                <ul class="row list-unstyled">
+                        <li class="col-xs-12 col-md-4">
+                            <label>车型ID：</label>
+                            <input id=""></input>
+                        </li>
+                        <li class="col-xs-12 col-md-4">
+                                <label>车型名称：</label>
+                                <input id=""></input>
+                        </li>
+                        <li class="col-xs-12 col-md-4">
+                                <label>生产厂家：</label>
+                                <input id=""></input>
+                        </li>
+                        <li class="col-xs-12 col-md-4">
+                                <label>最低参考价格：</label>
+                                <input id=""></input>
+                        </li>
+                        <li class="col-xs-12 col-md-4">
+                                <label>最高参考价格：</label>
+                                <input id=""></input>
+                        </li>
+                </ul>
+
+                <h2 class="Detailscontext-SubTitle">车辆信息</h2>
+                <div class="col-xs-12 col-md-12">
+                        <label>车辆介绍：</label>
+                        <textarea rows="3" cols="50" id=""></textarea>
+                </div>
+
+                
+
+
+
+
+
+                <div class="DetailsContext-Title">外观</div>
+                <h2 class="Detailscontext-SubTitle">规格配置</h2>
+                <ul class="row list-unstyled">
+                    <li class="col-xs-12 col-md-4">
+                        <label>车型结构：</label>
+                        <input id=""></input>
+                    </li>
+                    <li class="col-xs-12 col-md-4">
+                        <label>底盘类型：</label>
+                        <input id=""></input>
+                    </li>
+                    <li class="col-xs-12 col-md-4"><label>准驾类型：</label><input id=""></input></li>
+                    <li class="col-xs-12 col-md-4">
+                        <label>座位数：</label>
+                        <input id=""></input>
+                    </li>
+                    <li class="col-xs-12 col-md-4">
+                        <label>车长（mm）：</label>
+                        <input id=""></input>
+                    </li>
+                    <li class="col-xs-12 col-md-4">
+                        <label>车宽（mm）：</label>
+                        <input id=""></input>
+                    </li>
+
+                    <li class="col-xs-12 col-md-4">
+                        <label>车高（mm）：</label>
+                        <input id=""></input>
+                    </li>
+                    <li class="col-xs-12 col-md-4">
+                        <label>轴距（mm）：</label>
+                        <input id=""></input>
+                    </li>
+                    <li class="col-xs-12 col-md-4">
+                        <label>前轮距（mm）：</label>
+                        <input id=""></input>
+                    </li>
+                    <li class="col-xs-12 col-md-4">
+                        <label>后轮距（mm）：</label>
+                        <input id=""></input>
+                    </li>
+
+                    <li class="col-xs-12 col-md-4">
+                        <label>最小离地间隙（mm）：</label>
+                        <input id=""></input>
+                    </li>
+                    <li class="col-xs-12 col-md-4">
+                        <label>整备质量（kg）：</label>
+                        <input id=""></input>
+                    </li>
+                    <li class="col-xs-12 col-md-4">
+                        <label>最大质量（kg）：</label>
+                        <input id=""></input>
+                    </li>
+                    <li class="col-xs-12 col-md-4"><label>接近角</label><input id=""></input></li>
+                    <li class="col-xs-12 col-md-4"><label>离去角</label><input id=""></input></li>
+                </ul>
+
+                <h2 class="Detailscontext-SubTitle">底盘参数/动力/燃油/驱动</h2>
+                <ul class="row list-unstyled">
+                    
+                    <li class="col-xs-12 col-md-4">
+                        <label>悬挂：</label>
+                        <input id=""></input>
+                    </li>
+                    <li class="col-xs-12 col-md-4">
+                        <label>前悬挂形式：</label>
+                        <input id=""></input>
+                    </li>
+                    <li class="col-xs-12 col-md-4">
+                        <label>后悬挂形式：</label>
+                        <input id=""></input>
+                    </li>
+                    <li class="col-xs-12 col-md-4">
+                        <label>可变悬挂：</label>
+                        <input id=""></input>
+                    </li>
+                    <li class="col-xs-12 col-md-4">
+                            <label>发动机厂家型号：</label>
+                            <input id=""></input>
+                        </li>
+                        <li class="col-xs-12 col-md-4">
+                            <label>排量：</label>
+                            <input id=""></input>
+                        </li>
+                        <li class="col-xs-12 col-md-4">
+                            <label>进气形式：</label>
+                            <input id=""></input>
+                        </li>
+                        <li class="col-xs-12 col-md-4">
+                            <label>发动机功率：</label>
+                            <input id=""></input>
+                        </li>
+                        <li class="col-xs-12 col-md-4">
+                            <label>发动机马力：</label>
+                            <input id=""></input>
+                        </li>
+                        <li class="col-xs-12 col-md-4">
+                            <label>发动机扭矩：</label>
+                            <input id=""></input>
+                        </li>
+
+                        <li class="col-xs-12 col-md-4">
+                            <label>缸体材料：</label>
+                            <input id=""></input>
+                        </li>
+                        <li class="col-xs-12 col-md-4">
+                            <label>缸盖材料：</label>
+                            <input id=""></input>
+                        </li>
+
+                        <li class="col-xs-12 col-md-4">
+                                <label>档位数：</label>
+                                <input id=""></input>
+                            </li>
+                            <li class="col-xs-12 col-md-4">
+                                <label>变速箱：</label>
+                                <input id=""></input>
+                            </li>
+                            <li class="col-xs-12 col-md-4">
+                                <label>驱动方式：</label>
+                                <input id=""></input>
+                            </li>
+                            <li class="col-xs-12 col-md-4">
+                                    <label>燃油及标号：</label>
+                                    <input id=""></input>
+                                </li>
+                                <li class="col-xs-12 col-md-4">
+                                    <label>环保标准：</label>
+                                    <input id=""></input>
+                                </li>
+                                <li class="col-xs-12 col-md-4">
+                                    <label>官方油耗(L)：</label>
+                                    <input id=""></input>
+                                </li>
+                                
+        
+                                <li class="col-xs-12 col-md-4">
+                                    <label>油箱容积(L)：(L)：</label>
+                                    <input id=""></input>
+                                </li>
+                </ul>
+
+                <h2 class="Detailscontext-SubTitle">轮胎</h2>
+                <ul class="row list-unstyled">
+                    <li class="col-xs-12 col-md-4">
+                        <label>前轮胎规格：</label>
+                        <input id=""></input>
+                    </li>
+                    <li class="col-xs-12 col-md-4">
+                        <label>后轮胎规格：</label>
+                        <input id=""></input>
+                    </li>
+                    <li class="col-xs-12 col-md-4">
+                        <label>备胎规格：</label>
+                        <input id=""></input>
+                    </li>
+                    <li class="col-xs-12 col-md-4">
+                        <label>铝合金轮毂：</label>
+                        <input id=""></input>
+                    </li>
+
+                    <li class="col-xs-12 col-md-4">
+                        <label>胎压监测系统：</label>
+                        <input id=""></input>
+                    </li>
+
+
+                </ul>
+
+
+                <div class="DetailsContext-Title">驾驶室</div>
+
+                <h2 class="Detailscontext-SubTitle">方向盘</h2>
+                <ul class="row list-unstyled">
+
+                    <li class="col-xs-12 col-md-4">
+                        <label>多功能方向盘：</label>
+                        <input id=""></input>
+                    </li>
+
+                    <li class="col-xs-12 col-md-4">
+                        <label>方向盘调节：</label>
+                        <input id=""></input>
+                    </li>
+
+                    <li class="col-xs-12 col-md-4">
+                        <label>助力转向类型：</label>
+                        <input id=""></input>
+                    </li>
+
+                </ul>
+
+                <h2 class="Detailscontext-SubTitle">座椅</h2>
+                <ul class="row list-unstyled">
+                    <li class="col-xs-12 col-md-4">
+                        <label>皮质座椅：</label>
+                        <input id=""></input>
+                    </li>
+                    <li class="col-xs-12 col-md-4">
+                        <label>织物/皮双拼座椅：</label>
+                        <input id=""></input>
+                    </li>
+                    <li class="col-xs-12 col-md-4">
+                        <label>方向盘调节：</label>
+                        <input id=""></input>
+                    </li>
+
+                    <li class="col-xs-12 col-md-4">
+                        <label>驾驶位座椅调节：</label>
+                        <input id=""></input>
+                    </li>
+                    <li class="col-xs-12 col-md-4">
+                        <label>副驾驶位座椅调节：</label>
+                        <input id=""></input>
+                    </li>
+                    <li class="col-xs-12 col-md-4">
+                        <label>第二排座椅调节：</label>
+                        <input id=""></input>
+                    </li>
+
+                    <li class="col-xs-12 col-md-4">
+                        <label>座椅高低调节：</label>
+                        <input id=""></input>
+                    </li>
+
+                    <li class="col-xs-12 col-md-4">
+                        <label>座椅通风：</label>
+                        <input id=""></input>
+                    </li>
+                    <li class="col-xs-12 col-md-4">
+                        <label>前排座椅加热：</label>
+                        <input id=""></input>
+                    </li>
+                </ul>
+
+                <h2 class="Detailscontext-SubTitle">多媒体</h2>
+                <ul class="row list-unstyled">
+                    <li class="col-xs-12 col-md-4"><label>音箱品牌：</label><input id=""></input></li>
+                    <li class="col-xs-12 col-md-4"><label>扬声器数量：</label><input id=""></input></li>
+                    <li class="col-xs-12 col-md-4"><label>车载电视：</label><input id=""></input></li>
+                    <li class="col-xs-12 col-md-4"><label>车载蓝牙：</label><input id=""></input></li>
+                </ul>
+
+                <h2 class="Detailscontext-SubTitle">安全气囊</h2>
+                <ul class="row list-unstyled">
+                    <li class="col-xs-12 col-md-4"><label>驾驶位安全气囊：</label><input id=""></input></li>
+                    <li class="col-xs-12 col-md-4"><label>副驾驶位安全气囊：</label><input id=""></input></li>
+                </ul>
+
+                <h2 class="Detailscontext-SubTitle">空调</h2>
+                <ul class="row list-unstyled">
+                    <li class="col-xs-12 col-md-4"><label>空调类型：</label><input id=""></input></li>
+                    <li class="col-xs-12 col-md-4"><label>后排空调出风口：</label><input id=""></input></li>
+                    <li class="col-xs-12 col-md-4"><label>车内空气净化：</label><input id=""></input></li>
+                </ul>
+
+                <div class="DetailsContext-Title">驾驶辅助</div>
+                <h2 class="Detailscontext-SubTitle">安全类配置</h2>
+                <ul class="row list-unstyled">
+                    <li class="col-xs-12 col-md-4"><label>倒车雷达：</label><input id=""></input></li>
+                    <li class="col-xs-12 col-md-4"><label>并线辅助：</label><input id=""></input></li>
+                    <li class="col-xs-12 col-md-4"><label>自适应巡航：</label><input id=""></input></li>
+                    <li class="col-xs-12 col-md-4"><label>全景摄像头：</label><input id=""></input></li>
+                    <li class="col-xs-12 col-md-4"><label>倒车影像：</label><input id=""></input></li>
+                    <li class="col-xs-12 col-md-4"><label>GPS导航：</label><input id=""></input></li>
+                    <li class="col-xs-12 col-md-4"><label>定速巡航：</label><input id=""></input></li>
+                    <li class="col-xs-12 col-md-4"><label>无钥匙启动：</label><input id=""></input></li>
+                </ul>
+
+
+
+
+                <div class="DetailsContext-Title">房车</div>
+
+                <h2 class="Detailscontext-SubTitle">会客区</h2>
+                <ul class="row list-unstyled">
+
+                    <li class="col-xs-12 col-md-4"><label>沙发座位数：</label><input id=""></input></li>
+                    <li class="col-xs-12 col-md-4"><label>行驶可乘坐人数：</label><input id=""></input></li>
+                    <li class="col-xs-12 col-md-4"><label>沙发材质：</label><input id=""></input></li>
+                    <li class="col-xs-12 col-md-4"><label>沙发床：</label><input id=""></input></li>
+                    <li class="col-xs-12 col-md-4"><label>升降桌：</label><input id=""></input></li>
+                </ul>
+                <h2 class="Detailscontext-SubTitle">厨房</h2>
+                <ul class="row list-unstyled">
+                    <li class="col-xs-12 col-md-4"><label>房车专用抽油烟机：</label><input id=""></input></li>
+                    <li class="col-xs-12 col-md-4"><label>房车专用冰箱：</label><input id=""></input></li>
+                    <li class="col-xs-12 col-md-4"><label>冰箱容积：</label><input id=""></input></li>
+                    <li class="col-xs-12 col-md-4"><label>冰箱类型：</label><input id=""></input></li>
+                    <li class="col-xs-12 col-md-4"><label>洗菜池：</label><input id=""></input></li>
+                    <li class="col-xs-12 col-md-4"><label>水龙头冷热水可调：</label><input id=""></input></li>
+                    <li class="col-xs-12 col-md-4"><label>电磁炉：</label><input id=""></input></li>
+                    <li class="col-xs-12 col-md-4"><label>烤箱：</label><input id=""></input></li>
+                    <li class="col-xs-12 col-md-4"><label>微波炉：</label><input id=""></input></li>
+                    <li class="col-xs-12 col-md-4"><label>洗碗机：</label><input id=""></input></li>
+                    <li class="col-xs-12 col-md-4"><label>燃气罐数量：</label><input id=""></input></li>
+                    <li class="col-xs-12 col-md-4"><label>燃气罐容积：</label><input id=""></input></li>
+                </ul>
+                <h2 class="Detailscontext-SubTitle">床位</h2>
+                <ul class="row list-unstyled">
+                    <li class="col-xs-12 col-md-4"><label>单人床数量：</label><input id=""></input></li>
+                    <li class="col-xs-12 col-md-4"><label>单人床尺寸：</label><input id=""></input></li>
+                    <li class="col-xs-12 col-md-4"><label>双人床尺寸：</label><input id=""></input></li>
+                    <li class="col-xs-12 col-md-4"><label>双人床数量：</label><input id=""></input></li>
+                    <li class="col-xs-12 col-md-4"><label>总床位数：</label><input id=""></input></li>
+                </ul>
+                <h2 class="Detailscontext-SubTitle">卫生间</h2>
+                <ul class="row list-unstyled">
+                    <li class="col-xs-12 col-md-4"><label>卫生间：</label><input id=""></input></li>
+                    <li class="col-xs-12 col-md-4"><label>卫生间形式：</label><input id=""></input></li>
+                    <li class="col-xs-12 col-md-4"><label>淋浴器：</label><input id=""></input></li>
+                    <li class="col-xs-12 col-md-4"><label>坐便器：</label><input id=""></input></li>
+                    <li class="col-xs-12 col-md-4"><label>卫生间洗手池：</label><input id=""></input></li>
+                    <li class="col-xs-12 col-md-4"><label>暖风出口：</label><input id=""></input></li>
+                    <li class="col-xs-12 col-md-4"><label>换气扇：</label><input id=""></input></li>
+                    <li class="col-xs-12 col-md-4"><label>热水器：</label><input id=""></input></li>
+                    <li class="col-xs-12 col-md-4"><label>热水器类型：</label><input id=""></input></li>
+                    <li class="col-xs-12 col-md-4"><label>洗衣机：</label><input id=""></input></li>
+                </ul>
+                <h2 class="Detailscontext-SubTitle">供电系统</h2>
+                <ul class="row list-unstyled">
+                    <li class="col-xs-12 col-md-4"><label>太阳能电池板：</label><input id=""></input></li>
+                    <li class="col-xs-12 col-md-4"><label>太阳能电池板发电量：</label><input id=""></input></li>
+                    <li class="col-xs-12 col-md-4"><label>发电机：</label><input id=""></input></li>
+                    <li class="col-xs-12 col-md-4"><label>发电机类型：</label><input id=""></input></li>
+                    <li class="col-xs-12 col-md-4"><label>逆变器：</label><input id=""></input></li>
+                    <li class="col-xs-12 col-md-4"><label>逆变器功率：</label><input id=""></input></li>
+                    <li class="col-xs-12 col-md-4"><label>中央控制面板：</label><input id=""></input></li>
+                    <li class="col-xs-12 col-md-4"><label>电瓶数量：</label><input id=""></input></li>
+                    <li class="col-xs-12 col-md-4"><label>电瓶电量：</label><input id=""></input></li>
+                </ul>
+                <h2 class="Detailscontext-SubTitle">供水系统</h2>
+                <ul class="row list-unstyled">
+                    <li class="col-xs-12 col-md-4"><label>房车专用水泵：</label><input id=""></input></li>
+                    <li class="col-xs-12 col-md-4"><label>净水箱容积：</label><input id=""></input></li>
+                    <li class="col-xs-12 col-md-4"><label>黑水箱容积：</label><input id=""></input></li>
+                    <li class="col-xs-12 col-md-4"><label>灰水箱容积：</label><input id=""></input></li>
+                    <li class="col-xs-12 col-md-4"><label>排污方式：</label><input id=""></input></li>
+                    <li class="col-xs-12 col-md-4"><label>饮水净化系统：</label><input id=""></input></li>
+                </ul>
+                <h2 class="Detailscontext-SubTitle">娱乐系统</h2>
+                <ul class="row list-unstyled">
+                    <li class="col-xs-12 col-md-4"><label>车载Wifi：</label><input id=""></input></li>
+                    <li class="col-xs-12 col-md-4"><label>卫星天线：</label><input id=""></input></li>
+                    <li class="col-xs-12 col-md-4"><label>车载电视：</label><input id=""></input></li>
+                    <li class="col-xs-12 col-md-4"><label>车载KTV：</label><input id=""></input></li>
+                    <li class="col-xs-12 col-md-4"><label>DVD机头：</label><input id=""></input></li>
+                    <li class="col-xs-12 col-md-4"><label>车载音响：</label><input id=""></input></li>
+                    <li class="col-xs-12 col-md-4"><label>音响数量：</label><input id=""></input></li>
+                </ul>
+                <h2 class="Detailscontext-SubTitle">温度控制系统</h2>
+                <ul class="row list-unstyled">
+                    <li class="col-xs-12 col-md-4"><label>驻车燃油加热系统：</label><input id=""></input></li>
+                    <li class="col-xs-12 col-md-4"><label>房车专用空调：</label><input id=""></input></li>
+                    <li class="col-xs-12 col-md-4"><label>空调形式：</label><input id=""></input></li>
+                    <li class="col-xs-12 col-md-4"><label>燃气暖风系统：</label><input id=""></input></li>
+                </ul>
+                <h2 class="Detailscontext-SubTitle">安全系统</h2>
+                <ul class="row list-unstyled">
+                    <li class="col-xs-12 col-md-4"><label>烟雾报警器：</label><input id=""></input></li>
+                    <li class="col-xs-12 col-md-4"><label>煤气报警器：</label><input id=""></input></li>
+                    <li class="col-xs-12 col-md-4"><label>一氧化碳报警器：</label><input id=""></input></li>
+                </ul>
+            </div>
+      </div>
+  </div>
+
+
+</div>
+
+  
+
+{% endblock %}
