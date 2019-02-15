@@ -40,14 +40,35 @@
                         </li>
                 </ul>
 
-                <h2 class="Detailscontext-SubTitle">车辆信息</h2>
-                <div class="col-xs-12 col-md-12">
-                        <label>车辆介绍：</label>
-                        <textarea rows="3" cols="50" id=""></textarea>
-                </div>
+                <h2 class="Detailscontext-SubTitle">车辆介绍</h2>
+                <ul class="row list-unstyled">
+                    <li class="col-xs-12 col-md-12" style="display:flex">
+                        <textarea rows="7" cols="200" id=""></textarea>
+                    </li>
+                </ul>
 
+                <h2 class="Detailscontext-SubTitle">车辆图片</h2>
+                <ul class="row list-unstyled">
+                    <li class="col-xs-12 col-md-12">
+                        <h4>标题图片（仅上传一张）</h4>
+                            <form action="/cars-titleImage" method="post" enctype="multipart/form-data">
+                                <input type="file" name="file"/>
+                                <input type="submit" value="ok"/>
+                            </form>
+                    </li>
+
+                    <li class="col-xs-12 col-md-12">
+                        <h4>展示图片</h4>
+                            <form action="/cars-titleImage" method="post" enctype="multipart/form-data">
+                                <input type="file" name="file"/>
+                                <input type="file" name="file"/>
+                                <input type="file" name="file"/>
+                                <input type="file" name="file"/>
+                                <input type="submit" value="ok"/>
+                            </form>
+                    </li>
+                </ul>
                 
-
 
 
 
