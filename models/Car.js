@@ -5,15 +5,15 @@ module.exports = db.defineModel('Cars', {
     carLogo:db.STRING(20),
     carTitle1:db.STRING(20),
     carTitle2:db.TEXT,
-    carPriceMin:db.DOUBLE, //最小价格
-    carPriceMax:db.DOUBLE, //最大价格
+    carPriceMin:db.STRING(20), //最小价格
+    carPriceMax:db.STRING(20), //最大价格
     carChexingjiegou:db.STRING(20),
     carDipanleixing:db.STRING(20),
     carZhunjialeixing:db.STRING(20),
     carZuoweishu:db.STRING(20),
     carChechang:db.STRING(20),
     carChekuang:db.STRING(20),
-    carCheGao:db.STRING(20),
+    carChegao:db.STRING(20),
     carZhouju:db.STRING(20),
     carQianlunju:db.STRING(20),
     carHoulunju:db.STRING(20),
@@ -21,7 +21,7 @@ module.exports = db.defineModel('Cars', {
     carZhengbeizhiliang:db.STRING(20),
     carJiejinjiao:db.STRING(20),
     carLiqujiao:db.STRING(20),
-    carXuanGua:db.STRING(20),
+    carXuangua:db.STRING(20),
     carQianxuanguaxingshi:db.STRING(20),
     carHouxuanguaxingshi:db.STRING(20),
     carKebianxuangua:db.STRING(20),
@@ -50,7 +50,6 @@ module.exports = db.defineModel('Cars', {
     carZhulizhuanxiangleixing:db.STRING(20),
     carPizhizuoyi:db.STRING(20),
     carZhiwupishuangpingzuoyi:db.STRING(20),
-    carFangxiangpantiaojie:db.STRING(20),
     carJiashiweizuoyitiaojie:db.STRING(20),
     carFujiashiweizuoyitiaojie:db.STRING(20),
     carDierpaizuoyitiaojie:db.STRING(20),
@@ -135,7 +134,7 @@ module.exports = db.defineModel('Cars', {
     carYanwubaojingxi:db.STRING(20),
     carMeiqibaojingqi:db.STRING(20),
     carYiyanghuatanbaojingqi:db.STRING(20),
-
-
+    carTitleImage:db.STRING(20),
+    carMoreImage:db.STRING(50),
 
 });

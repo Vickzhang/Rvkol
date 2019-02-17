@@ -10,6 +10,11 @@ const isProduction = process.env.NODE_ENV === 'production';
 
 //导入调用Nunjucks
 const templating = require('./templating.js');
+//导入koaBody
+const koaBody = require('koa-body');
+
+
+
 
 //=============================================================================
 
@@ -28,8 +33,13 @@ app.use(async (ctx, next) => {
     execTime = new Date().getTime() - start;
     ctx.response.set('X-Response-Time', `${execTime}ms`);
 });
-
-
+//使用koabody模块
+app.use(koaBody({
+    multipart: true, 
+    formidable: {
+      maxFileSize: 200*1024*1024 // 设置上传文件大小最大限制，默认2M
+    } 
+  }));
 
 //静态文件
 if (true) {

@@ -29,23 +29,26 @@
             </tr>
           </thead>
           <tbody>
+              {% for f in data %}
             <tr>
-              <th scope="row">0001</th>
-              <td>君威</td>
-              <td>别克</td>
-              <td>2018-1-1</td>
+              <th scope="row">{{f.carID}}</th>
+              <td>{{f.carTitle1}}</td>
+              <td>{{f.carLogo}}</td>
+              <td>{{f.createdAt}}</td>
               <td>
                 <div role="presentation" class="dropdown">
                   <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                     操作 <span class="caret"></span>
                   </button>
                   <ul class="dropdown-menu">
+                      <li><a href="">浏览</a></li>
                     <li><a href="">编辑</a></li>
                     <li><a href="">删除</a></li>
                   </ul>
                 </div>
               </td>
             </tr>
+            {% endfor %}
           </tbody>
         </table>
         <nav class="pull-right">

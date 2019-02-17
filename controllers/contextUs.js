@@ -4,15 +4,11 @@ module.exports={
             userName: ctx.request.body.userName,
             connection: ctx.request.body.connection,
             targetCar:ctx.request.body.targetCar,
-            createTime: Date.now(),
           }
         
         //数据库操作
         const model = require('../model');
-
         let RVUser = model.RVuser;
-
-
         (async () => {
             var RVuser = await RVUser.create({
                 userName: user.userName,
