@@ -1,17 +1,17 @@
-$(function(){
-	/** 验证文件是否导入成功  */
-	$("#form1").ajaxForm(function(data){  
+$(function () {
+    /** 验证文件是否导入成功  */
+    $("#form1").ajaxForm(function (data) {
         var oDiv = document.getElementById("carTitleimage");
         oDiv.innerText = data.titleFileName;
-	});     
+    });
 });
 
-$(function(){
-	/** 验证文件是否导入成功  */
-	$("#form2").ajaxForm(function(data){  
+$(function () {
+    /** 验证文件是否导入成功  */
+    $("#form2").ajaxForm(function (data) {
         var oDiv = document.getElementById("carMoreimage");
         oDiv.innerText = data.moreFileName;
-	});
+    });
 });
 
 var saveButton = $('#save').click(() => {
@@ -22,26 +22,25 @@ var saveButton = $('#save').click(() => {
         dataType: 'json',
         data: {
             carID: $('#carID').val(),
-            carLogo:  $('#carLogo').val(),
+            carLogo: $('#carLogo').val(),
             carTitle1: $('#carTitle1').val(),
-            carTitle2:  $('#carTitle2').val(),
-            carPriceMin:  $('#carPriceMin').val(),
-            carPriceMax:  $('#carPriceMax').val(),
+            carTitle2: $('#carTitle2').val(),
+            carPriceMin: $('#carPriceMin').val(),
+            carPriceMax: $('#carPriceMax').val(),
             carChexingjiegou: $('#carChexingjiegou').val(),
-            carDipanleixing:  $('#carDipanleixing').val(),
-            carZhunjialeixing:  $('#carZhunjialeixing').val(),
-            carZuoweishu:  $('#carZuoweishu').val(),
-            carChechang:  $('#carChechang').val(),
-            carChekuang:  $('#carChekuang').val(),
-            carChegao:  $('#carChegao').val(),
-            carZhouju:  $('#carZhouju').val(),
-            carQianlunju:  $('#carQianlunju').val(),
-            carHoulunju:  $('#carHoulunju').val(),
+            carDipanleixing: $('#carDipanleixing').val(),
+            carZhunjialeixing: $('#carZhunjialeixing').val(),
+            carZuoweishu: $('#carZuoweishu').val(),
+            carChechang: $('#carChechang').val(),
+            carChekuang: $('#carChekuang').val(),
+            carChegao: $('#carChegao').val(),
+            carZhouju: $('#carZhouju').val(),
+            carQianlunju: $('#carQianlunju').val(),
+            carHoulunju: $('#carHoulunju').val(),
             carZuixiaolidijianxi: $('#carZuixiaolidijianxi').val(),
             carZhengbeizhiliang: $('#carZhengbeizhiliang').val(),
             carJiejinjiao: $('#carJiejinjiao').val(),
             carLiqujiao: $('#carLiqujiao').val(),
-            carXuanGua: $('#carXuangua').val(),
             carQianxuanguaxingshi: $('#carQianxuanguaxingshi').val(),
             carHouxuanguaxingshi: $('#carHouxuanguaxingshi').val(),
             carKebianxuangua: $('#carKebianxuangua').val(),
@@ -51,8 +50,6 @@ var saveButton = $('#save').click(() => {
             carFadongjigonglv: $('#carFadongjigonglv').val(),
             carFadongjimali: $('#carFadongjimali').val(),
             carFadongjiniuju: $('#carFadongjiniuju').val(),
-            carGangticailiao: $('#carGangticailiao').val(),
-            carGanggaicailiao: $('#carGanggaicailiao').val(),
             carDangweishu: $('#carDangweishu').val(),
             carBiansuxiang: $('#carBiansuxiang').val(),
             carQudongfangshi: $('#carQudongfangshi').val(),
@@ -65,6 +62,18 @@ var saveButton = $('#save').click(() => {
             carBeitaiguige: $('#carBeitaiguige').val(),
             carLvhejinlungu: $('#carLvhejinlungu').val(),
             carTaiyajiancexitong: $('#carTaiyajiancexitong').val(),
+            carWaizhichufang: $('#carWaizhichufang').val(),
+            carWaizhilinyu: $('#carWaizhilinyu').val(),
+            carWaizhidianshi: $('#carWaizhidianshi').val(),
+            carZheyangpeng: $('#carZheyangpeng').val(),
+            carDiandongtabu: $('#carDiandongtabu').val(),
+            carShiwaideng: $('#carShiwaideng').val(),
+            carPati: $('#carPati').val(),
+            carZixingchejia: $('#carZixingchejia').val(),
+            carTuochegou: $('#carTuochegou').val(),
+            carChuwugui: $('#carChuwugui').val(),
+            carTuozhancang: $('#carTuozhancang').val(),
+            carQita: $('#carQita').val(),
             carDuogongnengfangxiangpan: $('#carDuogongnengfangxiangpan').val(),
             carFangxiangpantiaojie: $('#carFangxiangpantiaojie').val(),
             carZhulizhuanxiangleixing: $('#carZhulizhuanxiangleixing').val(),

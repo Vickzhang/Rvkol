@@ -21,6 +21,7 @@
                     </div>
                     <div class="caption col-md-7">
                         <h1 class="Detail-biaoti1">{{data[0].carTitle1}}</h1>
+                        <h3>房车品牌：{{data[0].carLogo}}&nbsp;&nbsp;&nbsp; 参考价格：{{data[0].carPriceMin}}-{{data[0].carPriceMin}}</h3>
                         <p id=text_desc_p class="Detail-biaoti2">
                             {{data[0].carTitle2}}
                         </p>
@@ -124,11 +125,8 @@
 
                     <h2 class="Detailscontext-SubTitle">底盘参数/动力/燃油/驱动</h2>
                     <ul class="row list-unstyled">
-                        
-                        <li class="col-xs-12 col-md-4">
-                            <label>悬挂：</label>
-                            <span>无</span>
-                        </li>
+
+
                         <li class="col-xs-12 col-md-4">
                             <label>前悬挂形式：</label>
                             <span>麦弗逊式悬挂 </span>
@@ -142,69 +140,61 @@
                             <span>无</span>
                         </li>
                         <li class="col-xs-12 col-md-4">
-                                <label>发动机厂家型号：</label>
-                                <span>上柴SC25R</span>
-                            </li>
-                            <li class="col-xs-12 col-md-4">
-                                <label>排量：</label>
-                                <span>2.5T</span>
-                            </li>
-                            <li class="col-xs-12 col-md-4">
-                                <label>进气形式：</label>
-                                <span>涡轮增压</span>
-                            </li>
-                            <li class="col-xs-12 col-md-4">
-                                <label>发动机功率：</label>
-                                <span>100</span>
-                            </li>
-                            <li class="col-xs-12 col-md-4">
-                                <label>发动机马力：</label>
-                                <span>136</span>
-                            </li>
-                            <li class="col-xs-12 col-md-4">
-                                <label>发动机扭矩：</label>
-                                <span>330</span>
-                            </li>
-    
-                            <li class="col-xs-12 col-md-4">
-                                <label>缸体材料：</label>
-                                <span>铝合金</span>
-                            </li>
-                            <li class="col-xs-12 col-md-4">
-                                <label>缸盖材料：</label>
-                                <span>铸铁</span>
-                            </li>
+                            <label>发动机厂家型号：</label>
+                            <span>上柴SC25R</span>
+                        </li>
+                        <li class="col-xs-12 col-md-4">
+                            <label>排量：</label>
+                            <span>2.5T</span>
+                        </li>
+                        <li class="col-xs-12 col-md-4">
+                            <label>进气形式：</label>
+                            <span>涡轮增压</span>
+                        </li>
+                        <li class="col-xs-12 col-md-4">
+                            <label>发动机功率：</label>
+                            <span>100</span>
+                        </li>
+                        <li class="col-xs-12 col-md-4">
+                            <label>发动机马力：</label>
+                            <span>136</span>
+                        </li>
+                        <li class="col-xs-12 col-md-4">
+                            <label>发动机扭矩：</label>
+                            <span>330</span>
+                        </li>
 
-                            <li class="col-xs-12 col-md-4">
-                                    <label>档位数：</label>
-                                    <span>6档</span>
-                                </li>
-                                <li class="col-xs-12 col-md-4">
-                                    <label>变速箱：</label>
-                                    <span>手自一体</span>
-                                </li>
-                                <li class="col-xs-12 col-md-4">
-                                    <label>驱动方式：</label>
-                                    <span>前置前驱</span>
-                                </li>
-                                <li class="col-xs-12 col-md-4">
-                                        <label>燃油及标号：</label>
-                                        <span>#0柴油</span>
-                                    </li>
-                                    <li class="col-xs-12 col-md-4">
-                                        <label>环保标准：</label>
-                                        <span>国V</span>
-                                    </li>
-                                    <li class="col-xs-12 col-md-4">
-                                        <label>官方油耗(L)：</label>
-                                        <span>-</span>
-                                    </li>
-                                    
-            
-                                    <li class="col-xs-12 col-md-4">
-                                        <label>油箱容积(L)：(L)：</label>
-                                        <span>80L</span>
-                                    </li>
+
+                        <li class="col-xs-12 col-md-4">
+                            <label>档位数：</label>
+                            <span>6档</span>
+                        </li>
+                        <li class="col-xs-12 col-md-4">
+                            <label>变速箱：</label>
+                            <span>手自一体</span>
+                        </li>
+                        <li class="col-xs-12 col-md-4">
+                            <label>驱动方式：</label>
+                            <span>前置前驱</span>
+                        </li>
+                        <li class="col-xs-12 col-md-4">
+                            <label>燃油及标号：</label>
+                            <span>#0柴油</span>
+                        </li>
+                        <li class="col-xs-12 col-md-4">
+                            <label>环保标准：</label>
+                            <span>国V</span>
+                        </li>
+                        <li class="col-xs-12 col-md-4">
+                            <label>官方油耗(L)：</label>
+                            <span>-</span>
+                        </li>
+
+
+                        <li class="col-xs-12 col-md-4">
+                            <label>油箱容积(L)：(L)：</label>
+                            <span>80L</span>
+                        </li>
                     </ul>
 
                     <h2 class="Detailscontext-SubTitle">轮胎</h2>
@@ -234,6 +224,61 @@
 
                     </ul>
 
+                    <h2 class="Detailscontext-SubTitle">车外配置</h2>
+                    <ul class="row list-unstyled">
+                        <li class="col-xs-12 col-md-4">
+                            <label>外置厨房：</label>
+                            <span>215/75 R16</span>
+                        </li>
+                        <li class="col-xs-12 col-md-4">
+                            <label>外置淋浴：</label>
+                            <span>215/75 R16</span>
+                        </li>
+                        <li class="col-xs-12 col-md-4">
+                            <label>外置电视：</label>
+                            <span>全尺寸</span>
+                        </li>
+                        <li class="col-xs-12 col-md-4">
+                            <label>遮阳篷：</label>
+                            <span>选装</span>
+                        </li>
+
+                        <li class="col-xs-12 col-md-4">
+                            <label>电动踏步：</label>
+                            <span>无</span>
+                        </li>
+
+                        <li class="col-xs-12 col-md-4">
+                            <label>室外灯：</label>
+                            <span>无</span>
+                        </li>
+                        <li class="col-xs-12 col-md-4">
+                            <label>爬梯：</label>
+                            <span>无</span>
+                        </li>
+                        <li class="col-xs-12 col-md-4">
+                            <label>自行车架：</label>
+                            <span>无</span>
+                        </li>
+                        <li class="col-xs-12 col-md-4">
+                            <label>拖车钩：</label>
+                            <span>无</span>
+                        </li>
+                        <li class="col-xs-12 col-md-4">
+                            <label>储物柜：</label>
+                            <span>无</span>
+                        </li>
+                        <li class="col-xs-12 col-md-4">
+                                <label>拓展仓：</label>
+                                <span>无</span>
+                            </li>
+                        <li class="col-xs-12 col-md-4">
+                            <label>其他：</label>
+                            <span>无</span>
+                        </li>
+
+
+                    </ul>
 
                     <div class="DetailsContext-Title">驾驶室</div>
 
@@ -321,7 +366,6 @@
                         <li class="col-xs-12 col-md-4"><label>车内空气净化：</label><span>无</span></li>
                     </ul>
 
-                    <div class="DetailsContext-Title">驾驶辅助</div>
                     <h2 class="Detailscontext-SubTitle">安全类配置</h2>
                     <ul class="row list-unstyled">
                         <li class="col-xs-12 col-md-4"><label>倒车雷达：</label><span>无</span></li>
@@ -337,8 +381,8 @@
 
 
 
-                    <div class="DetailsContext-Title">房车</div>
-  
+                    <div class="DetailsContext-Title">生活区</div>
+
                     <h2 class="Detailscontext-SubTitle">会客区</h2>
                     <ul class="row list-unstyled">
 
@@ -434,75 +478,74 @@
             <div id="DetailsVideo" class="tab-pane fade Detail-show">
 
                 <div class="row">
-                        <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h3 class="panel-title"><span class="glyphicon glyphicon-hd-video"></span>房车文章|车型视频</h3>
-                                </div>
-                                <div class="panel-body">
-                                    <video width="100%" controls="controls">
-                                        <source src="http://vjs.zencdn.net/v/oceans.mp4">
-                                    </video>
-                                </div>
-                            </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title"><span class="glyphicon glyphicon-hd-video"></span>房车文章|车型视频</h3>
+                        </div>
+                        <div class="panel-body">
+                            <video width="100%" controls="controls">
+                                <source src="http://vjs.zencdn.net/v/oceans.mp4">
+                            </video>
+                        </div>
+                    </div>
                 </div>
 
             </div>
 
 
             <div id="DetailsContact" class="tab-pane fade Detail-show">
-                    <div class="row">
-                            <div id="contact" class="col-md-10 col-md-offset-1">
-                                    <div class="lvjing">
-                                        <div class="container">
-                                            <div class="row">
-                                                <div class="col-md-5">
-                                                    <h2>
-                                                        <span class="glyphicon glyphicon-send"></span>
-                                                        &nbsp
-                                                        联系我们
-                                                    </h2>
-                                                    <p>房车情报提供最新最全的房车信息，简单直接，给您想要的信息。我们提供最优质的咨询服务，帮助您有最优惠的价格买到最合适的车型。</p>
-                                                    <address>
-                                                        <p><span class="glyphicon glyphicon-home"></span>&nbsp地址：北京市房山区天星院1号</p>
-                                                        <p><span class="glyphicon glyphicon-phone-alt"></span>&nbsp联系电话：010-61351861</p>
-                                                        <p><span class="glyphicon glyphicon-envelope"></span>&nbsp邮箱：2629135340@qq.com</p>
-                                                    </address>
-                                                </div>
-                                                <div class="col-md-5">
-                                                    <form action="/contextUs" method="POST">
-                                                        <div class="col-md-6">
-                                                            <input type="text" class="form-control" placeholder="您的姓名" />
-                                                        </div>
-                                                        <div class="col-md-6">
-                                                            <input type="text" class="form-control" placeholder="您的联系方式" />
-                                                        </div>
-                                                        <div class="col-md-12">
-                                                            <input type="text" class="form-control" placeholder="标题" />
-                                                        </div>
-                                                        <div class="col-md-12">
-                                                            <textarea class="form-control" placeholder="留言内容" rows="4"></textarea>
-                                                              
-                                                        </div>
-                                                        <div class="col-md-8">
-                                                            <input type="submit" class="form-control" value="提交">
-                                                        </div>
-                                                    </form>
-                            
-                                                </div>
-                                            </div>
-                            
-                                        </div>
-                            
-                                        
+                <div class="row">
+                    <div id="contact" class="col-md-10 col-md-offset-1">
+                        <div class="lvjing">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <h2>
+                                            <span class="glyphicon glyphicon-send"></span>
+                                            &nbsp 联系我们
+                                        </h2>
+                                        <p>房车情报提供最新最全的房车信息，简单直接，给您想要的信息。我们提供最优质的咨询服务，帮助您有最优惠的价格买到最合适的车型。</p>
+                                        <address>
+                                            <p><span class="glyphicon glyphicon-home"></span>&nbsp地址：北京市房山区天星院1号</p>
+                                            <p><span class="glyphicon glyphicon-phone-alt"></span>&nbsp联系电话：010-61351861</p>
+                                            <p><span class="glyphicon glyphicon-envelope"></span>&nbsp邮箱：2629135340@qq.com</p>
+                                        </address>
                                     </div>
-                            
-                            
-                            
-                            
+                                    <div class="col-md-5">
+                                        <form action="/contextUs" method="POST">
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control" placeholder="您的姓名" />
+                                            </div>
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control" placeholder="您的联系方式" />
+                                            </div>
+                                            <div class="col-md-12">
+                                                <input type="text" class="form-control" placeholder="标题" />
+                                            </div>
+                                            <div class="col-md-12">
+                                                <textarea class="form-control" placeholder="留言内容" rows="4"></textarea>
+
+                                            </div>
+                                            <div class="col-md-8">
+                                                <input type="submit" class="form-control" value="提交">
+                                            </div>
+                                        </form>
+
+                                    </div>
+                                </div>
+
                             </div>
-            
-            
+
+
+                        </div>
+
+
+
+
                     </div>
+
+
+                </div>
             </div>
         </div>
     </div>

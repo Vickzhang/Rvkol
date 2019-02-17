@@ -2,15 +2,15 @@
 
 <div class="container">
 
-        <nav class="navbar navbar-DetailTab">
-                <ul class="nav list-unstyled list-inline">
-                        <li class=" col-xs-6 col-md-3"><a href="/cars-dashbord" class="list-group-item">车型管理</a></li>
-                        <li class=" col-xs-6 col-md-3"><a href="/cars-add" class="list-group-item active">添加车型</a></li>
-                    </ul>
-        </nav>
+    <nav class="navbar navbar-DetailTab">
+        <ul class="nav list-unstyled list-inline">
+            <li class=" col-xs-6 col-md-3"><a href="/cars-dashbord" class="list-group-item">车型管理</a></li>
+            <li class=" col-xs-6 col-md-3"><a href="/cars-add" class="list-group-item active">添加车型</a></li>
+        </ul>
+    </nav>
 
     <div class="row">
-      <div class="col-md-12">
+        <div class="col-md-12">
             <div class="page-header">
                 <h1>添加车型</h1>
             </div>
@@ -18,29 +18,29 @@
                 <div class="DetailsContext-Title">基础信息</div>
                 <h2 class="Detailscontext-SubTitle">车辆信息</h2>
                 <ul class="row list-unstyled">
-                        <li class="col-xs-12 col-md-4">
-                            <label>车型ID：</label>
-                            <input id="carID"></input>
-                        </li>
-                        <li class="col-xs-12 col-md-4">
-                                <label>车型名称：</label>
-                                <input id="carTitle1"></input>
-                        </li>
-                        <li class="col-xs-12 col-md-4">
-                                <label>生产厂家：</label>
-                                <input id="carLogo"></input>
-                        </li>
-                        <li class="col-xs-12 col-md-4">
-                                <label>最低参考价格：</label>
-                                <input id="carPriceMin"></input>
-                        </li>
-                        <li class="col-xs-12 col-md-4">
-                                <label>最高参考价格：</label>
-                                <input id="carPriceMax"></input>
-                        </li>
+                    <li class="col-xs-12 col-md-4">
+                        <label>车型ID：</label>
+                        <input id="carID"></input>
+                    </li>
+                    <li class="col-xs-12 col-md-4">
+                        <label>车型名称：</label>
+                        <input id="carTitle1"></input>
+                    </li>
+                    <li class="col-xs-12 col-md-4">
+                        <label>车型品牌：</label>
+                        <input id="carLogo"></input>
+                    </li>
+                    <li class="col-xs-12 col-md-4">
+                        <label>最低参考价格：</label>
+                        <input id="carPriceMin"></input>
+                    </li>
+                    <li class="col-xs-12 col-md-4">
+                        <label>最高参考价格：</label>
+                        <input id="carPriceMax"></input>
+                    </li>
                 </ul>
 
-                <h2 class="Detailscontext-SubTitle">车辆介绍</h2>
+                <h2 class="Detailscontext-SubTitle">车辆介绍(每一条请以句号结尾，前端可以自动换行）</h2>
                 <ul class="row list-unstyled">
                     <li class="col-xs-12 col-md-12" style="display:flex">
                         <textarea rows="7" cols="200" id="carTitle2"></textarea>
@@ -50,28 +50,28 @@
                 <h2 class="Detailscontext-SubTitle">车辆图片</h2>
                 <ul class="row list-unstyled">
                     <li class="col-xs-12 col-md-12">
-                            <form id="form1" action="/cars-titleImage" method="post" enctype="multipart/form-data" target="frame1">
-                                <div class="form-group">
-                                        <h5 for="titleFile">封面图片(只能选择单张图片）</h5>
-                                        <input type="file" name="file" id="titleFile">
-                                        <span id="carTitleimage"></span>
-                                </div>
-                                
-                                <button type="submit" class="btn btn-primary">上传</button>
-                            </form>
+                        <form id="form1" action="/cars-titleImage" method="post" enctype="multipart/form-data" target="frame1">
+                            <div class="form-group">
+                                <h5 for="titleFile">封面图片(只能选择单张图片）</h5>
+                                <input type="file" name="file" id="titleFile">
+                                <span id="carTitleimage"></span>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">上传</button>
+                        </form>
                     </li>
 
                     <li class="col-xs-12 col-md-12">
-                            <form id="form2" action="/cars-moreImage" method="post" enctype="multipart/form-data" target="frame2">
+                        <form id="form2" action="/cars-moreImage" method="post" enctype="multipart/form-data" target="frame2">
 
-                                <div class="form-group">
-                                        <h5 for="morefiles">展示图片(可以同时选择多张图片）</h5>
-                                        <input type="file" name="file" id="morefile" multiple="multiple">
-                                        <span id="carMoreimage"></span>
-                                </div>
-                                
-                                <button type="submit" class="btn btn-primary">上传</button>
-                            </form>
+                            <div class="form-group">
+                                <h5 for="morefiles">展示图片(可以同时选择多张图片）</h5>
+                                <input type="file" name="file" id="morefile" multiple="multiple">
+                                <span id="carMoreimage"></span>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">上传</button>
+                        </form>
                     </li>
                 </ul>
 
@@ -136,11 +136,8 @@
 
                 <h2 class="Detailscontext-SubTitle">底盘参数/动力/燃油/驱动</h2>
                 <ul class="row list-unstyled">
-                    
-                    <li class="col-xs-12 col-md-4">
-                        <label>悬挂：</label>
-                        <input id="carXuangua"></input>
-                    </li>
+
+
                     <li class="col-xs-12 col-md-4">
                         <label>前悬挂形式：</label>
                         <input id="carQianxuanguaxingshi"></input>
@@ -154,69 +151,61 @@
                         <input id="carKebianxuangua"></input>
                     </li>
                     <li class="col-xs-12 col-md-4">
-                            <label>发动机厂家型号：</label>
-                            <input id="carFadongjichangjiaxinghao"></input>
-                        </li>
-                        <li class="col-xs-12 col-md-4">
-                            <label>排量：</label>
-                            <input id="carPailiang"></input>
-                        </li>
-                        <li class="col-xs-12 col-md-4">
-                            <label>进气形式：</label>
-                            <input id="carJinqixingshi"></input>
-                        </li>
-                        <li class="col-xs-12 col-md-4">
-                            <label>发动机功率：</label>
-                            <input id="carFadongjigonglv"></input>
-                        </li>
-                        <li class="col-xs-12 col-md-4">
-                            <label>发动机马力：</label>
-                            <input id="carFadongjimali"></input>
-                        </li>
-                        <li class="col-xs-12 col-md-4">
-                            <label>发动机扭矩：</label>
-                            <input id="carFadongjiniuju"></input>
-                        </li>
+                        <label>发动机厂家型号：</label>
+                        <input id="carFadongjichangjiaxinghao"></input>
+                    </li>
+                    <li class="col-xs-12 col-md-4">
+                        <label>排量：</label>
+                        <input id="carPailiang"></input>
+                    </li>
+                    <li class="col-xs-12 col-md-4">
+                        <label>进气形式：</label>
+                        <input id="carJinqixingshi"></input>
+                    </li>
+                    <li class="col-xs-12 col-md-4">
+                        <label>发动机功率：</label>
+                        <input id="carFadongjigonglv"></input>
+                    </li>
+                    <li class="col-xs-12 col-md-4">
+                        <label>发动机马力：</label>
+                        <input id="carFadongjimali"></input>
+                    </li>
+                    <li class="col-xs-12 col-md-4">
+                        <label>发动机扭矩：</label>
+                        <input id="carFadongjiniuju"></input>
+                    </li>
 
-                        <li class="col-xs-12 col-md-4">
-                            <label>缸体材料：</label>
-                            <input id="carGangticailiao"></input>
-                        </li>
-                        <li class="col-xs-12 col-md-4">
-                            <label>缸盖材料：</label>
-                            <input id="carGanggaicailiao"></input>
-                        </li>
 
-                        <li class="col-xs-12 col-md-4">
-                                <label>档位数：</label>
-                                <input id="carDangweishu"></input>
-                            </li>
-                            <li class="col-xs-12 col-md-4">
-                                <label>变速箱：</label>
-                                <input id="carBiansuxiang"></input>
-                            </li>
-                            <li class="col-xs-12 col-md-4">
-                                <label>驱动方式：</label>
-                                <input id="carQudongfangshi"></input>
-                            </li>
-                            <li class="col-xs-12 col-md-4">
-                                    <label>燃油及标号：</label>
-                                    <input id="carRanyoujibiaohao"></input>
-                                </li>
-                                <li class="col-xs-12 col-md-4">
-                                    <label>环保标准：</label>
-                                    <input id="carHuanbaobiaozhun"></input>
-                                </li>
-                                <li class="col-xs-12 col-md-4">
-                                    <label>官方油耗(L)：</label>
-                                    <input id="carGuanfangyouhao"></input>
-                                </li>
-                                
-        
-                                <li class="col-xs-12 col-md-4">
-                                    <label>油箱容积(L)：(L)：</label>
-                                    <input id="carYouxiangrongji"></input>
-                                </li>
+                    <li class="col-xs-12 col-md-4">
+                        <label>档位数：</label>
+                        <input id="carDangweishu"></input>
+                    </li>
+                    <li class="col-xs-12 col-md-4">
+                        <label>变速箱：</label>
+                        <input id="carBiansuxiang"></input>
+                    </li>
+                    <li class="col-xs-12 col-md-4">
+                        <label>驱动方式：</label>
+                        <input id="carQudongfangshi"></input>
+                    </li>
+                    <li class="col-xs-12 col-md-4">
+                        <label>燃油及标号：</label>
+                        <input id="carRanyoujibiaohao"></input>
+                    </li>
+                    <li class="col-xs-12 col-md-4">
+                        <label>环保标准：</label>
+                        <input id="carHuanbaobiaozhun"></input>
+                    </li>
+                    <li class="col-xs-12 col-md-4">
+                        <label>官方油耗(L)：</label>
+                        <input id="carGuanfangyouhao"></input>
+                    </li>
+
+
+                    <li class="col-xs-12 col-md-4">
+                        <label>油箱容积(L)：(L)：</label>
+                        <input id="carYouxiangrongji"></input>
+                    </li>
                 </ul>
 
                 <h2 class="Detailscontext-SubTitle">轮胎</h2>
@@ -246,6 +235,64 @@
 
                 </ul>
 
+                <h2 class="Detailscontext-SubTitle">车外配置</h2>
+                <ul class="row list-unstyled">
+                    <li class="col-xs-12 col-md-4">
+                        <label>外置厨房：</label>
+                        <input id="carWaizhichufang"></input>
+                    </li>
+                    <li class="col-xs-12 col-md-4">
+                        <label>外置淋浴：</label>
+                        <input id="carWaizhilinyu"></input>
+                    </li>
+                    <li class="col-xs-12 col-md-4">
+                        <label>外置电视：</label>
+                        <input id="carWaizhidianshi"></input>
+                    </li>
+                    <li class="col-xs-12 col-md-4">
+                        <label>遮阳篷：</label>
+                        <input id="carZheyangpeng"></input>
+                    </li>
+
+                    <li class="col-xs-12 col-md-4">
+                        <label>电动踏步：</label>
+                        <input id="carDiandongtabu"></input>
+                    </li>
+                    <li class="col-xs-12 col-md-4">
+                        <label>室外灯：</label>
+                        <input id="carShiwaideng"></input>
+                    </li>
+
+                    <li class="col-xs-12 col-md-4">
+                        <label>爬梯：</label>
+                        <input id="carPati"></input>
+                    </li>
+                    <li class="col-xs-12 col-md-4">
+                        <label>自行车架：</label>
+                        <input id="carZixingchejia"></input>
+                    </li>
+
+                    <li class="col-xs-12 col-md-4">
+                        <label>拖车钩：</label>
+                        <input id="carTuochegou"></input>
+                    </li>
+                    <li class="col-xs-12 col-md-4">
+                        <label>储物柜：</label>
+                        <input id="carChuwugui"></input>
+                    </li>
+
+                    <li class="col-xs-12 col-md-4">
+                        <label>拓展仓：</label>
+                        <input id="carTuozhancang"></input>
+                    </li>
+
+                    <li class="col-xs-12 col-md-4">
+                        <label>其他：</label>
+                        <input id="carQita"></input>
+                    </li>
+
+
+                </ul>
 
                 <div class="DetailsContext-Title">驾驶室</div>
 
@@ -329,7 +376,6 @@
                     <li class="col-xs-12 col-md-4"><label>车内空气净化：</label><input id="carCheneikongqijinhua"></input></li>
                 </ul>
 
-                <div class="DetailsContext-Title">驾驶辅助</div>
                 <h2 class="Detailscontext-SubTitle">安全类配置</h2>
                 <ul class="row list-unstyled">
                     <li class="col-xs-12 col-md-4"><label>倒车雷达：</label><input id="carDaocheleida"></input></li>
@@ -345,7 +391,7 @@
 
 
 
-                <div class="DetailsContext-Title">房车</div>
+                <div class="DetailsContext-Title">生活区</div>
 
                 <h2 class="Detailscontext-SubTitle">会客区</h2>
                 <ul class="row list-unstyled">
@@ -438,14 +484,14 @@
                 </ul>
             </div>
             <button id="save" class="btn btn-primary">提交</button>
-      </div>
+        </div>
     </div>
 
-    
+
 
 
 </div>
 
-  
+
 
 {% endblock %}
