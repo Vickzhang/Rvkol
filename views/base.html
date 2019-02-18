@@ -15,34 +15,43 @@
 </head>
 
 <body>
-    <div class="container i_con">
-        <a href="/e/public/ClickAd?adid=34" target="_blank"><img src="http://img.rv58.com/w/2018/11/qcb/1200.jpg" border="0" width="1200" height="80" alt="北京房车展"></a> 
-    </div>
-    <!-- 顶部导航 -->
-    <nav class="navbar navbar-default">
-        <div class="container">
-            <div class="navbar-header" style="max-height: 150px">
-                <!-- 小屏幕导航按钮和logo -->
-                <button class="navbar-toggle" role="button" data-toggle="collapse" href="#baseBar" aria-expanded="false" aria-controls="collapseExample">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a href="/" class="navbar-brand"><img src="/static/img/logo.jpeg" style="max-height:50px"  class="img-responsive"></a>
-            </div>
-
-            <!-- 顶部导航项目 -->
-            <div id="baseBar" class="navbar-collapse collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="/">首页</a></li>
-                    <li><a href="/RvDetails/1">车型库</a></li>
-                    <li><a href="/">文章</a></li>
-                    <li><a href="/">微信公众号</a></li>
-                    <li><a href="/">联系我们</a></li>
-                </ul>
-            </div>
+    <div class="row">
+        <div class="logo col-md-2 col-md-offset-1">
+            <a href="/>
+                <img src="/static/img/logo.jpeg" class="img-responsive">
+            </a>
         </div>
-    </nav>
+    </div>
+    
+    <!-- 顶部导航 -->
+    <div class="row">
+        <nav class="navbar navbar-default col-md-12">
+
+                <div class="navbar-header" style="max-height: 100px">
+                    <!-- 小屏幕导航按钮和logo -->
+                    <button class="navbar-toggle" role="button" data-toggle="collapse" href="#baseBar" aria-expanded="false" aria-controls="collapseExample">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!-- <a href="/" class="navbar-brand"><img src="/static/img/logo.jpeg" style="max-height:50px"  class="img-responsive"></a> -->
+                </div>
+
+
+                <!-- 顶部导航项目 -->
+                <div id="baseBar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="/">首页</a></li>
+                        <li><a href="/RvDetails/1">车型库</a></li>
+                        <li><a href="/">文章</a></li>
+                        <li><a href="/">微信公众号</a></li>
+                        <li><a href="/">联系我们</a></li>
+                    </ul>
+                </div>
+
+        </nav>
+    </div>
+
 
     {% block main %} {% endblock %}
     <footer>
