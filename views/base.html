@@ -16,36 +16,45 @@
 
 <body>
     <div class="row">
-        <div class="logo col-md-2 col-md-offset-1">
-            <a href="/>
-                <img src="/static/img/logo.jpeg" class="img-responsive">
+        <div class="logo col-md-2 col-md-offset-1 col-xs-4" ">
+            <a href="/">
+                <img class="img-responsive" src="/static/img/logo.jpeg" alt="">
             </a>
+        </div>
+
+        <div class="col-md-5 col-xs-8" id="so" style="padding: 25px 25px 25px 0px">
+                <div class="input-group">
+                    <input type="text" class="form-control" onkeydown="onKeyDown(event)"/>
+                    <span class="input-group-addon"><a href="#"><i class="glyphicon glyphicon-search"> <span >搜 索</span></i></a></span>
+                </div>
         </div>
     </div>
     
     <!-- 顶部导航 -->
-    <div class="row">
-        <nav class="navbar navbar-default col-md-12">
+    <div class="row ">
+        <nav class="navbar navbar-default col-md-12 ">
 
-                <div class="navbar-header" style="max-height: 100px">
+                <div class="navbar-header " style="max-height: 100px ">
                     <!-- 小屏幕导航按钮和logo -->
-                    <button class="navbar-toggle" role="button" data-toggle="collapse" href="#baseBar" aria-expanded="false" aria-controls="collapseExample">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
+                    <button class="navbar-toggle " role="button " data-toggle="collapse " href="#baseBar
+                    " aria-expanded="false " aria-controls="collapseExample ">
+                        <span class="icon-bar "></span>
+                        <span class="icon-bar "></span>
+                        <span class="icon-bar "></span>
                     </button>
-                    <!-- <a href="/" class="navbar-brand"><img src="/static/img/logo.jpeg" style="max-height:50px"  class="img-responsive"></a> -->
+                    <!-- <a href="/ " class="navbar-brand "><img src="/static/img/logo.jpeg " style="max-height:50px
+                    "  class="img-responsive "></a> -->
                 </div>
 
 
                 <!-- 顶部导航项目 -->
-                <div id="baseBar" class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li><a href="/">首页</a></li>
-                        <li><a href="/RvDetails/1">车型库</a></li>
-                        <li><a href="/">文章</a></li>
-                        <li><a href="/">微信公众号</a></li>
-                        <li><a href="/">联系我们</a></li>
+                <div id="baseBar " class="navbar-collapse collapse ">
+                    <ul class="nav navbar-nav ">
+                        <li><a href="/ ">首页</a></li>
+                        <li><a href="/RvDetails/1 ">车型库</a></li>
+                        <li><a href="/ ">文章</a></li>
+                        <li><a href="/ ">微信公众号</a></li>
+                        <li><a href="/ ">联系我们</a></li>
                     </ul>
                 </div>
 
@@ -55,9 +64,9 @@
 
     {% block main %} {% endblock %}
     <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
+        <div class="container ">
+            <div class="row ">
+                <div class="col-md-12 ">
                     <p>Copyright&nbsp;©️&nbsp; 2018-2019 www.rvkol.com &nbsp;京ICP备：130429号-9</p>
                 </div>
             </div>
@@ -66,6 +75,6 @@
 
 </body>
 <!-- 用于防止页面跳转 -->
-<iframe name="frame1" frameborder="0" id="frame" style="display:none;"></iframe>
-<script src="/static/js/base.js"></script>
+<iframe name="frame1 " frameborder="0 " id="frame " style="display:none; "></iframe>
+<script src="/static/js/base.js "></script>
 </html>
