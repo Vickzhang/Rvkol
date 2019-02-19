@@ -145,5 +145,5 @@ module.exports = db.defineModel('Cars', {
     carYiyanghuatanbaojingqi:db.STRING(20),
     carTitleImage:db.STRING(20),
     carMoreImage:db.STRING(50),
-
+    carMoreImage2:db.STRING(50),
 });

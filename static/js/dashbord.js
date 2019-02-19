@@ -14,6 +14,15 @@ $(function () {
     });
 });
 
+
+$(function () {
+    /** 验证文件是否导入成功  */
+    $("#form3").ajaxForm(function (data) {
+        var oDiv = document.getElementById("carMoreimage2");
+        oDiv.innerText = data.moreFileName2;
+    });
+});
+
 var saveButton = $('#save').click(() => {
     //console.log($('#frame1').contents());
     $.ajax({
@@ -165,6 +174,7 @@ var saveButton = $('#save').click(() => {
             carYiyanghuatanbaojingqi: $('#carYiyanghuatanbaojingqi').val(),
             carTitleImage: $('#carTitleimage').text(),
             carMoreImage: $('#carMoreimage').text(),
+            carMoreImage2: $('#carMoreimage2').text(),
         }
     })
 });

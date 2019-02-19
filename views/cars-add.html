@@ -65,9 +65,23 @@
                         <form id="form2" action="/cars-moreImage" method="post" enctype="multipart/form-data" target="frame2">
 
                             <div class="form-group">
-                                <h5 for="morefiles">展示图片(可以同时选择多张图片）</h5>
+                                <h5 for="morefiles">外观图片(请同时选择多张图片）</h5>
                                 <input type="file" name="file" id="morefile" multiple="multiple">
                                 <span id="carMoreimage"></span>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">上传</button>
+                        </form>
+                    </li>
+
+
+                    <li class="col-xs-12 col-md-12">
+                        <form id="form3" action="/cars-moreImage2" method="post" enctype="multipart/form-data" target="frame3">
+
+                            <div class="form-group">
+                                <h5 for="morefiles">内饰图片(请同时选择多张图片）</h5>
+                                <input type="file" name="file" id="morefile" multiple="multiple">
+                                <span id="carMoreimage2"></span>
                             </div>
 
                             <button type="submit" class="btn btn-primary">上传</button>

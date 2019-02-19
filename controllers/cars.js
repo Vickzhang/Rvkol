@@ -63,6 +63,35 @@ module.exports={
             }
             
     },
+
+    'POST /cars-moreImage2':async (ctx,next)=>{
+        //文件上传
+        //配置
+        const files = ctx.request.files.file; // 获取上传文件
+        
+        var fileNames=new Array();
+        for (let file of files) {
+            // 创建可读流
+            const reader = fs.createReadStream(file.path);
+            // 获取上传文件扩展名
+            const ext = file.name.split('.').pop(); // 获取上传文件扩展名
+
+            const fileName=`static/img/Details/${file.name}`;
+            fileNames.push(fileName);
+            const upStream = fs.createWriteStream(fileName); // 创建可写流
+            reader.pipe(upStream); // 可读流通过管道写入可写流
+            // 可读流通过管道写入可写流
+            reader.pipe(upStream);
+          }
+          console.log(fileNames);
+        
+        return ctx.body = {
+            code: 'success',
+            moreFileName2: fileNames
+        }
+        
+    },
+
     'POST /submitCar':async (ctx, next) => {
         let carDetail = {
             carID: ctx.request.body.carID,
@@ -210,6 +239,7 @@ module.exports={
             carYiyanghuatanbaojingqi: ctx.request.body.carYiyanghuatanbaojingqi,
             carTitleImage: ctx.request.body.carTitleimage,
             carMoreImage: ctx.request.body.carMoreimage,
+            carMoreImage2: ctx.request.body.carMoreimage2,
           }
           console.log(carDetail);
           //数据库操作
@@ -362,6 +392,7 @@ module.exports={
                 carYiyanghuatanbaojingqi: carDetail.carYiyanghuatanbaojingqi,
                 carTitleImage: carDetail.carTitleimage,
                 carMoreImage: carDetail.carMoreimage,
+                carMoreImage2: carDetail.carMoreimage2,
             });
             console.log('created: ' + JSON.stringify(RVuser));
         })();
