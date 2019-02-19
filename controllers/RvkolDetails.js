@@ -1,4 +1,12 @@
 module.exports={
+    'GET /cars':async(ctx,next)=>{
+        ctx.render('cars.html',{
+
+        })
+    },
+
+
+
     'GET /RvDetails/:id':async(ctx,next)=>{
         var id =ctx.params.id;
 

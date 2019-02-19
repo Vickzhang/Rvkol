@@ -1,0 +1,73 @@
+{% extends "base.html" %} {% block main %}
+<div class="container">
+    <div class="col-md-12">
+        <div class="cars-selection">
+            <div class="main-inner-section condition-selectcar clearfix">
+                <div class="section-header header1">
+                  <div class="box">
+                    <h2>按条件选车</h2></div>
+                  <div class="more">
+                    <a href="/car/?s=all#pt">查看所有车型</a></div>
+                </div>
+                <div class="treeMainv1">
+                  <div class="tool-selectcar-v2 y2015">
+                    <dl>
+                      <dt>价格：</dt>
+                      <dd>
+                        <ul>
+                          <li class="current"><a href="/car/?#pt">不限</a></li>
+                          <li><a href="/car/?p=1&amp;#pt">10万以下</a></li>
+                          <li><a href="/car/?p=2&amp;#pt">10-30万</a></li>
+                          <li><a href="/car/?p=3&amp;#pt">30-50万</a></li>
+                          <li><a href="/car/?p=4&amp;#pt">50-100万</a></li>
+                          <li><a href="/car/?p=5&amp;#pt">100-200万</a></li>
+                          <li><a href="/car/?p=6&amp;#pt">200-500万</a></li>
+                          <li><a href="/car/?p=7&amp;#pt">500万以上</a></li>
+                        </ul>
+                      </dd>
+                    </dl>
+                    <dl class="dl-level">
+                      <dt>类别：</dt>
+                      <dd>
+                        <ul>
+                          <li class="current"><a href="/car/?#pt">不限</a></li>
+                          <li><a href="/car/?&amp;l=9&amp;#pt">自行A型</a></li>
+                          <li><a href="/car/?&amp;l=1&amp;#pt">自行B型</a></li>
+                          <li><a href="/car/?&amp;l=2&amp;#pt">自行C型</a></li>
+                          <li><a href="/car/?&amp;l=3&amp;#pt">拖挂A型</a></li>
+                          <li><a href="/car/?&amp;l=4&amp;#pt">拖挂B型</a></li>
+                          <li><a href="/car/?&amp;l=5&amp;#pt">拖挂C型</a></li>
+                          <li><a href="/car/?&amp;l=6&amp;#pt">拖挂D型</a></li>
+                          <li><a href="/car/?&amp;l=7&amp;#pt">商务车</a></li>
+                          <li><a href="/car/?&amp;l=8&amp;#pt">移动木屋</a></li>           
+                        </ul>
+                      </dd>
+                    </dl>
+                    <dl class="dl-level">
+                      <dt>底盘：</dt>
+                      <dd>
+                        <ul>
+                          <li class="current"><a href="/car/?#pt">不限</a></li>
+                          <li><a href="/car/?&amp;d=0&amp;#pt">依维柯</a></li>
+                          <li><a href="/car/?&amp;d=1&amp;#pt">大通</a></li>
+                          <li><a href="/car/?&amp;d=2&amp;#pt">奔驰</a></li>
+                          <li><a href="/car/?&amp;d=3&amp;#pt">福特</a></li>
+                          <li><a href="/car/?&amp;d=4&amp;#pt">长城</a></li>
+                          <li><a href="/car/?&amp;d=5&amp;#pt">东风御风</a></li>
+                          <li><a href="/car/?&amp;d=6&amp;#pt">黄海</a></li>
+                          <li><a href="/car/?&amp;d=7&amp;#pt">江淮</a></li>
+                          <li><a href="/car/?&amp;d=8&amp;#pt">卡威</a></li>
+                          <li><a href="/car/?&amp;d=9&amp;#pt">五十铃</a></li>           
+                        </ul>
+                      </dd>
+                    </dl>
+                    
+                   
+                  </div>
+                </div>
+                 
+              </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
