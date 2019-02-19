@@ -147,7 +147,7 @@
 /*  联系我们    */
 
 #contact{
-    background:url(/static/img/map/MAP.png)no-repeat;
+    /* background:url(/static/img/map/MAP.png)no-repeat; */
     background-size: cover;
     color:#fff;
 
