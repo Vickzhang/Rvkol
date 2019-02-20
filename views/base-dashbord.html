@@ -13,41 +13,44 @@
 
 <body>
     <!-- 顶部导航 -->
-    <nav class="navbar navbar-default">
-        <div class="container">
-            <div class="navbar-header" style="max-height: 150px">
+    <nav class="navbar navbar-default col-md-12 ">
+
+            <div class="navbar-header">
                 <!-- 小屏幕导航按钮和logo -->
-                <button class="navbar-toggle" role="button" data-toggle="collapse" href="#baseBar" aria-expanded="false" aria-controls="collapseExample">
+                <button class="navbar-toggle" role="button" data-toggle="collapse" data-target="#baseBar" aria-expanded="false" aria-controls="collapseExample">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="/" class="navbar-brand"><img src="/static/img/logo.jpeg" style="max-height:50px"  class="img-responsive"></a>
+                
             </div>
 
-            <!-- 顶部导航项目 -->
-            <div id="baseBar" class="navbar-collapse collapse navbar-fixed-top">
-                <ul class="nav navbar-nav">
-                    <li><a href="/dashbord"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;后台首页</a></li>
-                    <li><a href="/cars-dashbord"><span class="glyphicon glyphicon-resize-vertical"></span>&nbsp;&nbsp;车型库管理</a></li>
-                    <li><a href="/contexts"><span class="glyphicon glyphicon-comment"></span>&nbsp;&nbsp;文章管理</a></li>
-                </ul>
 
-                <ul class="nav navbar-nav navbar-right">
-                        <li class="dropdown">
-                                <a id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                  admin
-                                  <span class="caret"></span>
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="dLabel">
-                                  <li><a href="/"><span class="glyphicon glyphicon-book"></span> &nbsp;&nbsp;前台首页</a></li>
-                                </ul>
-                            </li>
-                    <li><a href="/RvDetails/1">退出</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+                <!-- 顶部导航项目 -->
+                <div id="baseBar" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                                <li><a href="/dashbord"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;后台首页</a></li>
+                                <li><a href="/cars-dashbord"><span class="glyphicon glyphicon-resize-vertical"></span>&nbsp;&nbsp;车型库管理</a></li>
+                                <li><a href="/contexts"><span class="glyphicon glyphicon-comment"></span>&nbsp;&nbsp;文章管理</a></li>
+                            </ul>
+
+                            <ul class="nav navbar-nav navbar-right">
+                                    <li class="dropdown">
+                                            <a id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                              admin
+                                              <span class="caret"></span>
+                                            </a>
+                                            <ul class="dropdown-menu" aria-labelledby="dLabel">
+                                              <li><a href="/"><span class="glyphicon glyphicon-book"></span> &nbsp;&nbsp;前台首页</a></li>
+                                            </ul>
+                                        </li>
+                                <li><a href="/RvDetails/1">退出</a></li>
+                            </ul>
+                </div>
+
+        </nav>
+
+
 
     {% block main %} {% endblock %}
     <footer>
