@@ -12,9 +12,57 @@
     <link rel="stylesheet" href="/static/css/RvDetails.css">
     <script src="/static/js/jquery-3.2.1.min.js"></script>
     <script src="/static/js/bootstrap.min.js"></script>
+    <style type="text/css">
+        html, body {width:100%;height:100%;} /*非常重要的样式让背景图片100%适应整个屏幕*/
+        .bg {display: table;width: 100%;height: 100%;padding: 100px 0;text-align: center;color: #fff;background: url(/static/img/ADS/Banner.jpeg) no-repeat bottom center;background-color: #000;background-size: cover;}
+        .my-navbar {padding:20px 0;transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;}
+        .my-navbar a{background:transparent !important;color:#fff !important}
+        .my-navbar a:hover {color:#45bcf9 !important;background:transparent;outline:0}
+        .my-navbar a {transition: color 0.5s ease-in-out;}/*-webkit-transition ;-moz-transition*/
+        .top-nav {padding:0;background:#4284d9;}
+        button.navbar-toggle {background-color:#fbfbfb;}/*整个背景都是transparent透明的，会看不到，所以再次覆盖一下*/
+        button.navbar-toggle > span.icon-bar {background-color:#dedede}
+    </style>
 </head>
 
 <body>
+
+        <nav class="navbar navbar-fixed-top my-navbar" role="navigation">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse"
+                                data-target="#example-navbar-collapse">
+                            <span class="sr-only">切换导航</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">房车情报</a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="example-navbar-collapse">
+                        <ul class="nav navbar-nav">
+                                <li><a href="/ ">首页</a></li>
+                                <li><a href="/cars">车型库</a></li>
+                                <li><a href="/ ">文章</a></li>
+                                <li><a href="/ ">微信公众号</a></li>
+                                <li><a href="/ ">联系我们</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+             <div class="bg">
+                 <h1>房车情报</h1>
+
+                <p>...</p>
+                <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+             </div>
+            <script>
+                $(window).scroll(function () {
+                    if ($(".navbar").offset().top > 50) {$(".navbar-fixed-top").addClass("top-nav");
+                    }else {$(".navbar-fixed-top").removeClass("top-nav");}
+                })</script>
+
+
     <div class="row">
         <div class="logo col-md-2 col-md-offset-1 col-xs-4">
             <div class="row">
@@ -38,31 +86,6 @@
     
     <!-- 顶部导航 -->
 
-        <nav class="navbar navbar-default col-md-12 ">
-
-            <div class="navbar-header">
-                <!-- 小屏幕导航按钮和logo -->
-                <button class="navbar-toggle" role="button" data-toggle="collapse" data-target="#baseBar" aria-expanded="false" aria-controls="collapseExample">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                
-            </div>
-
-
-                <!-- 顶部导航项目 -->
-                <div id="baseBar" class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav ">
-                        <li><a href="/ ">首页</a></li>
-                        <li><a href="/cars">车型库</a></li>
-                        <li><a href="/ ">文章</a></li>
-                        <li><a href="/ ">微信公众号</a></li>
-                        <li><a href="/ ">联系我们</a></li>
-                    </ul>
-                </div>
-
-        </nav>
 
 
 
