@@ -31,8 +31,8 @@ body{
  .navbar-default .navbar-brand{
     font-size: 28px;
     font-weight: bold;
-    height: 70px;
-    line-height: 35px;
+    /* height: 70px;
+    line-height: 35px; */
 } 
 
  .navbar-default ul{
@@ -93,3 +93,5 @@ footer{
 
 a:focus{text-decoration:none;}
 a:hover{text-decoration: none;}
+
+
