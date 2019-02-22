@@ -73,7 +73,6 @@ body{
     -moz-background-size: cover;
     -ms-background-size: cover;
     display: block;
-    height: 150px;
     overflow: hidden;
 }
 
