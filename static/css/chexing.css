@@ -323,4 +323,64 @@
     color: #999;
 }
 
+.tool-selectcar-v2 dd li.current a:link, .tool-selectcar-v2 dd li.current a:visited, .tool-selectcar-v2 dd li.current a:hover {
+    background-color: #4284d9;
+    padding: 5.5px 10px;
+    color: #FFF;
+    border-radius: 3px;
+}
 
+/*车型列表*/
+
+
+.header2 .header-note1 {
+    bottom: -7px;
+}
+
+.header-note1 {
+    position: relative;
+    bottom: -20px;
+    color: #999;
+    font-size: 14px;
+}
+
+.section-header>.box h2 {
+    font-weight: bold;
+    border-bottom: 5px solid #FF4F53;
+    float: left;
+    margin-right: 30px;
+    position: relative;
+}
+
+.header2>.box h2 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.block-4col-180>div {
+    margin-top: 22px;
+}
+
+.mb20 {
+    margin-bottom: 14px;
+}
+
+.p-list {
+    margin-top: 10px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.name {
+    margin-bottom: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.price {
+    color: #FF4F53;
+}
