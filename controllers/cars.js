@@ -1,6 +1,22 @@
 const fs = require('fs');
-const checkDirExist = require('../utils/checkDirExist');
-const getUploadDirName = require('../utils/getUploadDirName');
+
+////const checkDirExist = require('../utils/checkDirExist');
+//const getUploadDirName = require('../utils/getUploadDirName');
+
+function checkDirExist(p) {
+    if (!fs.existsSync(p)) {
+      fs.mkdirSync(p);
+    }
+  }
+
+
+  function getUploadDirName(){
+    const date = new Date();
+    let month = Number.parseInt(date.getMonth()) + 1;
+    month = month.toString().length > 1 ? month : `0${month}`;
+    const dir = `${date.getFullYear()}${month}${date.getDate()}${date.getHours()}${date.getMinutes()}`;
+    return dir;
+  }
 
 
 module.exports={
