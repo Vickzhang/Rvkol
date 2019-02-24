@@ -1,0 +1,107 @@
+{% extends "base-dashbord.html" %} {% block main %}
+
+<div class="container">
+
+    <nav class="navbar navbar-DetailTab">
+        <ul class="nav list-unstyled list-inline">
+            <li class=" col-xs-6 col-md-3"><a href="/article-dashbord" class="list-group-item">文章管理</a></li>
+            <li class=" col-xs-6 col-md-3"><a href="/article-add" class="list-group-item active">添加文章</a></li>
+        </ul>
+    </nav>
+
+    <div class="row">
+        <div class="col-md-12">
+
+            <div class="DetailsContext-Box">
+                <div class="DetailsContext-Title">基础信息</div>
+                <h2 class="Detailscontext-SubTitle">文章信息</h2>
+                <ul class="row list-unstyled">
+                    <li class="col-xs-12 col-md-4">
+                        <label>文章ID：</label>
+                        <input id="articleID"></input>
+                    </li>
+                    <li class="col-xs-12 col-md-4">
+                        <label>文章标题：</label>
+                        <input id="articleTitle"></input>
+                    </li>
+                
+
+                    <li class="col-xs-12 col-md-4">
+                            <label>相关车型：(统一）</label>
+                            <input id="articleXiangguanchexing"></input>
+                        </li>
+                    <li class="col-xs-12 col-md-4">
+                        <label>作者：</label>
+                        <input id="articleZuozhe"></input>
+                    </li>
+
+                    <li class="col-xs-12 col-md-4">
+                            <label>文章类型：</label>
+                            <!-- class="selectpicker show-tick" -->
+                            <select id="articleWenzhangleixing" class="normalSelect selectpicker show-tick"  data-live-search="true">
+                                <option>车型文章</option>
+                                <option>资讯</option>
+                                <option>旅行游记</option>
+                                <option>用车</option>
+                            </select>
+                        </li>
+                </ul>
+
+
+
+                <h2 class="Detailscontext-SubTitle">标题图片</h2>
+                <ul class="row list-unstyled">
+                    <li class="col-xs-12 col-md-12">
+                        <form id="form1" action="/cars-titleImage" method="post" enctype="multipart/form-data" target="frame1">
+                            <div class="form-group">
+                                <h5 for="titleFile">封面图片(只能选择单张图片）</h5>
+                                <input type="file" name="file" id="titleFile">
+                                <span id="carTitleimage"></span>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">上传</button>
+                        </form>
+                    </li>
+
+                </ul>
+
+                <h2 class="Detailscontext-SubTitle">文章内容</h2>
+                <div id="summernote">请添加文章内容</div>
+
+                <!-- 
+                <script type="text/javascript">
+                    $(document).ready( function() {
+                      $("#summernote").summernote({
+                        minHeight: 300,             // set minimum height of editor
+                      });                    
+                    });
+                </script>  -->
+
+            </div>
+            <br>
+            <!-- <button id="articleSave" class="btn btn-primary" onclick="save()" data-toggle="modal" data-target="#myModal">提交</button> -->
+            <button id="articleSave" class="btn btn-primary" onclick="save()">提交</button>
+
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    提交成功
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</div>
+
+
+
+
+
+{% endblock %}

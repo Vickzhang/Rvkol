@@ -1,0 +1,73 @@
+{% extends "base-dashbord.html" %} {% block main %}
+
+<div class="container">
+    <nav class="navbar navbar-DetailTab">
+        <ul class="nav list-unstyled list-inline">
+                <li class="col-xs-6 col-md-3"><a href="/article-dashbord" class="list-group-item active">文章管理</a></li>
+                <li class="col-xs-6 col-md-3"><a href="/article-add" class="list-group-item">添加文章</a></li>
+            </ul>
+  </nav>
+  <div class="row">
+
+      <div class="col-md-12">
+        <div class="page-header">
+            <h1>文章管理</h1>
+        </div>
+        <ul class="nav nav-tabs">
+          <li class="active">
+            <a href="">文章列表</a>
+          </li>
+        </ul>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>文章标题</th>
+              <th>文章类型</th>
+              <th>更新时间</th>
+              <th>作者</th>
+              <th>操作</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">01</th>
+              <td>为什么选择房车情报</td>
+              <td>文章</td>
+              <td>2019-01-12</td>
+              <td>姜小白</td>
+              <td>
+                <div role="presentation" class="dropdown">
+                  <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                    操作 <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu">
+                      <li><a href="">浏览</a></li>
+                    <li><a href="">编辑</a></li>
+                    <li><a href="">删除</a></li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <nav class="pull-right">
+            <ul class="pagination">
+              <li class=""><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+              <li class="active"><a href="#">1 </a></li>
+              <li class=""><a href="#">2</a></li>
+              <li class=""><a href="#">3</a></li>
+              <li class=""><a href="#">4</a></li>
+              <li class=""><a href="#">5</a></li>
+              <li class=""><a href="#"><span aria-hidden="true">&raquo;</span></a></li>
+            </ul>
+          </nav>
+      </div>
+  </div>
+
+
+</div>
+
+  
+
+{% endblock %}

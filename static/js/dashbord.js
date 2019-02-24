@@ -23,6 +23,48 @@ $(function () {
     });
 });
 
+// 文章保存
+
+//初始化编辑器
+$(document).ready( function() {
+    $("#summernote").summernote({
+      minHeight: 300,             // set minimum height of editor
+      callbacks:{
+        onImageUpload: function(file) { //图片默认以二进制的形式存储到数据库，调用此方法将请求后台将图片存储到服务器，返回图片请求地址到前端
+            //将图片放入Formdate对象中      
+            var formData = new FormData(); 
+            //‘picture'为后台获取的文件名，file[0]是要上传的文件
+            formData.append("picture", file[0]); 
+
+            $.ajax({    
+                type:'post', 
+                url:'/article-uploadeImage',   
+                cache: false,
+                data:formData, 
+                processData: false,
+                contentType: false,
+                dataType:'json', //请求成功后，后台返回图片访问地址字符串，故此以text格式获取，而不是json格式
+                success: function(data) {
+                    alert(data.code);    
+                    $('#summernote').summernote('insertImage',data.pictureName); 
+                }, 
+                error:function(){       
+                    alert("上传失败");       
+                } 
+            });
+        }
+          
+      }
+    });                    
+  });
+
+//保存
+var save = function() {
+    var markup = $('#summernote').summernote('code');
+    alert(markup);
+};
+
+
 var saveButton = $('#save').click(() => {
     //console.log($('#frame1').contents());
     $.ajax({
