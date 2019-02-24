@@ -4,7 +4,7 @@
     <nav class="navbar navbar-DetailTab">
         <ul class="nav list-unstyled list-inline">
                 <li class="col-xs-6 col-md-3"><a href="/cars-dashbord" class="list-group-item active">车型管理</a></li>
-                <li class="col-xs-6 col-md-3"><a href="/cars-add" class="list-group-item">添加车型</a></li>
+                <li class="col-xs-6 col-md-3"><a href="/cars-add" class="list-group-item">编辑车型</a></li>
             </ul>
   </nav>
   <div class="row">
@@ -41,8 +41,8 @@
                     操作 <span class="caret"></span>
                   </button>
                   <ul class="dropdown-menu">
-                      <li><a href="">浏览</a></li>
-                    <li><a href="">编辑</a></li>
+                      <li><a href="RvDetails/{{f.carID}}">浏览</a></li>
+                    <li><a href="cars-change/{{f.carID}}">编辑</a></li>
                     <li><a href="">删除</a></li>
                   </ul>
                 </div>
