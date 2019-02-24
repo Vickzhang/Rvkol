@@ -1,7 +1,11 @@
 module.exports={
     'GET /cars':async(ctx,next)=>{
-        ctx.render('cars.html',{
+        const model = require('../model');
+        let Car = model.Car;
+        var result = await Car.findAll();
 
+        ctx.render('cars.html',{
+            data:result
         })
     },
 

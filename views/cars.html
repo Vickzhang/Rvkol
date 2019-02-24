@@ -20,26 +20,25 @@
                           <li><a href="/car/?p=2&amp;#pt">10-30万</a></li>
                           <li><a href="/car/?p=3&amp;#pt">30-50万</a></li>
                           <li><a href="/car/?p=4&amp;#pt">50-100万</a></li>
-                          <li><a href="/car/?p=5&amp;#pt">100-200万</a></li>
-                          <li><a href="/car/?p=6&amp;#pt">200-500万</a></li>
-                          <li><a href="/car/?p=7&amp;#pt">500万以上</a></li>
                         </ul>
                       </dd>
                     </dl>
                     <dl class="dl-level">
-                      <dt>类别：</dt>
+                      <dt>品牌：</dt>
                       <dd>
                         <ul class="list-unstyled">
                           <li class="current"><a href="/car/?#pt">不限</a></li>
-                          <li><a href="/car/?&amp;l=9&amp;#pt">自行A型</a></li>
-                          <li><a href="/car/?&amp;l=1&amp;#pt">自行B型</a></li>
-                          <li><a href="/car/?&amp;l=2&amp;#pt">自行C型</a></li>
-                          <li><a href="/car/?&amp;l=3&amp;#pt">拖挂A型</a></li>
-                          <li><a href="/car/?&amp;l=4&amp;#pt">拖挂B型</a></li>
-                          <li><a href="/car/?&amp;l=5&amp;#pt">拖挂C型</a></li>
-                          <li><a href="/car/?&amp;l=6&amp;#pt">拖挂D型</a></li>
-                          <li><a href="/car/?&amp;l=7&amp;#pt">商务车</a></li>
-                          <li><a href="/car/?&amp;l=8&amp;#pt">移动木屋</a></li>           
+                          <li><a href="/car/?&amp;l=9&amp;#pt">瑞弗</a></li>
+                          <li><a href="/car/?&amp;l=1&amp;#pt">上汽大众</a></li>
+                          <li><a href="/car/?&amp;l=2&amp;#pt">凯伦宾威</a></li>
+                          <li><a href="/car/?&amp;l=3&amp;#pt">华晨</a></li> 
+                          <li><a href="/car/?&amp;l=3&amp;#pt">齐星</a></li> 
+                          <li><a href="/car/?&amp;l=3&amp;#pt">览众</a></li> 
+                          <li><a href="/car/?&amp;l=3&amp;#pt">旌航</a></li> 
+                          <li><a href="/car/?&amp;l=3&amp;#pt">湖光</a></li> 
+                          <li><a href="/car/?&amp;l=3&amp;#pt">亚特</a></li>
+                          <li><a href="/car/?&amp;l=3&amp;#pt">德兴</a></li>
+                          <li><a href="/car/?&amp;l=3&amp;#pt">顺旅</a></li>           
                         </ul>
                       </dd>
                     </dl>
@@ -72,26 +71,28 @@
                 <div class="section-header header2 h-default2">
                 <div class="box">
                   <h2>选新车</h2>
-                  <span class="header-note1" id="styleTotal">共 9 个房车</span>
+                  <span class="header-note1" id="styleTotal">共 {{data.length}} 个房车</span>
                 </div>
                 
               </div>
               <div class="row" id="divContent">
               
-                 
+                  {% for f in data %}
                 <div class="col-xs-3 mb20">
                   <div>
                     <div class="img">
-                      <a href="http://www.rv28.com/car/lvtu/ltglb/" target="_blank">
+                      <a href="RvDetails/{{f.carID}}"   target="_blank">
                       <img class="img-responsive" src="http://www.rv28.com/data/attachment/portal/201812/30/200110tpyy2mtm6se5m8mf.jpg.thumb.jpg" alt="侣途公路版拖挂房车"></a>
                     </div>
                     <ul class="p-list list-unstyled">
                       <li class="name">
-                        <a href="http://www.rv28.com/car/lvtu/ltglb/" target="_blank">侣途公路版拖挂房车</a></li>
-                      <li class="price">4.98万</li>
+                        <a href="RvDetails/:{{f.carID}}" target="_blank">{{f.carTitle1}}</a></li>
+                      <li class="price">{{f.carPriceMin}}</li>
                     </ul>
                   </div>
-                </div>                  
+                  
+                </div> 
+                {% endfor %}                 
             </div>
             </div>
 
