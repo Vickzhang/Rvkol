@@ -5,6 +5,6 @@ module.exports = db.defineModel('Articles', {
     articleTitle: db.STRING(20),
     articleXiangguanchexing:db.STRING(20),
     articleZuozhe:db.STRING(20),
-    articleWenzhangleixing:db.string(20),
-    articleContext:db.LONGTEXT
+    articleWenzhangleixing:db.STRING(20),
+    articleContext:db.TEXT('long')
 });
