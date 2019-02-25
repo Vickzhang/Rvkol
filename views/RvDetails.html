@@ -17,7 +17,7 @@
             <div id="DetailsShow" class="tab-pane fade in active  Detail-show">
                 <div class="row Detail-biaoti">
                     <div class="col-md-5">
-                        <img src="/static/img/Details/0001/0001.jpg" class="img-responsive">
+                        <img src="{{data[0].carTitleImage}}" class="img-responsive">
                     </div>
                     <div class="caption col-md-7">
                         <h1 class="Detail-biaoti1">{{data[0].carTitle1}}</h1>
@@ -85,104 +85,107 @@
                     <ul class="row list-unstyled">
                         <li class="col-xs-12 col-md-4">
                             <label>车型结构：</label>
-                            <span>承载式</span>
+                            <span>{{data[0].carChexingjiegou}}</span>
                         </li>
                         <li class="col-xs-12 col-md-4">
                             <label>底盘类型：</label>
-                            <span>科威特</span>
+                            <span>{{data[0].carDipanleixing}}</span>
                         </li>
-                        <li class="col-xs-12 col-md-4"><label>准驾类型：</label><span>C1</span></li>
+                        <li class="col-xs-12 col-md-4">
+                            <label>准驾类型：</label>
+                            <span>{{data[0].carZhunjialeixing}}</span>
+                        </li>
                         <li class="col-xs-12 col-md-4">
                             <label>座位数：</label>
-                            <span>2-6人</span>
+                            <span>{{data[0].carZuoweishu}}</span>
                         </li>
                         <li class="col-xs-12 col-md-4">
                             <label>车长（mm）：</label>
-                            <span>5700、5895、5980</span>
+                            <span>{{data[0].carChechang}}</span>
                         </li>
                         <li class="col-xs-12 col-md-4">
                             <label>车宽（mm）：</label>
-                            <span>1998、2028</span>
+                            <span>{{data[0].carChekuang}}</span>
                         </li>
 
                         <li class="col-xs-12 col-md-4">
                             <label>车高（mm）：</label>
-                            <span>2552、2600、2662、 2802、2750、2842</span>
+                            <span>{{data[0].carChegao}}</span>
                         </li>
                         <li class="col-xs-12 col-md-4">
                             <label>轴距（mm）：</label>
-                            <span>3850</span>
+                            <span>{{data[0].carZhouju}}</span>
                         </li>
                         <li class="col-xs-12 col-md-4">
                             <label>前轮距（mm）：</label>
-                            <span>1734</span>
+                            <span>{{data[0].carQianlunju}}</span>
                         </li>
                         <li class="col-xs-12 col-md-4">
                             <label>后轮距（mm）：</label>
-                            <span>1728</span>
+                            <span>{{data[0].carHoulunju}}</span>
                         </li>
 
                         <li class="col-xs-12 col-md-4">
                             <label>最小离地间隙（mm）：</label>
-                            <span>210</span>
+                            <span>{{data[0].carZuixiaolidijianxi}}</span>
                         </li>
                         <li class="col-xs-12 col-md-4">
                             <label>整备质量（kg）：</label>
-                            <span>3050</span>
+                            <span>{{data[0].carZhengbeizhiliang}}</span>
                         </li>
                         <li class="col-xs-12 col-md-4">
                             <label>最大质量（kg）：</label>
-                            <span>3800</span>
+                            <span>{{data[0].carZuidazhiliang}}</span>
                         </li>
-                        <li class="col-xs-12 col-md-4"><label>接近角</label><span>-</span></li>
-                        <li class="col-xs-12 col-md-4"><label>离去角</label><span>-</span></li>
+                        <li class="col-xs-12 col-md-4"><label>接近角</label><span>{{data[0].carJiejinjiao}}</span></li>
+                        <li class="col-xs-12 col-md-4"><label>离去角</label><span>{{data[0].carLiqujiao}}</span></li>
                     </ul>
 
                     <h2 class="Detailscontext-SubTitle">底盘参数/动力/燃油/驱动</h2>
                     <ul class="row list-unstyled">
 
+                            <li class="col-xs-12 col-md-4">
+                                    <label>前悬挂形式：</label>
+                                    <input id="carQianxuanguaxingshi">{{data[0].carQianxuanguaxingshi}}</span>
+                                </li>
 
                         <li class="col-xs-12 col-md-4">
-                            <label>前悬挂形式：</label>
-                            <span>麦弗逊式悬挂 </span>
-                        </li>
-                        <li class="col-xs-12 col-md-4">
                             <label>后悬挂形式：</label>
-                            <span>钢板弹簧非独立悬架</span>
+                            <span>{{data[0].carHouxuanguaxingshi}}</span>
                         </li>
                         <li class="col-xs-12 col-md-4">
                             <label>可变悬挂：</label>
-                            <span>无</span>
+                            <span>{{data[0].carKebianxuangua}}</span>
                         </li>
                         <li class="col-xs-12 col-md-4">
                             <label>发动机厂家型号：</label>
-                            <span>上柴SC25R</span>
+                            <span>{{data[0].carFadongjichangjiaxinghao}}</span>
                         </li>
                         <li class="col-xs-12 col-md-4">
                             <label>排量：</label>
-                            <span>2.5T</span>
+                            <span>{{data[0].carPailiang}}</span>
                         </li>
                         <li class="col-xs-12 col-md-4">
                             <label>进气形式：</label>
-                            <span>涡轮增压</span>
+                            <span>{{data[0].carJinqixingshi}}</span>
                         </li>
                         <li class="col-xs-12 col-md-4">
                             <label>发动机功率：</label>
-                            <span>100</span>
+                            <span>{{data[0].carFadongjigonglv}}</span>
                         </li>
                         <li class="col-xs-12 col-md-4">
                             <label>发动机马力：</label>
-                            <span>136</span>
+                            <span>{{data[0].carFadongjimali}}</span>
                         </li>
                         <li class="col-xs-12 col-md-4">
                             <label>发动机扭矩：</label>
-                            <span>330</span>
+                            <span>{{data[0].carFadongjiniuju}}</span>
                         </li>
 
 
                         <li class="col-xs-12 col-md-4">
                             <label>档位数：</label>
-                            <span>6档</span>
+                            <span>{{data[0].carDangweishu}}</span>
                         </li>
                         <li class="col-xs-12 col-md-4">
                             <label>变速箱：</label>
