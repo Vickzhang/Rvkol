@@ -33,15 +33,11 @@
 
                     <div id="DetailImages" class="row navbar-left navbar-DetailImages">
                         <ul class="nav list-unstyled list-inline">
+                                {% for f in data[0].carMoreImage.split(",") %}
                             <li class="active col-xs-4 col-md-3"><a href="#" data-toggle="tab">
-                                    <img style="max-width: 100%;" class="img-thumbnail viewer" src="/static/img/Details/0001/IMG_1.jpg">
+                                    <img style="max-width: 100%;" class="img-thumbnail viewer" src="{{f}}">
                                 </a></li>
-                            <li class="col-xs-4 col-md-3"><a href="#" data-toggle="tab">
-                                    <img style="max-width: 100%;" class="img-thumbnail viewer" src="/static/img/Details/0001/IMG_2.JPG" alt="">
-                                </a></li>
-                            <li class="col-xs-4 col-md-3"><a href="#" data-toggle="tab">
-                                    <img style="max-width: 100%;" class="img-thumbnail viewer" src="/static/img/Details/0001/IMG_3.JPG" alt="">
-                                </a></li>
+                                {% endfor %} 
                         </ul>
                     </div>
                     <!--放大图的imgModal-->
@@ -57,15 +53,11 @@
 
                     <div id="DetailImages" class="row navbar-left navbar-DetailImages">
                         <ul class="nav list-unstyled list-inline">
-                            <li class="col-xs-4 col-md-3"><a href="#" data-toggle="tab">
-                                    <img style="max-width: 100%;" class="img-thumbnail viewer" src="/static/img/Details/0001/IMG_4.JPG" alt="">
+                                {% for f in data[0].carMoreImage2.split(",") %}
+                                <li class="col-xs-4 col-md-3"><a href="#" data-toggle="tab">
+                                    <img style="max-width: 100%;" class="img-thumbnail viewer" src="{{f}}" alt="">
                                 </a></li>
-                            <li class="col-xs-4 col-md-3"><a href="#" data-toggle="tab">
-                                    <img style="max-width: 100%;" class="img-thumbnail viewer" src="/static/img/Details/0001/IMG_5.JPG" alt="">
-                                </a></li>
-                            <li class="col-xs-4 col-md-3"><a href="#" data-toggle="thumbnail">
-                                    <img style="max-width: 100%;" class="img-circle viewer" src="" alt="">
-                                </a></li>
+                                {% endfor %} 
                         </ul>
                     </div>
                     <!--放大图的imgModal-->
@@ -146,7 +138,7 @@
 
                             <li class="col-xs-12 col-md-4">
                                     <label>前悬挂形式：</label>
-                                    <input id="carQianxuanguaxingshi">{{data[0].carQianxuanguaxingshi}}</span>
+                                    <span id="carQianxuanguaxingshi">{{data[0].carQianxuanguaxingshi}}</span>
                                 </li>
 
                         <li class="col-xs-12 col-md-4">
@@ -189,29 +181,29 @@
                         </li>
                         <li class="col-xs-12 col-md-4">
                             <label>变速箱：</label>
-                            <span>手自一体</span>
+                            <span>{{data[0].carBiansuxiang}}</span>
                         </li>
                         <li class="col-xs-12 col-md-4">
                             <label>驱动方式：</label>
-                            <span>前置前驱</span>
+                            <span>{{data[0].carQudongfangshi}}</span>
                         </li>
                         <li class="col-xs-12 col-md-4">
                             <label>燃油及标号：</label>
-                            <span>#0柴油</span>
+                            <span>{{data[0].carRanyoujibiaohao}}</span>
                         </li>
                         <li class="col-xs-12 col-md-4">
                             <label>环保标准：</label>
-                            <span>国V</span>
+                            <span>{{data[0].carHuanbaobiaozhun}}</span>
                         </li>
                         <li class="col-xs-12 col-md-4">
                             <label>官方油耗(L)：</label>
-                            <span>-</span>
+                            <span>{{data[0].carGuanfangyouhao}}</span>
                         </li>
 
 
                         <li class="col-xs-12 col-md-4">
                             <label>油箱容积(L)：(L)：</label>
-                            <span>80L</span>
+                            <span>{{data[0].carYouxiangrongji}}</span>
                         </li>
                     </ul>
 
@@ -219,24 +211,24 @@
                     <ul class="row list-unstyled">
                         <li class="col-xs-12 col-md-4">
                             <label>前轮胎规格：</label>
-                            <span>215/75 R16</span>
+                            <span>{{data[0].carQianluntaiguige}}</span>
                         </li>
                         <li class="col-xs-12 col-md-4">
                             <label>后轮胎规格：</label>
-                            <span>215/75 R16</span>
+                            <span>{{data[0].carHouluntaiguige}}</span>
                         </li>
                         <li class="col-xs-12 col-md-4">
                             <label>备胎规格：</label>
-                            <span>全尺寸</span>
+                            <span>{{data[0].carBeitaiguige}}</span>
                         </li>
                         <li class="col-xs-12 col-md-4">
                             <label>铝合金轮毂：</label>
-                            <span>选装</span>
+                            <span>{{data[0].carLvhejinlungu}}</span>
                         </li>
 
                         <li class="col-xs-12 col-md-4">
                             <label>胎压监测系统：</label>
-                            <span>无</span>
+                            <span>{{data[0].carTaiyajiancexitong}}</span>
                         </li>
 
 
@@ -246,53 +238,53 @@
                     <ul class="row list-unstyled">
                         <li class="col-xs-12 col-md-4">
                             <label>外置厨房：</label>
-                            <span>215/75 R16</span>
+                            <span>{{data[0].carWaizhichufang}}</span>
                         </li>
                         <li class="col-xs-12 col-md-4">
                             <label>外置淋浴：</label>
-                            <span>215/75 R16</span>
+                            <span>{{data[0].carWaizhilinyu}}</span>
                         </li>
                         <li class="col-xs-12 col-md-4">
                             <label>外置电视：</label>
-                            <span>全尺寸</span>
+                            <span>{{data[0].carWaizhidianshi}}</span>
                         </li>
                         <li class="col-xs-12 col-md-4">
                             <label>遮阳篷：</label>
-                            <span>选装</span>
+                            <span>{{data[0].carZheyangpeng}}</span>
                         </li>
 
                         <li class="col-xs-12 col-md-4">
                             <label>电动踏步：</label>
-                            <span>无</span>
+                            <span>{{data[0].carDiandongtabu}}</span>
                         </li>
 
                         <li class="col-xs-12 col-md-4">
                             <label>室外灯：</label>
-                            <span>无</span>
+                            <span>{{data[0].carShiwaideng}}</span>
                         </li>
                         <li class="col-xs-12 col-md-4">
                             <label>爬梯：</label>
-                            <span>无</span>
+                            <span>{{data[0].carPati}}</span>
                         </li>
                         <li class="col-xs-12 col-md-4">
                             <label>自行车架：</label>
-                            <span>无</span>
+                            <span>{{data[0].carZixingchejia}}</span>
                         </li>
                         <li class="col-xs-12 col-md-4">
                             <label>拖车钩：</label>
-                            <span>无</span>
+                            <span>{{data[0].carTuochegou}}</span>
                         </li>
                         <li class="col-xs-12 col-md-4">
                             <label>储物柜：</label>
-                            <span>无</span>
+                            <span>{{data[0].carChuwugui}}</span>
                         </li>
                         <li class="col-xs-12 col-md-4">
                                 <label>拓展仓：</label>
-                                <span>无</span>
+                                <span>{{data[0].carQita}}</span>
                             </li>
                         <li class="col-xs-12 col-md-4">
                             <label>其他：</label>
-                            <span>无</span>
+                            <span>{{data[0].carQita}}</span>
                         </li>
 
 
@@ -305,17 +297,17 @@
 
                         <li class="col-xs-12 col-md-4">
                             <label>多功能方向盘：</label>
-                            <span>无</span>
+                            <span>{{data[0].carDuogongnengfangxiangpan}}</span>
                         </li>
 
                         <li class="col-xs-12 col-md-4">
                             <label>方向盘调节：</label>
-                            <span>无</span>
+                            <span>{{data[0].carFangxiangpantiaojie}}</span>
                         </li>
 
                         <li class="col-xs-12 col-md-4">
                             <label>助力转向类型：</label>
-                            <span>液压助力</span>
+                            <span>{{data[0].carZhulizhuanxiangleixing}}</span>
                         </li>
 
                     </ul>
@@ -324,76 +316,71 @@
                     <ul class="row list-unstyled">
                         <li class="col-xs-12 col-md-4">
                             <label>皮质座椅：</label>
-                            <span>有</span>
+                            <span>{{data[0].carPizhizuoyi}}</span>
                         </li>
                         <li class="col-xs-12 col-md-4">
                             <label>织物/皮双拼座椅：</label>
-                            <span>无</span>
+                            <span>{{data[0].carZhiwupishuangpingzuoyi}}</span>
                         </li>
-                        <li class="col-xs-12 col-md-4">
-                            <label>方向盘调节：</label>
-                            <span>无</span>
-                        </li>
-
                         <li class="col-xs-12 col-md-4">
                             <label>驾驶位座椅调节：</label>
-                            <span>手动</span>
+                            <span>{{data[0].carJiashiweizuoyitiaojie}}</span>
                         </li>
                         <li class="col-xs-12 col-md-4">
                             <label>副驾驶位座椅调节：</label>
-                            <span>手动</span>
+                            <span>{{data[0].carFujiashiweizuoyitiaojie}}</span>
                         </li>
                         <li class="col-xs-12 col-md-4">
                             <label>第二排座椅调节：</label>
-                            <span>手动</span>
+                            <span>{{data[0].carDierpaizuoyitiaojie}}</span>
                         </li>
 
                         <li class="col-xs-12 col-md-4">
                             <label>座椅高低调节：</label>
-                            <span>无</span>
+                            <span>{{data[0].carZuoyigaoditiaojie}}</span>
                         </li>
 
                         <li class="col-xs-12 col-md-4">
                             <label>座椅通风：</label>
-                            <span>无</span>
+                            <span>{{data[0].carZuoyitongfeng}}</span>
                         </li>
                         <li class="col-xs-12 col-md-4">
                             <label>前排座椅加热：</label>
-                            <span>无</span>
+                            <span>{{data[0].carQianpaizuoyijiare}}</span>
                         </li>
                     </ul>
 
                     <h2 class="Detailscontext-SubTitle">多媒体</h2>
                     <ul class="row list-unstyled">
-                        <li class="col-xs-12 col-md-4"><label>音箱品牌：</label><span>-</span></li>
-                        <li class="col-xs-12 col-md-4"><label>扬声器数量：</label><span>4-5个</span></li>
-                        <li class="col-xs-12 col-md-4"><label>车载电视：</label><span>有</span></li>
-                        <li class="col-xs-12 col-md-4"><label>车载蓝牙：</label><span>无</span></li>
+                        <li class="col-xs-12 col-md-4"><label>音箱品牌：</label><span>{{data[0].carYinxiangpinpai}}</span></li>
+                        <li class="col-xs-12 col-md-4"><label>扬声器数量：</label><span>{{data[0].carYangshengqishuliang}}</span></li>
+                        <li class="col-xs-12 col-md-4"><label>车载电视：</label><span>{{data[0].carChezaidianshi}}</span></li>
+                        <li class="col-xs-12 col-md-4"><label>车载蓝牙：</label><span>{{data[0].carChezailanya}}</span></li>
                     </ul>
 
                     <h2 class="Detailscontext-SubTitle">安全气囊</h2>
                     <ul class="row list-unstyled">
-                        <li class="col-xs-12 col-md-4"><label>驾驶位安全气囊：</label><span>无</span></li>
-                        <li class="col-xs-12 col-md-4"><label>副驾驶位安全气囊：</label><span>无</span></li>
+                        <li class="col-xs-12 col-md-4"><label>驾驶位安全气囊：</label><span>{{data[0].carJiashiweianquanqinang}}</span></li>
+                        <li class="col-xs-12 col-md-4"><label>副驾驶位安全气囊：</label><span>{{data[0].carFujiashiweianquanqinang}}</span></li>
                     </ul>
 
                     <h2 class="Detailscontext-SubTitle">空调</h2>
                     <ul class="row list-unstyled">
-                        <li class="col-xs-12 col-md-4"><label>空调类型：</label><span>手动</span></li>
-                        <li class="col-xs-12 col-md-4"><label>后排空调出风口：</label><span>有</span></li>
-                        <li class="col-xs-12 col-md-4"><label>车内空气净化：</label><span>无</span></li>
+                        <li class="col-xs-12 col-md-4"><label>空调类型：</label><span>{{data[0].carKongtiaoleixing}}</span></li>
+                        <li class="col-xs-12 col-md-4"><label>后排空调出风口：</label><span>{{data[0].carHoupaikongtiaochukou}}</span></li>
+                        <li class="col-xs-12 col-md-4"><label>车内空气净化：</label><span>{{data[0].carCheneikongqijinhua}}</span></li>
                     </ul>
 
                     <h2 class="Detailscontext-SubTitle">安全类配置</h2>
                     <ul class="row list-unstyled">
-                        <li class="col-xs-12 col-md-4"><label>倒车雷达：</label><span>无</span></li>
-                        <li class="col-xs-12 col-md-4"><label>并线辅助：</label><span>无</span></li>
-                        <li class="col-xs-12 col-md-4"><label>自适应巡航：</label><span>无</span></li>
-                        <li class="col-xs-12 col-md-4"><label>全景摄像头：</label><span>无</span></li>
-                        <li class="col-xs-12 col-md-4"><label>倒车影像：</label><span>有</span></li>
-                        <li class="col-xs-12 col-md-4"><label>GPS导航：</label><span>有</span></li>
-                        <li class="col-xs-12 col-md-4"><label>定速巡航：</label><span>无</span></li>
-                        <li class="col-xs-12 col-md-4"><label>无钥匙启动：</label><span>无</span></li>
+                        <li class="col-xs-12 col-md-4"><label>倒车雷达：</label><span>{{data[0].carDaocheleida}}</span></li>
+                        <li class="col-xs-12 col-md-4"><label>并线辅助：</label><span>{{data[0].carBingxianfuzhu}}</span></li>
+                        <li class="col-xs-12 col-md-4"><label>自适应巡航：</label><span>{{data[0].carZishiyingxunhang}}</span></li>
+                        <li class="col-xs-12 col-md-4"><label>全景摄像头：</label><span>{{data[0].carQuanjingshexiangtou}}</span></li>
+                        <li class="col-xs-12 col-md-4"><label>倒车影像：</label><span>{{data[0].carDaocheyingxiang}}</span></li>
+                        <li class="col-xs-12 col-md-4"><label>GPS导航：</label><span>{{data[0].carGPSdaohang}}</span></li>
+                        <li class="col-xs-12 col-md-4"><label>定速巡航：</label><span>{{data[0].carDingsuxunhang}}</span></li>
+                        <li class="col-xs-12 col-md-4"><label>无钥匙启动：</label><span>{{data[0].carWuyaoshiqidong}}</span></li>
                     </ul>
 
 
@@ -404,91 +391,91 @@
                     <h2 class="Detailscontext-SubTitle">会客区</h2>
                     <ul class="row list-unstyled">
 
-                        <li class="col-xs-12 col-md-4"><label>沙发座位数：</label><span>-</span></li>
-                        <li class="col-xs-12 col-md-4"><label>行驶可乘坐人数：</label><span>-</span></li>
-                        <li class="col-xs-12 col-md-4"><label>沙发材质：</label><span>真皮</span></li>
-                        <li class="col-xs-12 col-md-4"><label>沙发床：</label><span>有</span></li>
-                        <li class="col-xs-12 col-md-4"><label>升降桌：</label><span>有</span></li>
+                        <li class="col-xs-12 col-md-4"><label>沙发座位数：</label><span>{{data[0].carZuoyitoncarShafazuoweishugfeng}}</span></li>
+                        <li class="col-xs-12 col-md-4"><label>行驶可乘坐人数：</label><span>{{data[0].carXingshikechengzuorenshu}}</span></li>
+                        <li class="col-xs-12 col-md-4"><label>沙发材质：</label><span>{{data[0].carShafacaizhi}}</span></li>
+                        <li class="col-xs-12 col-md-4"><label>沙发床：</label><span>{{data[0].carShafazhuo}}</span></li>
+                        <li class="col-xs-12 col-md-4"><label>升降桌：</label><span>{{data[0].carShengjiangzhuo}}</span></li>
                     </ul>
                     <h2 class="Detailscontext-SubTitle">厨房</h2>
                     <ul class="row list-unstyled">
-                        <li class="col-xs-12 col-md-4"><label>房车专用抽油烟机：</label><span>有</span></li>
-                        <li class="col-xs-12 col-md-4"><label>房车专用冰箱：</label><span>有</span></li>
-                        <li class="col-xs-12 col-md-4"><label>冰箱容积：</label><span>49L</span></li>
-                        <li class="col-xs-12 col-md-4"><label>冰箱类型：</label><span>压缩机</span></li>
-                        <li class="col-xs-12 col-md-4"><label>洗菜池：</label><span>有</span></li>
-                        <li class="col-xs-12 col-md-4"><label>水龙头冷热水可调：</label><span>有</span></li>
-                        <li class="col-xs-12 col-md-4"><label>电磁炉：</label><span>定制</span></li>
-                        <li class="col-xs-12 col-md-4"><label>烤箱：</label><span>定制</span></li>
-                        <li class="col-xs-12 col-md-4"><label>微波炉：</label><span>定制</span></li>
-                        <li class="col-xs-12 col-md-4"><label>洗碗机：</label><span>定制</span></li>
-                        <li class="col-xs-12 col-md-4"><label>燃气罐数量：</label><span>1</span></li>
-                        <li class="col-xs-12 col-md-4"><label>燃气罐容积：</label><span>10kg</span></li>
+                        <li class="col-xs-12 col-md-4"><label>房车专用抽油烟机：</label><span>{{data[0].carFangchezhuanyongchouyouyanji}}</span></li>
+                        <li class="col-xs-12 col-md-4"><label>房车专用冰箱：</label><span>{{data[0].carFangchezhuanyongbingxiang}}</span></li>
+                        <li class="col-xs-12 col-md-4"><label>冰箱容积：</label><span>{{data[0].carBingxiangrongji}}</span></li>
+                        <li class="col-xs-12 col-md-4"><label>冰箱类型：</label><span>{{data[0].carBingxiangleixing}}</span></li>
+                        <li class="col-xs-12 col-md-4"><label>洗菜池：</label><span>{{data[0].carXicaichi}}</span></li>
+                        <li class="col-xs-12 col-md-4"><label>水龙头冷热水可调：</label><span>{{data[0].carShuilongtoulengreshuiketiao}}</span></li>
+                        <li class="col-xs-12 col-md-4"><label>电磁炉：</label><span>{{data[0].carDiancilu}}</span></li>
+                        <li class="col-xs-12 col-md-4"><label>烤箱：</label><span>{{data[0].carKaoxiang}}</span></li>
+                        <li class="col-xs-12 col-md-4"><label>微波炉：</label><span>{{data[0].carWeibolu}}</span></li>
+                        <li class="col-xs-12 col-md-4"><label>洗碗机：</label><span>{{data[0].carXiwanji}}</span></li>
+                        <li class="col-xs-12 col-md-4"><label>燃气罐数量：</label><span>{{data[0].carRanxiguanshuliang}}</span></li>
+                        <li class="col-xs-12 col-md-4"><label>燃气罐容积：</label><span>{{data[0].carRanxiguanrongji}}</span></li>
                     </ul>
                     <h2 class="Detailscontext-SubTitle">床位</h2>
                     <ul class="row list-unstyled">
-                        <li class="col-xs-12 col-md-4"><label>单人床数量：</label><span>2</span></li>
-                        <li class="col-xs-12 col-md-4"><label>单人床尺寸：</label><span>1900*1100</span></li>
-                        <li class="col-xs-12 col-md-4"><label>双人床尺寸：</label><span>1</span></li>
-                        <li class="col-xs-12 col-md-4"><label>双人床数量：</label><span>1860*1280</span></li>
-                        <li class="col-xs-12 col-md-4"><label>总床位数：</label><span>3</span></li>
+                        <li class="col-xs-12 col-md-4"><label>单人床数量：</label><span>{{data[0].carDanrenchuangshuliang}}</span></li>
+                        <li class="col-xs-12 col-md-4"><label>单人床尺寸：</label><span>{{data[0].carDanrenchuangchicun}}</span></li>
+                        <li class="col-xs-12 col-md-4"><label>双人床尺寸：</label><span>{{data[0].carShuangrenchuangchicun}}</span></li>
+                        <li class="col-xs-12 col-md-4"><label>双人床数量：</label><span>{{data[0].carShuangrenchuangshuliang}}</span></li>
+                        <li class="col-xs-12 col-md-4"><label>总床位数：</label><span>{{data[0].carZongchuangweishu}}</span></li>
                     </ul>
                     <h2 class="Detailscontext-SubTitle">卫生间</h2>
                     <ul class="row list-unstyled">
-                        <li class="col-xs-12 col-md-4"><label>卫生间：</label><span>有</span></li>
-                        <li class="col-xs-12 col-md-4"><label>卫生间形式：</label><span>一体式</span></li>
-                        <li class="col-xs-12 col-md-4"><label>淋浴器：</label><span>有</span></li>
-                        <li class="col-xs-12 col-md-4"><label>坐便器：</label><span>有</span></li>
-                        <li class="col-xs-12 col-md-4"><label>卫生间洗手池：</label><span>无</span></li>
-                        <li class="col-xs-12 col-md-4"><label>暖风出口：</label><span>有</span></li>
-                        <li class="col-xs-12 col-md-4"><label>换气扇：</label><span>有</span></li>
-                        <li class="col-xs-12 col-md-4"><label>热水器：</label><span>有</span></li>
-                        <li class="col-xs-12 col-md-4"><label>热水器类型：</label><span>燃气热水器</span></li>
-                        <li class="col-xs-12 col-md-4"><label>洗衣机：</label><span>无</span></li>
+                        <li class="col-xs-12 col-md-4"><label>卫生间：</label><span>{{data[0].carWeishengjian}}</span></li>
+                        <li class="col-xs-12 col-md-4"><label>卫生间形式：</label><span>{{data[0].carWeishengjianxingshi}}</span></li>
+                        <li class="col-xs-12 col-md-4"><label>淋浴器：</label><span>{{data[0].carLinyuqi}}</span></li>
+                        <li class="col-xs-12 col-md-4"><label>坐便器：</label><span>{{data[0].carZuobianqi}}</span></li>
+                        <li class="col-xs-12 col-md-4"><label>卫生间洗手池：</label><span>{{data[0].carWeishengjianxishouchi}}</span></li>
+                        <li class="col-xs-12 col-md-4"><label>暖风出口：</label><span>{{data[0].carNuanfengchukou}}</span></li>
+                        <li class="col-xs-12 col-md-4"><label>换气扇：</label><span>{{data[0].carHuanqishan}}</span></li>
+                        <li class="col-xs-12 col-md-4"><label>热水器：</label><span>{{data[0].carReshuiqi}}</span></li>
+                        <li class="col-xs-12 col-md-4"><label>热水器类型：</label><span>{{data[0].carReshuiqileixing}}</span></li>
+                        <li class="col-xs-12 col-md-4"><label>洗衣机：</label><span>{{data[0].carXiyiji}}</span></li>
                     </ul>
                     <h2 class="Detailscontext-SubTitle">供电系统</h2>
                     <ul class="row list-unstyled">
-                        <li class="col-xs-12 col-md-4"><label>太阳能电池板：</label><span>选装</span></li>
-                        <li class="col-xs-12 col-md-4"><label>太阳能电池板发电量：</label><span>100W-300W</span></li>
-                        <li class="col-xs-12 col-md-4"><label>发电机：</label><span>无</span></li>
-                        <li class="col-xs-12 col-md-4"><label>发电机类型：</label><span>-</span></li>
-                        <li class="col-xs-12 col-md-4"><label>逆变器：</label><span>有</span></li>
-                        <li class="col-xs-12 col-md-4"><label>逆变器功率：</label><span>1500W</span></li>
-                        <li class="col-xs-12 col-md-4"><label>中央控制面板：</label><span>有</span></li>
-                        <li class="col-xs-12 col-md-4"><label>电瓶数量：</label><span>2</span></li>
-                        <li class="col-xs-12 col-md-4"><label>电瓶电量：</label><span>200安时</span></li>
+                        <li class="col-xs-12 col-md-4"><label>太阳能电池板：</label><span>{{data[0].carTaiyangnengdianchiban}}</span></li>
+                        <li class="col-xs-12 col-md-4"><label>太阳能电池板发电量：</label><span>{{data[0].carTaixiangnengdianchibanfadianliang}}</span></li>
+                        <li class="col-xs-12 col-md-4"><label>发电机：</label><span>{{data[0].carFadianji}}</span></li>
+                        <li class="col-xs-12 col-md-4"><label>发电机类型：</label><span>{{data[0].carFadianjileixing}}</span></li>
+                        <li class="col-xs-12 col-md-4"><label>逆变器：</label><span>{{data[0].carNibianqi}}</span></li>
+                        <li class="col-xs-12 col-md-4"><label>逆变器功率：</label><span>{{data[0].carNibianqigonglv}}</span></li>
+                        <li class="col-xs-12 col-md-4"><label>中央控制面板：</label><span>{{data[0].carZhongyangkongzhimianban}}</span></li>
+                        <li class="col-xs-12 col-md-4"><label>电瓶数量：</label><span>{{data[0].carDianpingshuliang}}</span></li>
+                        <li class="col-xs-12 col-md-4"><label>电瓶电量：</label><span>{{data[0].carDianpingdianliang}}</span></li>
                     </ul>
                     <h2 class="Detailscontext-SubTitle">供水系统</h2>
                     <ul class="row list-unstyled">
-                        <li class="col-xs-12 col-md-4"><label>房车专用水泵：</label><span>有</span></li>
-                        <li class="col-xs-12 col-md-4"><label>净水箱容积：</label><span>140升</span></li>
-                        <li class="col-xs-12 col-md-4"><label>黑水箱容积：</label><span>45升</span></li>
-                        <li class="col-xs-12 col-md-4"><label>灰水箱容积：</label><span>45升</span></li>
-                        <li class="col-xs-12 col-md-4"><label>排污方式：</label><span>手动</span></li>
-                        <li class="col-xs-12 col-md-4"><label>饮水净化系统：</label><span>无</span></li>
+                        <li class="col-xs-12 col-md-4"><label>房车专用水泵：</label><span>{{data[0].carFangchezhuanyongshuibeng}}</span></li>
+                        <li class="col-xs-12 col-md-4"><label>净水箱容积：</label><span>{{data[0].carJingshuixiangrongji}}</span></li>
+                        <li class="col-xs-12 col-md-4"><label>黑水箱容积：</label><span>{{data[0].carHeishuixiangrongji}}</span></li>
+                        <li class="col-xs-12 col-md-4"><label>灰水箱容积：</label><span>{{data[0].carHuishuixiangrongji}}</span></li>
+                        <li class="col-xs-12 col-md-4"><label>排污方式：</label><span>{{data[0].carPaiwufangshi}}</span></li>
+                        <li class="col-xs-12 col-md-4"><label>饮水净化系统：</label><span>{{data[0].carYinshuijinghuaxitong}}</span></li>
                     </ul>
                     <h2 class="Detailscontext-SubTitle">娱乐系统</h2>
                     <ul class="row list-unstyled">
-                        <li class="col-xs-12 col-md-4"><label>车载Wifi：</label><span>选装</span></li>
-                        <li class="col-xs-12 col-md-4"><label>卫星天线：</label><span>选装</span></li>
-                        <li class="col-xs-12 col-md-4"><label>车载电视：</label><span>有</span></li>
-                        <li class="col-xs-12 col-md-4"><label>车载KTV：</label><span>定制</span></li>
-                        <li class="col-xs-12 col-md-4"><label>DVD机头：</label><span>定制</span></li>
-                        <li class="col-xs-12 col-md-4"><label>车载音响：</label><span>定制</span></li>
-                        <li class="col-xs-12 col-md-4"><label>音响数量：</label><span>-</span></li>
+                        <li class="col-xs-12 col-md-4"><label>车载Wifi：</label><span>{{data[0].carChezaiWifi}}</span></li>
+                        <li class="col-xs-12 col-md-4"><label>卫星天线：</label><span>{{data[0].carWeixingdianshi}}</span></li>
+                        <li class="col-xs-12 col-md-4"><label>车载电视：</label><span>{{data[0].carChezaidianshi}}</span></li>
+                        <li class="col-xs-12 col-md-4"><label>车载KTV：</label><span>{{data[0].carChezaiKTV}}</span></li>
+                        <li class="col-xs-12 col-md-4"><label>DVD机头：</label><span>{{data[0].carDVDjitou}}</span></li>
+                        <li class="col-xs-12 col-md-4"><label>车载音响：</label><span>{{data[0].carChezaiyingxiang}}</span></li>
+                        <li class="col-xs-12 col-md-4"><label>音响数量：</label><span>{{data[0].carYinxiangshuliang}}</span></li>
                     </ul>
                     <h2 class="Detailscontext-SubTitle">温度控制系统</h2>
                     <ul class="row list-unstyled">
-                        <li class="col-xs-12 col-md-4"><label>驻车燃油加热系统：</label><span>有</span></li>
-                        <li class="col-xs-12 col-md-4"><label>房车专用空调：</label><span>选装</span></li>
-                        <li class="col-xs-12 col-md-4"><label>空调形式：</label><span>定制空调</span></li>
-                        <li class="col-xs-12 col-md-4"><label>燃气暖风系统：</label><span>选装</span></li>
+                        <li class="col-xs-12 col-md-4"><label>驻车燃油加热系统：</label><span>{{data[0].carZhucheranyoujiarexitong}}</span></li>
+                        <li class="col-xs-12 col-md-4"><label>房车专用空调：</label><span>{{data[0].carFangchezhuanyongkongtiao}}</span></li>
+                        <li class="col-xs-12 col-md-4"><label>空调形式：</label><span>{{data[0].carKongtiaoxingshi}}</span></li>
+                        <li class="col-xs-12 col-md-4"><label>燃气暖风系统：</label><span>{{data[0].carRanqinuanfengxitong}}</span></li>
                     </ul>
                     <h2 class="Detailscontext-SubTitle">安全系统</h2>
                     <ul class="row list-unstyled">
-                        <li class="col-xs-12 col-md-4"><label>烟雾报警器：</label><span>有</span></li>
-                        <li class="col-xs-12 col-md-4"><label>煤气报警器：</label><span>有</span></li>
-                        <li class="col-xs-12 col-md-4"><label>一氧化碳报警器：</label><span>有</span></li>
+                        <li class="col-xs-12 col-md-4"><label>烟雾报警器：</label><span>{{data[0].carYanwubaojingxi}}</span></li>
+                        <li class="col-xs-12 col-md-4"><label>煤气报警器：</label><span>{{data[0].carMeiqibaojingqi}}</span></li>
+                        <li class="col-xs-12 col-md-4"><label>一氧化碳报警器：</label><span>{{data[0].carYiyanghuatanbaojingqi}}</span></li>
                     </ul>
                 </div>
             </div>

@@ -1,29 +1,29 @@
 
 
-$(function () {
-    /** 验证文件是否导入成功  */
-    $("#form1").ajaxForm(function (data) {
-        var oDiv = document.getElementById("carTitleimage");
-        oDiv.innerText = data.titleFileName;
-    });
-});
+// $(function () {
+//     /** 验证文件是否导入成功  */
+//     $("#form1").ajaxForm(function (data) {
+//         var oDiv = document.getElementById("carTitleimage");
+//         oDiv.innerText = data.titleFileName;
+//     });
+// });
 
-$(function () {
-    /** 验证文件是否导入成功  */
-    $("#form2").ajaxForm(function (data) {
-        var oDiv = document.getElementById("carMoreimage");
-        oDiv.innerText = data.moreFileName;
-    });
-});
+// $(function () {
+//     /** 验证文件是否导入成功  */
+//     $("#form2").ajaxForm(function (data) {
+//         var oDiv = document.getElementById("carMoreimage");
+//         oDiv.innerText = data.moreFileName;
+//     });
+// });
 
 
-$(function () {
-    /** 验证文件是否导入成功  */
-    $("#form3").ajaxForm(function (data) {
-        var oDiv = document.getElementById("carMoreimage2");
-        oDiv.innerText = data.moreFileName2;
-    });
-});
+// $(function () {
+//     /** 验证文件是否导入成功  */
+//     $("#form3").ajaxForm(function (data) {
+//         var oDiv = document.getElementById("carMoreimage2");
+//         oDiv.innerText = data.moreFileName2;
+//     });
+// });
 
 // 文章保存
 
