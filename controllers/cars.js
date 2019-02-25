@@ -135,7 +135,8 @@ module.exports={
     },
 
     'POST /submitCar':async (ctx, next) => {
-        console.log(ctx.request.body.carTitleImage)
+
+        //var array=test.split('\n');
         let carDetail = {
             carID: ctx.request.body.carID,
             carLogo:  ctx.request.body.carLogo,

@@ -50,43 +50,23 @@
                 <h2 class="Detailscontext-SubTitle">车辆图片</h2>
                 <ul class="row list-unstyled">
                     <li class="col-xs-12 col-md-12">
-                        <form id="form1" action="/cars-titleImage" method="post" enctype="multipart/form-data" target="frame1">
-                            <div class="form-group">
-                                <h5 for="titleFile">封面图片(只能选择单张图片）</h5>
-                                <input type="file" name="file" id="titleFile">
-                                <span id="carTitleimage">{{data[0].carTitleimage}}</span>
-                            </div>
 
-                            <button type="submit" class="btn btn-primary">上传</button>
-                        </form>
-                    </li>
+                        <h5 for="titleFile">封面图片(只能存放单张图片） <a style="font-weight: bold; color:red;" href="http://sm.ms/" target="_Blank">图床链接,在图床上传后复制链接到输入框中即可</a></h5>
+                        <input id="carTitleimage">
 
-                    <li class="col-xs-12 col-md-12">
-                        <form id="form2" action="/cars-moreImage" method="post" enctype="multipart/form-data" target="frame2">
+            </li>
 
-                            <div class="form-group">
-                                <h5 for="morefiles">外观图片(请同时选择多张图片）</h5>
-                                <input type="file" name="file" id="morefile" multiple="multiple">
-                                <span id="carMoreimage">{{data[0].carMoreimage}}</span>
-                            </div>
+            <li class="col-xs-12 col-md-12">
+                <h5 for="titleFile">外观图片(支持多张图片） <a style="font-weight: bold; color:red;" href="http://sm.ms/" target="_Blank">图床链接,在图床上传后复制链接到输入框中即可</a></h5>
+                <textarea rows="5" cols="100" id="carMoreimage"></textarea> 
 
-                            <button type="submit" class="btn btn-primary">上传</button>
-                        </form>
-                    </li>
+            </li>
 
 
-                    <li class="col-xs-12 col-md-12">
-                        <form id="form3" action="/cars-moreImage2" method="post" enctype="multipart/form-data" target="frame3">
-
-                            <div class="form-group">
-                                <h5 for="morefiles">内饰图片(请同时选择多张图片）</h5>
-                                <input type="file" name="file" id="morefile" multiple="multiple">
-                                <span id="carMoreimage2">{{data[0].carMoreimage2}}</span>
-                            </div>
-
-                            <button type="submit" class="btn btn-primary">上传</button>
-                        </form>
-                    </li>
+            <li class="col-xs-12 col-md-12">
+                <h5 for="titleFile">内饰图片(支持多张图片） <a style="font-weight: bold; color:red;" href="http://sm.ms/" target="_Blank">图床链接,在图床上传后复制链接到输入框中即可</a></h5>
+                <textarea rows="5" cols="100" id="carMoreimage2"></textarea> 
+            </li>
                 </ul>
 
 

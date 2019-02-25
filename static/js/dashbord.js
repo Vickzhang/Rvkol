@@ -1,3 +1,5 @@
+
+
 $(function () {
     /** 验证文件是否导入成功  */
     $("#form1").ajaxForm(function (data) {
@@ -66,6 +68,8 @@ var save = function() {
 
 
 var saveButton = $('#save').click(() => {
+    var MoreImage = $("#carMoreimage").val().split("\n").join(",");
+    var MoreImage2 = $("#carMoreimage2").val().split("\n").join(",");
     $.ajax({
         type: 'POST',
         url: '/submitCar',
@@ -213,15 +217,17 @@ var saveButton = $('#save').click(() => {
             carYanwubaojingxi: $('#carYanwubaojingxi').val(),
             carMeiqibaojingqi: $('#carMeiqibaojingqi').val(),
             carYiyanghuatanbaojingqi: $('#carYiyanghuatanbaojingqi').val(),
-            carTitleImage: $('#carTitleimage').text(),
-            carMoreImage: $('#carMoreimage').text(),
-            carMoreImage2: $('#carMoreimage2').text(),
+            carTitleImage: $('#carTitleimage').val(),
+            carMoreImage: MoreImage,
+            carMoreImage2: MoreImage2
         }
     })
 });
 
 
 var saveChangeButton = $('#saveChange').click(() => {
+    var MoreImage = $("#carMoreimage").val().split("\n").join(",");
+    var MoreImage2 = $("#carMoreimage2").val().split("\n").join(",");
     //console.log($('#frame1').contents());
     $.ajax({
         type: 'POST',
@@ -370,9 +376,9 @@ var saveChangeButton = $('#saveChange').click(() => {
             carYanwubaojingxi: $('#carYanwubaojingxi').val(),
             carMeiqibaojingqi: $('#carMeiqibaojingqi').val(),
             carYiyanghuatanbaojingqi: $('#carYiyanghuatanbaojingqi').val(),
-            carTitleImage: $('#carTitleimage').text(),
-            carMoreImage: $('#carMoreimage').text(),
-            carMoreImage2: $('#carMoreimage2').text(),
+            carTitleImage: $('#carTitleimage').val(),
+            carMoreImage: MoreImage,
+            carMoreImage2: MoreImage2,
         }
     })
 });
