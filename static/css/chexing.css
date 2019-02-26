@@ -293,6 +293,51 @@
     font-size: 14px;
 }
 
+
+ul,li{
+    list-style: none;
+}
+
+.on{
+    background-color: #f01400;
+    color: #ffffff !important;
+}
+
+
+.select-box ul>li:first-child, .select-result ul>li:first-child{
+    color:black;
+    pointer-events: none;
+}
+
+
+
+.select-box ul>li{
+    float: left;
+    text-align: center;
+    height: 30px;
+    color: #c9c9c9;
+    cursor: pointer;
+    margin: 5px 0;
+}
+
+
+.select-box ul, select-result{
+    clear: both;
+}
+
+.select-result{
+    float: left;
+    text-align: center;
+    padding: 3px 0;
+    color: #c9c9c9;
+}
+
+
+
+
+
+
+
 .treeMainv1 {
     width: 860px;
     float: left;

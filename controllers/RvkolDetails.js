@@ -9,17 +9,44 @@ module.exports={
         })
     },
 
-    'GET /cars/:p&:l&:d':async(ctx,next)=>{
-        var p =ctx.params.p;
-        var l =ctx.params.l;
-        var d =ctx.params.d;
+    'GET /cars/:p/:l/:d':async(ctx,next)=>{
+        var p =ctx.params.p.split("=")[1];
+        var l =ctx.params.l.split("=")[1];
+        var d =ctx.params.d.split("=")[1];
+        var result;
+        if(p=="all"&&l=="all"&&d=="all"){
+            result = await Car.findAll();
+        }
+        else if(p=="all"&&l=="all"&&d!="all"){
+            result = await Car.findAll({
+                where:{
+                    car
+                }
+            });
+        }
+        else if(p=="all"&&l!="all"&&d=="all"){
 
-        console.log(p+l+d);
+        }
+        else if(p!="all"&&l=="all"&&d=="all"){
+
+        }
+        else if(p=="all"&&l!="all"&&d!="all"){
+
+        }
+        else if(p!="all"&&l=="all"&&d!="all"){
+
+        }
+        else if(p!="all"&&l!="all"&&d!="all"){
+
+        }
+        else{
+
+        }
 
 
         const model = require('../model');
         let Car = model.Car;
-        var result = await Car.findAll();
+
 
         ctx.render('cars.html',{
             data:result
