@@ -1,4 +1,12 @@
 module.exports={
+
+    'GET /contactUS':async (ctx,next) => {
+        ctx.render('contactUS.html',{
+            title:'房车情报后台管理系统'
+        })
+    },
+
+
     'POST /tellUs':async (ctx, next) => {
         let user = {
             userName: ctx.request.body.userName,
