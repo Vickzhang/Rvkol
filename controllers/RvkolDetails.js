@@ -9,6 +9,23 @@ module.exports={
         })
     },
 
+    'GET /cars/:p&:l&:d':async(ctx,next)=>{
+        var p =ctx.params.p;
+        var l =ctx.params.l;
+        var d =ctx.params.d;
+
+        console.log(p+l+d);
+
+
+        const model = require('../model');
+        let Car = model.Car;
+        var result = await Car.findAll();
+
+        ctx.render('cars.html',{
+            data:result
+        })
+    },
+
 
 
     'GET /RvDetails/:id':async(ctx,next)=>{
