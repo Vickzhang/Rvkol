@@ -96,7 +96,11 @@ function LogoJudge(l) {
                 return "顺旅";
             }
             break;
-
+        case "13":
+            {
+                return "极速";
+            }
+            break;
 
         default:
             {
@@ -150,7 +154,7 @@ function DipanJudge(d) {
             break;
         case "9":
             {
-                return "卡威";
+                return "中兴领主";
             }
             break;
         case "10":
@@ -222,7 +226,9 @@ module.exports = {
         var result = await Car.findAll();
 
         ctx.render('cars.html', {
-            data: result
+            data: result,
+            title:'房车情报-车型库',
+            subtitle:'全球房车领袖，最新最全的房车情报'
         })
     },
 
@@ -396,7 +402,9 @@ module.exports = {
 
 
         ctx.render('cars.html', {
-            data: result
+            data: result,
+            title:'房车情报-车型库',
+            subtitle:'全球房车领袖，最新最全的房车情报'
         })
     },
 
