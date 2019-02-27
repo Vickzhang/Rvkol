@@ -2,12 +2,12 @@ const fs = require('fs');
 
 module.exports={
     'GET /article-dashbord':async (ctx,next) => {
-        //const model = require('../model');
-        //let Car = model.Car;
-        //var result = await Car.findAll();
-        //console.log(JSON.stringify(result));
+        const model = require('../model');
+        let Article = model.Article;
+        var result = await Article.findAll();
+        console.log(JSON.stringify(result));
         ctx.render('article-dashbord.html',{
-            //data:result
+            data:result
         })
     },
     'GET /article-add':async (ctx,next) => {
@@ -19,6 +19,11 @@ module.exports={
             //data:result
         })
     },
+
+
+
+
+    
     'POST /article-uploadeImage':async (ctx,next)=>{
         //文件上传
         //配置

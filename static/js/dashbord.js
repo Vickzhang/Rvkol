@@ -64,6 +64,21 @@ $(document).ready( function() {
 var save = function() {
     var markup = $('#summernote').summernote('code');
     alert(markup);
+    $.ajax({
+        type: 'POST',
+        url: '/subArticle',
+        dataType: 'json',
+        data: {
+            articleID: $('#articleID').val(),
+            articleTitle: $('#articleTitle').val(),
+            articleTitleImage: $('#articleTitleImage').val(),
+            articleXiangguanchexing: $('#articleXiangguanchexing').val(),
+            articleZuozhe: $('#articleZuozhe').val(),
+            articleWenzhangleixing: $('#articleWenzhangleixing').val(),
+            articleContext: markup,
+            articlePublish: 0,    
+        }
+    })
 };
 
 

@@ -26,16 +26,18 @@
               <th>文章类型</th>
               <th>更新时间</th>
               <th>作者</th>
+              <th>公布状态</th>
               <th>操作</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <th scope="row">01</th>
-              <td>为什么选择房车情报</td>
+              <th scope="row">{{data[0].articleID}}</th>
+              <td>{{data[0].articleTitle}}</td>
               <td>文章</td>
               <td>2019-01-12</td>
               <td>姜小白</td>
+              <td>{{data[0].articlePublish}}</td>
               <td>
                 <div role="presentation" class="dropdown">
                   <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
@@ -45,6 +47,8 @@
                       <li><a href="">浏览</a></li>
                     <li><a href="">编辑</a></li>
                     <li><a href="">删除</a></li>
+                    <li><a href="">公布</a></li>
+                    <li><a href="">取消公布</a></li>
                   </ul>
                 </div>
               </td>
