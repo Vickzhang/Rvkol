@@ -63,7 +63,7 @@ $(document).ready( function() {
 //保存
 var save = function() {
     var markup = $('#summernote').summernote('code');
-    alert(markup);
+    //alert(markup);
     $.ajax({
         type: 'POST',
         url: '/subArticle',
@@ -77,7 +77,13 @@ var save = function() {
             articleWenzhangleixing: $('#articleWenzhangleixing').val(),
             articleContext: markup,
             articlePublish: 0,    
-        }
+        },
+        success: function(data) {
+            alert(data.code); 
+        }, 
+        error:function(){       
+            alert("上传失败");       
+        } 
     })
 };
 

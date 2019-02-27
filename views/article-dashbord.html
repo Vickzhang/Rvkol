@@ -31,21 +31,22 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <th scope="row">{{data[0].articleID}}</th>
-              <td>{{data[0].articleTitle}}</td>
-              <td>文章</td>
-              <td>2019-01-12</td>
-              <td>姜小白</td>
-              <td>{{data[0].articlePublish}}</td>
+             {% for f in data %} 
+             <tr>
+              <th scope="row">{{f.articleID}}</th>
+              <td>{{f.articleTitle}}</td>
+              <td>{{f.articleWenzhangleixing}}</td>
+              <td>{{f.updatedAt}}</td>
+              <td>{{f.articleZuozhe}}</td>
+              <td>{{f.articlePublish}}</td> 
               <td>
                 <div role="presentation" class="dropdown">
                   <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                     操作 <span class="caret"></span>
                   </button>
                   <ul class="dropdown-menu">
-                      <li><a href="">浏览</a></li>
-                    <li><a href="">编辑</a></li>
+                      <li><a href="articleDetails/{{f.articleID}}">浏览</a></li>
+                    <li><a href="article-change/{{f.carID}}"">编辑</a></li>
                     <li><a href="">删除</a></li>
                     <li><a href="">公布</a></li>
                     <li><a href="">取消公布</a></li>
@@ -53,6 +54,7 @@
                 </div>
               </td>
             </tr>
+             {% endfor %}   
           </tbody>
         </table>
         <nav class="pull-right">

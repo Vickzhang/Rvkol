@@ -21,6 +21,40 @@ module.exports={
     },
 
 
+    'POST /subArticle':async (ctx,next)=>{
+        let article = {
+            articleID: ctx.request.body.articleID,
+            articleTitle:  ctx.request.body.articleTitle,
+            articleTitleImage: ctx.request.body.articleTitleImage,
+            articleXiangguanchexing:  ctx.request.body.articleXiangguanchexing,
+            articleZuozhe:  ctx.request.body.articleZuozhe,
+            articleWenzhangleixing:  ctx.request.body.articleWenzhangleixing,
+            articleContext:  ctx.request.body.articleContext,
+            articlePublish:  ctx.request.body.articlePublish,
+        }
+
+        const model = require('../model');
+
+        let Article = model.Article;
+        (async () => {
+            var articleResult = await Article.create({
+                articleID: article.articleID,
+                articleTitle:  article.articleTitle,
+                articleTitleImage: article.articleTitleImage,
+                articleXiangguanchexing:  article.articleXiangguanchexing,
+                articleZuozhe:  article.articleZuozhe,
+                articleWenzhangleixing:  article.articleWenzhangleixing,
+                articleContext: article.articleContext,
+                articlePublish:  article.articlePublish,
+            });
+            console.log('created: ' + JSON.stringify(articleResult));
+        })();
+
+        return ctx.body = {
+            code:'提交成功！',
+        }
+    },
+
 
 
     

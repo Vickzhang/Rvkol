@@ -93,7 +93,8 @@
 
 .chexing-logo{
     display: inline;
-    align-content: center; 
+    align-content: center;
+    text-align: center;
 }
 
 .chexing-logo img{
@@ -107,6 +108,7 @@
 .chexing-logo span{
     text-align:center;
     float: left;
+    width:100%
 }
 
 
