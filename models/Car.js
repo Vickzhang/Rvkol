@@ -5,8 +5,8 @@ module.exports = db.defineModel('Cars', {
     carLogo:db.STRING(20),
     carTitle1:db.STRING(20),
     carTitle2:db.TEXT,
-    carPriceMin:db.STRING(20), //最小价格
-    carPriceMax:db.STRING(20), //最大价格
+    carPriceMin:db.DOUBLE(20), //最小价格
+    carType:db.STRING(20), //最房车类型
     carChexingjiegou:db.STRING(20),
     carDipanleixing:db.STRING(20),
     carZhunjialeixing:db.STRING(20),
