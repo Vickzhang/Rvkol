@@ -5,14 +5,14 @@
 
 <div class="container-fluid">
 
-        <div id="Banner" class="Banner-Div col-md-10 col-md-offset-1" style="color:#cdbfe3;  padding:0 0; margin-bottom: 10px">
-            <a href="">
+        <div id="Banner" class="Banner-Div col-md-10 col-md-offset-1" style="color:#cdbfe3;  padding:0 0; margin-top: 10px; margin-bottom: 10px">
+            <a href="">
                 <img src="/static/img/ADS/sjrz.png" alt="" class="img-responsive">
             </a>
             </div>
 
             <div id="Banner2" class="Banner-Div col-md-10 col-md-offset-1" style="color:#cdbfe3; ;  padding:0 0; margin-bottom: 10px">
-                    <a href="">    
+                    <a href="">    
                             <img src="/static/img/ADS/Banner2.jpeg" alt="" class="img-responsive">
                     </a>
                     </div>
@@ -21,10 +21,7 @@
     <div class="row">
         <div class="col-md-7 col-md-offset-1">   
             <div id="chexingPanel" class="panel panel-default">
-                <!-- <div class="panel-heading">
-                    <h3 class="panel-title"><span class="glyphicon glyphicon-cog"></span> 车型库 &nbsp;&nbsp; 广告位：显示推荐车型</h3>
-                </div> -->
-                <div class="panel-body" style="padding-top:0px;">
+                <div class="panel-body" style="padding-top:20px; ">
                     <!-- 图标导航-->
 
                             <div class="i_con2 hidden-xs">
@@ -581,11 +578,14 @@
                 <div >
                     <div class="list-group">
                         <a href="" class="row list-group-item">
-                            <div class="">
-
+                            <div class="col-md-3">
+                                <img class="img-responsive" src="/static/img/logo/jinghang.jpg" alt="">
                             </div>
-                            <h3>bootstrap</h3>
-                            <p>fidobngdo nv c oivuc on jvifrvufovdfjvodf</p>
+                            <div class="col-md-8">
+                                    <h3>bootstrap</h3>
+                                    <p>fidobngdo nv c oivuc on jvifrvufovdfjvodf</p>
+                            </div>
+                            
                         </a>
                         <a href="" class="list-group-item">
                             <h3>bootstrap</h3>
@@ -603,56 +603,127 @@
 
         <div class="row">
 
-            <div class="col-md-5 col-md-offset-1">
-                <div class="panel panel-danger ">
-                <div class="panel-heading">
-                    <h2 class="h2-context">游记</h2>
-                </div>
-                <div>
-                    <div class="list-group">
-                        <a href="" class="list-group-item">
-                            <h3>bootstrap</h3>
-                            <p>fidobngdo nv c oivuc on jvifrvufovdfjvodf</p>
-                        </a>
-                        <a href="" class="list-group-item">
-                            <h3>bootstrap</h3>
-                            <p>fidobngdo nv c oivuc on jvifrvufovdfjvodf</p>
-                        </a>
-                        <a href="" class="list-group-item">
-                            <h3>bootstrap</h3>
-                            <p>fidobngdo nv c oivuc on jvifrvufovdfjvodf</p>
-                        </a>
-                    </div>
-                </div>
-            </div>
+            <div class="col-md-7 col-md-offset-1 box">
+                            <nav class="navbar">
+                                <div class="navbar-header">
+                                    <!-- 小屏幕导航按钮和logo -->
+                                    <button class="navbar-toggle" role="button" data-toggle="collapse" href="#NewsTab" aria-expanded="false" aria-controls="collapseExample">
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                    <a href="/" class="navbar-brand NewsBrand">新闻</a>
+                                    
+                                </div>
+                
+                                <!-- 顶部导航项目 -->
+                                <div id="NewsTab" class="navbar-collapse collapse navbar-chexing">
+                                    <ul class="nav nav-tabs">
+                                        <li class="active"><a href="#byCarArticle" data-toggle="tab">车型文章</a></li>
+                                        <li><a href="#byCarVideo" data-toggle="tab">车型视频</a></li>
+                                        <li><a href="#byNews" data-toggle="tab">最新资讯</a></li>
+                                        <li><a href="#byTravel" data-toggle="tab">旅行游记</a></li>
+                                        <li><a href="#byUseCar" data-toggle="tab">用车</a></li>
+                                    </ul>
+                                </div>
+                
+                                <!-- 导航栏正文 -->
+                                <div id="" class="tab-content">
+                                    <div class="tab-pane fade in active" id="byCarArticle">
+                                            <div class="list-group">
+                                                    {% for item in carArticle %}
+                                                    <a href="/articleDetails/{{item.articleID}}" class="row list-group-item" style="margin-left: 0px;margin-right: 0px;">
+                                                        <div class="col-md-3">
+                                                            <img class="img-responsive" src="{{item.articleTitleImage}}" alt="">
+                                                        </div>
+                                                        <div>
+                                                                <h3>{{item.articleTitle}}</h2>
+                                                                <span>作者:{{item.articleZuozhe}}</span>
+                                                                <span>时间:{{item.updatedAt}}</span>
+                                                        </div>                                            
+                                                    </a>
+                                                    {% endfor %}
+                                            </div>
+
+                                    </div>
+                                    <div class="tab-pane fade" id="byCarVideo">
+                                            <div class="list-group">
+                                                    {% for item in carVedio %}
+                                                    <a href="" class="row list-group-item" style="margin-left: 0px;margin-right: 0px;">
+                                                        <div class="col-md-3">
+                                                            <img class="img-responsive" src="{{item.articleTitleImage}}" alt="">
+                                                        </div>
+                                                        <div>
+                                                                <h3>{{item.articleTitle}}</h2>
+                                                                <span>作者:{{item.articleZuozhe}}</span>
+                                                                <span>时间:{{item.updatedAt}}</span>
+                                                        </div>                                            
+                                                    </a>
+                                                    {% endfor %}
+                                            </div>
+                                        
+                                    </div>
+                                    <div class="tab-pane fade" id="byNews">
+                                            <div class="list-group">
+                                                    {% for item in carNews %}
+                                                    <a href="/articleDetails/{{item.articleID}}" class="row list-group-item" style="margin-left: 0px;margin-right: 0px;">
+                                                        <div class="col-md-3">
+                                                            <img class="img-responsive" src="{{item.articleTitleImage}}" alt="">
+                                                        </div>
+                                                        <div>
+                                                                <h3>{{item.articleTitle}}</h2>
+                                                                <span>作者:{{item.articleZuozhe}}</span>
+                                                                <span>时间:{{item.updatedAt}}</span>
+                                                        </div>                                            
+                                                    </a>
+                                                    {% endfor %}
+                                            </div>
+                                        
+                                    </div>
+                                    <div class="tab-pane fade" id="byTravel">
+                                            <div class="list-group">
+                                                    {% for item in carTravel %}
+                                                    <a href="/articleDetails/{{item.articleID}}" class="row list-group-item" style="margin-left: 0px;margin-right: 0px;">
+                                                        <div class="col-md-3">
+                                                            <img class="img-responsive" src="{{item.articleTitleImage}}" alt="">
+                                                        </div>
+                                                        <div>
+                                                                <h3>{{item.articleTitle}}</h2>
+                                                                <span>作者:{{item.articleZuozhe}}</span>
+                                                                <span>时间:{{item.updatedAt}}</span>
+                                                        </div>                                            
+                                                    </a>
+                                                    {% endfor %}
+                                            </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="byUseCar">
+                                            <div class="list-group">
+                                                    {% for item in carUse %}
+                                                    <a href="/articleDetails/{{item.articleID}}" class="row list-group-item" style="margin-left: 0px;margin-right: 0px;">
+                                                        <div class="col-md-3">
+                                                            <img class="img-responsive" src="{{item.articleTitleImage}}" alt="">
+                                                        </div>
+                                                        <div>
+                                                                <h3>{{item.articleTitle}}</h2>
+                                                                <span>作者:{{item.articleZuozhe}}</span>
+                                                                <span>时间:{{item.updatedAt}}</span>
+                                                        </div>                                            
+                                                    </a>
+                                                    {% endfor %}
+                                            </div>
+                                    </div>
+
+                                </div>
+                            </nav>
+                            <script>
+                                    $(function () {
+                                        $('#NewsTab li:eq(0) a').tab('show');
+                                    });
+                            </script>
+                        
             </div>
 
-            <div class="col-md-5 carVideo">
-                <div class="col-md-6">
-                        <a href="http://www.rv28.com/a/article-16635-1.html">
-                            <img src="/static/data/attachment/1.jpg" class="img-responsive" alt="10万级热门拖挂房车介绍，四款拖挂房车推荐">
-                            <span>10万级热门拖挂房车介绍，四款拖挂房车</span>
-                            </a>
-                </div>
-
-                <div class="col-md-6">
-                        <a href="http://www.rv28.com/a/article-16635-1.html">
-                            <img src="/static/data/attachment/1.jpg" class="img-responsive" alt="10万级热门拖挂房车介绍，四款拖挂房车推荐">
-                            <span>10万级热门拖挂房车介绍，四款拖挂房车</span>
-                            </a>
-                </div>
-                <div class="col-md-6">
-                        <a href="http://www.rv28.com/a/article-16635-1.html">
-                            <img src="/static/data/attachment/1.jpg" class="img-responsive" alt="10万级热门拖挂房车介绍，四款拖挂房车推荐">
-                            <span>10万级热门拖挂房车介绍，四款拖挂房车</span>
-                            </a>
-                </div>
-                <div class="col-md-6">
-                        <a href="http://www.rv28.com/a/article-16635-1.html">
-                            <img src="/static/data/attachment/1.jpg" class="img-responsive" alt="10万级热门拖挂房车介绍，四款拖挂房车推荐">
-                            <span>10万级热门拖挂房车介绍，四款拖挂房车</span>
-                            </a>
-                </div>
+            <div class="col-md-4 carVideo">
 
             </div>
         </div>
