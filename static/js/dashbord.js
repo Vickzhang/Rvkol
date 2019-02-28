@@ -403,3 +403,13 @@ var saveChangeButton = $('#saveChange').click(() => {
         }
     })
 });
+
+
+function del(){
+    $(this).remove()
+    // var obj = event.srcElement||event.target;
+    // var li  = obj.parentNode;
+    // var ul = document.getElementById("ul");
+    // ul.removeChild(li);
+ 
+}
