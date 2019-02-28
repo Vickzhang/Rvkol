@@ -268,7 +268,13 @@ var saveButton = $('#save').click(() => {
             carTitleImage: $('#carTitleimage').val(),
             carMoreImage: MoreImage,
             carMoreImage2: MoreImage2
-        }
+        },
+        success: function(data) {
+            alert(data.code); 
+        }, 
+        error:function(){       
+            alert("上传失败");       
+        } 
     })
 });
 
@@ -427,7 +433,13 @@ var saveChangeButton = $('#saveChange').click(() => {
             carTitleImage: $('#carTitleimage').val(),
             carMoreImage: MoreImage,
             carMoreImage2: MoreImage2,
-        }
+        },
+        success: function(data) {
+            alert(data.code); 
+        }, 
+        error:function(){       
+            alert("上传失败");       
+        } 
     })
 });
 

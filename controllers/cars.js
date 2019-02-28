@@ -441,6 +441,9 @@ module.exports={
             console.log('created: ' + JSON.stringify(RVuser));
         })();
         //
+        return ctx.body = {
+            code:'提交成功！',
+        }
     } ,
     
     'POST /changeCar':async (ctx, next) => {
@@ -753,5 +756,8 @@ module.exports={
             console.log('change: ' + JSON.stringify(RVuser));
         })();
         //
+        return ctx.body = {
+            code:'保存成功！',
+        }
     }  
 }
