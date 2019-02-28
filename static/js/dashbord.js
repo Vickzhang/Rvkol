@@ -405,11 +405,21 @@ var saveChangeButton = $('#saveChange').click(() => {
 });
 
 
-function del(){
-    $(this).remove()
-    // var obj = event.srcElement||event.target;
-    // var li  = obj.parentNode;
-    // var ul = document.getElementById("ul");
-    // ul.removeChild(li);
- 
+var articleDel =function(id){
+    var delUrl='/articleDel/'+id
+    //alert(delUrl);
+    $.ajax({
+        type: 'POST',
+        url: delUrl,
+        dataType: 'json',
+        data: {
+            
+        },
+        success: function(data) {
+            alert(data.code); 
+        }, 
+        error:function(){       
+            alert("删除失败");       
+        } 
+    })
 }

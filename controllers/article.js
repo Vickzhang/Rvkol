@@ -76,6 +76,26 @@ module.exports={
     },
 
 
+    'POST /articleDel/:id':async (ctx,next) => {
+        var id = ctx.params.id;
+
+        //数据库操作
+        const model = require('../model');
+        let Article = model.Article;
+
+        var result = await Article.destroy({
+            where: {
+                articleID: id,
+            }
+        });
+        console.log('Del: ' + JSON.stringify(result));
+
+        return ctx.body = {
+            code:'删除成功！',
+        }
+    },
+
+
 
     
     'POST /article-uploadeImage':async (ctx,next)=>{
