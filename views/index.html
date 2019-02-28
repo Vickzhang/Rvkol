@@ -571,38 +571,30 @@
         
                 
             <div class="col-md-3">
-                <div class="panel panel-warning ">
-                <div class="panel-heading">
-                    <h2 class="h2-context">最新情报</h2>
-                </div>
-                <div >
-                    <div class="list-group">
-                        <a href="" class="row list-group-item">
-                            <div class="col-md-3">
-                                <img class="img-responsive" src="/static/img/logo/jinghang.jpg" alt="">
-                            </div>
-                            <div class="col-md-8">
-                                    <h3>bootstrap</h3>
-                                    <p>fidobngdo nv c oivuc on jvifrvufovdfjvodf</p>
-                            </div>
-                            
-                        </a>
-                        <a href="" class="list-group-item">
-                            <h3>bootstrap</h3>
-                            <p>fidobngdo nv c oivuc on jvifrvufovdfjvodf</p>
-                        </a>
-                        <a href="" class="list-group-item">
-                            <h3>bootstrap</h3>
-                            <p>fidobngdo nv c oivuc on jvifrvufovdfjvodf</p>
-                        </a>
+                    <div>
+                            <a href="/" class="navbar-brand NewsBrand">热门车型</a>
                     </div>
-                </div>
-                </div>
+                    
+
+                    <div class="list-group">
+                            {% for item in carArticle %}
+                            <a href="/articleDetails/{{item.articleID}}" class="row list-group-item" style="margin-left: 0px;margin-right: 0px;">
+                                <div class="col-md-3">
+                                    <img class="img-responsive" src="{{item.articleTitleImage}}" alt="">
+                                </div>
+                                <div>
+                                        <h3>{{item.articleTitle}}</h2>
+                                        <span>作者:{{item.articleZuozhe}}</span>
+                                        <span>时间:{{item.updatedAt}}</span>
+                                </div>                                            
+                            </a>
+                            {% endfor %}
+                    </div>
+
             </div>
         </div>
 
         <div class="row">
-
             <div class="col-md-7 col-md-offset-1 box">
                             <nav class="navbar">
                                 <div class="navbar-header">
