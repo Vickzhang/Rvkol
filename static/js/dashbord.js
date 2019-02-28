@@ -57,7 +57,8 @@ $(document).ready( function() {
         }
           
       }
-    });                    
+    }); 
+    
   });
 
 //保存
@@ -67,6 +68,32 @@ var save = function() {
     $.ajax({
         type: 'POST',
         url: '/subArticle',
+        dataType: 'json',
+        data: {
+            articleID: $('#articleID').val(),
+            articleTitle: $('#articleTitle').val(),
+            articleTitleImage: $('#articleTitleImage').val(),
+            articleXiangguanchexing: $('#articleXiangguanchexing').val(),
+            articleZuozhe: $('#articleZuozhe').val(),
+            articleWenzhangleixing: $('#articleWenzhangleixing').val(),
+            articleContext: markup,
+            articlePublish: 0,    
+        },
+        success: function(data) {
+            alert(data.code); 
+        }, 
+        error:function(){       
+            alert("上传失败");       
+        } 
+    })
+};
+
+var articleChange = function() {
+    var markup = $('#summernote').summernote('code');
+    //alert(markup);
+    $.ajax({
+        type: 'POST',
+        url: '/changeArticle',
         dataType: 'json',
         data: {
             articleID: $('#articleID').val(),
@@ -406,7 +433,7 @@ var saveChangeButton = $('#saveChange').click(() => {
 
 
 var articleDel =function(id){
-    var delUrl='/articleDel/'+id
+    var delUrl='/articleDel/'+id;
     //alert(delUrl);
     $.ajax({
         type: 'POST',
@@ -420,6 +447,45 @@ var articleDel =function(id){
         }, 
         error:function(){       
             alert("删除失败");       
+        } 
+    })
+}
+
+var articlePublish =function(id){
+    var publishUrl='/articlePublish/'+id;
+    //alert(delUrl);
+    $.ajax({
+        type: 'POST',
+        url: publishUrl,
+        dataType: 'json',
+        data: {
+            
+        },
+        success: function(data) {
+            alert(data.code); 
+        }, 
+        error:function(){       
+            alert("发布失败");       
+        } 
+    })
+}
+
+
+var articleUnPublish =function(id){
+    var UnpublishUrl='/articleUnPublish/'+id;
+    //alert(delUrl);
+    $.ajax({
+        type: 'POST',
+        url: UnpublishUrl,
+        dataType: 'json',
+        data: {
+            
+        },
+        success: function(data) {
+            alert(data.code); 
+        }, 
+        error:function(){       
+            alert("取消发布失败");       
         } 
     })
 }

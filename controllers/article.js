@@ -20,6 +20,26 @@ module.exports={
         })
     },
 
+    'GET /article-change/:id':async (ctx,next) => {
+        var id = ctx.params.id;
+
+        //数据库操作
+        const model = require('../model');
+        let Article = model.Article;
+
+        var result = await Article.findAll({
+            where: {
+                articleID: id,
+            }
+        });
+
+        console.log(JSON.stringify(result));
+
+        ctx.render('article-change.html', {
+            data: result,
+        })
+    },
+
     'GET /articleDetails/:id':async (ctx,next) => {
         var id = ctx.params.id;
 
@@ -75,6 +95,44 @@ module.exports={
         }
     },
 
+    'POST /changeArticle':async (ctx,next)=>{
+        let article = {
+            articleID: ctx.request.body.articleID,
+            articleTitle:  ctx.request.body.articleTitle,
+            articleTitleImage: ctx.request.body.articleTitleImage,
+            articleXiangguanchexing:  ctx.request.body.articleXiangguanchexing,
+            articleZuozhe:  ctx.request.body.articleZuozhe,
+            articleWenzhangleixing:  ctx.request.body.articleWenzhangleixing,
+            articleContext:  ctx.request.body.articleContext,
+            articlePublish:  ctx.request.body.articlePublish,
+        }
+
+        const model = require('../model');
+
+        let Article = model.Article;
+        (async () => {
+            var articleResult = await Article.update({
+                articleID: article.articleID,
+                articleTitle:  article.articleTitle,
+                articleTitleImage: article.articleTitleImage,
+                articleXiangguanchexing:  article.articleXiangguanchexing,
+                articleZuozhe:  article.articleZuozhe,
+                articleWenzhangleixing:  article.articleWenzhangleixing,
+                articleContext: article.articleContext,
+                articlePublish:  article.articlePublish,
+            },{
+                where:{
+                    articleID:article.articleID,
+                }
+            });
+            console.log('update: ' + JSON.stringify(articleResult));
+        })();
+
+        return ctx.body = {
+            code:'修改成功！',
+        }
+    },
+
 
     'POST /articleDel/:id':async (ctx,next) => {
         var id = ctx.params.id;
@@ -92,6 +150,50 @@ module.exports={
 
         return ctx.body = {
             code:'删除成功！',
+        }
+    },
+
+    'POST /articlePublish/:id':async (ctx,next) => {
+        var id = ctx.params.id;
+
+        //数据库操作
+        const model = require('../model');
+        let Article = model.Article;
+
+        var result = await Article.update({
+            articlePublish:1,
+        },{
+            where:{
+                articleID:id,
+            }
+        }
+    );
+        console.log('Del: ' + JSON.stringify(result));
+
+        return ctx.body = {
+            code:'发布成功！',
+        }
+    },
+
+    'POST /articleUnPublish/:id':async (ctx,next) => {
+        var id = ctx.params.id;
+
+        //数据库操作
+        const model = require('../model');
+        let Article = model.Article;
+
+        var result = await Article.update({
+            articlePublish:0,
+        },{
+            where:{
+                articleID:id,
+            }
+        }
+    );
+        console.log('unPublish: ' + JSON.stringify(result));
+
+        return ctx.body = {
+            code:'操作成功！',
         }
     },
 
