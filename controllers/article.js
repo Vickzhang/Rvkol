@@ -20,6 +20,26 @@ module.exports={
         })
     },
 
+    'GET /articleDetails/:id':async (ctx,next) => {
+        var id = ctx.params.id;
+
+        //数据库操作
+        const model = require('../model');
+        let Article = model.Article;
+
+        var result = await Article.findAll({
+            where: {
+                articleID: id,
+            }
+        });
+
+        console.log(JSON.stringify(result));
+
+        ctx.render('articleDetails.html', {
+            data: result,
+        })
+    },
+
 
     'POST /subArticle':async (ctx,next)=>{
         let article = {

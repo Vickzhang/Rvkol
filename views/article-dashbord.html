@@ -3,19 +3,19 @@
 <div class="container">
     <nav class="navbar navbar-DetailTab">
         <ul class="nav list-unstyled list-inline">
-                <li class="col-xs-6 col-md-3"><a href="/article-dashbord" class="list-group-item active">文章管理</a></li>
-                <li class="col-xs-6 col-md-3"><a href="/article-add" class="list-group-item">添加文章</a></li>
+                <li class="col-xs-6 col-md-3"><a href="/article-dashbord" class="list-group-item active">文章/视频管理</a></li>
+                <li class="col-xs-6 col-md-3"><a href="/article-add" class="list-group-item">添加文章/视频</a></li>
             </ul>
   </nav>
   <div class="row">
 
       <div class="col-md-12">
         <div class="page-header">
-            <h1>文章管理</h1>
+            <h1>文章/视频管理</h1>
         </div>
         <ul class="nav nav-tabs">
           <li class="active">
-            <a href="">文章列表</a>
+            <a href="">文章/视频列表</a>
           </li>
         </ul>
         <table class="table">
@@ -46,7 +46,7 @@
                   </button>
                   <ul class="dropdown-menu">
                       <li><a href="articleDetails/{{f.articleID}}">浏览</a></li>
-                    <li><a href="article-change/{{f.carID}}"">编辑</a></li>
+                    <li><a href="article-change/{{f.articleID}}"">编辑</a></li>
                     <li><a href="">删除</a></li>
                     <li><a href="">公布</a></li>
                     <li><a href="">取消公布</a></li>

@@ -1,0 +1,26 @@
+{% extends "base.html" %} {% block main %}
+
+
+<div class="container" >
+        <br>
+        <br>
+
+        <h1>{{data[0].articleTitle}}</h1>
+        <div class="articleInfrom">
+            作者：{{data[0].articleZuozhe}}&nbsp;&nbsp;时间：{{data[0].updatedAt}}
+        </div>
+        <div id="summernote" class="articleContext">
+                <input id="noticeContent" name="noticeContent" value="{{data[0].articleContext}}" type="hidden">
+        </div>
+        
+    
+</div>
+
+<script>
+         var innerhtml = $("#noticeContent").val();
+         $("#summernote").append(innerhtml);
+</script>
+
+
+
+{% endblock %}

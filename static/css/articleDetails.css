@@ -1,0 +1,10 @@
+.articleInfrom {
+    margin-top: 20px;
+    font: 12px/1 Arial, "Sim sun";
+    color: #888;
+}
+
+.articleContext{
+    margin-top: 20px;
+    border-top: 1px solid black;
+}
