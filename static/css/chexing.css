@@ -184,9 +184,11 @@
 #contact{
     /* background:url(/static/img/map/MAP.png)no-repeat; */
     background-size: cover;
-    color:#fff;
-    background:rgb(0,0,0,0.7);
-    padding: 90px 0;
+    color:black;
+    background:rgba(241, 236, 236, 0.219);
+    padding: 40px 0;
+    border: gainsboro solid 1px;
+    border-radius: 4px;
 }
 
 #contact h2{
