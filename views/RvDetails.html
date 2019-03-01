@@ -6,7 +6,7 @@
                 <ul class="nav list-unstyled list-inline">
                     <li class="active col-xs-6 col-md-3"><a href="#DetailsShow" data-toggle="tab">车型展示</a></li>
                     <li class="col-xs-6 col-md-3"><a href="#DetailsContext" data-toggle="tab">车型配置</a></li>
-                    <li class="col-xs-6 col-md-3"><a href="#DetailsVideo" data-toggle="tab">车型视频</a></li>
+                    <li class="col-xs-6 col-md-3"><a href="#DetailsVideo" data-toggle="tab">车型文章/视频</a></li>
                     <li class="col-xs-6 col-md-3"><a href="#DetailsContact" data-toggle="tab">我要购车</a></li>
                 </ul>
             </div>
@@ -27,7 +27,7 @@
                         </p>
                     </div>
                 </div>
-<script>var break_line = document.getElementById("text_desc_p");
+                <script>var break_line = document.getElementById("text_desc_p");
     var content = break_line.innerHTML;
     break_line.innerHTML = content.replace(/。/g, "。<br>");
     
@@ -37,11 +37,11 @@
 
                     <div id="DetailImages" class="row navbar-left navbar-DetailImages">
                         <ul class="nav list-unstyled list-inline">
-                                {% for f in data[0].carMoreImage.split(",") %}
+                            {% for f in data[0].carMoreImage.split(",") %}
                             <li class="active col-xs-4 col-md-3"><a href="#" data-toggle="tab">
                                     <img style="max-width: 100%;" class="img-thumbnail viewer" src="{{f}}">
                                 </a></li>
-                                {% endfor %} 
+                            {% endfor %}
                         </ul>
                     </div>
                     <!--放大图的imgModal-->
@@ -57,11 +57,11 @@
 
                     <div id="DetailImages" class="row navbar-left navbar-DetailImages">
                         <ul class="nav list-unstyled list-inline">
-                                {% for f in data[0].carMoreImage2.split(",") %}
-                                <li class="col-xs-4 col-md-3"><a href="#" data-toggle="tab">
+                            {% for f in data[0].carMoreImage2.split(",") %}
+                            <li class="col-xs-4 col-md-3"><a href="#" data-toggle="tab">
                                     <img style="max-width: 100%;" class="img-thumbnail viewer" src="{{f}}" alt="">
                                 </a></li>
-                                {% endfor %} 
+                            {% endfor %}
                         </ul>
                     </div>
                     <!--放大图的imgModal-->
@@ -140,10 +140,10 @@
                     <h2 class="Detailscontext-SubTitle">底盘参数/动力/燃油/驱动</h2>
                     <ul class="row list-unstyled">
 
-                            <li class="col-xs-12 col-md-4">
-                                    <label>前悬挂形式：</label>
-                                    <span id="carQianxuanguaxingshi">{{data[0].carQianxuanguaxingshi}}</span>
-                                </li>
+                        <li class="col-xs-12 col-md-4">
+                            <label>前悬挂形式：</label>
+                            <span id="carQianxuanguaxingshi">{{data[0].carQianxuanguaxingshi}}</span>
+                        </li>
 
                         <li class="col-xs-12 col-md-4">
                             <label>后悬挂形式：</label>
@@ -283,9 +283,9 @@
                             <span>{{data[0].carChuwugui}}</span>
                         </li>
                         <li class="col-xs-12 col-md-4">
-                                <label>拓展仓：</label>
-                                <span>{{data[0].carQita}}</span>
-                            </li>
+                            <label>拓展仓：</label>
+                            <span>{{data[0].carQita}}</span>
+                        </li>
                         <li class="col-xs-12 col-md-4">
                             <label>其他：</label>
                             <span>{{data[0].carQita}}</span>
@@ -491,10 +491,22 @@
                         <div class="panel-heading">
                             <h3 class="panel-title"><span class="glyphicon glyphicon-hd-video"></span>房车文章|车型视频</h3>
                         </div>
+
+                    
+
                         <div class="panel-body">
-                            <video width="100%" controls="controls">
-                                <source src="http://vjs.zencdn.net/v/oceans.mp4">
-                            </video>
+                            {% for item in carArticles %}
+                            <a href="/articleDetails/{{item.articleID}}" class="row list-group-item" style="margin-left: 0px;margin-right: 0px;">
+                                <div class="col-md-3">
+                                    <img class="img-responsive" src="{{item.articleTitleImage}}" alt="">
+                                </div>
+                                <div>
+                                        <h3>{{item.articleTitle}}</h2>
+                                        <span>作者:{{item.articleZuozhe}}</span>
+                                        <span>时间:{{item.updatedAt}}</span>
+                                </div>                                            
+                            </a>
+                            {% endfor %}
                         </div>
                     </div>
                 </div>
@@ -506,54 +518,56 @@
                 <div class="row">
 
                     <section id="contact" class="col-md-10 col-md-offset-1">
-                            <div class="lvjing">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col-md-5">
-                                            <h2>
-                                                <span class="glyphicon glyphicon-send"></span>
-                                                &nbsp
-                                                联系我们
-                                            </h2>
-                                            <p>请留下您的联系方式吗，我们会安排专人尽快与您联系，您也可以添加微信：13436780368咨询房车事宜。</p>
-                                            <address>
-                                                <p><span class="glyphicon glyphicon-home"></span>&nbsp地址：北京市房山区天星院1号</p>
-                                                <p><span class="glyphicon glyphicon-phone-alt"></span>&nbsp联系电话：13436780368</p>
-                                                <p><span class="glyphicon glyphicon-envelope"></span>&nbsp邮箱：2629135340@qq.com</p>
-                                            </address>
+                        <div class="lvjing">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <h2>
+                                            <span class="glyphicon glyphicon-send"></span>
+                                            &nbsp
+                                            联系我们
+                                        </h2>
+                                        <p>请留下您的联系方式吗，我们会安排专人尽快与您联系，您也可以添加微信：13436780368咨询房车事宜。</p>
+                                        <address>
+                                            <p><span class="glyphicon glyphicon-home"></span>&nbsp地址：北京市房山区天星院1号</p>
+                                            <p><span class="glyphicon glyphicon-phone-alt"></span>&nbsp联系电话：13436780368</p>
+                                            <p><span class="glyphicon glyphicon-envelope"></span>&nbsp邮箱：2629135340@qq.com</p>
+                                        </address>
+                                    </div>
+
+                                    <div class="col-md-5 col-ofset-1">
+
+                                        <div class="col-md-12">
+                                            <input name="userName" type="text" class="form-control" placeholder="您的姓名" />
                                         </div>
-                                        
-                                        <div class="col-md-5 col-ofset-1">
-                                            
-                                                <div class="col-md-12">
-                                                    <input name="userName" type="text" class="form-control" placeholder="您的姓名" />
-                                                </div>
-                                                <div class="col-md-12">
-                                                    <input name="connection" type="text" class="form-control" placeholder="您的联系方式" />
-                                                </div>
-                                                <div class="col-md-12">
-                                                        <input name="targetCar" type="text" value="{{data[0].carTitle1}}" class="form-control" placeholder="您的意向车型"/>
+                                        <div class="col-md-12">
+                                            <input name="connection" type="text" class="form-control" placeholder="您的联系方式" />
+                                        </div>
+                                        <div class="col-md-12">
+                                            <input name="targetCar" type="text" value="{{data[0].carTitle1}}" class="form-control"
+                                                placeholder="您的意向车型" />
+                                        </div>
+
+                                        <div class="col-md-8">
+                                            <button class="form-control" id="TellUS">提交</button>
+                                        </div>
+
+                                        <!--模态框-->
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="myModal" tabindex="-1" role="dialog"
+                                            aria-labelledby="myModalLabel">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-body">
+                                                        提交成功
                                                     </div>
-    
-                                                <div class="col-md-8">
-                                                    <button class="form-control"  id="TellUS">提交</button>
                                                 </div>
-                                            
-                                            <!--模态框-->
-                                            <!-- Modal -->
-                                            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                                                    <div class="modal-dialog" role="document">
-                                                        <div class="modal-content">
-                                                            <div class="modal-body">
-                                                                提交成功
-                                                            </div>
-                                                        </div>
-                                                    </div>
                                             </div>
                                         </div>
-                                </div>                      
-                            </div>             
-                        </section>
+                                    </div>
+                                </div>
+                            </div>
+                    </section>
                 </div>
             </div>
         </div>
@@ -564,6 +578,6 @@
 <script src="/static/js/bootstrap.viewer.min.js"></script>
 <script type="text/javascript">
     $(function () {
-        $('.viewer').bootstrapViewer();//The default image source file path is the src attribute of the img tag.
+        $('.viewer').bootstrapViewer(); //The default image source file path is the src attribute of the img tag.
     })
 </script> {% endblock %}

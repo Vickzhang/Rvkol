@@ -417,16 +417,23 @@ module.exports = {
         const model = require('../model');
         let Car = model.Car;
 
-        var result = await Car.findAll({
+        var carInform = await Car.findAll({
             where: {
                 carID: id,
             }
         });
 
-        console.log(JSON.stringify(result));
+        let Articles = model.Article;
+        var ArticleInform = await Articles.findAll({
+            where: {
+                articleXiangguanchexing: id,
+            }
+        });
+        //console.log(JSON.stringify(result));
 
         ctx.render('RvDetails.html', {
-            data: result,
+            data: carInform,
+            carArticles:ArticleInform
         })
     }
 }

@@ -93,7 +93,8 @@ $(document).ready( function() {
 //保存
 var save = function() {
     var markup = $('#summernote').summernote('code');
-    //alert(markup);
+    var post= JSON.stringify(markup)
+    alert(post);
     $.ajax({
         type: 'POST',
         url: '/subArticle',
@@ -105,7 +106,7 @@ var save = function() {
             articleXiangguanchexing: $('#articleXiangguanchexing').val(),
             articleZuozhe: $('#articleZuozhe').val(),
             articleWenzhangleixing: $('#articleWenzhangleixing').val(),
-            articleContext: markup,
+            articleContext: post,
             articlePublish: 0,    
         },
         success: function(data) {

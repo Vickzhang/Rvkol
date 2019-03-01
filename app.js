@@ -2,7 +2,7 @@
 const Koa = require('koa');
 
 //导入koa posterParse
-const bodyParser = require('koa-bodyparser');
+//const bodyParser = require('koa-bodyparser');
 // 导入controller middleware:
 const controller = require('./controller');
 //判断运行环境
@@ -36,8 +36,12 @@ app.use(async (ctx, next) => {
 //使用koabody模块
 app.use(koaBody({
     multipart: true, 
+    jsonLimit:"5mb",
+    textLimit:"5mb",
+    formLimit:"5mb",
     formidable: {
-      maxFileSize: 200*1024*1024 // 设置上传文件大小最大限制，默认2M
+      maxFileSize: 200*1024*1024, // 设置上传文件大小最大限制，默认2M
+      maxFieldsSize:10*1024*104
     } 
   }));
 
@@ -58,7 +62,7 @@ app.use(templating('views', {
 
 
 // 加入 poster解析
-app.use(bodyParser());
+//app.use(bodyParser());
 
 
 //Controller
