@@ -473,6 +473,7 @@ var saveChangeButton = $('#saveChange').click(() => {
 });
 
 
+
 var articleDel =function(id){
     var delUrl='/articleDel/'+id;
     //alert(delUrl);

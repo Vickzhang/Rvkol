@@ -27,7 +27,11 @@
                         </p>
                     </div>
                 </div>
-
+<script>var break_line = document.getElementById("text_desc_p");
+    var content = break_line.innerHTML;
+    break_line.innerHTML = content.replace(/。/g, "。<br>");
+    
+    </script>
                 <div class="Detail-Images">
                     <h2>外观图片：</h2>
 
@@ -520,7 +524,7 @@
                                         </div>
                                         
                                         <div class="col-md-5 col-ofset-1">
-                                            <form action="/tellUs" method="POST" target="frame1">
+                                            
                                                 <div class="col-md-12">
                                                     <input name="userName" type="text" class="form-control" placeholder="您的姓名" />
                                                 </div>
@@ -532,9 +536,9 @@
                                                     </div>
     
                                                 <div class="col-md-8">
-                                                    <input type="submit" class="form-control" value="提交" data-toggle="modal" data-target="#myModal">
+                                                    <button class="form-control"  id="TellUS">提交</button>
                                                 </div>
-                                            </form>
+                                            
                                             <!--模态框-->
                                             <!-- Modal -->
                                             <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">

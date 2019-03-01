@@ -25,7 +25,9 @@ module.exports={
             });
             console.log('created: ' + JSON.stringify(RVuser));
         })();
-
+        return ctx.body = {
+            code:'提交成功！',
+        }
         //
 
     }  
