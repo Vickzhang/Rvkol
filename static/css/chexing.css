@@ -185,7 +185,8 @@
     /* background:url(/static/img/map/MAP.png)no-repeat; */
     background-size: cover;
     color:#fff;
-
+    background:rgb(0,0,0,0.7);
+    padding: 90px 0;
 }
 
 #contact h2{
@@ -198,13 +199,13 @@
     margin-bottom: 20px;
 }
 
-.lvjing{
+/* .lvjing{
     background:rgb(0,0,0,0.7);
     width: 100%;
     height: 100%;
     padding: 90px 0;
 
-}
+} */
 
 #contact .form-control{
     border: none;
