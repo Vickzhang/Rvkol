@@ -532,7 +532,7 @@
 
 
         <div class="row">
-            <div class="col-md-7 col-md-offset-1">
+            <div class="col-md-6 col-md-offset-1">
 
                         <div id="myCarousel" class="carousel slide ad-carousel">
                                 <!-- 轮播（Carousel）指标 -->
@@ -543,19 +543,19 @@
                                 </ol>   
                                 <!-- 轮播（Carousel）项目 -->
                                 <div class="carousel-inner">
-                                    <div class="item active">
-                                        <img class="img-responsive" src="/static/img/ADS/RVForOld.jpeg" alt="First slide">
-                                        <div class="carousel-caption">RV To Old
+                                    <a href="/cars/price=all/logo=4/dipan=all/leixing=all" class="item active">
+                                        <img class="img-responsive" src="https://i.loli.net/2019/03/02/5c7977b278fb8.jpeg" alt="First slide">
+                                        <div class="carousel-caption">水电无需升级，820Ah锂电池+180L净水箱，这款房车睡4-5人
                                         </div>
-                                    </div>
-                                    <div class="item">
-                                        <img src="/static/img/ADS/RVForLove.jpeg" alt="Second slide">
-                                        <div class="carousel-caption">RV For Love</div>
-                                    </div>
-                                    <div class="item">
-                                        <img src="/static/img/ADS/RVToSea.jpeg" alt="Third slide">
-                                        <div class="carousel-caption">RV To Sea</div>
-                                    </div>
+                                    </a>
+                                    <a href="/cars" class="item">
+                                        <img src="https://i.loli.net/2019/03/02/5c7978cf9ec0d.jpeg" alt="Second slide">
+                                        <div class="carousel-caption">大通原厂G10等您来试驾</div>
+                                    </a>
+                                    <a href="/cars" class="item">
+                                        <img src="https://i.loli.net/2019/03/02/5c7978cfb09b9.jpeg" alt="Third slide">
+                                        <div class="carousel-caption">中天发布新T型房车，车高不足3米，内高接近2米，配2张大双人床</div>
+                                    </a>
                                 </div>
                                 <!-- 轮播（Carousel）导航 -->
                                 <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
@@ -570,27 +570,35 @@
             </div>
         
                 
-            <div class="col-md-3">
-                    <div>
-                            <a href="/" class="navbar-brand NewsBrand">热门车型</a>
+            <div class="col-md-4" style="max-height:600px;">
+                    <div class="row hotArticle">
+                            <a href="/" class="navbar-brand NewsBrand">热门文章</a>
                     </div>
-                    
 
                     <div class="list-group">
-                            {% for item in carArticle %}
-                            <a href="/articleDetails/{{item.articleID}}" class="row list-group-item" style="margin-left: 0px;margin-right: 0px;">
-                                <div class="col-md-3">
-                                    <img class="img-responsive" src="{{item.articleTitleImage}}" alt="">
+                            
+                            <a href="/articleDetails/07" class="row list-group-item" style="margin-left: 0px;margin-right: 0px;">
+                                <div class="col-md-4">
+                                    <img class="img-responsive" src="https://i.loli.net/2019/03/02/5c79893ebd48c.jpeg" alt="">
                                 </div>
                                 <div>
-                                        <h3>{{item.articleTitle}}</h2>
-                                        <span>作者:{{item.articleZuozhe}}</span>
-                                        <span>时间:{{item.updatedAt}}</span>
+                                        <h4>宇通房车携13款车型强势登陆北京房车展</h4>
+                                        <span>作者:房车情报</span>
+                                        <span>时间:2019.03.02 03:31</span>
                                 </div>                                            
                             </a>
-                            {% endfor %}
-                    </div>
 
+                            <a href="/articleDetails/03" class="row list-group-item" style="margin-left: 0px;margin-right: 0px;">
+                                <div class="col-md-4">
+                                    <img class="img-responsive" src="https://i.loli.net/2019/03/01/5c78f9853ac62.jpg" alt="">
+                                </div>
+                                <div>
+                                        <h4>高颜值vs大空间 新季风 · 新T型房车全新上市！</h4>
+                                        <span>作者:房车情报</span>
+                                        <span>时间:2019.03.02 03:31</span>
+                                </div>                                            
+                            </a>
+                    </div>
             </div>
         </div>
 
@@ -641,7 +649,7 @@
                                     <div class="tab-pane fade" id="byCarVideo">
                                             <div class="list-group">
                                                     {% for item in carVedio %}
-                                                    <a href="" class="row list-group-item" style="margin-left: 0px;margin-right: 0px;">
+                                                    <a href="/articleDetails/{{item.articleID}}" class="row list-group-item" style="margin-left: 0px;margin-right: 0px;">
                                                         <div class="col-md-3">
                                                             <img class="img-responsive" src="{{item.articleTitleImage}}" alt="">
                                                         </div>
@@ -720,47 +728,6 @@
             </div>
         </div>
 
-        <div class="row">
-
-                <div id="contact" class="col-md-10 col-md-offset-1">
-                        <div class="lvjing">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-md-5">
-                                        <h2>
-                                            <span class="glyphicon glyphicon-send"></span>
-                                            &nbsp
-                                            联系我们
-                                        </h2>
-                                        <p>请留下您的联系方式吗，我们会安排专人尽快与您联系，您也可以添加微信：13436780368咨询房车事宜。</p>
-                                        <address>
-                                            <p><span class="glyphicon glyphicon-home"></span>&nbsp地址：北京市房山区天星院1号</p>
-                                            <p><span class="glyphicon glyphicon-phone-alt"></span>&nbsp联系电话：13436780368</p>
-                                            <p><span class="glyphicon glyphicon-envelope"></span>&nbsp邮箱：2629135340@qq.com</p>
-                                        </address>
-                                    </div>
-                                    <div class="col-ofset-1 col-md-5">
-                                      
-                                            <div class="col-md-12">
-                                                <input name="userName" type="text" class="form-control" placeholder="您的姓名" />
-                                            </div>
-                                            <div class="col-md-12">
-                                                <input name="connection" type="text" class="form-control" placeholder="您的联系方式" />
-                                            </div>
-                                            <div class="col-md-12">
-                                                    <input name="targetCar" type="text" class="form-control" placeholder="您的意向车型" />
-                                                </div>
-
-                                            <div class="col-md-8">
-                                                <button class="form-control"  id="TellUS">提交</button>
-                                            </div>
-                                      
-
-                                    </div>
-                            </div>                      
-                        </div>             
-                        </div>
-        </div>
 </div>
 
 <script>
