@@ -8,6 +8,7 @@ module.exports={
                  var carArticle = await Article.findAll({
                     where: {
                         articleWenzhangleixing: "车型文章",
+                        articlePublish:true
                     },
                     order:[['updatedAt', 'DESC']]
                  });
@@ -17,6 +18,7 @@ module.exports={
                 var carVedio = await Article.findAll({
                      where: {
                         articleWenzhangleixing: "车型视频",
+                        articlePublish:true
                      },
                      order:[['updatedAt', 'DESC']]
                  });
@@ -24,6 +26,7 @@ module.exports={
                  var carNews = await Article.findAll({
                     where: {
                        articleWenzhangleixing: "资讯",
+                       articlePublish:true
                     },
                     order:[['updatedAt', 'DESC']]
                 });
@@ -31,6 +34,7 @@ module.exports={
                 var carTravel = await Article.findAll({
                     where: {
                        articleWenzhangleixing: "旅行游记",
+                       articlePublish:true
                     },
                     order:[['updatedAt', 'DESC']]
                 });
@@ -38,6 +42,7 @@ module.exports={
                 var carUse = await Article.findAll({
                     where: {
                        articleWenzhangleixing: "用车",
+                       articlePublish:true
                     },
                     order:[['updatedAt', 'DESC']]
                 });
