@@ -297,7 +297,8 @@ var saveButton = $('#save').click(() => {
             carYiyanghuatanbaojingqi: $('#carYiyanghuatanbaojingqi').val(),
             carTitleImage: $('#carTitleimage').val(),
             carMoreImage: MoreImage,
-            carMoreImage2: MoreImage2
+            carMoreImage2: MoreImage2,
+            carPublish: 0,
         },
         success: function(data) {
             alert(data.code); 
@@ -516,6 +517,65 @@ var articlePublish =function(id){
 
 var articleUnPublish =function(id){
     var UnpublishUrl='/articleUnPublish/'+id;
+    //alert(delUrl);
+    $.ajax({
+        type: 'POST',
+        url: UnpublishUrl,
+        dataType: 'json',
+        data: {
+            
+        },
+        success: function(data) {
+            alert(data.code); 
+        }, 
+        error:function(){       
+            alert("取消发布失败");       
+        } 
+    })
+}
+
+
+var carDel =function(id){
+    var delUrl='/carDel/'+id;
+    //alert(delUrl);
+    $.ajax({
+        type: 'POST',
+        url: delUrl,
+        dataType: 'json',
+        data: {
+            
+        },
+        success: function(data) {
+            alert(data.code); 
+        }, 
+        error:function(){       
+            alert("删除失败");       
+        } 
+    })
+}
+
+var carPublish =function(id){
+    var publishUrl='/carPublish/'+id;
+    //alert(delUrl);
+    $.ajax({
+        type: 'POST',
+        url: publishUrl,
+        dataType: 'json',
+        data: {
+            
+        },
+        success: function(data) {
+            alert(data.code); 
+        }, 
+        error:function(){       
+            alert("发布错误");       
+        } 
+    })
+}
+
+
+var carUnPublish =function(id){
+    var UnpublishUrl='/carUnPublish/'+id;
     //alert(delUrl);
     $.ajax({
         type: 'POST',

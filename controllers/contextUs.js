@@ -2,7 +2,7 @@ module.exports={
 
     'GET /contactUS':async (ctx,next) => {
         ctx.render('contactUS.html',{
-            title:'房车情报后台管理系统'
+            title:'房车情报-联系我们'
         })
     },
 
@@ -27,6 +27,7 @@ module.exports={
         })();
         return ctx.body = {
             code:'提交成功！',
+            
         }
         //
 

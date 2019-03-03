@@ -146,4 +146,5 @@ module.exports = db.defineModel('Cars', {
     carTitleImage:db.STRING(300),
     carMoreImage:db.STRING(2000),
     carMoreImage2:db.STRING(2000),
+    carPublish:db.BOOLEAN
 });

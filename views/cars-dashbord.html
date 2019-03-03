@@ -24,6 +24,7 @@
               <th>ID</th>
               <th>车型</th>
               <th>品牌</th>
+              <th>是否发布</th>
               <th>更新时间</th>
               <th>操作</th>
             </tr>
@@ -34,6 +35,7 @@
               <th scope="row">{{f.carID}}</th>
               <td>{{f.carTitle1}}</td>
               <td>{{f.carLogo}}</td>
+              <td>{{f.carPublish}}</td>
               <td>{{f.createdAt}}</td>
               <td>
                 <div role="presentation" class="dropdown">
@@ -43,7 +45,9 @@
                   <ul class="dropdown-menu">
                       <li><a href="RvDetails/{{f.carID}}">浏览</a></li>
                     <li><a href="cars-change/{{f.carID}}">编辑</a></li>
-                    <li><a href="">删除</a></li>
+                    <li><a href="" onclick="carPublish('{{f.carID}}')" >公布</a></li>
+                    <li><a href="" onclick="carUnPublish('{{f.carID}}')">取消公布</a></li>
+                    <li><a href=""onclick="carDel('{{f.carID}}')">删除</a></li>
                   </ul>
                 </div>
               </td>

@@ -23,10 +23,13 @@ module.exports={
     'GET /cars-dashbord':async (ctx,next) => {
         const model = require('../model');
         let Car = model.Car;
-        var result = await Car.findAll();
+        var result = await Car.findAll({
+            order:[['carID', 'ASC']]
+        });
         console.log(JSON.stringify(result));
         ctx.render('cars-dashbord.html',{
-            data:result
+            data:result,
+            title:'房车情报-车型库管理',
         })
     },
 
@@ -46,11 +49,13 @@ module.exports={
         var result = await Car.findAll({
             where: {
                 carID:id,
+                carPublish:true,
             }
         });
         console.log(JSON.stringify(result));
         ctx.render('cars-change.html',{
             data:result,
+            title:'房车情报-修改车型'
         })
     },
 
@@ -284,6 +289,7 @@ module.exports={
             carTitleImage: ctx.request.body.carTitleImage,
             carMoreImage: ctx.request.body.carMoreImage,
             carMoreImage2: ctx.request.body.carMoreImage2,
+            carPublish:  ctx.request.body.carPublish,
           }
         //   console.log(carDetail);
           //数据库操作
@@ -437,6 +443,7 @@ module.exports={
                 carTitleImage: carDetail.carTitleImage,
                 carMoreImage: carDetail.carMoreImage,
                 carMoreImage2: carDetail.carMoreImage2,
+                carPublish:  ctx.request.body.carPublish,
             });
             console.log('created: ' + JSON.stringify(RVuser));
         })();
@@ -594,6 +601,7 @@ module.exports={
             carTitleImage: ctx.request.body.carTitleImage,
             carMoreImage: ctx.request.body.carMoreImage,
             carMoreImage2: ctx.request.body.carMoreImage2,
+            carPublish:  ctx.request.body.carPublish,
           }
           //数据库操作
         const model = require('../model');
@@ -747,6 +755,7 @@ module.exports={
                 carTitleImage: carDetail.carTitleImage,
                 carMoreImage: carDetail.carMoreImage,
                 carMoreImage2: carDetail.carMoreImage2,
+                carPublish:  ctx.request.body.carPublish,
             },{
                 where:{
                     carID:carDetail.carID,
@@ -759,5 +768,68 @@ module.exports={
         return ctx.body = {
             code:'保存成功！',
         }
-    }  
+    }  ,
+
+    'POST /carDel/:id':async (ctx,next) => {
+        var id = ctx.params.id;
+
+        //数据库操作
+        const model = require('../model');
+        let Car = model.Car;
+
+        var result = await Car.destroy({
+            where: {
+                carID: id,
+            }
+        });
+        //console.log('Del: ' + JSON.stringify(result));
+
+        return ctx.body = {
+            code:'删除成功！',
+        }
+    },
+
+    'POST /carPublish/:id':async (ctx,next) => {
+        var id = ctx.params.id;
+
+        //数据库操作
+        const model = require('../model');
+        let Car = model.Car;
+
+        var result = await Car.update({
+            carPublish:1,
+        },{
+            where:{
+                carID:id,
+            }
+        }
+    );
+       // console.log('Publish: ' + JSON.stringify(result));
+
+        return ctx.body = {
+            code:'发布成功！',
+        }
+    },
+
+    'POST /carUnPublish/:id':async (ctx,next) => {
+        var id = ctx.params.id;
+
+        //数据库操作
+        const model = require('../model');
+        let Car = model.Car;
+
+        var result = await Car.update({
+            carPublish:0,
+        },{
+            where:{
+               carID:id,
+            }
+        }
+    );
+        //console.log('unPublish: ' + JSON.stringify(result));
+
+        return ctx.body = {
+            code:'操作成功！',
+        }
+    },
 }

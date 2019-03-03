@@ -4,10 +4,13 @@ module.exports={
     'GET /article-dashbord':async (ctx,next) => {
         const model = require('../model');
         let Article = model.Article;
-        var result = await Article.findAll();
+        var result = await Article.findAll({
+            order:[['articleID', 'ASC']]
+        });
         console.log(JSON.stringify(result));
         ctx.render('article-dashbord.html',{
-            data:result
+            data:result,
+            title:'房车情报-文章/视频管理',
         })
     },
     'GET /article-add':async (ctx,next) => {
@@ -16,6 +19,7 @@ module.exports={
         //var result = await Car.findAll();
         //console.log(JSON.stringify(result));
         ctx.render('article-add.html',{
+            title:'房车情报-添加文章/视频',
             //data:result
         })
     },
@@ -37,6 +41,7 @@ module.exports={
 
         ctx.render('article-change.html', {
             data: result,
+            title:'文章/视频编辑',
         })
     },
 
@@ -57,6 +62,7 @@ module.exports={
 
         ctx.render('articleDetails.html', {
             data: result,
+            title:result[0].articleTitle,
         })
     },
 

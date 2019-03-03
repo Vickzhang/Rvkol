@@ -8,7 +8,8 @@ module.exports={
 
 
             ctx.render('dashbord.html',{
-                data:result
+                data:result,
+                title:'房车情报后台管理系统'
             });
 
             console.log(JSON.stringify(result));

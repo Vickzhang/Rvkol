@@ -223,7 +223,11 @@ module.exports = {
     'GET /cars': async (ctx, next) => {
         const model = require('../model');
         let Car = model.Car;
-        var result = await Car.findAll();
+        var result = await Car.findAll({
+            where:{
+                carPublish:true,
+            }
+        });
 
         ctx.render('cars.html', {
             data: result,
@@ -433,7 +437,8 @@ module.exports = {
 
         ctx.render('RvDetails.html', {
             data: carInform,
-            carArticles:ArticleInform
+            carArticles:ArticleInform,
+            title:"房车情报-"+carInform[0].carTitle1
         })
     }
 }
