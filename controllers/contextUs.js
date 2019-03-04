@@ -27,7 +27,7 @@ module.exports={
             var RVuser = await RVUser.create({
                 userName: user.userName,
                 connection: user.connection,
-                targetCar:user.targetCar
+                targetCar:user.targetCar,
             });
             console.log('created: ' + JSON.stringify(RVuser));
         })();
@@ -45,6 +45,8 @@ module.exports={
             testDriveName: ctx.request.body.testDriveName,
             testDriveConnection: ctx.request.body.testDriveConnection,
             testDriveCar:ctx.request.body.testDriveCar,
+            testDrivePeople:ctx.request.body.testDrivePeople,
+            testDriveMoney:ctx.request.body.testDriveMoney,
           }
         
         //数据库操作
@@ -54,7 +56,9 @@ module.exports={
             var RVTestDriver = await testDrive.create({
                 testDriveName: user.testDriveName,
                 testDriveConnection: user.testDriveConnection,
-                testDriveCar:user.testDriveCar
+                testDriveCar:user.testDriveCar,
+                testDrivePeople:user.testDrivePeople,
+                testDriveMoney:user.testDriveMoney
             });
             console.log('created: ' + JSON.stringify(RVTestDriver));
         })();

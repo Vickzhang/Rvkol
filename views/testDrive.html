@@ -144,6 +144,22 @@
 			transition: all 0.5s ease 0s;
 		}
 
+				.form-horizontal .select {
+			float: left;
+			margin-left: 7px;
+			line-height: 20px;
+			padding-top: 5px;
+			text-transform: capitalize;
+		}
+
+						.form-horizontal .label {
+			float: left;
+			margin-left: 7px;
+			line-height: 20px;
+			padding-top: 5px;
+			text-transform: capitalize;
+		}
+
 		@media only screen and (max-width: 479px) {
 			.form-horizontal .form-group {
 				padding: 0 25px;
@@ -192,16 +208,38 @@
 								<input type="text" class="form-control" id="testDriveCar" placeholder="意向车型">
 								<i class="fa fa-car"></i>
 							</div>
+							<div class="form-group">
+									<input type="text" class="form-control" id="testDriveCar" placeholder="使用人数">
+									<i class="fa fa-github"></i>
+								</div>
+								<div class="form-group">
+											  <select class="form-control"  id="testDriverCar">
+													<option value="">购车预算</option> 
+													<option value ="30万元以内"">30万元以内</option>
+													<option value ="30万到50万">30万到50万</option>
+													<option value="50万以上">50万以上</option>
+												  </select>
+										 <!-- <i class="fa fa-car"></i>  -->
+									</div>
 							<div  class="form-group">
 								<!-- <span class="text">Remember me</span> -->
 								<button class="btn btn-default" id="testDrvie">预约</button>
 							</div>
+							<div class="row">
+								<div class="col-md-offset-1 col-xs-offset-1 col-md-3 col-xs-4">
+									<img class="img-responsive" src="/static/img/ADS/twoweima.jpeg" alt="">
+								</div>
+								<div class="col-md-7 col-xs-6">
+										<h6 style="line-height: 1.3rem">&nbsp;&nbsp;对房车感兴趣欢迎关注微信公众号"房车情报(rvkolcom)"或登录"房车情报官网(www.rvkol.com)"获得更多房车视频、图文资讯</h6>
+								</div>
+							</div>
+							
 						</form>
 					</div>
 				</div>
 			</div>
 		</div>
-		<h5 style="line-height: 1.3rem">&nbsp;&nbsp;对房车感兴趣欢迎关注微信公众号"房车情报(rvkolcom)"或登录"房车情报官网(www.rvkol.com)"获得更多房车视频、图文资讯</h5>
+		<!-- <h5 style="line-height: 1.3rem">&nbsp;&nbsp;对房车感兴趣欢迎关注微信公众号"房车情报(rvkolcom)"或登录"房车情报官网(www.rvkol.com)"获得更多房车视频、图文资讯</h5> -->
 		<script>
 			var TellUS = $('#testDrvie').click(() => {
 				var url='/testDrvie';
@@ -213,6 +251,8 @@
 						testDriveName: $('#testDriveName').val(),
 						testDriveConnection: $('#testDriveConnection').val(),
 						testDriveCar: $('#testDriveCar').val(),
+						testDrivePeople:$('#testDrivePeople').val(),
+						testDriveMoney:$('#testDriveMoney').val(),
 					},
 					success: function (data) {
 						alert(data.code);

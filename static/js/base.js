@@ -7,6 +7,7 @@ var TellUS= $('#TellUS').click(() => {
             userName: $('#userName').val(),
             connection: $('#connection').val(),
             targetCar: $('#targetCar').val(),
+            
         },
         success: function(data) {
             alert(data.code); 
