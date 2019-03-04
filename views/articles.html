@@ -1,0 +1,29 @@
+{% extends "base.html" %} {% block main %}
+<div class="container">
+    <div class="col-md-12">
+
+            <div class="cars-list">
+                <div class="section-header header2 h-default2">
+                <div class="box">
+                  <h2>{{subTitle}}</h2>
+                  <span class="header-note1" id="styleTotal">共 {{data.length}} 个结果</span>
+                </div>                
+              </div>
+              <div class="row" id="divContent">            
+                {% for f in data %}
+                <a href="/articleDetails/{{f.articleID}}" class="row list-group-item" style="margin-left: 0px;margin-right: 0px;">
+                  <div class="col-md-3">
+                      <img class="img-responsive" src="{{f.articleTitleImage}}" alt="">
+                  </div>
+                  <div>
+                          <h3>{{f.articleTitle}}</h2>
+                          <span>作者:{{f.articleZuozhe}}</span>
+                          <span>时间:{{f.updatedAt}}</span>
+                  </div>                                            
+                </a>
+                {% endfor %}                 
+              </div>
+            </div>
+        </div>
+</div>
+{% endblock %}

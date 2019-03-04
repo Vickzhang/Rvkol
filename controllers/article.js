@@ -1,6 +1,70 @@
+
+function PriceArticle(l) {
+    switch (l) {
+        case "1":
+            {
+                return "车型文章";
+            }
+            break;
+        case "2":
+            {
+                return "车型视频";
+            }
+            break;
+        case "3":
+            {
+                return "资讯";
+            }
+            break;
+            case "4":
+            {
+                return "旅行游记";
+            }
+            break;
+            case "5":
+            {
+                return "用车";
+            }
+            break;
+
+        default:
+            {
+                return "车型文章";
+            }
+            break;
+    }
+}
+
+
+
+
+
+
+
+
 const fs = require('fs');
 
 module.exports={
+    'GET /articles/:l':async (ctx,next) => {
+        var l = ctx.params.l;
+        var leixingResult=PriceArticle(l);
+        const model = require('../model');
+        let Article = model.Article;
+        var result = await Article.findAll({
+            order:[['articleID', 'ASC']],
+            where:{
+                articleWenzhangleixing:leixingResult
+            }
+        });
+        console.log(JSON.stringify(result));
+        ctx.render('articles.html',{
+            title:'房车情报-车型文章',
+            subTitle:leixingResult,
+            data:result
+        })
+    },
+
+
     'GET /article-dashbord':async (ctx,next) => {
         const model = require('../model');
         let Article = model.Article;
@@ -14,10 +78,7 @@ module.exports={
         })
     },
     'GET /article-add':async (ctx,next) => {
-        //const model = require('../model');
-        //let Car = model.Car;
-        //var result = await Car.findAll();
-        //console.log(JSON.stringify(result));
+
         ctx.render('article-add.html',{
             title:'房车情报-添加文章/视频',
             //data:result
