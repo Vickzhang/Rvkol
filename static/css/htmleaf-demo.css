@@ -23,7 +23,10 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
-body, html { font-size: 100%; 	padding: 0; margin: 0;}
+body, html { font-size: 100%; 	padding: 0; margin: 0;	background: -webkit-linear-gradient(red, blue); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(red, blue); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(red, blue); /* Firefox 3.6 - 15 */
+    background: linear-gradient(red, blue); /* 标准的语法（必须放在最后） */}
 
 /* Reset */
 *,
@@ -46,7 +49,10 @@ body, html { font-size: 100%; 	padding: 0; margin: 0;}
 }
 
 body{
-	background: #00b4ef;
+	background: -webkit-linear-gradient(#9400D3,#00BFFF); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(#9400D3, #00BFFF); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(#9400D3, #00BFFF); /* Firefox 3.6 - 15 */
+    background: linear-gradient(#9400D3, #00BFFF); /* 标准的语法（必须放在最后） */
 	color: #D5D6E2;
 	font-weight: 500;
 	font-size: 1.05em;
@@ -76,10 +82,11 @@ a:hover,a:focus{color:#74777b;text-decoration: none;}
 	padding: 1em 190px 1em;
 	letter-spacing: -1px;
 	text-align: center;
-	background: #00b4ef;
+	/* background: #00b4ef; */
+
 }
 .htmleaf-header h1 {
-	color: #D5D6E2;
+	color:whitesmoke;
 	font-weight: 600;
 	font-size: 2em;
 	line-height: 1;
