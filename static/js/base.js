@@ -1,4 +1,3 @@
-
 var TellUS= $('#TellUS').click(() => {
     $.ajax({
         type: 'POST',

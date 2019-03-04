@@ -6,6 +6,12 @@ module.exports={
         })
     },
 
+    'GET /testDrive':async (ctx,next) => {
+        ctx.render('testDrive.html',{
+            title:'房车情报-联系我们'
+        })
+    },
+
 
     'POST /tellUs':async (ctx, next) => {
         let user = {
@@ -25,6 +31,34 @@ module.exports={
             });
             console.log('created: ' + JSON.stringify(RVuser));
         })();
+        return ctx.body = {
+            code:'提交成功！',
+            
+        }
+        //
+
+    }  ,
+
+
+    'POST /testDrive':async (ctx, next) => {
+        let user = {
+            testDriveName: ctx.request.body.testDriveName,
+            testDriveConnection: ctx.request.body.testDriveConnection,
+            testDriveCar:ctx.request.body.testDriveCar,
+          }
+        
+        //数据库操作
+        const model = require('../model');
+        let testDrive = model.testDrive;
+        (async () => {
+            var RVTestDriver = await testDrive.create({
+                testDriveName: user.testDriveName,
+                testDriveConnection: user.testDriveConnection,
+                testDriveCar:user.testDriveCar
+            });
+            console.log('created: ' + JSON.stringify(RVTestDriver));
+        })();
+
         return ctx.body = {
             code:'提交成功！',
             

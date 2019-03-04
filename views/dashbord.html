@@ -144,6 +144,37 @@
             </table>
           </div>
     </div>
+
+    <div class="col-md-12">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">试驾预约</h3>
+            </div>
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th>姓名</th>
+                  <th>联系方式</th>
+                  <th>意向车型</th>
+                  <th>预约提交时间</th>
+                </tr>
+              </thead>
+              
+  
+              <tbody>
+                  {% for f in testDrive %}
+                <tr>
+                  <td scope="row">{{f.testDriveName}}</td>
+                  <td>{{f.testDriveConnection}}</td>
+                  <td>{{f.testDriveCar}}</td>
+                  <td>{{f.createdAt}}</td>
+                </tr> 
+                {% endfor %}
+                
+              </tbody>
+            </table>
+          </div>
+    </div>
   </div>
 
   
