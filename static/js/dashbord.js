@@ -91,10 +91,9 @@ $(document).ready( function() {
   });
 
 //保存
-var save = function() {
+var save = $('#articleSave').click(() => {
     var markup = $('#summernote').summernote('code');
-    //var post= JSON.stringify(markup)
-    alert(post);
+
     $.ajax({
         type: 'POST',
         url: '/subArticle',
@@ -116,7 +115,7 @@ var save = function() {
             alert("上传失败");       
         } 
     })
-};
+});
 
 var articleChange = function() {
     var markup = $('#summernote').summernote('code');
