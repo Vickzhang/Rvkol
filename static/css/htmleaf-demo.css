@@ -94,7 +94,7 @@ a:hover,a:focus{color:#74777b;text-decoration: none;}
 }
 .htmleaf-header h1 span {
 	display: block;
-	font-size: 60%;
+	font-size: 50%;
 	font-weight: 400;
 	padding: 0.8em 0 0.5em 0;
 	color: #c3c8cd;
@@ -219,7 +219,7 @@ a:hover,a:focus{color:#74777b;text-decoration: none;}
 		padding: 2em 10% 2em;
 	}
 	.htmleaf-header h1 {
-        font-size:1.4em;
+        font-size:2em;
     }
     .htmleaf-links{font-size: 1.4em}
 }
@@ -229,7 +229,7 @@ a:hover,a:focus{color:#74777b;text-decoration: none;}
 		padding: 2em 10% 2em;
 	}
 	.htmleaf-header h1 {
-        font-size:1.2em;
+        font-size:2em;
     }
     .htmleaf-links{font-size: 1.2em}
     .related h3{font-size: 1em;}
@@ -240,7 +240,7 @@ a:hover,a:focus{color:#74777b;text-decoration: none;}
 
 @media screen and (max-width: 766px) {
 	.htmleaf-header h1 {
-        font-size:1.3em;
+        font-size:2em;
     }
     .htmleaf-links{font-size: 1.3em}
 }
@@ -250,7 +250,7 @@ a:hover,a:focus{color:#74777b;text-decoration: none;}
 		padding: 2em 10% 2em;
 	}
 	.htmleaf-header h1 {
-        font-size:1em;
+        font-size:2em;
     }
     .htmleaf-links{font-size: 1em}
     .related h3{font-size: 0.8em;}
