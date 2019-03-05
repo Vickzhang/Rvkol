@@ -135,13 +135,30 @@
 		.form-horizontal .btn {
 			float: right;
 			font-size: 14px;
-			color: #fff;
 			background: #00b4ef;
 			border-radius: 30px;
 			padding: 10px 25px;
-			border: none;
+			border:none;
 			text-transform: capitalize;
 			transition: all 0.5s ease 0s;
+
+			color: rgba(255, 255, 255, 1);
+			text-decoration: none;
+			background-color: rgba(219, 87, 51, 1);
+			font-family: "Microsoft YaHei", 微软雅黑, 宋体;
+			font-weight: 700;
+			font-size: 2em;
+			display: block;
+			padding: 4px;
+			border-radius: 8px;
+			/* let's use box shadows to make the button look more 3-dimensional */
+			box-shadow: 0px 9px 0px rgba(219, 31, 5, 1), 0px 9px 25px rgba(0, 0, 0, .7);
+			/* margin: 20px auto; */
+			width: 160px;
+			text-align: center;
+			-webkit-transition: all .1s ease;
+			-moz-transition: all .1s ease;
+			transition: all .1s ease;
 		}
 
 				.form-horizontal .select {
@@ -213,8 +230,8 @@
 							<div class="form-group">
 									<input type="text" class="form-control" id="testDriveCar" placeholder="使用人数">
 									<i class="fa fa-github"></i>
-								</div>
-								<div class="form-group">
+							</div>
+							<div class="form-group">
 											  <select class="form-control"  id="testDriverCar">
 													<option value="">购车预算</option> 
 													<option value ="30万元以内"">30万元以内</option>
@@ -222,7 +239,7 @@
 													<option value="50万以上">50万以上</option>
 												  </select>
 										 <!-- <i class="fa fa-car"></i>  -->
-									</div>
+							</div>
 							<div  class="form-group">
 								<!-- <span class="text">Remember me</span> -->
 								<button class="btn btn-default" id="testDrvie">预约</button>
@@ -236,7 +253,7 @@
 								</div>
 							</div>
 							
-						</form>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -266,7 +283,6 @@
 			})
 		</script>
 	</div>
-
 </body>
 
 </html>
