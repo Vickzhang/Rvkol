@@ -28,6 +28,7 @@ module.exports={
         });
         console.log(JSON.stringify(result));
         ctx.render('cars-dashbord.html',{
+            attributes: ['carD','carTitle1','carLogo','carPublish','updatedAt'],
             data:result,
             title:'房车情报-车型库管理',
         })

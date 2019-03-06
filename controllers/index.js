@@ -6,7 +6,9 @@ module.exports={
                  let Article = model.Article;
 
                  var carArticle = await Article.findAll({
+                    attributes: ['articleTitle','articleID','articleTitleImage','articleZuozhe','updatedAt'],
                     where: {
+                        
                         articleWenzhangleixing: "车型文章",
                         articlePublish:true
                     },
@@ -16,6 +18,7 @@ module.exports={
                 // console.log(JSON.stringify(carArticle));
 
                 var carVedio = await Article.findAll({
+                    attributes: ['articleTitle','articleID','articleTitleImage','articleZuozhe','updatedAt'],
                      where: {
                         articleWenzhangleixing: "车型视频",
                         articlePublish:true
@@ -24,6 +27,7 @@ module.exports={
                  });
 
                  var carNews = await Article.findAll({
+                    attributes: ['articleTitle','articleID','articleTitleImage','articleZuozhe','updatedAt'],
                     where: {
                        articleWenzhangleixing: "资讯",
                        articlePublish:true
@@ -32,6 +36,7 @@ module.exports={
                 });
 
                 var carTravel = await Article.findAll({
+                    attributes: ['articleTitle','articleID','articleTitleImage','articleZuozhe','updatedAt'],
                     where: {
                        articleWenzhangleixing: "旅行游记",
                        articlePublish:true
@@ -40,6 +45,7 @@ module.exports={
                 });
 
                 var carUse = await Article.findAll({
+                    attributes: ['articleTitle','articleID','articleTitleImage','articleZuozhe','updatedAt'],
                     where: {
                        articleWenzhangleixing: "用车",
                        articlePublish:true

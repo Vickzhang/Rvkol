@@ -51,6 +51,7 @@ module.exports={
         const model = require('../model');
         let Article = model.Article;
         var result = await Article.findAll({
+            attributes: ['articleID', 'articleZuozhe','articleTitleImage','articleTitle','updatedAt'],
             order:[['articleID', 'ASC']],
             where:{
                 articleWenzhangleixing:leixingResult
@@ -69,6 +70,7 @@ module.exports={
         const model = require('../model');
         let Article = model.Article;
         var result = await Article.findAll({
+            attributes: ['articleID', 'articleZuozhe','articleWenzhangleixing','articleTitle','articlePublish','updatedAt'],
             order:[['articleID', 'ASC']]
         });
         console.log(JSON.stringify(result));
