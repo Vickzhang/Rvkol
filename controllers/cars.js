@@ -24,11 +24,12 @@ module.exports={
         const model = require('../model');
         let Car = model.Car;
         var result = await Car.findAll({
+            attributes: ['carID','carTitle1','carLogo','carPublish','updatedAt'],
             order:[['carID', 'ASC']]
         });
         console.log(JSON.stringify(result));
         ctx.render('cars-dashbord.html',{
-            attributes: ['carD','carTitle1','carLogo','carPublish','updatedAt'],
+            
             data:result,
             title:'房车情报-车型库管理',
         })
@@ -82,63 +83,63 @@ module.exports={
     },
 
 
-        'POST /cars-moreImage':async (ctx,next)=>{
-            //文件上传
-            //配置
-            const files = ctx.request.files.file; // 获取上传文件
+    //     'POST /cars-moreImage':async (ctx,next)=>{
+    //         //文件上传
+    //         //配置
+    //         const files = ctx.request.files.file; // 获取上传文件
             
-            var fileNames=new Array();
-            for (let file of files) {
-                // 创建可读流
-                const reader = fs.createReadStream(file.path);
-                // 获取上传文件扩展名
-                //const ext = file.name.split('.').pop(); // 获取上传文件扩展名
-                const dir =`static/img/Details/${getUploadDirName()}`;
-                checkDirExist(dir);
-                const fileName=`${dir}/${file.name}`;
-                fileNames.push(fileName);
-                const upStream = fs.createWriteStream(fileName); // 创建可写流
-                reader.pipe(upStream); // 可读流通过管道写入可写流
-                // 可读流通过管道写入可写流
-                reader.pipe(upStream);
-              }
-              console.log(fileNames);
+    //         var fileNames=new Array();
+    //         for (let file of files) {
+    //             // 创建可读流
+    //             const reader = fs.createReadStream(file.path);
+    //             // 获取上传文件扩展名
+    //             //const ext = file.name.split('.').pop(); // 获取上传文件扩展名
+    //             const dir =`static/img/Details/${getUploadDirName()}`;
+    //             checkDirExist(dir);
+    //             const fileName=`${dir}/${file.name}`;
+    //             fileNames.push(fileName);
+    //             const upStream = fs.createWriteStream(fileName); // 创建可写流
+    //             reader.pipe(upStream); // 可读流通过管道写入可写流
+    //             // 可读流通过管道写入可写流
+    //             reader.pipe(upStream);
+    //           }
+    //           console.log(fileNames);
             
-            return ctx.body = {
-                code: 'success',
-                moreFileName: fileNames
-            }
+    //         return ctx.body = {
+    //             code: 'success',
+    //             moreFileName: fileNames
+    //         }
             
-    },
+    // },
 
-    'POST /cars-moreImage2':async (ctx,next)=>{
-        //文件上传
-        //配置
-        const files = ctx.request.files.file; // 获取上传文件
+    // 'POST /cars-moreImage2':async (ctx,next)=>{
+    //     //文件上传
+    //     //配置
+    //     const files = ctx.request.files.file; // 获取上传文件
         
-        var fileNames=new Array();
-        for (let file of files) {
-            // 创建可读流
-            const reader = fs.createReadStream(file.path);
-            // 获取上传文件扩展名
-            //const ext = file.name.split('.').pop(); // 获取上传文件扩展名
-            const dir =`static/img/Details/${getUploadDirName()}`;
-            checkDirExist(dir);
-            const fileName=`${dir}/${file.name}`;
-            fileNames.push(fileName);
-            const upStream = fs.createWriteStream(fileName); // 创建可写流
-            reader.pipe(upStream); // 可读流通过管道写入可写流
-            // 可读流通过管道写入可写流
-            reader.pipe(upStream);
-          }
-          console.log(fileNames);
+    //     var fileNames=new Array();
+    //     for (let file of files) {
+    //         // 创建可读流
+    //         const reader = fs.createReadStream(file.path);
+    //         // 获取上传文件扩展名
+    //         //const ext = file.name.split('.').pop(); // 获取上传文件扩展名
+    //         const dir =`static/img/Details/${getUploadDirName()}`;
+    //         checkDirExist(dir);
+    //         const fileName=`${dir}/${file.name}`;
+    //         fileNames.push(fileName);
+    //         const upStream = fs.createWriteStream(fileName); // 创建可写流
+    //         reader.pipe(upStream); // 可读流通过管道写入可写流
+    //         // 可读流通过管道写入可写流
+    //         reader.pipe(upStream);
+    //       }
+    //       console.log(fileNames);
         
-        return ctx.body = {
-            code: 'success',
-            moreFileName2: fileNames
-        }
+    //     return ctx.body = {
+    //         code: 'success',
+    //         moreFileName2: fileNames
+    //     }
         
-    },
+    // },
 
     'POST /submitCar':async (ctx, next) => {
 

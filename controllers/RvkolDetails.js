@@ -254,8 +254,13 @@ module.exports = {
         let Car = model.Car;
 
         if (p == "all" && l == "all" && d == "all" && x == "all") {
-            result = await Car.findAll();
-        } else if (p != "all" && l == "all" && d == "all" && x == "all") {
+            result = await Car.findAll({
+                attributes: ['carID','carTitleImage','carTitleImage','carLogo','carPriceMin'],
+            });
+        } 
+        
+        
+        else if (p != "all" && l == "all" && d == "all" && x == "all") {
             result = await Car.findAll({
                 where: {
                     carPriceMin: {
@@ -266,6 +271,7 @@ module.exports = {
             });
         } else if (p == "all" && l != "all" && d == "all" && x == "all") {
             result = await Car.findAll({
+                attributes: ['carID','carTitleImage','carTitleImage','carLogo','carPriceMin'],
                 where: {
                     carLogo: LogoResult
                 }
@@ -273,12 +279,14 @@ module.exports = {
 
         } else if (p == "all" && l == "all" && d != "all" && x == "all") {
             result = await Car.findAll({
+                attributes: ['carID','carTitleImage','carTitleImage','carLogo','carPriceMin'],
                 where: {
                     carDipanleixing: dipanResult
                 }
             });
         } else if (p == "all" && l == "all" && d == "all" && x != "all") {
             result = await Car.findAll({
+                attributes: ['carID','carTitleImage','carTitleImage','carLogo','carPriceMin'],
                 where: {
                     carChexingjiegou: leixingResult
                 }
@@ -286,6 +294,7 @@ module.exports = {
 
         } else if (p == "all" && l != "all" && d != "all" && x == "all") {
             result = await Car.findAll({
+                attributes: ['carID','carTitleImage','carTitleImage','carLogo','carPriceMin'],
                 where: {
                     carLogo: LogoResult,
                     carDipanleixing: dipanResult
@@ -294,6 +303,7 @@ module.exports = {
 
         } else if (p != "all" && l == "all" && d != "all" && x == "all") {
             result = await Car.findAll({
+                attributes: ['carID','carTitleImage','carTitleImage','carLogo','carPriceMin'],
                 where: {
                     carPriceMin: {
                         '$gt': priceResult[0],
@@ -304,6 +314,7 @@ module.exports = {
             });
         } else if (p != "all" && l != "all" && d == "all" && x == "all") {
             result = await Car.findAll({
+                attributes: ['carID','carTitleImage','carTitleImage','carLogo','carPriceMin'],
                 where: {
                     carPriceMin: {
                         '$gt': priceResult[0],
@@ -315,6 +326,7 @@ module.exports = {
 
         } else if (p != "all" && l == "all" && d == "all" && x != "all") {
             result = await Car.findAll({
+                attributes: ['carID','carTitleImage','carTitleImage','carLogo','carPriceMin'],
                 where: {
                     carPriceMin: {
                         '$gt': priceResult[0],
@@ -326,6 +338,7 @@ module.exports = {
 
         } else if (p == "all" && l != "all" && d == "all" && x != "all") {
             result = await Car.findAll({
+                attributes: ['carID','carTitleImage','carTitleImage','carLogo','carPriceMin'],
                 where: {
 
                     carLogo: LogoResult,

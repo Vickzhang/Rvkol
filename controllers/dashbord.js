@@ -4,7 +4,8 @@ module.exports={
             const model = require('../model');
             let RVUser = model.RVuser;
 
-            var result = await RVUser.findAll();
+            var result = await RVUser.findAll(
+            );
 
             let testDriver = model.testDrive;
             var testResult = await testDriver.findAll();
