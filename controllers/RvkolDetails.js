@@ -260,7 +260,7 @@ module.exports = {
 
         if (p == "all" && l == "all" && d == "all" && x == "all") {
             result = await Car.findAll({
-                attributes: ['carID','carTitleImage','carTitleImage','carLogo','carPriceMin'],
+                attributes: ['carID','carTitle1','carTitleImage','carLogo','carPriceMin'],
             });
         } 
         

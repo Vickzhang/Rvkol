@@ -88,6 +88,7 @@ $(document).ready( function() {
       }
     }); 
     initFileInput("file-Portrait1", "/cars-titleImage");
+
   });
 
 //文件上传
@@ -103,10 +104,12 @@ function initFileInput(ctrlName, uploadUrl) {
         previewFileIcon: "<i class='glyphicon glyphicon-king'></i>", 
     });
     //文件上传完成之后发生的事件
-    $("#uploadFile").on("fileuploaded", function(event, data, previewId, index) {
+    $("#file-Portrait1").on("fileuploaded", function(event, data, previewId, index) {
         var form = data.form, files = data.files, extra = data.extra, response = data.response, reader = data.reader;
         if(response.code == 'success') {
-                $('#carTitleimage').append(response.data.url + "\n");}
+                $('#carTitleimage').val()=response.code;
+                alert(response.code)
+        }
     });
 }
 

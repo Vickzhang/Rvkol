@@ -61,31 +61,6 @@ app.use(koaBody({
           console.log(err);
         }
   } 
-    // multipart:true,
-    // encoding:'gzip',
-    // formidable:{
-    //   uploadDir: path.join(__dirname, './static/img'),
-    //   keepExtensions: true,
-    //   maxFieldsSize: 2 * 1024 * 1024,
-    //   onFileBegin:(name,file) => {
-    //    console.log(file);
-    //   // 获取文件后缀
-    //   //const ext = getUploadFileExt(file.name);
-    //   // 最终要保存到的文件夹目录
-    //   const dirName = getUploadDirName();
-    //   console.log(dirName);
-    //   const dir = path.join(__dirname, `/static/img/${dirName}`);
-
-    //   // 获取文件名称
-
-    //   // 重新覆盖 file.path 属性
-    //   file.path = `${dir}/${file.name}`;
-    //   console.log(file.path);
-    //   },
-    //   onError:(err)=>{
-    //     console.log(err);
-    //   }
-    // }
   }));
 
 //静态文件
