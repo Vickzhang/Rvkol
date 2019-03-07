@@ -12,7 +12,10 @@ const isProduction = process.env.NODE_ENV === 'production';
 const templating = require('./templating.js');
 //导入koaBody
 const koaBody = require('koa-body');
-
+//上传所需文件
+const getUploadDirName=require('./utils/getUploadDirName.js');
+const checkDirExist=require('./utils/checkDirExist.js')
+const path=require('path');
 
 //=============================================================================
 
@@ -35,28 +38,31 @@ app.use(async (ctx, next) => {
 app.use(koaBody({
     multipart:true,
     encoding:'gzip',
-    // formidable:{
-    //   uploadDir: path.join(__dirname, 'static/img'),
-    //   keepExtensions: true,
-    //   maxFieldsSize: 2 * 1024 * 1024,
-    //   onFileBegin:(name,file) => {
-    //   // console.log(file);
-    //   // 获取文件后缀
-    //   const ext = getUploadFileExt(file.name);
-    //   // 最终要保存到的文件夹目录
-    //   const dirName = getUploadDirName();
-    //   const dir = path.join(__dirname, `static/img/${dirName}`);
-    //   // 检查文件夹是否存在如果不存在则新建文件夹
-    //   checkDirExist(dir);
-    //   // 获取文件名称
-    //   const fileName = getUploadFileName(ext);
-    //   // 重新覆盖 file.path 属性
-    //   file.path = `${dir}/${fileName}`;
-    //   },
-    //   onError:(err)=>{
-    //     console.log(err);
-    //   }
-    // }
+    formidable:{
+      uploadDir: path.join(__dirname, './static/img'),
+      keepExtensions: true,
+      maxFieldsSize: 2 * 1024 * 1024,
+      onFileBegin:(name,file) => {
+       console.log(file);
+      // 获取文件后缀
+      //const ext = getUploadFileExt(file.name);
+      // 最终要保存到的文件夹目录
+      const dirName = getUploadDirName();
+      console.log(dirName);
+      const dir = path.join(__dirname, `/static/img/${dirName}`);
+      console.log(dir);
+      // 检查文件夹是否存在如果不存在则新建文件夹
+      checkDirExist(dir);
+      // 获取文件名称
+      //const fileName = getUploadFileName(ext);
+      // 重新覆盖 file.path 属性
+      file.path = `${dir}/${file.name}`;
+      console.log(file.path);
+      },
+      onError:(err)=>{
+        console.log(err);
+      }
+    }
   }));
 
 //静态文件

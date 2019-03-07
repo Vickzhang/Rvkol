@@ -87,7 +87,7 @@ $(document).ready( function() {
           
       }
     }); 
-    //initFileInput("file-Portrait1", "/static/img");
+    initFileInput("file-Portrait1", "/cars-titleImage");
   });
 
 //文件上传
