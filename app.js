@@ -13,9 +13,9 @@ const templating = require('./templating.js');
 //导入koaBody
 const koaBody = require('koa-body');
 //上传所需文件
-const getUploadDirName=require('./utils/getUploadDirName.js');
-const checkDirExist=require('./utils/checkDirExist.js')
-const path=require('path');
+//const getUploadDirName=require('./utils/getUploadDirName.js');
+//const checkDirExist=require('./utils/checkDirExist.js')
+//const path=require('path');
 
 //=============================================================================
 
