@@ -36,33 +36,39 @@ app.use(async (ctx, next) => {
 });
 //使用koabody模块
 app.use(koaBody({
-    multipart:true,
-    encoding:'gzip',
-    formidable:{
-      uploadDir: path.join(__dirname, './static/img'),
-      keepExtensions: true,
-      maxFieldsSize: 2 * 1024 * 1024,
-      onFileBegin:(name,file) => {
-       console.log(file);
-      // 获取文件后缀
-      //const ext = getUploadFileExt(file.name);
-      // 最终要保存到的文件夹目录
-      const dirName = getUploadDirName();
-      console.log(dirName);
-      const dir = path.join(__dirname, `/static/img/${dirName}`);
-      console.log(dir);
-      // 检查文件夹是否存在如果不存在则新建文件夹
-      checkDirExist(dir);
-      // 获取文件名称
-      //const fileName = getUploadFileName(ext);
-      // 重新覆盖 file.path 属性
-      file.path = `${dir}/${file.name}`;
-      console.log(file.path);
-      },
-      onError:(err)=>{
-        console.log(err);
-      }
-    }
+  multipart: true, 
+  jsonLimit:"5mb",
+  textLimit:"5mb",
+  formLimit:"5mb",
+  formidable: {
+    maxFileSize: 200*1024*1024, // 设置上传文件大小最大限制，默认2M
+    maxFieldsSize:10*1024*104
+  } 
+    // multipart:true,
+    // encoding:'gzip',
+    // formidable:{
+    //   uploadDir: path.join(__dirname, './static/img'),
+    //   keepExtensions: true,
+    //   maxFieldsSize: 2 * 1024 * 1024,
+    //   onFileBegin:(name,file) => {
+    //    console.log(file);
+    //   // 获取文件后缀
+    //   //const ext = getUploadFileExt(file.name);
+    //   // 最终要保存到的文件夹目录
+    //   const dirName = getUploadDirName();
+    //   console.log(dirName);
+    //   const dir = path.join(__dirname, `/static/img/${dirName}`);
+
+    //   // 获取文件名称
+
+    //   // 重新覆盖 file.path 属性
+    //   file.path = `${dir}/${file.name}`;
+    //   console.log(file.path);
+    //   },
+    //   onError:(err)=>{
+    //     console.log(err);
+    //   }
+    // }
   }));
 
 //静态文件
