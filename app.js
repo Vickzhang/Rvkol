@@ -1,8 +1,7 @@
 // 导入koa，和koa 1.x不同，在koa2中，我们导入的是一个class，因此用大写的Koa表示:
 const Koa = require('koa');
 
-//导入koa posterParse
-//const bodyParser = require('koa-bodyparser');
+
 // 导入controller middleware:
 const controller = require('./controller');
 //判断运行环境
@@ -13,8 +12,8 @@ const templating = require('./templating.js');
 //导入koaBody
 const koaBody = require('koa-body');
 //上传所需文件
-//const getUploadDirName=require('./utils/getUploadDirName.js');
-//const checkDirExist=require('./utils/checkDirExist.js')
+const getUploadDirName=require('./utils/getUploadDirname');
+const checkDirExist=require('./utils/checkDirExist');
 //const path=require('path');
 
 //=============================================================================
