@@ -1,116 +1,103 @@
 
-
-// $(function () {
-//     /** 验证文件是否导入成功  */
-//     $("#form1").ajaxForm(function (data) {
-//         var oDiv = document.getElementById("carTitleimage");
-//         oDiv.innerText = data.titleFileName;
-//     });
-// });
-
-// $(function () {
-//     /** 验证文件是否导入成功  */
-//     $("#form2").ajaxForm(function (data) {
-//         var oDiv = document.getElementById("carMoreimage");
-//         oDiv.innerText = data.moreFileName;
-//     });
-// });
-
-
-// $(function () {
-//     /** 验证文件是否导入成功  */
-//     $("#form3").ajaxForm(function (data) {
-//         var oDiv = document.getElementById("carMoreimage2");
-//         oDiv.innerText = data.moreFileName2;
-//     });
-// });
-
 // 文章保存
 
 //初始化编辑器
-$(document).ready( function() {
+$(document).ready(function () {
     $("#summernote").summernote({
-      minHeight: 300,             // set minimum height of editor
-      lang: 'zh-CN',
-      placeholder: '填写文章....',
-      toolbar: [
-        // <!--字体工具-->
-        ['fontname', ['fontname']], //字体系列                                 
-        ['style', ['bold', 'italic', 'underline', 'clear']], // 字体粗体、字体斜体、字体下划线、字体格式清除       
-        ['font', ['strikethrough', 'superscript', 'subscript']], //字体划线、字体上标、字体下标   
-        ['fontsize', ['fontsize']], //字体大小                                
-        ['color', ['color']], //字体颜色
-        
-        //<!--段落工具-->                
-        ['style', ['style']],//样式
-        ['para', ['ul', 'ol', 'paragraph']], //无序列表、有序列表、段落对齐方式
-        ['height', ['height']], //行高
-        
-        //<!--插入工具-->    
-        ['table',['table']], //插入表格    
-        ['hr',['hr']],//插入水平线                
-        ['link',['link']], //插入链接                
-        ['picture',['picture']], //插入图片                
-        ['video',['video']], //插入视频
-        
-        //<!--其它-->
-        ['fullscreen',['fullscreen']], //全屏
-        ['codeview',['codeview']], //查看html代码
-        ['undo',['undo']], //撤销
-        ['redo',['redo']], //取消撤销
-        ['help',['help']], //帮助
-      ],
-      callbacks:{
-        onImageUpload: function(file) { //图片默认以二进制的形式存储到数据库，调用此方法将请求后台将图片存储到服务器，返回图片请求地址到前端
-            //将图片放入Formdate对象中      
-            var formData = new FormData(); 
-            //‘picture'为后台获取的文件名，file[0]是要上传的文件
-            formData.append("picture", file[0]); 
+        minHeight: 300, // set minimum height of editor
+        lang: 'zh-CN',
+        placeholder: '填写文章....',
+        toolbar: [
+            // <!--字体工具-->
+            ['fontname', ['fontname']], //字体系列                                 
+            ['style', ['bold', 'italic', 'underline', 'clear']], // 字体粗体、字体斜体、字体下划线、字体格式清除       
+            ['font', ['strikethrough', 'superscript', 'subscript']], //字体划线、字体上标、字体下标   
+            ['fontsize', ['fontsize']], //字体大小                                
+            ['color', ['color']], //字体颜色
 
-            $.ajax({    
-                type:'post', 
-                url:'/article-uploadeImage',   
-                cache: false,
-                data:formData, 
-                processData: false,
-                contentType: false,
-                dataType:'json', //请求成功后，后台返回图片访问地址字符串，故此以text格式获取，而不是json格式
-                success: function(data) {
-                    alert(data.code);    
-                    $('#summernote').summernote('insertImage',data.pictureName); 
-                }, 
-                error:function(){       
-                    alert("上传失败");       
-                } 
-            });
+            //<!--段落工具-->                
+            ['style', ['style']], //样式
+            ['para', ['ul', 'ol', 'paragraph']], //无序列表、有序列表、段落对齐方式
+            ['height', ['height']], //行高
+
+            //<!--插入工具-->    
+            ['table', ['table']], //插入表格    
+            ['hr', ['hr']], //插入水平线                
+            ['link', ['link']], //插入链接                
+            ['picture', ['picture']], //插入图片                
+            ['video', ['video']], //插入视频
+
+            //<!--其它-->
+            ['fullscreen', ['fullscreen']], //全屏
+            ['codeview', ['codeview']], //查看html代码
+            ['undo', ['undo']], //撤销
+            ['redo', ['redo']], //取消撤销
+            ['help', ['help']], //帮助
+        ],
+        callbacks: {
+            onImageUpload: function (file) { //图片默认以二进制的形式存储到数据库，调用此方法将请求后台将图片存储到服务器，返回图片请求地址到前端
+                //将图片放入Formdate对象中      
+                var formData = new FormData();
+                //‘picture'为后台获取的文件名，file[0]是要上传的文件
+                formData.append("picture", file[0]);
+
+                $.ajax({
+                    type: 'post',
+                    url: '/article-Image',
+                    cache: false,
+                    data: formData,
+                    processData: false,
+                    contentType: false,
+                    dataType: 'json', //请求成功后，后台返回图片访问地址字符串，故此以text格式获取，而不是json格式
+                    success: function (data) {
+                        alert(data.titleFileName);
+                        $('#summernote').summernote('insertImage', data.titleFileName);
+                    },
+                    error: function () {
+                        alert("上传失败");
+                    }
+                });
+            }
+
         }
-          
-      }
-    }); 
-    initFileInput("file-Portrait1", "/cars-titleImage");
-
-  });
+    });
+    initFileInput("file-Portrait1", "/cars-Image","carTitleimage");
+    initFileInput("file-Portrait2", "/cars-Image","carMoreimage");
+    initFileInput("file-Portrait3", "/cars-Image","carMoreimage2");
+    initFileInput("file-Portrait4", "/cars-Image","articleTitleImage");
+});
 
 //文件上传
-function initFileInput(ctrlName, uploadUrl) {    
-    var control = $('#' + ctrlName); 
+function initFileInput(ctrlName, uploadUrl,addCtrlName) {
+    var control = $('#' + ctrlName);
     control.fileinput({
         language: 'zh', //设置语言
         uploadUrl: uploadUrl, //上传的API
-        allowedFileExtensions : ['jpg', 'png','gif','jpeg'],//接收的文件后缀
-        showUpload: false, //是否显示上传按钮
-        showCaption: false,//是否显示标题
+        allowedFileExtensions: ['jpg', 'png', 'gif', 'jpeg'], //接收的文件后缀
+        showUpload: true, //是否显示上传按钮
+        showCaption: true, //是否显示标题
         browseClass: "btn btn-primary", //按钮样式             
-        previewFileIcon: "<i class='glyphicon glyphicon-king'></i>", 
+        previewFileIcon: "<i class='glyphicon glyphicon-king'></i>",
     });
     //文件上传完成之后发生的事件
-    $("#file-Portrait1").on("fileuploaded", function(event, data, previewId, index) {
-        var form = data.form, files = data.files, extra = data.extra, response = data.response, reader = data.reader;
-        if(response.code == 'success') {
-                $('#carTitleimage').val()=response.code;
-                alert(response.code)
+    $("#"+ctrlName).on("fileuploaded", function (event, data, previewId, index) {
+        var form = data.form,
+            files = data.files,
+            extra = data.extra,
+            response = data.response,
+            reader = data.reader;
+            //alert($('#'+addCtrlName).attr("tagName"));
+        if (response.code == 'success') {
+            if (addCtrlName=="carTitleimage"||addCtrlName=="articleTitleImage") {
+                $('#'+addCtrlName).val(response.titleFileName);
+            }else{
+                $('#'+addCtrlName).append(response.titleFileName+"\n");
+            }
+            
         }
     });
+    //文件上传完成之后发生的事件
+
 }
 
 //保存
@@ -129,18 +116,18 @@ var save = $('#articleSave').click(() => {
             articleZuozhe: $('#articleZuozhe').val(),
             articleWenzhangleixing: $('#articleWenzhangleixing').val(),
             articleContext: markup,
-            articlePublish: 0,    
+            articlePublish: 0,
         },
-        success: function(data) {
-            alert(data.code); 
-        }, 
-        error:function(){       
-            alert("上传失败");       
-        } 
+        success: function (data) {
+            alert(data.code);
+        },
+        error: function () {
+            alert("上传失败");
+        }
     })
 });
 
-var articleChange = function() {
+var articleChange = function () {
     var markup = $('#summernote').summernote('code');
     //alert(markup);
     $.ajax({
@@ -155,14 +142,14 @@ var articleChange = function() {
             articleZuozhe: $('#articleZuozhe').val(),
             articleWenzhangleixing: $('#articleWenzhangleixing').val(),
             articleContext: markup,
-            articlePublish: 0,    
+            articlePublish: 0,
         },
-        success: function(data) {
-            alert(data.code); 
-        }, 
-        error:function(){       
-            alert("上传失败");       
-        } 
+        success: function (data) {
+            alert(data.code);
+        },
+        error: function () {
+            alert("上传失败");
+        }
     })
 };
 
@@ -322,12 +309,12 @@ var saveButton = $('#save').click(() => {
             carMoreImage2: MoreImage2,
             carPublish: 0,
         },
-        success: function(data) {
-            alert(data.code); 
-        }, 
-        error:function(){       
-            alert("上传失败");       
-        } 
+        success: function (data) {
+            alert(data.code);
+        },
+        error: function () {
+            alert("上传失败");
+        }
     })
 });
 
@@ -487,130 +474,130 @@ var saveChangeButton = $('#saveChange').click(() => {
             carMoreImage: MoreImage,
             carMoreImage2: MoreImage2,
         },
-        success: function(data) {
-            alert(data.code); 
-        }, 
-        error:function(){       
-            alert("上传失败");       
-        } 
+        success: function (data) {
+            alert(data.code);
+        },
+        error: function () {
+            alert("上传失败");
+        }
     })
 });
 
 
 
-var articleDel =function(id){
-    var delUrl='/articleDel/'+id;
+var articleDel = function (id) {
+    var delUrl = '/articleDel/' + id;
     //alert(delUrl);
     $.ajax({
         type: 'POST',
         url: delUrl,
         dataType: 'json',
         data: {
-            
+
         },
-        success: function(data) {
-            alert(data.code); 
-        }, 
-        error:function(){       
-            alert("删除失败");       
-        } 
+        success: function (data) {
+            alert(data.code);
+        },
+        error: function () {
+            alert("删除失败");
+        }
     })
 }
 
-var articlePublish =function(id){
-    var publishUrl='/articlePublish/'+id;
+var articlePublish = function (id) {
+    var publishUrl = '/articlePublish/' + id;
     //alert(delUrl);
     $.ajax({
         type: 'POST',
         url: publishUrl,
         dataType: 'json',
         data: {
-            
+
         },
-        success: function(data) {
-            alert(data.code); 
-        }, 
-        error:function(){       
-            alert("发布失败");       
-        } 
+        success: function (data) {
+            alert(data.code);
+        },
+        error: function () {
+            alert("发布失败");
+        }
     })
 }
 
 
-var articleUnPublish =function(id){
-    var UnpublishUrl='/articleUnPublish/'+id;
+var articleUnPublish = function (id) {
+    var UnpublishUrl = '/articleUnPublish/' + id;
     //alert(delUrl);
     $.ajax({
         type: 'POST',
         url: UnpublishUrl,
         dataType: 'json',
         data: {
-            
+
         },
-        success: function(data) {
-            alert(data.code); 
-        }, 
-        error:function(){       
-            alert("取消发布失败");       
-        } 
+        success: function (data) {
+            alert(data.code);
+        },
+        error: function () {
+            alert("取消发布失败");
+        }
     })
 }
 
 
-var carDel =function(id){
-    var delUrl='/carDel/'+id;
+var carDel = function (id) {
+    var delUrl = '/carDel/' + id;
     //alert(delUrl);
     $.ajax({
         type: 'POST',
         url: delUrl,
         dataType: 'json',
         data: {
-            
+
         },
-        success: function(data) {
-            alert(data.code); 
-        }, 
-        error:function(){       
-            alert("删除失败");       
-        } 
+        success: function (data) {
+            alert(data.code);
+        },
+        error: function () {
+            alert("删除失败");
+        }
     })
 }
 
-var carPublish =function(id){
-    var publishUrl='/carPublish/'+id;
+var carPublish = function (id) {
+    var publishUrl = '/carPublish/' + id;
     //alert(delUrl);
     $.ajax({
         type: 'POST',
         url: publishUrl,
         dataType: 'json',
         data: {
-            
+
         },
-        success: function(data) {
-            alert(data.code); 
-        }, 
-        error:function(){       
-            alert("发布错误");       
-        } 
+        success: function (data) {
+            alert(data.code);
+        },
+        error: function () {
+            alert("发布错误");
+        }
     })
 }
 
 
-var carUnPublish =function(id){
-    var UnpublishUrl='/carUnPublish/'+id;
+var carUnPublish = function (id) {
+    var UnpublishUrl = '/carUnPublish/' + id;
     //alert(delUrl);
     $.ajax({
         type: 'POST',
         url: UnpublishUrl,
         dataType: 'json',
         data: {
-            
+
         },
-        success: function(data) {
-            alert(data.code); 
-        }, 
-        error:function(){       
-            alert("取消发布失败");       
-        } 
+        success: function (data) {
+            alert(data.code);
+        },
+        error: function () {
+            alert("取消发布失败");
+        }
     })
 }
