@@ -87,28 +87,28 @@ $(document).ready( function() {
           
       }
     }); 
-    //initFileInput("file-Portrait1", "/cars-titleImage");
+    initFileInput("file-Portrait1", "/cars-titleImage");
   });
 
-// //文件上传
-// function initFileInput(ctrlName, uploadUrl) {    
-//     var control = $('#' + ctrlName); 
-//     control.fileinput({
-//         language: 'zh', //设置语言
-//         uploadUrl: uploadUrl, //上传的API
-//         allowedFileExtensions : ['jpg', 'png','gif','jpeg'],//接收的文件后缀
-//         showUpload: false, //是否显示上传按钮
-//         showCaption: false,//是否显示标题
-//         browseClass: "btn btn-primary", //按钮样式             
-//         previewFileIcon: "<i class='glyphicon glyphicon-king'></i>", 
-//     });
-//     //文件上传完成之后发生的事件
-//     $("#uploadFile").on("fileuploaded", function(event, data, previewId, index) {
-//         var form = data.form, files = data.files, extra = data.extra, response = data.response, reader = data.reader;
-//         if(response.code == 'success') {
-//                 $('#carTitleimage').append(response.data.url + "\n");}
-//     });
-// }
+//文件上传
+function initFileInput(ctrlName, uploadUrl) {    
+    var control = $('#' + ctrlName); 
+    control.fileinput({
+        language: 'zh', //设置语言
+        uploadUrl: uploadUrl, //上传的API
+        allowedFileExtensions : ['jpg', 'png','gif','jpeg'],//接收的文件后缀
+        showUpload: false, //是否显示上传按钮
+        showCaption: false,//是否显示标题
+        browseClass: "btn btn-primary", //按钮样式             
+        previewFileIcon: "<i class='glyphicon glyphicon-king'></i>", 
+    });
+    //文件上传完成之后发生的事件
+    $("#uploadFile").on("fileuploaded", function(event, data, previewId, index) {
+        var form = data.form, files = data.files, extra = data.extra, response = data.response, reader = data.reader;
+        if(response.code == 'success') {
+                $('#carTitleimage').append(response.data.url + "\n");}
+    });
+}
 
 //保存
 var save = $('#articleSave').click(() => {
