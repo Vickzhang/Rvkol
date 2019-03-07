@@ -13,9 +13,9 @@ const templating = require('./templating.js');
 //导入koaBody
 const koaBody = require('koa-body');
 //上传所需文件
-//const getUploadDirName=require('./utils/getUploadDirName.js');
-//const checkDirExist=require('./utils/checkDirExist.js')
-//const path=require('path');
+const getUploadDirName=require('./utils/getUploadDirName.js');
+const checkDirExist=require('./utils/checkDirExist.js')
+const path=require('path');
 
 //=============================================================================
 
@@ -42,7 +42,25 @@ app.use(koaBody({
   formLimit:"5mb",
   formidable: {
     maxFileSize: 200*1024*1024, // 设置上传文件大小最大限制，默认2M
-    maxFieldsSize:10*1024*104
+    maxFieldsSize:10*1024*104,
+    uploadDir: path.join(__dirname, './static/img'),
+      keepExtensions: true,
+      maxFieldsSize: 2 * 1024 * 1024,
+      onFileBegin:(name,file) => {
+        // 最终要保存到的文件夹目录
+        const dirName = getUploadDirName();
+        console.log(dirName);
+        const dir = path.join(__dirname, `/static/img/${dirName}`);
+        checkDirExist(dir);
+        // 获取文件名称
+
+        // 重新覆盖 file.path 属性
+        file.path = `${dir}/${file.name}`;
+        console.log(file.path);
+        },
+        onError:(err)=>{
+          console.log(err);
+        }
   } 
     // multipart:true,
     // encoding:'gzip',

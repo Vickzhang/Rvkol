@@ -101,6 +101,11 @@ function LogoJudge(l) {
                 return "极速";
             }
             break;
+            case "14":
+            {
+                return "飞神";
+            }
+            break;
 
         default:
             {
