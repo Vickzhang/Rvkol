@@ -64,10 +64,10 @@ module.exports={
 
     'POST /cars-Image':async (ctx,next)=>{
         // //文件上传
-        console.log(JSON.stringify(ctx.request.files.file_data.path));
+        console.log(JSON.stringify(ctx.uploadpath.file_data));
         return ctx.body = {
             code: 'success',
-            titleFileName: ctx.request.files.file_data.path
+            titleFileName: ctx.uploadpath.file_data
         }   
     },
 
@@ -76,23 +76,11 @@ module.exports={
 
             //文件上传
             //配置
-            //ctx.body = JSON.stringify(ctx.request.files)
-            const file = ctx.request.files.picture.path; // 获取上传文件
-            console.log(file);
-            // const reader = fs.createReadStream(file.path); // 创建可读流
-            // //const ext = file.name.split('.').pop(); // 获取上传文件扩展名
-            // const dir =`static/img/Details/${getUploadDirName()}`;
-            // checkDirExist(dir);
-            // const fileName=`${dir}/${file.name}`;
-            // const upStream = fs.createWriteStream(fileName); // 创建可写流
-            // reader.pipe(upStream); // 可读流通过管道写入可写流
-            // console.log(ctx.uploadpath);
-            // ctx.body = JSON.stringify(ctx.request.files);
-            //     console.log(fileNames);
+
             
             return ctx.body = {
                 code: 'success',
-                titleFileName: file
+                titleFileName: ctx.uploadpath.picture
             }
             
     },

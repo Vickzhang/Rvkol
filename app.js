@@ -48,12 +48,14 @@ app.use(koaBody({
       onFileBegin:(name,file) => {
         // 最终要保存到的文件夹目录
         const dirName = getUploadDirName();
-        console.log(dirName);
         const dir = path.join(__dirname, `/static/img/Details/${dirName}`);
         checkDirExist(dir);
         // 重新覆盖 file.path 属性
         file.path = `${dir}/${file.name}`;
-        },
+        app.context.uploadpath = app.context.uploadpath ? app.context.uploadpath : {};
+        app.context.uploadpath[name] = `/static/img/Details/${dirName}/${file.name}`;
+        console.log(`/static/img/Details/${dirName}/${file.name}`);
+      },
         onError:(err)=>{
           console.log(err);
         }
