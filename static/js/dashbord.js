@@ -89,6 +89,7 @@ function initFileInput(ctrlName, uploadUrl,addCtrlName) {
             //alert($('#'+addCtrlName).attr("tagName"));
         if (response.code == 'success') {
             if (addCtrlName=="carTitleimage"||addCtrlName=="articleTitleImage") {
+                //alert(response.titleFileName);
                 $('#'+addCtrlName).val(response.titleFileName);
             }else{
                 $('#'+addCtrlName).append(response.titleFileName+"\n");
