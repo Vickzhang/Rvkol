@@ -106,6 +106,16 @@ function LogoJudge(l) {
                 return "飞神";
             }
             break;
+            case "15":
+            {
+                return "深圳四驱";
+            }
+            break;
+            case "16":
+            {
+                return "中汽京福";
+            }
+            break;
 
         default:
             {
@@ -164,7 +174,7 @@ function DipanJudge(d) {
             break;
         case "10":
             {
-                return "德兴";
+                return "福田";
             }
             break;
         case "11":

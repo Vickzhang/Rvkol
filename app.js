@@ -43,8 +43,7 @@ app.use(koaBody({
     maxFileSize: 200*1024*1024, // 设置上传文件大小最大限制，默认2M
     maxFieldsSize:10*1024*104,
     //uploadDir: path.join(__dirname, './static/img/Details'),
-      keepExtensions: true,
-      maxFieldsSize: 2 * 1024 * 1024,
+    keepExtensions: true,
       onFileBegin:(name,file) => {
         // 最终要保存到的文件夹目录
         const dirName = getUploadDirName();
@@ -54,7 +53,7 @@ app.use(koaBody({
         file.path = `${dir}/${file.name}`;
         app.context.uploadpath = app.context.uploadpath ? app.context.uploadpath : {};
         app.context.uploadpath[name] = `/static/img/Details/${dirName}/${file.name}`;
-        console.log(`/static/img/Details/${dirName}/${file.name}`);
+        //console.log(`/static/img/Details/${dirName}/${file.name}`);
       },
         onError:(err)=>{
           console.log(err);

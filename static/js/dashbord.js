@@ -95,6 +95,8 @@ function initFileInput(ctrlName, uploadUrl,addCtrlName) {
                 $('#'+addCtrlName).append(response.titleFileName+"\n");
             }
             
+        }else{
+            
         }
     });
     //文件上传完成之后发生的事件
