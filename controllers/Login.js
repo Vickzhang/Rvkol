@@ -14,12 +14,12 @@ var config = {
 module.exports={
     'GET /weChat':async (ctx,next) => {
 
-        console.log(this.query);
+        console.log(ctx.request.body);
         var token=config.wechat.token;
-        var signature=this.query.signature;
-        var nonce=this.query.nonce;
-        var timestamp=this.query.timestamp;
-        var ecostr=this.query.ecostr;
+        var signature=ctx.request.body.signature;
+        var nonce=ctx.request.body.nonce;
+        var timestamp=ctx.request.body.timestamp;
+        var ecostr=ctx.request.body.ecostr;
         //字典排序
         var str=[token,timestamp,nonce].sort().join('');
         var sha=sha1(str);
