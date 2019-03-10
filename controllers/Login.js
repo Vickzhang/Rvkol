@@ -25,9 +25,9 @@ module.exports={
         var sha=sha1(str);
       
         if(sha==signature){
-          this.body=ecostr+'';
+          etx.body=ecostr+'';
         }else{
-          this.body="wrong";
+          ctx.body="wrong";
         }
 
         //ctx.render('Login.html',{
