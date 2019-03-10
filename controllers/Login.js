@@ -1,3 +1,5 @@
+const sha1=require('sha1');
+
 var config = {
     wechat:{
       appID:'wx7157fe49fb90c141',

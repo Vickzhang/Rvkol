@@ -1,6 +1,6 @@
 // 导入koa，和koa 1.x不同，在koa2中，我们导入的是一个class，因此用大写的Koa表示:
 const Koa = require('koa');
-const sha1=require('sha1');
+
 
 // 导入controller middleware:
 const controller = require('./controller');
