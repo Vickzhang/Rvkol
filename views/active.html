@@ -1,0 +1,60 @@
+<head>
+        <link rel="stylesheet" href="/static/css/active.css" type="text/css" media="screen" charset="utf-8">
+        <link rel="stylesheet" href="/static/css/barCode.css" type="text/css" media="screen" charset="utf-8">
+    <script src="/static/js/barCode.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>
+    <header class="htmleaf-header">
+        <div class="htmleaf-links">
+            <a class="" href="/" title="房车情报" target="_blank"><img class="img-responsive" src="/static/img/logoTouming.png"
+                    alt=""></a>
+        </div>
+    </header>
+    <div class="coupon-wrapper">
+        <h3>房车情报优惠券领取：</h3>
+        <div class="coupon-item">
+            <div class="style-one">
+                <div class="info-box">
+                    <p class="nick">房车情报千元大礼包</p>
+                    <div class="coupon-money">
+                        <div class="lay of">￥<em>1000</em></div>
+                        <div class="lay">
+                            <p class="tit">优惠</p>
+                            <p class="demand">请凭此券到XX展区领取</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="javascript:;" class="get-btn" onclick="createBarcode('div128','www.rvkol.com','B');">
+                    <span>立即领取</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <h2 style="color:rgb(83, 75, 75);">您的优惠券码</h2>
+
+    <div class="number">
+
+
+
+        <p id="barcode"></p>
+        <div style="margin-left: 25%;">
+
+                <div class="barcode2" id="div128"></div>
+        </div>
+        <div class="scene">
+                <div class="ticket"></div>
+                <div class="ticket"></div>
+                <div class="ticket"> </div>
+            </div>
+    </div>
+
+    <script>
+
+    </script>
+
+</body>
+
+</html>
