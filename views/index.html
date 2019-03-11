@@ -58,9 +58,9 @@
                                     <li class="active"><a href="#bytype" data-toggle="tab">按车型</a></li>
                                     <li><a href="#byprice" data-toggle="tab">按价格</a></li>
                                     <li><a href="#bylogo" data-toggle="tab">按品牌</a></li>
-                                    <li><a href="#by1-3" data-toggle="tab">10-30万</a></li>
+                                    <!-- <li><a href="#by1-3" data-toggle="tab">10-30万</a></li>
                                     <li><a href="#by3-5" data-toggle="tab">30-50万</a></li>
-                                    <li><a href="#by5-10" data-toggle="tab">50-100万</a></li>
+                                    <li><a href="#by5-10" data-toggle="tab">50-100万</a></li> -->
                                 </ul>
                             </div>
             
@@ -70,30 +70,40 @@
                                     <div class="row chexing-row">
                                         <div class="col-xs-4 col-md-2"> <a class="chexing-a" href="">自行式B型:</a></div>
                                         {% for item in carTypeZixingshiB %}
-                                        <div class="col-xs-4 col-md-2"> <a href="">{{item.carID}}</a></div>
+                                        <div class="col-xs-4 col-md-2"> <a href="/RVDetails/{{item.carID}}">{{item.carTitle1}}</a></div>
                                         {% endfor %}
                                     </div>
                                     <div class="row chexing-row">
                                         <div class="col-xs-4 col-md-2"> <a class="chexing-a" href="">自行式C型:</a></div>
-                                        <div class="col-xs-4 col-md-2"> <a href="">拓锐斯特大</a></div>
+                                        {% for item in carTypeZixingshiC %}
+                                        <div class="col-xs-4 col-md-2"> <a href="/RVDetails/{{item.carID}}">{{item.carTitle1}}</a></div>
+                                        {% endfor %}
                                     </div>
                                     <div class="row">
                                         <div class="col-xs-4 col-md-2"> <a class="chexing-a" href="">皮卡房车:</a></div>
-                                        <div class="col-xs-4 col-md-2"> <a href="">戈士达460拖</a></div>
+                                        {% for item in carTypePikafangche %}
+                                        <div class="col-xs-4 col-md-2"> <a href="/RVDetails/{{item.carID}}">{{item.carTitle1}}</a></div>
+                                        {% endfor %}
                                     </div>
                                 </div>
                                 <div class="tab-pane fade" id="byprice">
                                     <div class="row chexing-row">
                                         <div class="col-xs-4 col-md-2"> <a class="chexing-a" href="">10-30万:</a></div>
-                                        <div class="col-xs-4 col-md-2"> <a href="">嵘野8米单拓</a></div>
+                                        {% for item in carPrice0to3 %}
+                                        <div class="col-xs-4 col-md-2"> <a href="/RVDetails/{{item.carID}}">{{item.carTitle1}}</a></div>
+                                        {% endfor %}
                                     </div>
                                     <div class="row chexing-row">
                                         <div class="col-xs-4 col-md-2"> <a class="chexing-a" href="">30-50万:</a></div>
-                                        <div class="col-xs-4 col-md-2"> <a href="">拓锐斯特大</a></div>
+                                        {% for item in carPrice3to5 %}
+                                        <div class="col-xs-4 col-md-2"> <a href="/RVDetails/{{item.carID}}">{{item.carTitle1}}</a></div>
+                                        {% endfor %}
                                     </div>
                                     <div class="row">
-                                        <div class="col-xs-4 col-md-2"> <a class="chexing-a" href="">50-100万:</a></div>
-                                        <div class="col-xs-4 col-md-2"> <a href="">览众赛拉维</a></div>
+                                            <div class="col-xs-4 col-md-2"> <a class="chexing-a" href="">50-100万:</a></div>
+                                        {% for item in carPrice5to10 %}
+                                        <div class="col-xs-4 col-md-2"> <a href="/RVDetails/{{item.carID}}">{{item.carTitle1}}</a></div>
+                                        {% endfor %}
                                     </div>
                                 </div>
                                 <div class="tab-pane fade" id="bylogo">
@@ -189,7 +199,7 @@
                                                 </div>
                                     </div>
                                 </div>
-                                <div class="tab-pane fade" id="by1-3">
+                                <!-- <div class="tab-pane fade" id="by1-3">
                                     <div class="row chexing-row">
                                         <div class=" col-xs-4 col-md-3">
                                             <a class="a1" href="">卫航特顺旅居车</a> <br/>
@@ -437,7 +447,7 @@
                                                             </span>
                                                     </div>     
                                             </div>
-                                </div>
+                                </div> -->
                             </div>
                         </nav>
                         <script>

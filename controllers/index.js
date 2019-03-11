@@ -53,31 +53,71 @@ module.exports={
                     order:[['updatedAt', 'DESC']]
                 });
 
+                let Car = model.Car;
+
                 //按车型
-                var carTypeZixingshiB = await Article.findAll({
-                    attributes: ['carTitle1','carID','updateAt'],
+                var carTypeZixingshiB = await Car.findAll({
+                    attributes: ['carTitle1','carID','updatedAt'],
                     where: {
-                       carType: "自行式B",
-                       articlePublish:true
+                       carChexingjiegou: "自行式B",
+                       carPublish:true
                     },
                     order:[['updatedAt', 'DESC']]
                 });
 
-                var carTypePikafangche = await Article.findAll({
-                    attributes: ['carTitle1','carID','updateAt'],
+                var carTypePikafangche = await Car.findAll({
+                    attributes: ['carTitle1','carID','updatedAt'],
                     where: {
-                       carType: "皮卡房车",
-                       articlePublish:true
+                        carChexingjiegou: "皮卡房车",
+                       carPublish:true
                     },
                     order:[['updatedAt', 'DESC']]
                 });
 
 
-                var carTypeZixingshiC = await Article.findAll({
-                    attributes: ['carTitle1','carID','updateAt'],
+                var carTypeZixingshiC = await Car.findAll({
+                    attributes: ['carTitle1','carID','updatedAt'],
                     where: {
-                       carType: "自行式C",
-                       articlePublish:true
+                        carChexingjiegou: "自行式C",
+                       carPublish:true
+                    },
+                    order:[['updatedAt', 'DESC']]
+                });
+
+
+                var carPrice0to3 = await Car.findAll({
+                    attributes: ['carTitle1','carID','updatedAt'],
+                    where: {
+                       carPriceMin: {
+                        '$gt': 0,
+                        '$lte': 30,
+                       },
+                       carPublish:true
+                    },
+                    order:[['updatedAt', 'DESC']]
+                });
+
+                var carPrice3to5 = await Car.findAll({
+                    attributes: ['carTitle1','carID','updatedAt'],
+                    where: {
+                       carPriceMin: {
+                        '$gt': 30,
+                        '$lte': 50,
+                       },
+                       carPublish:true
+                    },
+                    order:[['updatedAt', 'DESC']]
+                });
+
+
+                var carPrice5to10 = await Car.findAll({
+                    attributes: ['carTitle1','carID','updatedAt'],
+                    where: {
+                       carPriceMin: {
+                        '$gt': 50,
+                        '$lte': 100,
+                       },
+                       carPublish:true
                     },
                     order:[['updatedAt', 'DESC']]
                 });
@@ -94,6 +134,9 @@ module.exports={
             carTypeZixingshiB:carTypeZixingshiB.slice(0,5),
             carTypeZixingshiC:carTypeZixingshiC.slice(0,5),
             carTypePikafangche:carTypePikafangche.slice(0,5),
+            carPrice0to3:carPrice0to3.slice(0,5),
+            carPrice3to5:carPrice3to5.slice(0,5),
+            carPrice5to10:carPrice5to10.slice(0,5),
         })
     }
 }
