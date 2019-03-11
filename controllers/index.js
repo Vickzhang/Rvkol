@@ -53,6 +53,34 @@ module.exports={
                     order:[['updatedAt', 'DESC']]
                 });
 
+                //按车型
+                var carTypeZixingshiB = await Article.findAll({
+                    attributes: ['carTitle1','carID','updateAt'],
+                    where: {
+                       carType: "自行式B",
+                       articlePublish:true
+                    },
+                    order:[['updatedAt', 'DESC']]
+                });
+
+                var carTypePikafangche = await Article.findAll({
+                    attributes: ['carTitle1','carID','updateAt'],
+                    where: {
+                       carType: "皮卡房车",
+                       articlePublish:true
+                    },
+                    order:[['updatedAt', 'DESC']]
+                });
+
+
+                var carTypeZixingshiC = await Article.findAll({
+                    attributes: ['carTitle1','carID','updateAt'],
+                    where: {
+                       carType: "自行式C",
+                       articlePublish:true
+                    },
+                    order:[['updatedAt', 'DESC']]
+                });
 
 
         ctx.render('index.html',{
@@ -63,6 +91,9 @@ module.exports={
             carNews:carNews.slice(0,10),
             carTravel:carTravel.slice(0,10),
             carUse:carUse.slice(0,10),
+            carTypeZixingshiB:carTypeZixingshiB.slice(0,5),
+            carTypeZixingshiC:carTypeZixingshiC.slice(0,5),
+            carTypePikafangche:carTypePikafangche.slice(0,5),
         })
     }
 }

@@ -69,14 +69,16 @@
                                 <div class="tab-pane fade in active" id="bytype">
                                     <div class="row chexing-row">
                                         <div class="col-xs-4 col-md-2"> <a class="chexing-a" href="">自行式B型:</a></div>
-                                        <div class="col-xs-4 col-md-2"> <a href="">新星自在系</a></div>
+                                        {% for item in carTypeZixingshiB %}
+                                        <div class="col-xs-4 col-md-2"> <a href="">{{item.carID}}</a></div>
+                                        {% endfor %}
                                     </div>
                                     <div class="row chexing-row">
                                         <div class="col-xs-4 col-md-2"> <a class="chexing-a" href="">自行式C型:</a></div>
                                         <div class="col-xs-4 col-md-2"> <a href="">拓锐斯特大</a></div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-xs-4 col-md-2"> <a class="chexing-a" href="">拖挂式A型:</a></div>
+                                        <div class="col-xs-4 col-md-2"> <a class="chexing-a" href="">皮卡房车:</a></div>
                                         <div class="col-xs-4 col-md-2"> <a href="">戈士达460拖</a></div>
                                     </div>
                                 </div>
