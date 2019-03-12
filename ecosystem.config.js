@@ -3,7 +3,7 @@ module.exports = {
         {
           name: "Rvkol",
           script: "app.js",
-          watch: true,
+          watch: false,
           env: {
             "PORT": 3000,
             "NODE_ENV": "development"
