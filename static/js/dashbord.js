@@ -74,7 +74,7 @@ function initFileInput(ctrlName, uploadUrl,addCtrlName) {
         language: 'zh', //设置语言
         uploadUrl: uploadUrl, //上传的API
         allowedFileExtensions: ['jpg', 'png', 'gif', 'jpeg'], //接收的文件后缀
-        showUpload: false, //是否显示上传按钮
+        showUpload: true, //是否显示上传按钮
         showCaption: true, //是否显示标题
         browseClass: "btn btn-primary", //按钮样式             
         previewFileIcon: "<i class='glyphicon glyphicon-king'></i>",
