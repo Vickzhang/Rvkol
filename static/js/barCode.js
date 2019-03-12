@@ -68,17 +68,33 @@
       
   */
   function createBarcode(showDiv,textValue,barcodeType){
-      var divElement = document.getElementById(showDiv);
-          divElement.innerHTML = code128(textValue,barcodeType);
+          
           for(var j=0;j<10;j++){
             var randStr = "";
             for (var i = 0; i < 5; i++) {//此处的12为生成12位数字，可随即更改
-                var randItem = Math.floor(Math.random() * 10);
+                var randItem = Math.floor(Math.random() * 8);
                 randStr += randItem;
             }
-            var value="766"+randStr;//此处的766是要求必须已766开头，如果不需要可以去掉并在for循环中填入你要的位数
-            var divElement2 = document.getElementById("barcode");
-            //document.getElementById("barcode").value=(value);
-            divElement2.innerHTML =value;
+            var value="Rvkol"+randStr;//此处的766是要求必须已766开头，如果不需要可以去掉并在for循环中填入你要的位数
+          }
+            //提交一个ajax请求
+            $.ajax({
+              type: 'POST',
+              url: "/ActiveCountAdd",
+              dataType: 'json',
+              data: {
+                
+              },
+              success: function (data) {
+                  //alert(data.code);
+                  var divElement = document.getElementById(showDiv);
+                  divElement.innerHTML = code128(textValue,barcodeType);
+                  var divElement2 = document.getElementById("barcode");
+                  //document.getElementById("barcode").value=(value);
+                  divElement2.innerHTML =value;
+              },
+              error: function () {
+                  //alert("优惠券获取失败，请稍后再试");
+              }
+          })
   }
-}
