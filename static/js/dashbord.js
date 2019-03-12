@@ -65,6 +65,10 @@ $(document).ready(function () {
     initFileInput("file-Portrait2", "/cars-Image","carMoreimage");
     initFileInput("file-Portrait3", "/cars-Image","carMoreimage2");
     initFileInput("file-Portrait4", "/cars-Image","articleTitleImage");
+
+    //分页
+    console.log(data.page);
+    //$(#).addClass("active");
 });
 
 //文件上传
