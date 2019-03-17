@@ -10,6 +10,14 @@ function generateId() {
     return uuid.v4();
 }
 
+function getTime(){
+    const date = new Date();
+    let month = Number.parseInt(date.getMonth()) + 1;
+    month = month.toString().length > 1 ? month : `0${month}`;
+    const timeString = `${date.getFullYear()}-${month}-${date.getDate()} ${date.getHours()}:${date.getMinutes()}`;
+    return timeString;
+  }
+
 var sequelize = new Sequelize(config.database, config.username, config.password, {
     host: config.host,
     dialect: 'mysql',
@@ -80,7 +88,7 @@ function defineModel(name, attributes) {
         timestamps: false,
         hooks: {
             beforeValidate: function (obj) {
-                var tnow = new Date().toLocaleString();
+                var tnow = getTime();
 
                 if (obj.isNewRecord) {
                     console.log('will create entity...' + obj);
