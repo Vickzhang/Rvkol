@@ -14,7 +14,7 @@ function getTime(){
     const date = new Date();
     let month = Number.parseInt(date.getMonth()) + 1;
     month = month.toString().length > 1 ? month : `0${month}`;
-    const timeString = `${date.getFullYear()}-${month}-${date.getDate()} ${date.getHours()}:${date.getMinutes()}`;
+    const timeString = `${date.getFullYear()}/${month}/${date.getDate()} ${date.getHours()}:${date.getMinutes()}`;
     return timeString;
   }
 
