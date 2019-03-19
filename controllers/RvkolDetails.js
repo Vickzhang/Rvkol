@@ -117,6 +117,22 @@ function LogoJudge(l) {
             }
             break;
 
+            case "17":
+            {
+                return "江铃旅居车";
+            }
+            break;
+            case "18":
+            {
+                return "阿克米房车";
+            }
+            break;
+            case "19":
+            {
+                return "雅升房车";
+            }
+            break;
+
         default:
             {
                 return "瑞弗";
