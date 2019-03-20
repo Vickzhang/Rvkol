@@ -15,7 +15,7 @@ module.exports={
             const model = require('../model');
             let RVUser = model.RVuser;
 
-            var result = await RVUser.findAll({
+            var result = await RVUser.findAndCountAll({
                 order:[['createdAt', 'DESC']],
                 offset:(page - 1) * pageSize,//开始的数据索引，比如当page=2 时offset=10 ，而pagesize我们定义为10，则现在为索引为10，也就是从第11条开始返回数据条目
                 limit:pageSize//每页限制返回的数据条数
@@ -24,19 +24,31 @@ module.exports={
             );
 
             let testDriver = model.testDrive;
-            var testResult = await testDriver.findAll({
+            var testResult = await testDriver.findAndCountAll({
                 order:[['createdAt', 'DESC']],
                 offset:(page - 1) * pageSize,//开始的数据索引，比如当page=2 时offset=10 ，而pagesize我们定义为10，则现在为索引为10，也就是从第11条开始返回数据条目
                 limit:pageSize//每页限制返回的数据条数
             });
+
+            let Cars = model.Car;
+            var carsResult = await Cars.count({
+                where:{
+
+                }
+            });
+
+
             console.log(ctx.state);
             ctx.render('dashbord.html',{
-                testDrive:testResult,
-                data:result,
+                testDrive:testResult.rows,
+                data:result.rows,
                 title:'房车情报后台管理系统',
                 page:page,
-                totalhit:ctx.state.totalhit
+                totalhit:ctx.state.totalhit,
+                totalMessage:result.count,
+                totalCars:carsResult
             });
 
         }
+
     }
