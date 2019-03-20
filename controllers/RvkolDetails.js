@@ -124,7 +124,7 @@ function LogoJudge(l) {
             break;
             case "18":
             {
-                return "阿克米房车";
+                return "阿科米房车";
             }
             break;
             case "19":
@@ -196,6 +196,12 @@ function DipanJudge(d) {
         case "11":
             {
                 return "五十铃";
+            }
+            break;
+
+            case "12":
+            {
+                return "金杯";
             }
             break;
 
