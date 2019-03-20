@@ -14,6 +14,7 @@ const koaBody = require('koa-body');
 //上传所需文件
 const getUploadDirName=require('./utils/getUploadDirname');
 const checkDirExist=require('./utils/checkDirExist');
+const addHit=require('./utils/addHit');
 const path=require('path');
 
 
@@ -31,6 +32,13 @@ app.use(async (ctx, next) => {
     var 
         start = new Date().getTime(),
         execTime;
+    //if (!ctx.path.startsWith('/static')&&!ctx.path.startsWith('/dashbord')) 
+          const websites = await addHit(ctx.path);
+          const totalhit=websites.totalhit;
+          ctx.state = Object.assign(ctx.state, { totalhit: totalhit });
+          //console.log(ctx.state);
+        
+
     await next();
     execTime = new Date().getTime() - start;
     ctx.response.set('X-Response-Time', `${execTime}ms`);
