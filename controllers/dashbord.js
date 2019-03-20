@@ -37,8 +37,15 @@ module.exports={
                 }
             });
 
+            let Articles = model.Article;
+            var articlesResult = await Articles.count({
+                where:{
 
-            console.log(ctx.state);
+                }
+            });
+
+
+            console.log(carsResult);
             ctx.render('dashbord.html',{
                 testDrive:testResult.rows,
                 data:result.rows,
@@ -46,7 +53,8 @@ module.exports={
                 page:page,
                 totalhit:ctx.state.totalhit,
                 totalMessage:result.count,
-                totalCars:carsResult
+                totalCars:carsResult,
+                totalArticles:articlesResult
             });
 
         }
