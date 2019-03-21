@@ -237,6 +237,7 @@ module.exports={
             carMoreImage: ctx.request.body.carMoreImage,
             carMoreImage2: ctx.request.body.carMoreImage2,
             carPublish:  ctx.request.body.carPublish,
+            carHot:0,
           }
         //   console.log(carDetail);
           //数据库操作
@@ -390,7 +391,8 @@ module.exports={
                 carTitleImage: carDetail.carTitleImage,
                 carMoreImage: carDetail.carMoreImage,
                 carMoreImage2: carDetail.carMoreImage2,
-                carPublish:  ctx.request.body.carPublish,
+                carPublish:  carDetail.carPublish,
+                carHot:carDetail.carHot
             });
             console.log('created: ' + JSON.stringify(RVuser));
         })();

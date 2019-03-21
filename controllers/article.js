@@ -121,6 +121,16 @@ module.exports={
             }
         });
 
+
+        await Article.increment({
+            articleHot : 1,
+            },{
+                where:{
+                    articleID:id
+                }
+            }
+        )
+
         console.log(JSON.stringify(result));
 
         ctx.render('articleDetails.html', {
@@ -140,6 +150,7 @@ module.exports={
             articleWenzhangleixing:  ctx.request.body.articleWenzhangleixing,
             articleContext:  ctx.request.body.articleContext,
             articlePublish:  ctx.request.body.articlePublish,
+            articleHot:0
         }
 
         const model = require('../model');
@@ -155,6 +166,7 @@ module.exports={
                 articleWenzhangleixing:  article.articleWenzhangleixing,
                 articleContext: article.articleContext,
                 articlePublish:  article.articlePublish,
+                articleHot:article.articleHot
             });
             console.log('created: ' + JSON.stringify(articleResult));
         })();

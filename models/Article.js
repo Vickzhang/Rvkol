@@ -8,5 +8,6 @@ module.exports = db.defineModel('Articles', {
     articleZuozhe:db.STRING(20),
     articleWenzhangleixing:db.STRING(20),
     articleContext:db.TEXT('long'),
-    articlePublish:db.BOOLEAN
+    articlePublish:db.BOOLEAN,
+    articleHot:db.INTEGER(10)
 });

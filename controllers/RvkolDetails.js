@@ -471,6 +471,15 @@ module.exports = {
             }
         });
 
+        await Car.increment({
+            carHot : 1,
+            },{
+                where:{
+                    carID:id
+                }
+            }
+        )
+
         let Articles = model.Article;
         var ArticleInform = await Articles.findAll({
             where: {
