@@ -108,6 +108,19 @@ module.exports={
         })
     },
 
+    'GET /article-hot':async (ctx,next) => {
+        const model = require('../model');
+        let Article = model.Article;
+        var result = await Article.findAll({
+            attributes: ['articleID', 'articleTitle','articleHot','isHot'],
+            order:[['articleHot', 'Desc']]
+        });
+        ctx.render('article-hot.html',{
+            title:'房车情报-添加文章/视频',
+            data:result
+        })
+    },
+
     'GET /articleDetails/:id':async (ctx,next) => {
         var id = ctx.params.id;
 
@@ -275,6 +288,51 @@ module.exports={
 
         return ctx.body = {
             code:'操作成功！',
+        }
+    },
+
+
+    'POST /articleHot/:id':async (ctx,next) => {
+        var id = ctx.params.id;
+
+        //数据库操作
+        const model = require('../model');
+        let Article = model.Article;
+
+        var result = await Article.update({
+            isHot:1,
+        },{
+            where:{
+                articleID:id,
+            }
+        }
+    );
+        console.log('Hot: ' + JSON.stringify(result));
+
+        return ctx.body = {
+            code:'设置热门成功！',
+        }
+    },
+
+    'POST /articleUnHot/:id':async (ctx,next) => {
+        var id = ctx.params.id;
+
+        //数据库操作
+        const model = require('../model');
+        let Article = model.Article;
+
+        var result = await Article.update({
+            isHot:0,
+        },{
+            where:{
+                articleID:id,
+            }
+        }
+    );
+        console.log('unPublish: ' + JSON.stringify(result));
+
+        return ctx.body = {
+            code:'取消热门成功！',
         }
     },
 

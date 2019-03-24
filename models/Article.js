@@ -9,5 +9,6 @@ module.exports = db.defineModel('Articles', {
     articleWenzhangleixing:db.STRING(20),
     articleContext:db.TEXT('long'),
     articlePublish:db.BOOLEAN,
-    articleHot:db.INTEGER(10)
+    articleHot:db.INTEGER(10),
+    isHot:db.BOOLEAN
 });

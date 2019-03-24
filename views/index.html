@@ -353,28 +353,21 @@
                     </div>
 
                     <div class="list-group">
-                            
-                            <a href="/articleDetails/07" class="row list-group-item" style="margin-left: 0px;margin-right: 0px;">
+                        {% for item in carHotArticle %}
+                            <a href="/articleDetails/{{item.carID}}" class="row list-group-item" style="margin-left: 0px;margin-right: 0px;">
                                 <div class="col-md-4">
-                                    <img class="img-responsive" src="https://i.loli.net/2019/03/02/5c79893ebd48c.jpeg" alt="">
+                                    <img class="img-responsive" src="{{item.articleTitleImage}}" alt="">
                                 </div>
                                 <div>
-                                        <h4  style="overflow:hidden;white-space:nowrap;text-overflow:ellipsis;">宇通房车携13款车型强势登陆北京房车展</h4>
-                                        <span>作者:房车情报</span>
-                                        <span>时间:2019.03.02 03:31</span>
+                                    <h4 style="overflow:hidden;white-space:nowrap;text-overflow:ellipsis;">{{item.articleTitle}}</h2>
+                                        <span>作者:{{item.articleZuozhe}}</span>
+                                        <span>时间:{{item.updatedAt}}</span>
+                                        <span>Hot:{{item.articleHot}}</span>
                                 </div>                                            
                             </a>
+                        {% endfor %}
 
-                            <a href="/articleDetails/03" class="row list-group-item" style="margin-left: 0px;margin-right: 0px;">
-                                <div class="col-md-4">
-                                    <img class="img-responsive" src="https://i.loli.net/2019/03/01/5c78f9853ac62.jpg" alt="">
-                                </div>
-                                <div>
-                                        <h4 style="overflow:hidden;white-space:nowrap;text-overflow:ellipsis;"> 高颜值vs大空间 新季风 · 新T型房车全新上市！</h4>
-                                        <span>作者:房车情报</span>
-                                        <span>时间:2019.03.02 03:31</span>
-                                </div>                                            
-                            </a>
+
 
 
                     </div>

@@ -549,6 +549,46 @@ var articleUnPublish = function (id) {
 }
 
 
+var articleHot = function (id) {
+    var publishUrl = '/articleHot/' + id;
+    //alert(delUrl);
+    $.ajax({
+        type: 'POST',
+        url: publishUrl,
+        dataType: 'json',
+        data: {
+
+        },
+        success: function (data) {
+            alert(data.code);
+        },
+        error: function () {
+            alert("设置热门失败");
+        }
+    })
+}
+
+
+var articleUnHot = function (id) {
+    var UnpublishUrl = '/articleUnHot/' + id;
+    //alert(delUrl);
+    $.ajax({
+        type: 'POST',
+        url: UnpublishUrl,
+        dataType: 'json',
+        data: {
+
+        },
+        success: function (data) {
+            alert(data.code);
+        },
+        error: function () {
+            alert("取消热门失败");
+        }
+    })
+}
+
+
 var carDel = function (id) {
     var delUrl = '/carDel/' + id;
     //alert(delUrl);

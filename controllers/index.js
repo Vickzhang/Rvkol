@@ -53,6 +53,17 @@ module.exports={
                     order:[['updatedAt', 'DESC']]
                 });
 
+
+                var hotArticle = await Article.findAll({
+                    attributes: ['articleTitle','articleID','articleTitleImage','articleZuozhe','updatedAt','articleHot'],
+                    where: {
+                       isHot:true
+                    },
+                    order:[['updatedAt', 'DESC']]
+                });
+
+
+
                 let Car = model.Car;
 
                 //按车型
@@ -136,6 +147,7 @@ module.exports={
             carPrice0to3:carPrice0to3.slice(0,5),
             carPrice3to5:carPrice3to5.slice(0,5),
             carPrice5to10:carPrice5to10.slice(0,5),
+            carHotArticle:hotArticle.slice(0,4)
         })
     }
 }
