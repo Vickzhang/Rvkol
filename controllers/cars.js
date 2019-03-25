@@ -62,6 +62,22 @@ module.exports={
     },
 
 
+    'GET /cars-hot':async (ctx,next) => {
+        const model = require('../model');
+        let Car = model.Car;
+        var result = await Car.findAll({
+            attributes: ['carID','carTitle1','carHot','isHot'],
+            order:[['carHot', 'desc']]
+        });
+        console.log(JSON.stringify(result));
+        ctx.render('cars-hot.html',{
+            
+            data:result,
+            title:'房车情报-车型库管理',
+        })
+    },
+
+
     'POST /cars-Image':async (ctx,next)=>{
         // //文件上传
         console.log(JSON.stringify(ctx.uploadpath.file_data));
@@ -238,6 +254,7 @@ module.exports={
             carMoreImage2: ctx.request.body.carMoreImage2,
             carPublish:  ctx.request.body.carPublish,
             carHot:0,
+            isHot:false
           }
         //   console.log(carDetail);
           //数据库操作
@@ -392,7 +409,8 @@ module.exports={
                 carMoreImage: carDetail.carMoreImage,
                 carMoreImage2: carDetail.carMoreImage2,
                 carPublish:  carDetail.carPublish,
-                carHot:carDetail.carHot
+                carHot:carDetail.carHot,
+                isHot:carDetail.isHot
             });
             console.log('created: ' + JSON.stringify(RVuser));
         })();
@@ -779,6 +797,51 @@ module.exports={
 
         return ctx.body = {
             code:'操作成功！',
+        }
+    },
+
+
+    'POST /carHot/:id':async (ctx,next) => {
+        var id = ctx.params.id;
+
+        //数据库操作
+        const model = require('../model');
+        let Car = model.Car;
+
+        var result = await Car.update({
+            isHot:1,
+        },{
+            where:{
+                carID:id,
+            }
+        }
+    );
+       // console.log('Publish: ' + JSON.stringify(result));
+
+        return ctx.body = {
+            code:'设置热门成功！',
+        }
+    },
+
+    'POST /carUnHot/:id':async (ctx,next) => {
+        var id = ctx.params.id;
+
+        //数据库操作
+        const model = require('../model');
+        let Car = model.Car;
+
+        var result = await Car.update({
+            isHot:0,
+        },{
+            where:{
+               carID:id,
+            }
+        }
+    );
+        //console.log('unPublish: ' + JSON.stringify(result));
+
+        return ctx.body = {
+            code:'取消热门成功！',
         }
     },
 }

@@ -163,7 +163,8 @@ module.exports={
             articleWenzhangleixing:  ctx.request.body.articleWenzhangleixing,
             articleContext:  ctx.request.body.articleContext,
             articlePublish:  ctx.request.body.articlePublish,
-            articleHot:0
+            articleHot:0,
+            isHot:false
         }
 
         const model = require('../model');
@@ -179,7 +180,8 @@ module.exports={
                 articleWenzhangleixing:  article.articleWenzhangleixing,
                 articleContext: article.articleContext,
                 articlePublish:  article.articlePublish,
-                articleHot:article.articleHot
+                articleHot:article.articleHot,
+                isHot:article.isHot
             });
             console.log('created: ' + JSON.stringify(articleResult));
         })();

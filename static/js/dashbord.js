@@ -646,3 +646,44 @@ var carUnPublish = function (id) {
         }
     })
 }
+
+
+
+var carHot = function (id) {
+    var publishUrl = '/carHot/' + id;
+    //alert(delUrl);
+    $.ajax({
+        type: 'POST',
+        url: publishUrl,
+        dataType: 'json',
+        data: {
+
+        },
+        success: function (data) {
+            alert(data.code);
+        },
+        error: function () {
+            alert("设置热门失败");
+        }
+    })
+}
+
+
+var carUnHot = function (id) {
+    var UnpublishUrl = '/carUnHot/' + id;
+    //alert(delUrl);
+    $.ajax({
+        type: 'POST',
+        url: UnpublishUrl,
+        dataType: 'json',
+        data: {
+
+        },
+        success: function (data) {
+            alert(data.code);
+        },
+        error: function () {
+            alert("取消热门失败");
+        }
+    })
+}

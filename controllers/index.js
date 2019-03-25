@@ -133,6 +133,24 @@ module.exports={
                     order:[['updatedAt', 'DESC']]
                 });
 
+                var SuggestCar = await Car.findAll({
+                    attributes: ['carTitle1','carID','carTitleImage','carPriceMin','carHot'],
+                    where: {
+                       isHot:true
+                    },
+                    order:[['carHot', 'DESC']]
+                });
+
+
+                
+                var HotCar = await Car.findAll({
+                    attributes: ['carTitle1','carID','carTitleImage','carPriceMin','carHot'],
+                    where: {
+                       //isHot:true
+                    },
+                    order:[['carHot', 'DESC']]
+                });
+
         ctx.render('index.html',{
             title:'房车情报',
             subtitle:'全球房车领袖，最新最全的房车情报',
@@ -147,7 +165,9 @@ module.exports={
             carPrice0to3:carPrice0to3.slice(0,5),
             carPrice3to5:carPrice3to5.slice(0,5),
             carPrice5to10:carPrice5to10.slice(0,5),
-            carHotArticle:hotArticle.slice(0,4)
+            carHotArticle:hotArticle.slice(0,4),
+            carHotCar:HotCar.slice(0,10),
+            carHotCarSuggest:SuggestCar.slice(0.10)
         })
     }
 }

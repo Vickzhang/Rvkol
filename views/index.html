@@ -506,7 +506,7 @@
                                     <ul class="tab-nav">
                                         <li class="tab-nav-item tab-active">
                                             <a href="javascript:;">
-                                                <span>人气榜</span>
+                                                <span>小编推荐榜</span>
                                             </a>
                                         </li>
                                         <li class="tab-nav-item">
@@ -519,40 +519,45 @@
                                     <div class="tab-panel">
                                         <div class="tab-panel-item tab-active">
                                             <div class="aui-sale-content">
+                                                    {% for item in carHotCarSuggest %}
                                                 <a href="javascript:;" class="aui-list-item">
                                                     <div class="aui-list-item-img">
-                                                        <img src="/static/img/Details/201903162310/1.png" alt="">
-                                                        <span class="aui-tag-top">TOP1</span>
+                                                        <img src="{{item.carTitleImage}}" alt="">
+                                                        <span class="aui-tag-top">TOP</span>
                                                         <span class="aui-tag-play"><i class="icon icon-play"></i></span>
                                                         <span class="aui-comment"><i class="icon icon-comment"></i></span>
                                                     </div>
                                                     <div class="aui-flex">
                                                         <div class="aui-flex-box">
-                                                            <h2>大运河智慧街区 <em>推荐</em></h2>
+                                                            <h2>{{item.carTitle1}} <em>推荐</em></h2>
                                                         </div>
                                                         <div class="aui-sale-price">
-                                                            8000<em>万元</em>
+                                                            {{item.carPriceMin}}<em>万元</em>
                                                         </div>
                                                     </div>
                                                 </a>
+                                                {% endfor %}
                                             </div>
                                         </div>
                                         <div class="tab-panel-item">
+                                                {% for item in carHotCar %}
                                             <a href="javascript:;" class="aui-list-item">
-                                                <div class="aui-list-item-img">
-                                                    <img src="images/seal-001.jpg" alt="">
-                                                    <span class="aui-comment"><i class="icon icon-comment"></i></span>
-                                                </div>
-                                                <div class="aui-flex">
-                                                    <div class="aui-flex-box">
-                                                        <h2>大运河智慧街区 <em>在售</em> <em class="aui-tags">住宅</em></h2>
-                                                        
-                                                    </div>
-                                                    <div class="aui-sale-price">
-                                                        8000<em>元/㎡起</em>
-                                                    </div>
-                                                </div>
+                                                    <div class="aui-list-item-img">
+                                                            <img src="{{item.carTitleImage}}" alt="">
+                                                            <span class="aui-tag-top">TOP</span>
+                                                            <span class="aui-tag-play"><i class="icon icon-play"></i></span>
+                                                            <span class="aui-comment"><i class="icon icon-comment"></i></span>
+                                                        </div>
+                                                        <div class="aui-flex">
+                                                            <div class="aui-flex-box">
+                                                                <h2>{{item.carTitle1}} <em>热门</em></h2>
+                                                            </div>
+                                                            <div class="aui-sale-price">
+                                                                {{item.carPriceMin}}<em>万元</em>
+                                                            </div>
+                                                        </div>
                                             </a>
+                                            {% endfor %}
                                         </div>
                                     </div>
                                 </div>
