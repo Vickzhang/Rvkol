@@ -321,16 +321,16 @@
                                 <!-- 轮播（Carousel）项目 -->
                                 <div class="carousel-inner">
                                     <a href="/cars/price=all/logo=4/dipan=all/leixing=all" class="item active">
-                                        <img class="img-responsive lazy" data-src="https://i.loli.net/2019/03/02/5c7977b278fb8.jpeg" alt="First slide">
+                                        <img class="img-responsive" src="https://i.loli.net/2019/03/02/5c7977b278fb8.jpeg" alt="First slide">
                                         <div class="carousel-caption">水电无需升级，820Ah锂电池+180L净水箱，这款房车睡4-5人
                                         </div>
                                     </a>
                                     <a href="/articleDetails/08" class="item">
-                                        <img class="img-responsive lazy" data-src="https://i.loli.net/2019/03/04/5c7c61418118c.png" alt="Second slide">
+                                        <img class="img-responsive" src="https://i.loli.net/2019/03/04/5c7c61418118c.png" alt="Second slide">
                                         <div class="carousel-caption">万众瞩目，“质有心 行无界”瑞弗上市发布会全国首发</div>
                                     </a>
                                     <a href="/cars" class="item">
-                                        <img class="img-responsive lazy" data-src="https://i.loli.net/2019/03/02/5c7978cfb09b9.jpeg" alt="Third slide">
+                                        <img class="img-responsive" src="https://i.loli.net/2019/03/02/5c7978cfb09b9.jpeg" alt="Third slide">
                                         <div class="carousel-caption">中天发布新T型房车，车高不足3米，内高接近2米，配2张大双人床</div>
                                     </a>
                                 </div>
@@ -573,9 +573,8 @@
      $(function() {
        $("img.lazy").lazyload({effect: "fadeIn"});
    });
-    if (screen.width > 768) {
-        
-    document.getElementById("right").style.height = document.getElementById("left").offsetHeight + "px";
+    if (screen.width > 768) {   
+        document.getElementById("right").style.height = document.getElementById("left").offsetHeight + "px";
     }
         function savePeople() { 
             // jquery 表单提交 
