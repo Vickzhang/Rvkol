@@ -522,7 +522,8 @@
                                                     {% for item in carHotCarSuggest %}
                                                 <a href="javascript:;" class="aui-list-item">
                                                     <div class="aui-list-item-img">
-                                                        <img src="{{item.carTitleImage}}" alt="">
+                                                        <!-- <img src="{{item.carTitleImage}}" alt=""> -->
+                                                        <img class="lazy" data-src="{{item.carTitleImage}}" alt="">
                                                         <span class="aui-tag-top">TOP</span>
                                                         <span class="aui-tag-play"><i class="icon icon-play"></i></span>
                                                         <span class="aui-comment"><i class="icon icon-comment"></i></span>
@@ -543,7 +544,8 @@
                                                 {% for item in carHotCar %}
                                             <a href="javascript:;" class="aui-list-item">
                                                     <div class="aui-list-item-img">
-                                                            <img  src="{{item.carTitleImage}}" alt="">
+                                                            <!-- <img  src="{{item.carTitleImage}}" alt=""> -->
+                                                            <img class="lazy" data-src="{{item.carTitleImage}}" alt="">
                                                             <span class="aui-tag-top">TOP</span>
                                                             <span class="aui-tag-play"><i class="icon icon-play"></i></span>
                                                             <span class="aui-comment"><i class="icon icon-comment"></i></span>
@@ -568,9 +570,9 @@
 </div>
 
 <script>
-//     $(function() {
-//       $("img.lazy").lazyload({effect: "fadeIn"});
-//   });
+     $(function() {
+       $("img.lazy").lazyload({effect: "fadeIn"});
+   });
     if (screen.width > 768) {
         
     document.getElementById("right").style.height = document.getElementById("left").offsetHeight + "px";
