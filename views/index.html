@@ -7,13 +7,13 @@
 
         <div id="Banner" class="Banner-Div col-md-10 col-md-offset-1" style="color:#cdbfe3;  padding:0 0; margin-top: 10px; margin-bottom: 10px">
             <a href="">
-                <img src="/static/img/ADS/sjrz.png" alt="" class="img-responsive">
+                <img class="img-responsive lazy" data-src="/static/img/ADS/sjrz.png" alt="" >
             </a>
             </div>
 
             <div id="Banner2" class="Banner-Div col-md-10 col-md-offset-1" style="color:#cdbfe3; ;  padding:0 0; margin-bottom: 10px">
                     <a href="">    
-                            <img src="/static/img/ADS/Banner2.jpeg" alt="" class="img-responsive">
+                            <img class="img-responsive lazy" data-src="/static/img/ADS/Banner2.jpeg" alt="" >
                     </a>
                     </div>
 
@@ -321,16 +321,16 @@
                                 <!-- 轮播（Carousel）项目 -->
                                 <div class="carousel-inner">
                                     <a href="/cars/price=all/logo=4/dipan=all/leixing=all" class="item active">
-                                        <img class="img-responsive" src="https://i.loli.net/2019/03/02/5c7977b278fb8.jpeg" alt="First slide">
+                                        <img class="img-responsive lazy" data-src="https://i.loli.net/2019/03/02/5c7977b278fb8.jpeg" alt="First slide">
                                         <div class="carousel-caption">水电无需升级，820Ah锂电池+180L净水箱，这款房车睡4-5人
                                         </div>
                                     </a>
                                     <a href="/articleDetails/08" class="item">
-                                        <img src="https://i.loli.net/2019/03/04/5c7c61418118c.png" alt="Second slide">
+                                        <img class="img-responsive lazy" data-src="https://i.loli.net/2019/03/04/5c7c61418118c.png" alt="Second slide">
                                         <div class="carousel-caption">万众瞩目，“质有心 行无界”瑞弗上市发布会全国首发</div>
                                     </a>
                                     <a href="/cars" class="item">
-                                        <img src="https://i.loli.net/2019/03/02/5c7978cfb09b9.jpeg" alt="Third slide">
+                                        <img class="img-responsive lazy" data-src="https://i.loli.net/2019/03/02/5c7978cfb09b9.jpeg" alt="Third slide">
                                         <div class="carousel-caption">中天发布新T型房车，车高不足3米，内高接近2米，配2张大双人床</div>
                                     </a>
                                 </div>
@@ -356,7 +356,7 @@
                         {% for item in carHotArticle %}
                             <a href="/articleDetails/{{item.articleID}}" class="row list-group-item" style="margin-left: 0px;margin-right: 0px;">
                                 <div class="col-md-4">
-                                    <img class="img-responsive" src="{{item.articleTitleImage}}" alt="">
+                                    <img class="img-responsive lazy" data-src="{{item.articleTitleImage}}" alt="">
                                 </div>
                                 <div>
                                     <h4 style="overflow:hidden;white-space:nowrap;text-overflow:ellipsis;">{{item.articleTitle}}</h2>
@@ -406,7 +406,7 @@
                                                     {% for item in carArticle %}
                                                     <a href="/articleDetails/{{item.articleID}}" class="row list-group-item" style="margin-left: 0px;margin-right: 0px;">
                                                         <div class="col-md-3">
-                                                            <img class="img-responsive" src="{{item.articleTitleImage}}" alt="">
+                                                            <img class="img-responsive lazy" data-src="{{item.articleTitleImage}}" alt="">
                                                         </div>
                                                         <div>
                                                                 <h3 style="overflow:hidden;white-space:nowrap;text-overflow:ellipsis;">{{item.articleTitle}}</h2>
@@ -424,7 +424,7 @@
                                                     {% for item in carVedio %}
                                                     <a href="/articleDetails/{{item.articleID}}" class="row list-group-item" style="margin-left: 0px;margin-right: 0px;">
                                                         <div class="col-md-3">
-                                                            <img class="img-responsive" src="{{item.articleTitleImage}}" alt="">
+                                                            <img class="img-responsive lazy" data-src="{{item.articleTitleImage}}" alt="">
                                                         </div>
                                                         <div>
                                                                 <h3 style="overflow:hidden;white-space:nowrap;text-overflow:ellipsis;">{{item.articleTitle}}</h2>
@@ -442,7 +442,7 @@
                                                     {% for item in carNews %}
                                                     <a href="/articleDetails/{{item.articleID}}" class="row list-group-item" style="margin-left: 0px;margin-right: 0px;">
                                                         <div class="col-md-3">
-                                                            <img class="img-responsive" src="{{item.articleTitleImage}}" alt="">
+                                                            <img class="img-responsive lazy" data-srcc="{{item.articleTitleImage}}" alt="">
                                                         </div>
                                                         <div>
                                                                 <h3 style="overflow:hidden;white-space:nowrap;text-overflow:ellipsis;">{{item.articleTitle}}</h2>
@@ -460,7 +460,7 @@
                                                     {% for item in carTravel %}
                                                     <a href="/articleDetails/{{item.articleID}}" class="row list-group-item" style="margin-left: 0px;margin-right: 0px;">
                                                         <div class="col-md-3">
-                                                            <img class="img-responsive" src="{{item.articleTitleImage}}" alt="">
+                                                            <img class="img-responsive lazy" data-src="{{item.articleTitleImage}}" alt="">
                                                         </div>
                                                         <div>
                                                                 <h3 style="overflow:hidden;white-space:nowrap;text-overflow:ellipsis;">{{item.articleTitle}}</h2>
@@ -477,7 +477,7 @@
                                                     {% for item in carUse %}
                                                     <a href="/articleDetails/{{item.articleID}}" class="row list-group-item" style="margin-left: 0px;margin-right: 0px;">
                                                         <div class="col-md-3">
-                                                            <img class="img-responsive" src="{{item.articleTitleImage}}" alt="">
+                                                            <img class="img-responsive lazy" data-src="{{item.articleTitleImage}}" alt="">
                                                         </div>
                                                         <div>
                                                                 <h3 style="overflow:hidden;white-space:nowrap;text-overflow:ellipsis;">{{item.articleTitle}}</h2>
