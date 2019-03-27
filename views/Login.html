@@ -164,12 +164,37 @@ body{
 	</div>
 	<br>
 	<div class="login">
-		<input type="text" placeholder="username" name="user"><br>
-		<input type="password" placeholder="password" name="password"><br>
-		<a href="/dashbord/1"><input  type="button" value="Login" ></a>
+		<input id="username" type="text" placeholder="username" name="user"><br>
+		<input id="password" type="password" placeholder="password" name="password"><br>
+		<a id="Login""><input  type="button" value="Login" ></a>
 	</div>
-	<script src='/static/js/jquery-3.2.1.min.js'></script>
 
+
+
+	<script src='/static/js/jquery-3.2.1.min.js'></script>
+		<script>
+			var TellUS = $('#Login').click(() => {
+				var url='/login';
+				$.ajax({
+					type: 'POST',
+					url: url,
+					dataType: 'json',
+					data: {
+						username: $('#username').val(),
+						password: $('#password').val(),
+					},
+					success: function (data) {
+						alert(data.msg);
+						if (data.success) {
+							window.location.href = '/dashbord/1';
+						}
+					},
+					error: function () {
+						alert("信息验证失败，请联系管理员");
+					}
+				})
+			})
+		</script>
 
 
 </body>

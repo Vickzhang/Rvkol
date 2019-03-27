@@ -140,7 +140,7 @@ function LogoJudge(l) {
             break;
             case "21":
             {
-                return "旅友房车";
+                return "侣友房车";
             }
             break;
 

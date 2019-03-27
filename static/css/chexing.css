@@ -322,6 +322,19 @@ ul,li{
     color: #ffffff !important;
 }
 
+.price{
+    padding-left: 0px;
+}
+.logo {
+    padding-left: 0px;
+}
+.dipan {
+    padding-left: 0px;
+}
+.leixing{
+    padding-left: 0px;
+}
+
 .select-box ul>li{
     border-radius: 4px;
     width:70px;

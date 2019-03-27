@@ -21,6 +21,10 @@ function checkDirExist(p) {
 
 module.exports={
     'GET /cars-dashbord':async (ctx,next) => {
+
+        if (!ctx.session.username) {
+            ctx.response.redirect('/dashbord');
+        }
         const model = require('../model');
         let Car = model.Car;
         var result = await Car.findAll({
@@ -36,12 +40,20 @@ module.exports={
     },
 
     'GET /cars-add':async (ctx,next) => {
+
+        if (!ctx.session.username) {
+            ctx.response.redirect('/dashbord');
+        }
         ctx.render('cars-add.html',{
             title:'房车情报后台管理系统'
         })
     },
 
     'GET /cars-change/:id':async (ctx,next) => {
+
+        if (!ctx.session.username) {
+            ctx.response.redirect('/dashbord');
+        }
         var id =ctx.params.id;
 
         //数据库操作
@@ -63,6 +75,10 @@ module.exports={
 
 
     'GET /cars-hot':async (ctx,next) => {
+
+        if (!ctx.session.username) {
+            ctx.response.redirect('/dashbord');
+        }
         const model = require('../model');
         let Car = model.Car;
         var result = await Car.findAll({

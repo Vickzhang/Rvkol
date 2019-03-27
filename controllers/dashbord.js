@@ -9,6 +9,11 @@ module.exports={
         },
 
         'GET /dashbord/:id':async (ctx,next) => {
+
+            if (!ctx.session.username) {
+                ctx.response.redirect('/dashbord');
+            }
+
             var page=ctx.params.id;
             var pageSize=20;
             //数据库操作
@@ -54,7 +59,8 @@ module.exports={
                 totalhit:ctx.state.totalhit,
                 totalMessage:result.count,
                 totalCars:carsResult,
-                totalArticles:articlesResult
+                totalArticles:articlesResult,
+                username:ctx.session.username
             });
 
         }

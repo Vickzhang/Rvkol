@@ -67,6 +67,9 @@ module.exports={
 
 
     'GET /article-dashbord':async (ctx,next) => {
+        if (!ctx.session.username) {
+            ctx.response.redirect('/dashbord');
+        }
         const model = require('../model');
         let Article = model.Article;
         var result = await Article.findAll({
@@ -81,6 +84,10 @@ module.exports={
     },
     'GET /article-add':async (ctx,next) => {
 
+        if (!ctx.session.username) {
+            ctx.response.redirect('/dashbord');
+        }
+
         ctx.render('article-add.html',{
             title:'房车情报-添加文章/视频',
             //data:result
@@ -88,6 +95,10 @@ module.exports={
     },
 
     'GET /article-change/:id':async (ctx,next) => {
+
+        if (!ctx.session.username) {
+            ctx.response.redirect('/dashbord');
+        }
         var id = ctx.params.id;
 
         //数据库操作
@@ -109,6 +120,10 @@ module.exports={
     },
 
     'GET /article-hot':async (ctx,next) => {
+
+        if (!ctx.session.username) {
+            ctx.response.redirect('/dashbord');
+        }
         const model = require('../model');
         let Article = model.Article;
         var result = await Article.findAll({

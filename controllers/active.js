@@ -8,6 +8,10 @@ module.exports = {
 
     'GET /active-dashbord': async (ctx, next) => {
 
+        if (!ctx.session.username) {
+            ctx.response.redirect('/dashbord');
+        }
+
         const model = require('../model');
         let activeList = model.Active;
 

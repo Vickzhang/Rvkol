@@ -9,6 +9,8 @@ const isProduction = process.env.NODE_ENV === 'production';
 
 //导入调用Nunjucks
 const templating = require('./templating.js');
+//引用 koa-session  用于用户认证
+const session=require('koa-session');
 //导入koaBody
 const koaBody = require('koa-body');
 //上传所需文件
@@ -23,6 +25,8 @@ const path=require('path');
 
 // 创建一个Koa对象表示web app本身:
 const app = new Koa();
+
+app.keys=['my code skill is awesome'];
 //=======================
 
 
@@ -43,6 +47,17 @@ app.use(async (ctx, next) => {
     execTime = new Date().getTime() - start;
     ctx.response.set('X-Response-Time', `${execTime}ms`);
 });
+
+
+app.use(session({
+  key: 'koa:sess', /** cookie的名称，可以不管 */
+  maxAge: 7200000, /** (number) maxAge in ms (default is 1 days)，cookie的过期时间，这里表示2个小时 */
+  overwrite: true, /** (boolean) can overwrite or not (default true) */
+  httpOnly: true, /** (boolean) httpOnly or not (default true) */
+  signed: true, /** (boolean) signed or not (default true) */
+},app));
+
+
 //使用koabody模块
 app.use(koaBody({
   multipart: true, 
