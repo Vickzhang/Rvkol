@@ -133,6 +133,17 @@ function LogoJudge(l) {
             }
             break;
 
+            case "20":
+            {
+                return "金冠";
+            }
+            break;
+            case "21":
+            {
+                return "旅友房车";
+            }
+            break;
+
         default:
             {
                 return "瑞弗";
