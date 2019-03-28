@@ -119,17 +119,17 @@ function LogoJudge(l) {
 
             case "17":
             {
-                return "江铃旅居车";
+                return "江铃";
             }
             break;
             case "18":
             {
-                return "阿科米房车";
+                return "阿科米";
             }
             break;
             case "19":
             {
-                return "雅升房车";
+                return "雅升";
             }
             break;
 
@@ -140,13 +140,36 @@ function LogoJudge(l) {
             break;
             case "21":
             {
-                return "侣友房车";
+                return "侣友";
+            }
+            break;
+
+            case "22":
+            {
+                return "中亚";
+            }
+            break;
+
+            case "23":
+            {
+                return "飞翔";
+            }
+            break;
+
+            case "24":
+            {
+                return "澎力特";
+            }
+            break;
+            case "25":
+            {
+                return "阿迪雅";
             }
             break;
 
         default:
             {
-                return "瑞弗";
+                return "阿迪雅";
             }
             break;
     }
@@ -213,6 +236,11 @@ function DipanJudge(d) {
             case "12":
             {
                 return "金杯";
+            }
+            break;
+            case "13":
+            {
+                return "菲亚特ducato";
             }
             break;
 
