@@ -240,7 +240,7 @@ function DipanJudge(d) {
             break;
             case "13":
             {
-                return "菲亚特ducato";
+                return "菲亚特";
             }
             break;
 
