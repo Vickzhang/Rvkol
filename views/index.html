@@ -544,13 +544,13 @@
                                 <div class="aui-tab" data-ydui-tab>
                                     <ul class="tab-nav">
                                         <li class="tab-nav-item tab-active">
-                                            <a href="javascript:;">
-                                                <span>小编推荐榜</span>
+                                            <a href="">
+                                                <span style="font-size: 2rem">推荐榜</span>
                                             </a>
                                         </li>
                                         <li class="tab-nav-item">
-                                            <a href="javascript:;">
-                                                <span>热销榜</span>
+                                            <a href="">
+                                                <span style="font-size: 2rem">热销榜</span>
                                             </a>
                                         </li>
 
@@ -559,7 +559,7 @@
                                         <div class="tab-panel-item tab-active">
                                             <div class="aui-sale-content">
                                                     {% for item in carHotCarSuggest %}
-                                                <a href="javascript:;" class="aui-list-item">
+                                                <a href="/RvDetails/{{item.carID}}" class="aui-list-item">
                                                     <div class="aui-list-item-img">
                                                         <!-- <img src="{{item.carTitleImage}}" alt=""> -->
                                                         <img class="lazy" data-src="{{item.carTitleImage}}" alt="">
@@ -581,7 +581,7 @@
                                         </div>
                                         <div class="tab-panel-item">
                                                 {% for item in carHotCar %}
-                                            <a href="javascript:;" class="aui-list-item">
+                                            <a href="/RvDetails/{{item.carID}}" class="aui-list-item">
                                                     <div class="aui-list-item-img">
                                                             <!-- <img  src="{{item.carTitleImage}}" alt=""> -->
                                                             <img class="lazy" data-src="{{item.carTitleImage}}" alt="">
