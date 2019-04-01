@@ -17,7 +17,7 @@
             <div id="DetailsShow" class="tab-pane fade in active  Detail-show">
                 <div class="row Detail-biaoti">
                     <div class="col-md-5" style="padding:20px">
-                        <img class="lazy" data-src="{{data[0].carTitleImage}}" class="img-responsive">
+                        <img  data-src="{{data[0].carTitleImage}}" class="img-responsive lazy">
                     </div>
                     <div class="caption col-md-7">
                         <h1 class="Detail-biaoti1">{{data[0].carTitle1}}</h1>
@@ -28,10 +28,10 @@
                     </div>
                 </div>
                 <script>var break_line = document.getElementById("text_desc_p");
-    var content = break_line.innerHTML;
-    break_line.innerHTML = content.replace(/。/g, "。<br>");
+                var content = break_line.innerHTML;
+                    break_line.innerHTML = content.replace(/。/g, "。<br>");
     
-    </script>
+                </script>
                 <div class="Detail-Images">
                     <h2>外观图片：</h2>
 
