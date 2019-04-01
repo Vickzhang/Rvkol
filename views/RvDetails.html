@@ -38,7 +38,7 @@
                     <div id="DetailImages" class="row navbar-left navbar-DetailImages">
                         <ul class="nav list-unstyled list-inline">
                             {% for f in data[0].carMoreImage.split(",") %}
-                            <li class="col-xs-3 col-md-3" style="height:20vh;overflow: hidden;">
+                            <li class="col-xs-4 col-md-4" style="height:20vh;overflow: hidden;">
                                     <img style="max-width: 100%;" class="img-thumbnail viewer lazy" data-src="{{f}}">
                                 </li>
                             {% endfor %}
@@ -58,7 +58,7 @@
                     <div id="DetailImages" class="row navbar-left navbar-DetailImages">
                         <ul class="nav list-unstyled list-inline">
                             {% for f in data[0].carMoreImage2.split(",") %}
-                            <li class="col-xs-3 col-md-3" style="height:20vh;; overflow: hidden;">
+                            <li class="col-xs-4 col-md-4" style="height:20vh;; overflow: hidden;">
                                     <img style="max-width: 100%;" class="img-thumbnail viewer lazy" data-src="{{f}}" alt="">
                                 </li>
                             {% endfor %}
