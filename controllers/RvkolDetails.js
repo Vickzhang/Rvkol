@@ -158,12 +158,35 @@ function LogoJudge(l) {
 
             case "24":
             {
-                return "澎力特";
+                return "湃力特";
             }
             break;
             case "25":
             {
                 return "阿迪雅";
+            }
+            break;
+
+            case "26":
+            {
+                return "诺优";
+            }
+            break;
+
+            case "27":
+            {
+                return "郎宸";
+            }
+            break;
+
+            case "28":
+            {
+                return "宽大";
+            }
+            break;
+            case "29":
+            {
+                return "赛德";
             }
             break;
 
