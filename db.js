@@ -18,9 +18,10 @@ function getTime(){
     day = day.toString().length > 1 ? day : `0${day}`;
     let hours = Number.parseInt(date.getHours()) + 1;
     hours = hours.toString().length > 1 ? hours : `0${hours}`;
+    let minutes = Number.parseInt(date.getMinutes()) + 1;
+    minutes = minutes.toString().length > 1 ? minutes : `0${minutes}`;
 
-
-    const timeString = `${date.getFullYear()}/${month}/${day} ${hours}:${date.getMinutes()}`;
+    const timeString = `${date.getFullYear()}/${month}/${day} ${hours}:${minutes}`;
     return timeString;
   }
 
