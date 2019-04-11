@@ -29,7 +29,7 @@ module.exports={
                 connection: user.connection,
                 targetCar:user.targetCar,
             });
-            console.log('created: ' + JSON.stringify(RVuser));
+            console.log('createdRvkol: ' + JSON.stringify(RVuser));
         })();
         return ctx.body = {
             code:'提交成功！',
