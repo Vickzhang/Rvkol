@@ -14,7 +14,13 @@ function getTime(){
     const date = new Date();
     let month = Number.parseInt(date.getMonth()) + 1;
     month = month.toString().length > 1 ? month : `0${month}`;
-    const timeString = `${date.getFullYear()}/${month}/${date.getDate()} ${date.getHours()}:${date.getMinutes()}`;
+    let day = Number.parseInt(date.getDate()) + 1;
+    day = day.toString().length > 1 ? day : `0${day}`;
+    let hours = Number.parseInt(date.getHours()) + 1;
+    hours = hours.toString().length > 1 ? hours : `0${hours}`;
+
+
+    const timeString = `${date.getFullYear()}/${month}/${day} ${hours}:${date.getMinutes()}`;
     return timeString;
   }
 
