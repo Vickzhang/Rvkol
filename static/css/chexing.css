@@ -4,7 +4,7 @@
     font-size: 1rem;
 }
 
-.chexinglist li{ width: 10%; float:left; text-align:center; margin:0;}
+.chexinglist li{ width: 20%; float:left; text-align:center; margin:0;}
 .chexinglist a{display:block;width:auto;height:auto;color:#666; padding-top:10px;}
 .chexinglist li a:hover{ background-color:#f4f4f4; color:#C00}
 /*.chexinglist img{ width: 30px; height:auto;line-height:auto;}  */
@@ -14,6 +14,10 @@
     line-height:auto !important;
     overflow: hidden;
     text-overflow: ellipsis !important;
+}
+
+.chexingSelect{
+    margin-top:20px;
 }
 
 
