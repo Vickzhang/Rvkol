@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="/static/css/RvDetails.css">
     <link rel="stylesheet" href="/static/css/articleDetails.css"> 
     <link rel="shortcut icon" href="/static/img/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="/static/css/search-form.css">
     <script src="/static/js/jquery-3.2.1.min.js"></script>
     <script src="/static/js/bootstrap.min.js"></script>
     <script src="/static/js/paihang.js"></script>
@@ -61,20 +62,29 @@
                                 <li><a href="/">微信公众号</a></li>
                                 <li><a href="/contactUS">联系我们</a></li>
                                 <!-- <li><a href="/Login">后台登录</a></li> -->
+
                         </ul>
-                        <div class="col-md-4 col-md-offset-1 col-xs-8" id="so" style="padding: 10px 10px 10px 0px">
-                            <div class="input-group">
-                                <input type="text" class="form-control" onkeydown="onKeyDown(event)"/>
-                                <span class="input-group-addon"><a href="#"><i class="glyphicon glyphicon-search"> <span >搜索</span></i></a></span>
-                            </div>
-                    </div>
+                        <!-- <script>window.jQuery || document.write('<script src="/static/js/jquery-3.2.1.min.js"><\/script>')</script> -->
                     </div>
                 </div>
         </nav>
              <div class="bg">
                 <img src="/static/img/title.png" style="width:300px;" alt="">
-                <h3></h3>
                 <p><a class="btn btn-danger btn-lg" href="/contactUS" role="button" >联系我们</a></p>
+                <section class="container">
+                        <form onsubmit="submitFn(this, event);">
+                            <div class="search-wrapper">
+                                <div class="input-holder">
+                                    <input type="text" class="search-input" placeholder="Type to search" />
+                                    <button class="search-icon" onclick="searchToggle(this, event);"><span></span></button>
+                                </div>
+                                <span class="close" onclick="searchToggle(this, event);"></span>
+                                <div class="result-container">
+                
+                                </div>
+                            </div>
+                        </form>
+                </section>
              </div>
             <script>
                 $(window).scroll(function () {
