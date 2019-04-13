@@ -1,0 +1,83 @@
+{% extends "base-dashbord.html" %} {% block main %}
+
+<div class="container">
+    <nav class="navbar navbar-DetailTab">
+        <ul class="nav list-unstyled list-inline">
+                <li class="col-xs-4 col-md-3"><a href="/ad-dashbord" class="list-group-item active">广告管理</a></li>
+                <li class="col-xs-4 col-md-3"><a href="/ad-add" class="list-group-item">添加广告</a></li>
+            </ul>
+  </nav>
+  <div class="row">
+
+      <div class="col-md-12">
+        <div class="page-header">
+            <h1>广告管理</h1>
+        </div>
+        <ul class="nav nav-tabs">
+          <li class="active">
+            <a href="">广告列表</a>
+          </li>
+        </ul>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>广告标题</th>
+              <th>广告链接</th>
+              <th>广告图片</th>
+              <th>广告类型</th>
+              <th>访问量</th>
+              <th>创建时间</th>
+              <th>是否发布</th>
+              <th>操作</th>
+            </tr>
+          </thead>
+          <tbody>
+             {% for f in data %} 
+             <tr>
+              <th scope="row">{{f.adID}}</th>
+              <td>{{f.adName}}</td>
+              <td>{{f.adLink}}</td>
+              <td>{{f.adImage}}</td>
+              <td>{{f.adType}}</td>
+              <td>{{f.adHot}}</td> 
+              <td>{{f.createdAt}}</td> 
+              <td>{{f.adPublish}}</td> 
+              <td>
+                <div role="presentation" class="dropdown">
+                  <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                    操作 <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu">
+                    
+                    <li><a href="article-change/{{f.adID}}">编辑</a></li>
+                    <li><a href=""  onclick="adDel('{{f.articleID}}')" >删除</a></li>
+                    <li><a href="" onclick="adPublish('{{f.articleID}}')" >公布</a></li>
+                    <li><a href="" onclick="adUnPublish('{{f.articleID}}')">取消公布</a></li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+             {% endfor %}   
+          </tbody>
+        </table>
+        <nav class="pull-right">
+            <ul class="pagination">
+              <li class=""><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+              <li class="active"><a href="#">1 </a></li>
+              <li class=""><a href="#">2</a></li>
+              <li class=""><a href="#">3</a></li>
+              <li class=""><a href="#">4</a></li>
+              <li class=""><a href="#">5</a></li>
+              <li class=""><a href="#"><span aria-hidden="true">&raquo;</span></a></li>
+            </ul>
+          </nav>
+      </div>
+  </div>
+
+
+</div>
+
+  
+
+{% endblock %}

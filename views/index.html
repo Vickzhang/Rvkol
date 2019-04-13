@@ -6,13 +6,13 @@
 <div class="container-fluid">
 
         <div id="Banner" class="Banner-Div col-md-10 col-md-offset-1" style="color:#cdbfe3;  padding:0 0; margin-top: 10px; margin-bottom: 10px">
-            <a href="">
-                <img class="img-responsive lazy" data-src="/static/img/ADS/sjrz.png" alt="" >
+            <a href="{{banner1[0].adLink}}">
+                <img class="img-responsive lazy" data-src="{{banner1[0].adImage}}" alt="" >
             </a>
             </div>
 
             <div id="Banner2" class="Banner-Div col-md-10 col-md-offset-1" style="color:#cdbfe3; ;  padding:0 0; margin-bottom: 10px">
-                    <a href="">    
+                    <a href="/cars">    
                             <img class="img-responsive lazy" data-src="/static/img/ADS/Banner2.jpeg" alt="" >
                     </a>
                     </div>
@@ -424,19 +424,28 @@
                                 </ol>   
                                 <!-- 轮播（Carousel）项目 -->
                                 <div class="carousel-inner">
-                                    <a href="/cars/price=all/logo=4/dipan=all/leixing=all" class="item active">
-                                        <img class="img-responsive" src="https://i.loli.net/2019/03/02/5c7977b278fb8.jpeg" alt="First slide">
-                                        <div class="carousel-caption">水电无需升级，820Ah锂电池+180L净水箱，这款房车睡4-5人
-                                        </div>
+                                    
+                                    <a href="{{lunbo[0].adLink}}" class="item active">
+                                        <img class="img-responsive" src="{{lunbo[0].adImage}}">
+                                        <div class="carousel-caption">{{lunbo[0].adName}}</div>
                                     </a>
-                                    <a href="/articleDetails/08" class="item">
-                                        <img class="img-responsive" src="https://i.loli.net/2019/03/04/5c7c61418118c.png" alt="Second slide">
-                                        <div class="carousel-caption">万众瞩目，“质有心 行无界”瑞弗上市发布会全国首发</div>
-                                    </a>
-                                    <a href="/cars" class="item">
-                                        <img class="img-responsive" src="https://i.loli.net/2019/03/02/5c7978cfb09b9.jpeg" alt="Third slide">
-                                        <div class="carousel-caption">中天发布新T型房车，车高不足3米，内高接近2米，配2张大双人床</div>
-                                    </a>
+
+                                    <a href="{{lunbo[1].adLink}}" class="item">
+                                            <img class="img-responsive" src="{{lunbo[1].adImage}}">
+                                            <div class="carousel-caption">{{lunbo[1].adName}}</div>
+                                        </a>
+
+                                        <a href="{{lunbo[2].adLink}}" class="item">
+                                                <img class="img-responsive" src="{{lunbo[2].adImage}}">
+                                                <div class="carousel-caption">{{lunbo[2].adName}}</div>
+                                            </a>
+
+
+                                            <a href="{{lunbo[3].adLink}}" class="item">
+                                                    <img class="img-responsive" src="{{lunbo[3].adImage}}">
+                                                    <div class="carousel-caption">{{lunbo[3].adName}}</div>
+                                                </a>
+                                    
                                 </div>
                                 <!-- 轮播（Carousel）导航 -->
                                 <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">

@@ -1,6 +1,4 @@
 
-// 文章保存
-
 //初始化编辑器
 $(document).ready(function () {
     $("#summernote").summernote({
@@ -65,6 +63,7 @@ $(document).ready(function () {
     initFileInput("file-Portrait2", "/cars-Image","carMoreimage");
     initFileInput("file-Portrait3", "/cars-Image","carMoreimage2");
     initFileInput("file-Portrait4", "/cars-Image","articleTitleImage");
+    initFileInput("file-Portrait5", "/cars-Image","adImage");
     var innerhtml = $("#noticeContent").val();
         $("#summernote").summernote('code', innerhtml);
 });
@@ -90,7 +89,7 @@ function initFileInput(ctrlName, uploadUrl,addCtrlName) {
             reader = data.reader;
             //alert($('#'+addCtrlName).attr("tagName"));
         if (response.code == 'success') {
-            if (addCtrlName=="carTitleimage"||addCtrlName=="articleTitleImage") {
+            if (addCtrlName=="carTitleimage"||addCtrlName=="articleTitleImage"||addCtrlName=="adImage") {
                 //alert(response.titleFileName);
                 $('#'+addCtrlName).val(response.titleFileName);
             }else{
@@ -105,7 +104,7 @@ function initFileInput(ctrlName, uploadUrl,addCtrlName) {
 
 }
 
-//保存
+//文章管理Ajax
 var save = $('#articleSave').click(() => {
     var markup = $('#summernote').summernote('code');
 
@@ -131,7 +130,6 @@ var save = $('#articleSave').click(() => {
         }
     })
 });
-
 var articleChange = function () {
     var markup = $('#summernote').summernote('code');
     //alert(markup);
@@ -157,8 +155,98 @@ var articleChange = function () {
         }
     })
 };
+var articleDel = function (id) {
+    var delUrl = '/articleDel/' + id;
+    //alert(delUrl);
+    $.ajax({
+        type: 'POST',
+        url: delUrl,
+        dataType: 'json',
+        data: {
 
+        },
+        success: function (data) {
+            alert(data.code);
+        },
+        error: function () {
+            alert("删除失败");
+        }
+    })
+}
+var articlePublish = function (id) {
+    var publishUrl = '/articlePublish/' + id;
+    //alert(delUrl);
+    $.ajax({
+        type: 'POST',
+        url: publishUrl,
+        dataType: 'json',
+        data: {
 
+        },
+        success: function (data) {
+            alert(data.code);
+        },
+        error: function () {
+            alert("发布失败");
+        }
+    })
+}
+var articleUnPublish = function (id) {
+    var UnpublishUrl = '/articleUnPublish/' + id;
+    //alert(delUrl);
+    $.ajax({
+        type: 'POST',
+        url: UnpublishUrl,
+        dataType: 'json',
+        data: {
+
+        },
+        success: function (data) {
+            alert(data.code);
+        },
+        error: function () {
+            alert("取消发布失败");
+        }
+    })
+}
+var articleHot = function (id) {
+    var publishUrl = '/articleHot/' + id;
+    //alert(delUrl);
+    $.ajax({
+        type: 'POST',
+        url: publishUrl,
+        dataType: 'json',
+        data: {
+
+        },
+        success: function (data) {
+            alert(data.code);
+        },
+        error: function () {
+            alert("设置热门失败");
+        }
+    })
+}
+var articleUnHot = function (id) {
+    var UnpublishUrl = '/articleUnHot/' + id;
+    //alert(delUrl);
+    $.ajax({
+        type: 'POST',
+        url: UnpublishUrl,
+        dataType: 'json',
+        data: {
+
+        },
+        success: function (data) {
+            alert(data.code);
+        },
+        error: function () {
+            alert("取消热门失败");
+        }
+    })
+}
+
+//车型库管理Ajax
 var saveButton = $('#save').click(() => {
     var MoreImage = $("#carMoreimage").val().split("\n").join(",");
     var MoreImage2 = $("#carMoreimage2").val().split("\n").join(",");
@@ -322,8 +410,6 @@ var saveButton = $('#save').click(() => {
         }
     })
 });
-
-
 var saveChangeButton = $('#saveChange').click(() => {
     var MoreImage = $("#carMoreimage").val().split("\n").join(",");
     var MoreImage2 = $("#carMoreimage2").val().split("\n").join(",");
@@ -487,108 +573,6 @@ var saveChangeButton = $('#saveChange').click(() => {
         }
     })
 });
-
-
-
-var articleDel = function (id) {
-    var delUrl = '/articleDel/' + id;
-    //alert(delUrl);
-    $.ajax({
-        type: 'POST',
-        url: delUrl,
-        dataType: 'json',
-        data: {
-
-        },
-        success: function (data) {
-            alert(data.code);
-        },
-        error: function () {
-            alert("删除失败");
-        }
-    })
-}
-
-var articlePublish = function (id) {
-    var publishUrl = '/articlePublish/' + id;
-    //alert(delUrl);
-    $.ajax({
-        type: 'POST',
-        url: publishUrl,
-        dataType: 'json',
-        data: {
-
-        },
-        success: function (data) {
-            alert(data.code);
-        },
-        error: function () {
-            alert("发布失败");
-        }
-    })
-}
-
-
-var articleUnPublish = function (id) {
-    var UnpublishUrl = '/articleUnPublish/' + id;
-    //alert(delUrl);
-    $.ajax({
-        type: 'POST',
-        url: UnpublishUrl,
-        dataType: 'json',
-        data: {
-
-        },
-        success: function (data) {
-            alert(data.code);
-        },
-        error: function () {
-            alert("取消发布失败");
-        }
-    })
-}
-
-
-var articleHot = function (id) {
-    var publishUrl = '/articleHot/' + id;
-    //alert(delUrl);
-    $.ajax({
-        type: 'POST',
-        url: publishUrl,
-        dataType: 'json',
-        data: {
-
-        },
-        success: function (data) {
-            alert(data.code);
-        },
-        error: function () {
-            alert("设置热门失败");
-        }
-    })
-}
-
-
-var articleUnHot = function (id) {
-    var UnpublishUrl = '/articleUnHot/' + id;
-    //alert(delUrl);
-    $.ajax({
-        type: 'POST',
-        url: UnpublishUrl,
-        dataType: 'json',
-        data: {
-
-        },
-        success: function (data) {
-            alert(data.code);
-        },
-        error: function () {
-            alert("取消热门失败");
-        }
-    })
-}
-
-
 var carDel = function (id) {
     var delUrl = '/carDel/' + id;
     //alert(delUrl);
@@ -607,7 +591,6 @@ var carDel = function (id) {
         }
     })
 }
-
 var carPublish = function (id) {
     var publishUrl = '/carPublish/' + id;
     //alert(delUrl);
@@ -626,8 +609,6 @@ var carPublish = function (id) {
         }
     })
 }
-
-
 var carUnPublish = function (id) {
     var UnpublishUrl = '/carUnPublish/' + id;
     //alert(delUrl);
@@ -646,9 +627,6 @@ var carUnPublish = function (id) {
         }
     })
 }
-
-
-
 var carHot = function (id) {
     var publishUrl = '/carHot/' + id;
     //alert(delUrl);
@@ -667,8 +645,6 @@ var carHot = function (id) {
         }
     })
 }
-
-
 var carUnHot = function (id) {
     var UnpublishUrl = '/carUnHot/' + id;
     //alert(delUrl);
@@ -687,3 +663,28 @@ var carUnHot = function (id) {
         }
     })
 }
+
+//广告管理ajax
+
+var save = $('#adSave').click(() => {
+
+    $.ajax({
+        type: 'POST',
+        url: '/subAD',
+        dataType: 'json',
+        data: {
+            adID: $('#adID').val(),
+            adName: $('#adName').val(),
+            adLink: $('#adLink').val(),
+            adImage: $('#adImage').val(),
+            adType: $('#adType').val(),
+            adPublish: 0,
+        },
+        success: function (data) {
+            alert(data.code);
+        },
+        error: function () {
+            alert("上传失败");
+        }
+    })
+});

@@ -37,11 +37,6 @@ function PriceArticle(l) {
 
 
 
-
-
-
-
-
 const fs = require('fs');
 
 module.exports={
@@ -166,8 +161,6 @@ module.exports={
             title:result[0].articleTitle,
         })
     },
-
-
     'POST /subArticle':async (ctx,next)=>{
         let article = {
             articleID: ctx.request.body.articleID,
@@ -243,8 +236,6 @@ module.exports={
             code:'修改成功！',
         }
     },
-
-
     'POST /articleDel/:id':async (ctx,next) => {
         var id = ctx.params.id;
 
