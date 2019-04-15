@@ -417,15 +417,16 @@
             <div id="left"  class="col-md-5 col-md-offset-1">
                         <div id="myCarousel" class="carousel slide ad-carousel">
                                 <!-- 轮播（Carousel）指标 -->
-                                <ol class="carousel-indicators">
-                                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                <ol class="carousel-indicators" id="olnum">
+                                    <li>{{lunbo}}</li>
+                                    <!-- <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                                     <li data-target="#myCarousel" data-slide-to="1"></li>
-                                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                                    <li data-target="#myCarousel" data-slide-to="2"></li> -->
                                 </ol>   
                                 <!-- 轮播（Carousel）项目 -->
-                                <div class="carousel-inner">
+                                <div class="carousel-inner" id="lunbotu">
                                     
-                                    <a href="{{lunbo[0].adLink}}" class="item active">
+                                    <!-- <a href="{{lunbo[0].adLink}}" class="item active">
                                         <img class="img-responsive" src="{{lunbo[0].adImage}}">
                                         <div class="carousel-caption">{{lunbo[0].adName}}</div>
                                     </a>
@@ -433,10 +434,10 @@
                                     <a href="{{lunbo[1].adLink}}" class="item">
                                             <img class="img-responsive" src="{{lunbo[1].adImage}}">
                                             <div class="carousel-caption">{{lunbo[1].adName}}</div>
-                                        </a>
+                                    </a>
 
-                                        <a href="{{lunbo[2].adLink}}" class="item">
-                                                <img class="img-responsive" src="{{lunbo[2].adImage}}">
+                                    <a href="{{lunbo[2].adLink}}" class="item">
+                                        <img class="img-responsive" src="{{lunbo[2].adImage}}">
                                                 <div class="carousel-caption">{{lunbo[2].adName}}</div>
                                             </a>
 
@@ -444,7 +445,7 @@
                                             <a href="{{lunbo[3].adLink}}" class="item">
                                                     <img class="img-responsive" src="{{lunbo[3].adImage}}">
                                                     <div class="carousel-caption">{{lunbo[3].adName}}</div>
-                                                </a>
+                                                </a> -->
                                     
                                 </div>
                                 <!-- 轮播（Carousel）导航 -->
@@ -456,7 +457,7 @@
                                     <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
                                     <span class="sr-only">Next</span>
                                 </a>
-                            </div>
+                            </div>               
             </div>
         
                 
