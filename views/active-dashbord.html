@@ -1,7 +1,12 @@
 {% extends "base-dashbord.html" %} {% block main %}
 
 <div class="container">
-    
+    <nav class="navbar navbar-DetailTab">
+        <ul class="nav list-unstyled list-inline">
+            <li class=" col-xs-6 col-md-3"><a href="/active-dashbord" class="list-group-item active">活动管理</a></li>
+            <li class=" col-xs-6 col-md-3"><a href="/active-zhanhui" class="list-group-item">展会活动</a></li>
+        </ul>
+    </nav>
   <div class="row">
 
       <div class="col-md-12">
@@ -38,7 +43,7 @@
                     操作 <span class="caret"></span>
                   </button>
                   <ul class="dropdown-menu">
-                      <li><a href="active">浏览</a></li>
+                      <li><a href="{{f.activeLink}}">浏览</a></li>
                     <li><a href=""  >删除</a></li>
                   </ul>
                 </div>

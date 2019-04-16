@@ -64,6 +64,7 @@ $(document).ready(function () {
     initFileInput("file-Portrait3", "/cars-Image","carMoreimage2");
     initFileInput("file-Portrait4", "/cars-Image","articleTitleImage");
     initFileInput("file-Portrait5", "/cars-Image","adImage");
+    initFileInput("file-Portrait6", "/cars-Image","activeTitleImage");
     var innerhtml = $("#noticeContent").val();
         $("#summernote").summernote('code', innerhtml);
 });
@@ -89,7 +90,7 @@ function initFileInput(ctrlName, uploadUrl,addCtrlName) {
             reader = data.reader;
             //alert($('#'+addCtrlName).attr("tagName"));
         if (response.code == 'success') {
-            if (addCtrlName=="carTitleimage"||addCtrlName=="articleTitleImage"||addCtrlName=="adImage") {
+            if (addCtrlName=="carTitleimage"||addCtrlName=="articleTitleImage"||addCtrlName=="adImage"||addCtrlName=="activeTitleImage") {
                 //alert(response.titleFileName);
                 $('#'+addCtrlName).val(response.titleFileName);
             }else{
@@ -688,3 +689,27 @@ var save = $('#adSave').click(() => {
         }
     })
 });
+
+
+//活动管理
+var zhanhuiChange = function () {
+    var markup = $('#summernote').summernote('code');
+    $.ajax({
+        type: 'POST',
+        url: '/changeZhanhui',
+        dataType: 'json',
+        data: {
+            activeTitle: $('#activeTitle').val(),
+            activeSubTitle: markup,
+            activeTitleImage: $('#activeTitleImage').val(),
+            activePeople:0,
+            activePublish: 1,
+        },
+        success: function (data) {
+            alert(data.code);
+        },
+        error: function () {
+            alert("上传失败");
+        }
+    })
+};
