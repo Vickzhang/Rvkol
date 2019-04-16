@@ -29,7 +29,9 @@ module.exports = {
 
     'GET /active-zhanhui': async (ctx, next) => {
 
-
+        if (!ctx.session.username) {
+            ctx.response.redirect('/dashbord');
+        }
         const model = require('../model');
         let activeList = model.Active;
         var active = await activeList.findAll({
@@ -48,9 +50,6 @@ module.exports = {
 
     'GET /zhanhui': async (ctx, next) => {
 
-        if (!ctx.session.username) {
-            ctx.response.redirect('/dashbord');
-        }
         const model = require('../model');
         let activeList = model.Active;
         var active = await activeList.findAll({
