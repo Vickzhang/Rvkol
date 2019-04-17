@@ -18,17 +18,17 @@
                 <ul class="row list-unstyled">
                     <li class="col-xs-12 col-md-6">
                         <label>广告ID：</label>
-                        <input id="adID"></input>
+                        <input id="adID" value="{{data[0].articleID}}"></input>
                     </li>
                     <li class="col-xs-12 col-md-6">
                         <label>广告标题：</label>
-                        <input id="adName"></input>
+                        <input id="adName" value="{{data[0].articleID}}"></input>
                     </li>
                 
 
                     <li class="col-xs-12 col-md-6">
                             <label>广告链接：</label>
-                            <input id="adLink"></input>
+                            <input id="adLink" value="{{data[0].articleID}}"></input>
                         </li>
 
 
@@ -36,6 +36,7 @@
                             <label>广告类型：</label>
                             <!-- class="selectpicker show-tick" -->
                             <select id="adType" class="normalSelect selectpicker show-tick"  data-live-search="true">
+                                <option>未选择</option>
                                 <option>轮播广告</option>
                                 <option>广告位1</option>
                                 <option>广告位2</option>
@@ -47,7 +48,7 @@
 
                 <h2 class="Detailscontext-SubTitle">广告图片</h2>
                 <h5 for="adImage">广告(只能存放单张图片） <a style="font-weight: bold; color:red;" href="http://sm.ms/" target="_Blank">图床链接,在图床上传后复制链接到输入框中即可</a></h5>
-                <input id="adImage">
+                <input id="adImage" value="{{data[0].articleTitleImage}}">
                 <br>
                 <br>    
                  <div class="row" style="height: 400px">
