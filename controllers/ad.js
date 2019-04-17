@@ -61,4 +61,23 @@ module.exports={
             code:'提交成功！',
         }
     },
+
+    'POST /adDel/:id':async (ctx,next) => {
+        var id = ctx.params.id;
+
+        //数据库操作
+        const model = require('../model');
+        let AD = model.AD;
+
+        var result = await AD.destroy({
+            where: {
+                adID: id,
+            }
+        });
+        console.log('Del: ' + JSON.stringify(result));
+
+        return ctx.body = {
+            code:'删除成功！',
+        }
+    },
 }

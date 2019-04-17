@@ -690,6 +690,25 @@ var save = $('#adSave').click(() => {
     })
 });
 
+var adDel = function (id) {
+    var delUrl = '/adDel/' + id;
+    //alert(delUrl);
+    $.ajax({
+        type: 'POST',
+        url: delUrl,
+        dataType: 'json',
+        data: {
+
+        },
+        success: function (data) {
+            alert(data.code);
+        },
+        error: function () {
+            alert("删除失败");
+        }
+    })
+}
+
 
 //活动管理
 var zhanhuiChange = function () {
