@@ -1,0 +1,55 @@
+{% extends "base-dashbord.html" %} {% block main %}
+
+<div class="container">
+
+    <nav class="navbar navbar-DetailTab">
+        <ul class="nav list-unstyled list-inline">
+            <li class=" col-xs-6 col-md-3"><a href="/active-dashbord" class="list-group-item">活动管理</a></li>
+            <li class=" col-xs-6 col-md-3"><a href="/active-zhanhui" class="list-group-item active">展会活动</a></li>
+        </ul>
+    </nav>
+    
+  <div class="row">
+      <div class="col-md-12">
+
+          <div class="DetailsContext-Box">
+              <div class="DetailsContext-Title">展会信息</div>
+               <h2 class="Detailscontext-SubTitle">基本信息</h2> 
+
+              <ul class="row list-unstyled">
+                  <li class="col-xs-12 col-md-6">
+                      <label>展会标题：</label>
+                      <input id="activeTitle" value="{{active[0].activeTitle}}"></input>
+                  </li>
+                  <li class="col-xs-12 col-md-12">
+                    <h2 class="Detailscontext-SubTitle">展会信息（填入基本信息）</h2>
+                  <div id="summernote"></div>
+                  <input id="noticeContent" name="noticeContent" value="{{active[0].activeSubTitle}}" type="hidden">
+                </li>
+
+              </ul>
+
+
+
+              <h2 class="Detailscontext-SubTitle">广告图片</h2>
+              <h5 for="activeTitleImage">封面图片(只能存放单张图片） <a style="font-weight: bold; color:red;" href="http://sm.ms/" target="_Blank">图床链接,在图床上传后复制链接到输入框中即可</a></h5>
+              <input id="activeTitleImage" value="{{active[0].activeTitleImage}}">
+              <br>
+              <br>    
+               <div class="row" style="height: 400px">
+                  <input id="file-Portrait6" type="file">
+              </div>
+              
+          </div>
+          <br>
+          <button id="activeChange" class="btn btn-primary" onclick="zhanhuiChange()">保存</button>
+
+      </div>
+  </div>
+
+
+</div>
+
+
+
+{% endblock %}

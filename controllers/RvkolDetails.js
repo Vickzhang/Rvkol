@@ -189,6 +189,11 @@ function LogoJudge(l) {
                 return "赛德";
             }
             break;
+            case "30":
+            {
+                return "卫航";
+            }
+            break;
 
         default:
             {
