@@ -40,14 +40,18 @@ function PriceArticle(l) {
 const fs = require('fs');
 
 module.exports={
-    'GET /articles/:l':async (ctx,next) => {
+    'GET /articles/:l/:p':async (ctx,next) => {
         var l = ctx.params.l;
+        var page = ctx.params.p;
+        var pageSize = 20;
         var leixingResult=PriceArticle(l);
         const model = require('../model');
         let Article = model.Article;
-        var result = await Article.findAll({
+        var result = await Article.findAndCountAll({
             attributes: ['articleID', 'articleZuozhe','articleTitleImage','articleTitle','updatedAt'],
             order:[['articleID', 'ASC']],
+            offset:(page - 1) * pageSize,
+            limit:pageSize,//每页限制返回的数据条数
             where:{
                 articleWenzhangleixing:leixingResult
             }
@@ -56,7 +60,9 @@ module.exports={
         ctx.render('articles.html',{
             title:'房车情报-车型文章',
             subTitle:leixingResult,
-            data:result
+            data:result,
+            currentPage:page,
+            leixing:l
         })
     },
 
