@@ -41,8 +41,6 @@ app.use(async (ctx, next) => {
           const totalhit=websites.totalhit;
           ctx.state = Object.assign(ctx.state, { totalhit: totalhit });
           //console.log(ctx.state);
-        
-
     await next();
     execTime = new Date().getTime() - start;
     ctx.response.set('X-Response-Time', `${execTime}ms`);
@@ -98,12 +96,6 @@ app.use(templating('views', {
     watch: !isProduction
 }));
 
-
-
-
-
-// 加入 poster解析
-//app.use(bodyParser());
 
 
 //Controller
