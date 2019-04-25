@@ -363,7 +363,6 @@ module.exports = {
             });
         } 
         
-        
         else if (p != "all" && l == "all" && d == "all" && x == "all") {
             result = await Car.findAll({
                 where: {
@@ -519,7 +518,6 @@ module.exports = {
             });
 
         }
-
 
 
         ctx.render('cars.html', {
