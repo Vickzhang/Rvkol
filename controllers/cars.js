@@ -108,7 +108,7 @@ module.exports={
 
             //文件上传
             //配置
-
+            console.log(JSON.stringify(ctx.uploadpath))
             console.log(JSON.stringify(ctx.uploadpath.picture));
             return ctx.body = {
                 code: 'success',
