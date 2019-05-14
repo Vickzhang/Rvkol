@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="/static/css/chexing.css">
     <link rel="stylesheet" href="/static/css/paihang.css">
     <link rel="stylesheet" href="/static/css/RvDetails.css">
-    <link rel="stylesheet" href="/static/css/articleDetails.css"> 
+    <link rel="stylesheet" href="/static/css/articleDetails.css">
     <link rel="shortcut icon" href="/static/img/favicon.ico" />
     <link rel="stylesheet" type="text/css" href="/static/css/search-form.css">
     <script src="/static/js/jquery-3.2.1.min.js"></script>
@@ -26,79 +26,132 @@
         }
     </script>
     <style type="text/css">
-        html, body {width:100%;height:100%;} /*非常重要的样式让背景图片100%适应整个屏幕*/
-        .bg {margin-bottom: 0px;display: table;width: 100%;height: 20%;padding: 100px 0;text-align: center;color: #fff;background: url(/static/img/2.jpg) no-repeat bottom center;background-color: #000;background-size: cover;background-position: 0px 0px;}
-        .my-navbar {padding:20px 0;transition: background 0.5s ease-in-out, padding 0.5s ease-in-out; }
-        .my-navbar a{background:transparent !important;color:#fff !important}
-        .my-navbar a:hover {color:#25c6fc !important;background:transparent;outline:0}
-        .my-navbar a {transition: color 0.5s ease-in-out;}/*-webkit-transition ;-moz-transition*/
-        .top-nav {padding:0;background:#25c6fc;}
-        button.navbar-toggle {background-color:#fbfbfb;}/*整个背景都是transparent透明的，会看不到，所以再次覆盖一下*/
-        button.navbar-toggle > span.icon-bar {background-color:#dedede}
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        /*非常重要的样式让背景图片100%适应整个屏幕*/
+        .bg {
+            margin-bottom: 0px;
+            display: table;
+            width: 100%;
+            height: 100%;
+            padding: 100px 0;
+            text-align: center;
+            color: #fff;
+            background: url(/static/img/3.jpg) no-repeat bottom center;
+            background-color: #000;
+            background-size: cover;
+            background-position: 0px 0px;
+        }
+
+        .my-navbar {
+            padding: 20px 0;
+            transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
+        }
+
+        .my-navbar a {
+            background: #25c6fc !important;
+            color: #fff !important
+        }
+
+        .my-navbar a:hover {
+            color: #25c6fc !important;
+            background: transparent;
+            outline: 0
+        }
+
+        .my-navbar a {
+            transition: color 0.5s ease-in-out;
+        }
+
+        /*-webkit-transition ;-moz-transition*/
+        .top-nav {
+            padding: 0;
+            background: #25c6fc;
+        }
+
+        button.navbar-toggle {
+            background-color: #fbfbfb;
+        }
+
+        /*整个背景都是transparent透明的，会看不到，所以再次覆盖一下*/
+        button.navbar-toggle>span.icon-bar {
+            background-color: #dedede
+        }
     </style>
 </head>
 
 <body>
 
-        <nav class="navbar navbar-fixed-top my-navbar" role="navigation">
-                <!-- <div class="container-fluid"> -->
-                    <div class="navbar-header">
-                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
-                            <span class="sr-only">切换导航</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a style="margin: 0 10px;padding: 0 0;" class="navbar-brand" href="/"><img class="img-responsive" style="width:50px;" src="/static/img/logoTouming.png" alt=""></a>
+    <nav class="navbar navbar-fixed-top my-navbar" role="navigation">
+        <!-- <div class="container-fluid"> -->
+        <!-- <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+                <span class="sr-only">切换导航</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a style="margin: 0 10px;padding: 0 0;" class="navbar-brand" href="/"><img class="img-responsive"
+                    style="width:50px;" src="/static/img/logoTouming.png" alt=""></a>
+        </div> -->
+
+<!-- 
+        <div class="" id="example-navbar-collapse">
+        </div> -->
+        <!-- </div> -->
+    </nav>
+    <div class="bg">
+        <img src="/static/img/title.png" style="width:300px;" alt="">
+        <div class="" id="example-navbar-collapse">
+        <ul class=" nav nav-stacked">
+            <li class=""><a href="/ ">首页</a></li>
+            <li class=""><a href="/cars">车型库</a></li>
+            <li class=""><a href="/articles/1/1">车型文章</a></li>
+            <li class=""><a href="/articles/2/1">车型视频</a></li>
+            <li class=""><a href="/articles/3/1">资讯</a></li>
+            <li class=""><a href="/articles/4/1">旅行游记</a></li>
+            <li class=""><a href="/articles/5/1">用车</a></li>
+            <li class=""><a href="/testDrive">试驾预约</a></li>
+            <li class=""><a href="/zhanhui">展会</a></li>
+            <li class=""><a href="/">微信公众号</a></li>
+            <li class=""><a href="/contactUS">联系我们</a></li>
+        </ul>
+        </div>
+        <p><a class="btn btn-danger btn-lg" href="/contactUS" role="button">联系我们</a></p>
+        <section class="container">
+            <form onsubmit="submitFn(this, event);">
+                <div class="search-wrapper">
+                    <div class="input-holder">
+                        <input type="text" class="search-input" placeholder="Type to search" />
+                        <button class="search-icon" onclick="searchToggle(this, event);"><span></span></button>
                     </div>
+                    <span class="close" onclick="searchToggle(this, event);"></span>
+                    <div class="result-container">
 
-
-                    <div class="collapse navbar-collapse" id="example-navbar-collapse">
-                        <ul class="nav navbar-nav">
-                                <li><a href="/ ">首页</a></li>
-                                <li><a href="/cars">车型库</a></li>
-                                <li><a href="/articles/1/1">车型文章</a></li>
-                                <li><a href="/articles/2/1">车型视频</a></li>
-                                <li><a href="/articles/3/1">资讯</a></li>
-                                <li><a href="/articles/4/1">旅行游记</a></li>
-                                <li><a href="/articles/5/1">用车</a></li>
-                                <li><a href="/testDrive">试驾预约</a></li> 
-                                <li><a href="/zhanhui">展会</a></li>
-                                <li><a href="/">微信公众号</a></li>
-                                <li><a href="/contactUS">联系我们</a></li>
-                                <!-- <li><a href="/Login">后台登录</a></li> -->
-
-                        </ul>
                     </div>
-                <!-- </div> -->
-        </nav>
-             <div class="bg">
-                <img src="/static/img/title.png" style="width:300px;" alt="">
-                <p><a class="btn btn-danger btn-lg" href="/contactUS" role="button" >联系我们</a></p>
-                <section class="container">
-                        <form onsubmit="submitFn(this, event);">
-                            <div class="search-wrapper">
-                                <div class="input-holder">
-                                    <input type="text" class="search-input" placeholder="Type to search" />
-                                    <button class="search-icon" onclick="searchToggle(this, event);"><span></span></button>
-                                </div>
-                                <span class="close" onclick="searchToggle(this, event);"></span>
-                                <div class="result-container">
-                
-                                </div>
-                            </div>
-                        </form>
-                </section>
-             </div>
-            <script>
-                $(window).scroll(function () {
-                    if ($(".navbar").offset().top > 50) {$(".navbar-fixed-top").addClass("top-nav");
-                    }else {$(".navbar-fixed-top").removeClass("top-nav");}
-                })
-                $(function() {
-                $("img.lazy").lazyload({effect: "fadeIn",threshold :180});
+                </div>
+            </form>
+        </section>
+    </div>
+    <script>
+        $(window).scroll(function () {
+            if ($(".navbar").offset().top > 50) {
+                $(".navbar-fixed-top").addClass("top-nav");
+            } else {
+                $(".navbar-fixed-top").removeClass("top-nav");
+            }
+        })
+        $(function () {
+            $("img.lazy").lazyload({
+                effect: "fadeIn",
+                threshold: 180
             });
-            </script>
+        });
+    </script>
 
 
 
@@ -122,4 +175,5 @@
 <!-- 用于防止页面跳转 -->
 <iframe name="frame1" frameborder="0 " id="frame " style="display:none; "></iframe>
 <script src="/static/js/base.js"></script>
+
 </html>
