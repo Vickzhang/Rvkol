@@ -50,11 +50,20 @@
         .my-navbar {
             padding: 20px 0;
             transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
+            width: 400px;
+            position: absolute;
+            top: 0%;
+            left: 55%;
+        }
+
+        .my-navbar li {
+            border: #d1c7c7bb solid 1px;
         }
 
         .my-navbar a {
-            background: #25c6fc !important;
-            color: #fff !important
+            background: #ebeaea !important;
+            color: gray !important;
+            opacity: 0.9;
         }
 
         .my-navbar a:hover {
@@ -67,10 +76,16 @@
             transition: color 0.5s ease-in-out;
         }
 
-        /*-webkit-transition ;-moz-transition*/
-        .top-nav {
-            padding: 0;
-            background: #25c6fc;
+        .welcome{
+            width:80%;
+            position: absolute;
+            top:70%;
+            left: 10%;
+            opacity: 0.9;
+            background: #ebeaea;
+            color: gray !important;
+            font-size: 3rem;
+            font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
         }
 
         button.navbar-toggle {
@@ -86,9 +101,9 @@
 
 <body>
 
-    <nav class="navbar navbar-fixed-top my-navbar" role="navigation">
+    <!-- <nav class="navbar navbar-fixed-top my-navbar" role="navigation">
         <!-- <div class="container-fluid"> -->
-        <!-- <div class="navbar-header">
+    <!-- <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
                 <span class="sr-only">切换导航</span>
                 <span class="icon-bar"></span>
@@ -99,29 +114,38 @@
                     style="width:50px;" src="/static/img/logoTouming.png" alt=""></a>
         </div> -->
 
-<!-- 
+    <!-- 
         <div class="" id="example-navbar-collapse">
         </div> -->
-        <!-- </div> -->
-    </nav>
+    <!-- </div> -->
+    <!-- </nav> -->
     <div class="bg">
-        <img src="/static/img/title.png" style="width:300px;" alt="">
-        <div class="" id="example-navbar-collapse">
-        <ul class=" nav nav-stacked">
-            <li class=""><a href="/ ">首页</a></li>
+
+        <div class=" nav my-navbar">
+            <li><img src="/static/img/title.png" style="width:400px;background-color: #a40000" alt=""></li>
+            <li class=""><a href="/ ">网站首页</a></li>
             <li class=""><a href="/cars">车型库</a></li>
             <li class=""><a href="/articles/1/1">车型文章</a></li>
             <li class=""><a href="/articles/2/1">车型视频</a></li>
-            <li class=""><a href="/articles/3/1">资讯</a></li>
+            <!-- <li class=""><a href="/articles/3/1">资讯</a></li> -->
             <li class=""><a href="/articles/4/1">旅行游记</a></li>
-            <li class=""><a href="/articles/5/1">用车</a></li>
+            <!-- <li class=""><a href="/articles/5/1">用车</a></li> -->
             <li class=""><a href="/testDrive">试驾预约</a></li>
-            <li class=""><a href="/zhanhui">展会</a></li>
-            <li class=""><a href="/">微信公众号</a></li>
+            <li class=""><a href="/zhanhui">车友地带</a></li>
+            <!-- <li class=""><a href="/">微信公众号</a></li> -->
             <li class=""><a href="/contactUS">联系我们</a></li>
-        </ul>
         </div>
-        <p><a class="btn btn-danger btn-lg" href="/contactUS" role="button">联系我们</a></p>
+
+        <div class="welcome" >
+            <p></p>
+            <p>WELCOME TO</p>
+            <p>欢迎来到房车情报</p>
+            <p>房车情报是专业的房车咨询、视频、图文为一体的媒体平台</p>
+            <br>
+            
+        </div>
+
+        <!-- <p><a class="btn btn-danger btn-lg" href="/contactUS" role="button">联系我们</a></p>
         <section class="container">
             <form onsubmit="submitFn(this, event);">
                 <div class="search-wrapper">
@@ -135,16 +159,16 @@
                     </div>
                 </div>
             </form>
-        </section>
+        </section> -->
     </div>
     <script>
-        $(window).scroll(function () {
-            if ($(".navbar").offset().top > 50) {
-                $(".navbar-fixed-top").addClass("top-nav");
-            } else {
-                $(".navbar-fixed-top").removeClass("top-nav");
-            }
-        })
+        // $(window).scroll(function () {
+        //     if ($(".navbar").offset().top > 50) {
+        //         $(".navbar-fixed-top").addClass("top-nav");
+        //     } else {
+        //         $(".navbar-fixed-top").removeClass("top-nav");
+        //     }
+        // })
         $(function () {
             $("img.lazy").lazyload({
                 effect: "fadeIn",

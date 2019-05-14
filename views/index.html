@@ -5,88 +5,93 @@
 
 <div class="container-fluid">
 
-        <div id="Banner" class="Banner-Div col-md-10 col-md-offset-1" style="color:#cdbfe3;  padding:0 0; margin-top: 10px; margin-bottom: 10px">
-            <a href="{{banner1[0].adLink}}">
-                <img class="img-responsive lazy" data-src="{{banner1[0].adImage}}" alt="" >
-            </a>
-            </div>
+    <!-- <div id="Banner" class="Banner-Div col-md-10 col-md-offset-1"
+        style="color:#cdbfe3;  padding:0 0; margin-top: 10px; margin-bottom: 10px">
+        <a href="{{banner1[0].adLink}}">
+            <img class="img-responsive lazy" data-src="{{banner1[0].adImage}}" alt="">
+        </a>
+    </div>
 
-            <div id="Banner2" class="Banner-Div col-md-10 col-md-offset-1" style="color:#cdbfe3; ;  padding:0 0; margin-bottom: 10px">
-                    <a href="/cars">    
-                            <img class="img-responsive lazy" data-src="/static/img/ADS/Banner2.jpeg" alt="" >
-                    </a>
-                    </div>
+    <div id="Banner2" class="Banner-Div col-md-10 col-md-offset-1"
+        style="color:#cdbfe3; ;  padding:0 0; margin-bottom: 10px">
+        <a href="/cars">
+            <img class="img-responsive lazy" data-src="/static/img/ADS/Banner2.jpeg" alt="">
+        </a>
+    </div> -->
 
-    
-    <div class="row">
-        <div class="col-md-7 col-md-offset-1">   
+
+    <div class="row" style="margin-top:20px">
+        <div class="col-md-8" >
             <div id="chexingPanel" class="panel panel-default">
                 <div class="panel-body" style="padding: 0 15px 0 15px;">
-                    <!-- 图标导航-->
+                    <div class="i_con2 hidden-xs row">
+                        <div class="chexinglist col-md-8">
+                            <ul class="list-unstyled list-inline">
+                                <li><a href="/cars/price=all/logo=all/dipan=all/leixing=1"><img class="img-responsive"
+                                            src="http://img.rv58.com/w/rv/za.png"><span>自行式A</span></a> </li>
+                                <li><a href="/cars/price=all/logo=all/dipan=all/leixing=2"><img class="img-responsive"
+                                            src="http://img.rv58.com/w/rv/zb.png"> <span>自行式B</span></a></li>
+                                <li><a href="/cars/price=all/logo=all/dipan=all/leixing=3"><img class="img-responsive"
+                                            src="http://img.rv58.com/w/rv/zc.png"> <span>自行式C</span></a></li>
+                                <li><a href="/cars/price=all/logo=all/dipan=all/leixing=4"><img class="img-responsive"
+                                            src="http://img.rv58.com/w/rv/td.png"><span>皮卡房车</span></a></li>
+                                <li><a href="/cars/price=all/logo=all/dipan=all/leixing=5"><img class="img-responsive"
+                                            src="http://img.rv58.com/w/rv/ta.png"><span>拖挂式</span></a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4 row">
 
-                            <div class="i_con2 hidden-xs row">
-                                    <div class="chexinglist col-md-8">
-                                        <ul class="list-unstyled list-inline">
-                                            <li><a href="/cars/price=all/logo=all/dipan=all/leixing=1"><img class="img-responsive" src="http://img.rv58.com/w/rv/za.png"><span>自行式A</span></a> </li>
-                                            <li><a href="/cars/price=all/logo=all/dipan=all/leixing=2"><img class="img-responsive" src="http://img.rv58.com/w/rv/zb.png"> <span>自行式B</span></a></li>
-                                            <li><a href="/cars/price=all/logo=all/dipan=all/leixing=3"><img class="img-responsive" src="http://img.rv58.com/w/rv/zc.png"> <span>自行式C</span></a></li>
-                                            <li><a href="/cars/price=all/logo=all/dipan=all/leixing=4"><img class="img-responsive" src="http://img.rv58.com/w/rv/td.png"><span>皮卡房车</span></a></li>
-                                            <li><a href="/cars/price=all/logo=all/dipan=all/leixing=5"><img class="img-responsive" src="http://img.rv58.com/w/rv/ta.png"><span>拖挂式</span></a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-md-4 row">
+                            <div class="col-md-6">
+                                <button class="btn btn-default dropdown-toggle chexingSelect" type="button"
+                                    id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                    房车品牌
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="#">Separated link</a></li>
+                                </ul>
 
-                                        <div class="col-md-6">
-                                                <button class="btn btn-default dropdown-toggle chexingSelect" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                                        房车品牌
-                                                        <span class="caret"></span>
-                                                      </button>
-                                                      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                                                        <li><a href="#">Action</a></li>
-                                                        <li><a href="#">Another action</a></li>
-                                                        <li><a href="#">Something else here</a></li>
-                                                        <li role="separator" class="divider"></li>
-                                                        <li><a href="#">Separated link</a></li>
-                                                      </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <button class="btn btn-default dropdown-toggle chexingSelect" type="button"
+                                    id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                    房车车型
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="#">Separated link</a></li>
+                                </ul>
 
-                                        </div>
-                                        <div class="col-md-6">
-                                                <button class="btn btn-default dropdown-toggle chexingSelect" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                                        房车车型
-                                                        <span class="caret"></span>
-                                                      </button>
-                                                      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                                                        <li><a href="#">Action</a></li>
-                                                        <li><a href="#">Another action</a></li>
-                                                        <li><a href="#">Something else here</a></li>
-                                                        <li role="separator" class="divider"></li>
-                                                        <li><a href="#">Separated link</a></li>
-                                                      </ul>
-
-                                        </div>
-                                            
-                                          
-                                          
-                                                
-                                    </div>
                             </div>
 
 
 
+
+                        </div>
+                    </div>
                     <div class="chexing-nav">
                         <nav class="navbar navbar-chexing">
-            
+
                             <div class="navbar-header">
                                 <!-- 小屏幕导航按钮和logo -->
-                                <button class="navbar-toggle" role="button" data-toggle="collapse" href="#chexingTab" aria-expanded="false" aria-controls="collapseExample">
+                                <button class="navbar-toggle" role="button" data-toggle="collapse" href="#chexingTab"
+                                    aria-expanded="false" aria-controls="collapseExample">
                                     <span class="icon-bar"></span>
                                     <span class="icon-bar"></span>
                                     <span class="icon-bar"></span>
                                 </button>
                                 <a href="/" class="navbar-brand">选车导航</a>
-                                
+
                             </div>
-            
+
                             <!-- 顶部导航项目 -->
                             <div id="chexingTab" class="navbar-collapse collapse navbar-chexing">
                                 <ul class="nav nav-tabs">
@@ -98,26 +103,29 @@
                                     <li><a href="#by5-10" data-toggle="tab">50-100万</a></li> -->
                                 </ul>
                             </div>
-            
+
                             <!-- 导航栏正文 -->
                             <div id="chexingTabContent" class="tab-content chexing-tab-content">
                                 <div class="tab-pane fade in active" id="bytype">
                                     <div class="row chexing-row">
                                         <div class="col-xs-4 col-md-2"> <a class="chexing-a" href="">自行式B型:</a></div>
                                         {% for item in carTypeZixingshiB %}
-                                        <div class="col-xs-4 col-md-2 chexing-row-title" > <a href="/RVDetails/{{item.carID}}">{{item.carTitle1}}</a></div>
+                                        <div class="col-xs-4 col-md-2 chexing-row-title"> <a
+                                                href="/RVDetails/{{item.carID}}">{{item.carTitle1}}</a></div>
                                         {% endfor %}
                                     </div>
                                     <div class="row chexing-row">
                                         <div class="col-xs-4 col-md-2"> <a class="chexing-a" href="">自行式C型:</a></div>
                                         {% for item in carTypeZixingshiC %}
-                                        <div class="col-xs-4 col-md-2 chexing-row-title"> <a href="/RVDetails/{{item.carID}}">{{item.carTitle1}}</a></div>
+                                        <div class="col-xs-4 col-md-2 chexing-row-title"> <a
+                                                href="/RVDetails/{{item.carID}}">{{item.carTitle1}}</a></div>
                                         {% endfor %}
                                     </div>
                                     <div class="row">
                                         <div class="col-xs-4 col-md-2"> <a class="chexing-a" href="">皮卡房车:</a></div>
                                         {% for item in carTypePikafangche %}
-                                        <div class="col-xs-4 col-md-2 chexing-row-title"> <a href="/RVDetails/{{item.carID}}">{{item.carTitle1}}</a></div>
+                                        <div class="col-xs-4 col-md-2 chexing-row-title"> <a
+                                                href="/RVDetails/{{item.carID}}">{{item.carTitle1}}</a></div>
                                         {% endfor %}
                                     </div>
                                 </div>
@@ -125,52 +133,60 @@
                                     <div class="row chexing-row">
                                         <div class="col-xs-4 col-md-2"> <a class="chexing-a" href="">10-30万:</a></div>
                                         {% for item in carPrice0to3 %}
-                                        <div class="col-xs-4 col-md-2 chexing-row-title"> <a href="/RVDetails/{{item.carID}}">{{item.carTitle1}}</a></div>
+                                        <div class="col-xs-4 col-md-2 chexing-row-title"> <a
+                                                href="/RVDetails/{{item.carID}}">{{item.carTitle1}}</a></div>
                                         {% endfor %}
                                     </div>
                                     <div class="row chexing-row">
                                         <div class="col-xs-4 col-md-2"> <a class="chexing-a" href="">30-50万:</a></div>
                                         {% for item in carPrice3to5 %}
-                                        <div class="col-xs-4 col-md-2 chexing-row-title"> <a href="/RVDetails/{{item.carID}}">{{item.carTitle1}}</a></div>
+                                        <div class="col-xs-4 col-md-2 chexing-row-title"> <a
+                                                href="/RVDetails/{{item.carID}}">{{item.carTitle1}}</a></div>
                                         {% endfor %}
                                     </div>
                                     <div class="row">
-                                            <div class="col-xs-4 col-md-2"> <a class="chexing-a" href="">50-100万:</a></div>
+                                        <div class="col-xs-4 col-md-2"> <a class="chexing-a" href="">50-100万:</a></div>
                                         {% for item in carPrice5to10 %}
-                                        <div class="col-xs-4 col-md-2 chexing-row-title"> <a href="/RVDetails/{{item.carID}}">{{item.carTitle1}}</a></div>
+                                        <div class="col-xs-4 col-md-2 chexing-row-title"> <a
+                                                href="/RVDetails/{{item.carID}}">{{item.carTitle1}}</a></div>
                                         {% endfor %}
                                     </div>
                                 </div>
                                 <div class="tab-pane fade" id="bylogo">
                                     <div class="row">
                                         <div class="col-xs-4 col-md-2 chexing-logo">
-                                            <A href="/cars/price=all/logo=1/dipan=all/leixing=all"><img src="/static/img/logo/ruifu.jpeg" alt="瑞弗">
+                                            <A href="/cars/price=all/logo=1/dipan=all/leixing=all"><img
+                                                    src="/static/img/logo/ruifu.jpeg" alt="瑞弗">
                                                 <br>
                                                 <span>瑞弗</span>
                                             </A>
                                         </div>
                                         <div class="col-xs-4 col-md-2 chexing-logo">
-                                                <A class="pinpaiimg" href="/cars/price=all/logo=2/dipan=all/leixing=all"><img src="/static/img/logo/shangqidatong.jpg"
-                                                        alt="上汽大通">
-                                                    <br><span>上汽大通</span>
-                                                </A>
-                                            </div>
+                                            <A class="pinpaiimg"
+                                                href="/cars/price=all/logo=2/dipan=all/leixing=all"><img
+                                                    src="/static/img/logo/shangqidatong.jpg" alt="上汽大通">
+                                                <br><span>上汽大通</span>
+                                            </A>
+                                        </div>
 
                                         <div class="col-xs-4 col-md-2 chexing-logo">
-                                            <A class="pinpaiimg" href="/cars/price=all/logo=3/dipan=all/leixing=all"><img src="/static/img/logo/kailunbinwei.jpg"
-                                                    alt="凯伦宾威">
+                                            <A class="pinpaiimg"
+                                                href="/cars/price=all/logo=3/dipan=all/leixing=all"><img
+                                                    src="/static/img/logo/kailunbinwei.jpg" alt="凯伦宾威">
                                                 <br><span>凯伦宾威</span>
                                             </A>
                                         </div>
                                         <div class="col-xs-4 col-md-2 chexing-logo">
-                                            <A class="pinpaiimg" href="/cars/price=all/logo=4/dipan=all/leixing=all"><img src="/static/img/logo/zhongtian.jpeg"
-                                                    calt="中天">
+                                            <A class="pinpaiimg"
+                                                href="/cars/price=all/logo=4/dipan=all/leixing=all"><img
+                                                    src="/static/img/logo/zhongtian.jpeg" calt="中天">
                                                 <br><span>中天</span>
                                             </A>
                                         </div>
                                         <div class="col-xs-4 col-md-2 chexing-logo">
-                                            <A class="pinpaiimg" href="/cars/price=all/logo=5/dipan=all/leixing=all"><img src="/static/img/logo/huachen.jpg"
-                                                    alt="华晨">
+                                            <A class="pinpaiimg"
+                                                href="/cars/price=all/logo=5/dipan=all/leixing=all"><img
+                                                    src="/static/img/logo/huachen.jpg" alt="华晨">
                                                 <br><span>华晨</span>
                                             </A>
                                         </div>
@@ -240,20 +256,20 @@
                                                     </A>
                                                 </div> -->
 
-                                                <div class="col-xs-4 col-md-2 chexing-logo">
-                                                    <A class="pinpaiimg" href="/cars"><img src="/static/img/logo/more.JPG"
-                                                            alt="更多">
-                                                        <br><span>更多品牌</span>
-                                                    </A>
-                                                </div>
+                                        <div class="col-xs-4 col-md-2 chexing-logo">
+                                            <A class="pinpaiimg" href="/cars"><img src="/static/img/logo/more.JPG"
+                                                    alt="更多">
+                                                <br><span>更多品牌</span>
+                                            </A>
+                                        </div>
 
-                                                <!-- <div class="col-xs-4 col-md-2 chexing-logo">
+                                        <!-- <div class="col-xs-4 col-md-2 chexing-logo">
                                                     <A class="pinpaiimg" href="/cars/price=all/logo=18/dipan=all/leixing=all"><img src="/static/img/logo/akemifangche.jpg"
                                                             alt="阿科米">
                                                         <br><span>阿科米</span>
                                                     </A>
                                                 </div> -->
-                                                <!-- <div class="col-xs-4 col-md-2 chexing-logo">
+                                        <!-- <div class="col-xs-4 col-md-2 chexing-logo">
                                                     <A class="pinpaiimg" href="/cars/price=all/logo=19/dipan=all/leixing=all"><img src="/static/img/logo/yashengfangche.jpg"
                                                             alt="雅升">
                                                         <br><span>雅升</span>
@@ -329,361 +345,383 @@
                                             -->
                                     </div>
                                 </div>
-                               
+
                             </div>
                         </nav>
                         <script>
-                                $(function () {
-                                    $('#chexingTab li:eq(0) a').tab('show');
-                                });
+                            $(function () {
+                                $('#chexingTab li:eq(0) a').tab('show');
+                            });
                         </script>
                     </div>
-                    
                 </div>
             </div>
         </div>
 
-        <div class="col-md-3">
-                <div class="row brand-logo">
-                        <ul class="list-unstyled">
-                                <li class="col-md-4 col-xs-4">
-                                    <a href="/cars/price=all/logo=1/dipan=all/leixing=all" target="_blank">
-                                        <img src="/static/img/logo/ruifu.jpeg">
-                                        <p>瑞弗</p>
-                                    </a>
-                                </li>
-                                <li class=" col-md-4 col-xs-4">
-                                    <a href="/cars/price=all/logo=2/dipan=all/leixing=all" target="_blank">
-                                        <img src="/static/img/logo/shangqidatong.jpg">
-                                        <p>上汽大通</p>
-                                    </a>
-                                </li>
-                                <li class=" col-md-4 col-xs-4">
-                                    <a href="/cars/price=all/logo=3/dipan=all/leixing=all" target="_blank">
-                                        <img src="/static/img/logo/kailunbinwei.jpg">
-                                        <p>凯伦宾威</p>
-                                    </a>
-                                </li>
-                        </ul>
-                </div>
-                <div class="row brand-logo">
-                        <ul class="list-unstyled">
-                                <li class="col-md-4 col-xs-4">
-                                        <a href="/cars/price=all/logo=4/dipan=all/leixing=all" target="_blank">
-                                            <img src="/static/img/logo/zhongtian.jpeg">
-                                            <p>中天</p>
-                                        </a>
-                                    </li>
-                                    <li class="col-md-4 col-xs-4">
-                                        <a href="/cars/price=all/logo=5/dipan=all/leixing=all" target="_blank">
-                                            <img src="/static/img/logo/huachen.jpg">
-                                            <p>华晨</p>
-                                        </a>
-                                    </li>
-                                    <li class=" col-md-4 col-xs-4">
-                                        <a href="/cars/price=all/logo=6/dipan=all/leixing=all" target="_blank">
-                                            <img src="/static/img/logo/qixing.jpg">
-                                            <p>齐星</p>
-                                        </a>
-                                    </li>
-                        </ul>
-                </div>
-                <div class="row brand-logo">
-                        <ul class="list-unstyled">
-                                <li class="col-md-4 col-xs-4">
-                                        <a href="/cars/price=all/logo=7/dipan=all/leixing=all" target="_blank">
-                                            <img src="/static/img/logo/lanzhong.jpg">
-                                            <p>览众</p>
-                                        </a>
-                                    </li>
-                                    <li class="col-md-4 col-xs-4">
-                                        <a href="/cars/price=all/logo=8/dipan=all/leixing=all" target="_blank">
-                                            <img src="/static/img/logo/jinghang.jpg">
-                                            <p>旌航</p>
-                                        </a>
-                                    </li>
-                                    <li class=" col-md-4 col-xs-4">
-                                        <a href="/cars" target="_blank">
-                                            <!-- <div class="img">
+        <div class="col-md-4" style="width:32.5%;">
+            <div class="row brand-logo">
+                <ul class="list-unstyled">
+                    <li class="col-md-4 col-xs-4">
+                        <a href="/cars/price=all/logo=1/dipan=all/leixing=all" target="_blank">
+                            <img src="/static/img/logo/ruifu.jpeg">
+                            <p>瑞弗</p>
+                        </a>
+                    </li>
+                    <li class=" col-md-4 col-xs-4">
+                        <a href="/cars/price=all/logo=2/dipan=all/leixing=all" target="_blank">
+                            <img src="/static/img/logo/shangqidatong.jpg">
+                            <p>上汽大通</p>
+                        </a>
+                    </li>
+                    <li class=" col-md-4 col-xs-4">
+                        <a href="/cars/price=all/logo=3/dipan=all/leixing=all" target="_blank">
+                            <img src="/static/img/logo/kailunbinwei.jpg">
+                            <p>凯伦宾威</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="row brand-logo">
+                <ul class="list-unstyled">
+                    <li class="col-md-4 col-xs-4">
+                        <a href="/cars/price=all/logo=4/dipan=all/leixing=all" target="_blank">
+                            <img src="/static/img/logo/zhongtian.jpeg">
+                            <p>中天</p>
+                        </a>
+                    </li>
+                    <li class="col-md-4 col-xs-4">
+                        <a href="/cars/price=all/logo=5/dipan=all/leixing=all" target="_blank">
+                            <img src="/static/img/logo/huachen.jpg">
+                            <p>华晨</p>
+                        </a>
+                    </li>
+                    <li class=" col-md-4 col-xs-4">
+                        <a href="/cars/price=all/logo=6/dipan=all/leixing=all" target="_blank">
+                            <img src="/static/img/logo/qixing.jpg">
+                            <p>齐星</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="row brand-logo">
+                <ul class="list-unstyled">
+                    <li class="col-md-4 col-xs-4">
+                        <a href="/cars/price=all/logo=7/dipan=all/leixing=all" target="_blank">
+                            <img src="/static/img/logo/lanzhong.jpg">
+                            <p>览众</p>
+                        </a>
+                    </li>
+                    <li class="col-md-4 col-xs-4">
+                        <a href="/cars/price=all/logo=8/dipan=all/leixing=all" target="_blank">
+                            <img src="/static/img/logo/jinghang.jpg">
+                            <p>旌航</p>
+                        </a>
+                    </li>
+                    <li class=" col-md-4 col-xs-4">
+                        <a href="/cars" target="_blank">
+                            <!-- <div class="img">
                                                 <i></i>
                                                 <i></i>
                                                 <i></i>
                                             </div> -->
-                                            <img src="/static/img/logo/more.JPG">
-                                            <p>房车大全</p>
-                                        </a>
-                                    </li>
-                        </ul>
-                </div>
+                            <img src="/static/img/logo/more.JPG">
+                            <p>房车大全</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 
 
 
-        <div class="row">
-            <div id="left"  class="col-md-5 col-md-offset-1">
-                        <div id="myCarousel" class="carousel slide ad-carousel">
-                                <!-- 轮播（Carousel）指标 -->
-                                <ol class="carousel-indicators" id="olnum">
-                                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                                    <li data-target="#myCarousel" data-slide-to="1"></li>
-                                    <li data-target="#myCarousel" data-slide-to="2"></li> 
-                                </ol>   
-                                <!-- 轮播（Carousel）项目 -->
-                                <div class="carousel-inner" id="lunbotu">
-                                    
-                                    <a href="{{lunbo[0].adLink}}" class="item active">
-                                        <img class="img-responsive" src="{{lunbo[0].adImage}}">
-                                        <div class="carousel-caption">{{lunbo[0].adName}}</div>
-                                    </a>
-
-                                    <a href="{{lunbo[1].adLink}}" class="item">
-                                            <img class="img-responsive" src="{{lunbo[1].adImage}}">
-                                            <div class="carousel-caption">{{lunbo[1].adName}}</div>
-                                    </a>
-
-                                    <a href="{{lunbo[2].adLink}}" class="item">
-                                        <img class="img-responsive" src="{{lunbo[2].adImage}}">
-                                        <div class="carousel-caption">{{lunbo[2].adName}}</div>
-                                    </a>
-
-                                    
-                                </div>
-                                <!-- 轮播（Carousel）导航 -->
-                                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-                                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                                    <span class="sr-only">Previous</span>
-                                </a>
-                                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-                                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                                    <span class="sr-only">Next</span>
-                                </a>
-                            </div>               
-            </div>
-        
-                
-            <div id="right" class="col-md-5" style="overflow: hidden;">
-                    <div class="row hotArticle">
-                            <a href="/" class="navbar-brand NewsBrand">热门文章</a>
+    <div class="row">
+        <div id="left" class="col-md-6">
+                <div class="row hotArticle">
+                        <a href="/" class="navbar-brand NewsBrand">热门车型</a>
                     </div>
+            <div id="myCarousel" class="carousel slide ad-carousel">
+                <!-- 轮播（Carousel）指标 -->
+                <ol class="carousel-indicators" id="olnum">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                </ol>
+                <!-- 轮播（Carousel）项目 -->
+                <div class="carousel-inner" id="lunbotu">
 
-                    <div class="list-group">
-                        {% for item in carHotArticle %}
-                            <a href="/articleDetails/{{item.articleID}}" class="row list-group-item" style="margin-left: 0px;margin-right: 0px;">
-                                <div class="col-md-4">
+                    <a href="{{lunbo[0].adLink}}" class="item active">
+                        <img class="img-responsive" src="{{lunbo[0].adImage}}">
+                        <div class="carousel-caption">{{lunbo[0].adName}}</div>
+                    </a>
+
+                    <a href="{{lunbo[1].adLink}}" class="item">
+                        <img class="img-responsive" src="{{lunbo[1].adImage}}">
+                        <div class="carousel-caption">{{lunbo[1].adName}}</div>
+                    </a>
+
+                    <a href="{{lunbo[2].adLink}}" class="item">
+                        <img class="img-responsive" src="{{lunbo[2].adImage}}">
+                        <div class="carousel-caption">{{lunbo[2].adName}}</div>
+                    </a>
+
+
+                </div>
+                <!-- 轮播（Carousel）导航 -->
+                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+
+
+        <div id="right" class="col-md-6" style="padding-left:30px;overflow: hidden;">
+            <div class="row hotArticle">
+                <a href="/" class="navbar-brand NewsBrand">热门文章</a>
+            </div>
+
+            <div class="list-group">
+                {% for item in carHotArticle %}
+                <a href="/articleDetails/{{item.articleID}}" class="row list-group-item"
+                    style="margin-left: 0px;margin-right: 0px;">
+                    <div class="col-md-4">
+                        <img class="img-responsive lazy" data-src="{{item.articleTitleImage}}" alt="">
+                    </div>
+                    <div>
+                        <h4 style="overflow:hidden;white-space:nowrap;text-overflow:ellipsis;">{{item.articleTitle}}
+                            </h2>
+                            <span>作者:{{item.articleZuozhe}}</span>
+                            <span>时间:{{item.updatedAt}}</span>
+                            <span>Hot:{{item.articleHot}}</span>
+                    </div>
+                </a>
+                {% endfor %}
+
+
+
+
+            </div>
+        </div>
+    </div>
+    
+    <div class="row" >
+            <div class="hotArticle" >
+                    <a href="/" class="navbar-brand NewsBrand">热门视频</a>
+                </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-md-8 box">
+            <nav class="navbar">
+                <div class="navbar-header">
+                    <!-- 小屏幕导航按钮和logo -->
+                    <button class="navbar-toggle" role="button" data-toggle="collapse" href="#NewsTab"
+                        aria-expanded="false" aria-controls="collapseExample">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="/" class="navbar-brand NewsBrand">新闻</a>
+
+                </div>
+
+                <!-- 顶部导航项目 -->
+                <div id="NewsTab" class="navbar-collapse collapse navbar-chexing">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#byCarArticle" data-toggle="tab">车型文章</a></li>
+                        <li><a href="#byCarVideo" data-toggle="tab">车型视频</a></li>
+                        <li><a href="#byNews" data-toggle="tab">最新资讯</a></li>
+                        <li><a href="#byTravel" data-toggle="tab">旅行游记</a></li>
+                        <li><a href="#byUseCar" data-toggle="tab">用车</a></li>
+                    </ul>
+                </div>
+
+                <!-- 导航栏正文 -->
+                <div id="" class="tab-content">
+                    <div class="tab-pane fade in active" id="byCarArticle">
+                        <div class="list-group">
+                            {% for item in carArticle %}
+                            <a href="/articleDetails/{{item.articleID}}" class="row list-group-item"
+                                style="margin-left: 0px;margin-right: 0px;">
+                                <div class="col-md-3">
                                     <img class="img-responsive lazy" data-src="{{item.articleTitleImage}}" alt="">
                                 </div>
                                 <div>
-                                    <h4 style="overflow:hidden;white-space:nowrap;text-overflow:ellipsis;">{{item.articleTitle}}</h2>
+                                    <h3 style="overflow:hidden;white-space:nowrap;text-overflow:ellipsis;">
+                                        {{item.articleTitle}}</h2>
                                         <span>作者:{{item.articleZuozhe}}</span>
                                         <span>时间:{{item.updatedAt}}</span>
                                         <span>Hot:{{item.articleHot}}</span>
-                                </div>                                            
+                                </div>
                             </a>
-                        {% endfor %}
-
-
-
+                            {% endfor %}
+                        </div>
 
                     </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-7 col-md-offset-1 box">
-                            <nav class="navbar">
-                                <div class="navbar-header">
-                                    <!-- 小屏幕导航按钮和logo -->
-                                    <button class="navbar-toggle" role="button" data-toggle="collapse" href="#NewsTab" aria-expanded="false" aria-controls="collapseExample">
-                                        <span class="icon-bar"></span>
-                                        <span class="icon-bar"></span>
-                                        <span class="icon-bar"></span>
-                                    </button>
-                                    <a href="/" class="navbar-brand NewsBrand">新闻</a>
-                                    
+                    <div class="tab-pane fade" id="byCarVideo">
+                        <div class="list-group">
+                            {% for item in carVedio %}
+                            <a href="/articleDetails/{{item.articleID}}" class="row list-group-item"
+                                style="margin-left: 0px;margin-right: 0px;">
+                                <div class="col-md-3">
+                                    <img class="img-responsive lazy" data-src="{{item.articleTitleImage}}" alt="">
                                 </div>
-                
-                                <!-- 顶部导航项目 -->
-                                <div id="NewsTab" class="navbar-collapse collapse navbar-chexing">
-                                    <ul class="nav nav-tabs">
-                                        <li class="active"><a href="#byCarArticle" data-toggle="tab">车型文章</a></li>
-                                        <li><a href="#byCarVideo" data-toggle="tab">车型视频</a></li>
-                                        <li><a href="#byNews" data-toggle="tab">最新资讯</a></li>
-                                        <li><a href="#byTravel" data-toggle="tab">旅行游记</a></li>
-                                        <li><a href="#byUseCar" data-toggle="tab">用车</a></li>
-                                    </ul>
+                                <div>
+                                    <h3 style="overflow:hidden;white-space:nowrap;text-overflow:ellipsis;">
+                                        {{item.articleTitle}}</h2>
+                                        <span>作者:{{item.articleZuozhe}}</span>
+                                        <span>时间:{{item.updatedAt}}</span>
+                                        <span>Hot:{{item.articleHot}}</span>
                                 </div>
-                
-                                <!-- 导航栏正文 -->
-                                <div id="" class="tab-content">
-                                    <div class="tab-pane fade in active" id="byCarArticle">
-                                            <div class="list-group">
-                                                    {% for item in carArticle %}
-                                                    <a href="/articleDetails/{{item.articleID}}" class="row list-group-item" style="margin-left: 0px;margin-right: 0px;">
-                                                        <div class="col-md-3">
-                                                            <img class="img-responsive lazy" data-src="{{item.articleTitleImage}}" alt="">
-                                                        </div>
-                                                        <div>
-                                                                <h3 style="overflow:hidden;white-space:nowrap;text-overflow:ellipsis;">{{item.articleTitle}}</h2>
-                                                                <span>作者:{{item.articleZuozhe}}</span>
-                                                                <span>时间:{{item.updatedAt}}</span>
-                                                                <span>Hot:{{item.articleHot}}</span>
-                                                        </div>                                            
-                                                    </a>
-                                                    {% endfor %}
-                                            </div>
+                            </a>
+                            {% endfor %}
+                        </div>
 
-                                    </div>
-                                    <div class="tab-pane fade" id="byCarVideo">
-                                            <div class="list-group">
-                                                    {% for item in carVedio %}
-                                                    <a href="/articleDetails/{{item.articleID}}" class="row list-group-item" style="margin-left: 0px;margin-right: 0px;">
-                                                        <div class="col-md-3">
-                                                            <img class="img-responsive lazy" data-src="{{item.articleTitleImage}}" alt="">
-                                                        </div>
-                                                        <div>
-                                                                <h3 style="overflow:hidden;white-space:nowrap;text-overflow:ellipsis;">{{item.articleTitle}}</h2>
-                                                                <span>作者:{{item.articleZuozhe}}</span>
-                                                                <span>时间:{{item.updatedAt}}</span>
-                                                                <span>Hot:{{item.articleHot}}</span>
-                                                        </div>                                            
-                                                    </a>
-                                                    {% endfor %}
-                                            </div>
-                                        
-                                    </div>
-                                    <div class="tab-pane fade" id="byNews">
-                                            <div class="list-group">
-                                                    {% for item in carNews %}
-                                                    <a href="/articleDetails/{{item.articleID}}" class="row list-group-item" style="margin-left: 0px;margin-right: 0px;">
-                                                        <div class="col-md-3">
-                                                            <img class="img-responsive lazy" data-srcc="{{item.articleTitleImage}}" alt="">
-                                                        </div>
-                                                        <div>
-                                                                <h3 style="overflow:hidden;white-space:nowrap;text-overflow:ellipsis;">{{item.articleTitle}}</h2>
-                                                                <span>作者:{{item.articleZuozhe}}</span>
-                                                                <span>时间:{{item.updatedAt}}</span>
-                                                                <span>Hot:{{item.articleHot}}</span>
-                                                        </div>                                            
-                                                    </a>
-                                                    {% endfor %}
-                                            </div>
-                                        
-                                    </div>
-                                    <div class="tab-pane fade" id="byTravel">
-                                            <div class="list-group">
-                                                    {% for item in carTravel %}
-                                                    <a href="/articleDetails/{{item.articleID}}" class="row list-group-item" style="margin-left: 0px;margin-right: 0px;">
-                                                        <div class="col-md-3">
-                                                            <img class="img-responsive lazy" data-src="{{item.articleTitleImage}}" alt="">
-                                                        </div>
-                                                        <div>
-                                                                <h3 style="overflow:hidden;white-space:nowrap;text-overflow:ellipsis;">{{item.articleTitle}}</h2>
-                                                                <span>作者:{{item.articleZuozhe}}</span>
-                                                                <span>时间:{{item.updatedAt}}</span>
-                                                                <span>Hot:{{item.articleHot}}</span>
-                                                        </div>                                            
-                                                    </a>
-                                                    {% endfor %}
-                                            </div>
-                                    </div>
-                                    <div class="tab-pane fade" id="byUseCar">
-                                            <div class="list-group">
-                                                    {% for item in carUse %}
-                                                    <a href="/articleDetails/{{item.articleID}}" class="row list-group-item" style="margin-left: 0px;margin-right: 0px;">
-                                                        <div class="col-md-3">
-                                                            <img class="img-responsive lazy" data-src="{{item.articleTitleImage}}" alt="">
-                                                        </div>
-                                                        <div>
-                                                                <h3 style="overflow:hidden;white-space:nowrap;text-overflow:ellipsis;">{{item.articleTitle}}</h2>
-                                                                <span>作者:{{item.articleZuozhe}}</span>
-                                                                <span>时间:{{item.updatedAt}}</span>
-                                                                <span>Hot:{{item.articleHot}}</span>
-                                                        </div>                                            
-                                                    </a>
-                                                    {% endfor %}
-                                            </div>
-                                    </div>
-
-                                </div>
-                            </nav>
-                            <script>
-                                    $(function () {
-                                        $('#NewsTab li:eq(0) a').tab('show');
-                                    });
-                            </script>
-                        
-            </div>
-
-            <div class="col-md-3 aui-flexView box">
-                    <div class="row hotArticle">
-                            <a href="/" class="navbar-brand NewsBrand">房车榜</a>
                     </div>
-                <section class="aui-scrollView">
-                                <div class="aui-tab" data-ydui-tab>
-                                    <ul class="tab-nav">
-                                        <li class="tab-nav-item tab-active">
-                                            <a href="javascript:;">
-                                                <span style="font-size: 1.5rem">推荐榜</span>
-                                            </a>
-                                        </li>
-                                        <li class="tab-nav-item">
-                                            <a href="javascript:;">
-                                                <span style="font-size: 1.5rem">热销榜</span>
-                                            </a>
-                                        </li>
+                    <div class="tab-pane fade" id="byNews">
+                        <div class="list-group">
+                            {% for item in carNews %}
+                            <a href="/articleDetails/{{item.articleID}}" class="row list-group-item"
+                                style="margin-left: 0px;margin-right: 0px;">
+                                <div class="col-md-3">
+                                    <img class="img-responsive lazy" data-srcc="{{item.articleTitleImage}}" alt="">
+                                </div>
+                                <div>
+                                    <h3 style="overflow:hidden;white-space:nowrap;text-overflow:ellipsis;">
+                                        {{item.articleTitle}}</h2>
+                                        <span>作者:{{item.articleZuozhe}}</span>
+                                        <span>时间:{{item.updatedAt}}</span>
+                                        <span>Hot:{{item.articleHot}}</span>
+                                </div>
+                            </a>
+                            {% endfor %}
+                        </div>
 
-                                    </ul>
-                                    <div class="tab-panel">
-                                        <div class="tab-panel-item tab-active">
-                                            <div class="aui-sale-content">
-                                                    {% for item in carHotCarSuggest %}
-                                                <a href="/RvDetails/{{item.carID}}" class="aui-list-item">
-                                                    <div class="aui-list-item-img">
-                                                        <!-- <img src="{{item.carTitleImage}}" alt=""> -->
-                                                        <img class="lazy" data-src="{{item.carTitleImage}}" alt="">
-                                                        <span class="aui-tag-top">TOP</span>
-                                                        <!-- <span class="aui-tag-play"><i class="icon icon-play"></i></span> -->
-                                                        <span class="aui-comment"><i class="icon icon-comment"></i></span>
-                                                    </div>
-                                                    <div class="aui-flex">
-                                                        <div class="aui-flex-box">
-                                                            <h2>{{item.carTitle1}} <em>推荐</em></h2>
-                                                        </div>
-                                                        <div class="aui-sale-price">
-                                                            {{item.carPriceMin}}<em>万元</em>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                                {% endfor %}
-                                            </div>
+                    </div>
+                    <div class="tab-pane fade" id="byTravel">
+                        <div class="list-group">
+                            {% for item in carTravel %}
+                            <a href="/articleDetails/{{item.articleID}}" class="row list-group-item"
+                                style="margin-left: 0px;margin-right: 0px;">
+                                <div class="col-md-3">
+                                    <img class="img-responsive lazy" data-src="{{item.articleTitleImage}}" alt="">
+                                </div>
+                                <div>
+                                    <h3 style="overflow:hidden;white-space:nowrap;text-overflow:ellipsis;">
+                                        {{item.articleTitle}}</h2>
+                                        <span>作者:{{item.articleZuozhe}}</span>
+                                        <span>时间:{{item.updatedAt}}</span>
+                                        <span>Hot:{{item.articleHot}}</span>
+                                </div>
+                            </a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="byUseCar">
+                        <div class="list-group">
+                            {% for item in carUse %}
+                            <a href="/articleDetails/{{item.articleID}}" class="row list-group-item"
+                                style="margin-left: 0px;margin-right: 0px;">
+                                <div class="col-md-3">
+                                    <img class="img-responsive lazy" data-src="{{item.articleTitleImage}}" alt="">
+                                </div>
+                                <div>
+                                    <h3 style="overflow:hidden;white-space:nowrap;text-overflow:ellipsis;">
+                                        {{item.articleTitle}}</h2>
+                                        <span>作者:{{item.articleZuozhe}}</span>
+                                        <span>时间:{{item.updatedAt}}</span>
+                                        <span>Hot:{{item.articleHot}}</span>
+                                </div>
+                            </a>
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                </div>
+            </nav>
+            <script>
+                $(function () {
+                    $('#NewsTab li:eq(0) a').tab('show');
+                });
+            </script>
+
+        </div>
+
+        <div class="col-md-4 aui-flexView box">
+            <div class="row hotArticle">
+                <a href="/" class="navbar-brand NewsBrand">房车榜</a>
+            </div>
+            <section class="aui-scrollView">
+                <div class="aui-tab" data-ydui-tab>
+                    <ul class="tab-nav">
+                        <li class="tab-nav-item tab-active">
+                            <a href="javascript:;">
+                                <span style="font-size: 1.5rem">推荐榜</span>
+                            </a>
+                        </li>
+                        <li class="tab-nav-item">
+                            <a href="javascript:;">
+                                <span style="font-size: 1.5rem">热销榜</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                    <div class="tab-panel">
+                        <div class="tab-panel-item tab-active">
+                            <div class="aui-sale-content">
+                                {% for item in carHotCarSuggest %}
+                                <a href="/RvDetails/{{item.carID}}" class="aui-list-item">
+                                    <div class="aui-list-item-img">
+                                        <!-- <img src="{{item.carTitleImage}}" alt=""> -->
+                                        <img class="lazy" data-src="{{item.carTitleImage}}" alt="">
+                                        <span class="aui-tag-top">TOP</span>
+                                        <!-- <span class="aui-tag-play"><i class="icon icon-play"></i></span> -->
+                                        <span class="aui-comment"><i class="icon icon-comment"></i></span>
+                                    </div>
+                                    <div class="aui-flex">
+                                        <div class="aui-flex-box">
+                                            <h2>{{item.carTitle1}} <em>推荐</em></h2>
                                         </div>
-                                        <div class="tab-panel-item">
-                                                {% for item in carHotCar %}
-                                            <a href="/RvDetails/{{item.carID}}" class="aui-list-item">
-                                                    <div class="aui-list-item-img">
-                                                            <!-- <img  src="{{item.carTitleImage}}" alt=""> -->
-                                                            <img class="lazy" data-src="{{item.carTitleImage}}" alt="">
-                                                            <span class="aui-tag-top">TOP</span>
-                                                            <!-- <span class="aui-tag-play"><i class="icon icon-play"></i></span> -->
-                                                            <span class="aui-comment"><i class="icon icon-comment"></i></span>
-                                                        </div>
-                                                        <div class="aui-flex">
-                                                            <div class="aui-flex-box">
-                                                                <h2>{{item.carTitle1}} <em>热门</em></h2>
-                                                            </div>
-                                                            <div class="aui-sale-price">
-                                                                {{item.carPriceMin}}<em>万元</em>
-                                                            </div>
-                                                        </div>
-                                            </a>
-                                            {% endfor %}
+                                        <div class="aui-sale-price">
+                                            {{item.carPriceMin}}<em>万元</em>
                                         </div>
                                     </div>
+                                </a>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <div class="tab-panel-item">
+                            {% for item in carHotCar %}
+                            <a href="/RvDetails/{{item.carID}}" class="aui-list-item">
+                                <div class="aui-list-item-img">
+                                    <!-- <img  src="{{item.carTitleImage}}" alt=""> -->
+                                    <img class="lazy" data-src="{{item.carTitleImage}}" alt="">
+                                    <span class="aui-tag-top">TOP</span>
+                                    <!-- <span class="aui-tag-play"><i class="icon icon-play"></i></span> -->
+                                    <span class="aui-comment"><i class="icon icon-comment"></i></span>
                                 </div>
-                </section>
-            </div>
+                                <div class="aui-flex">
+                                    <div class="aui-flex-box">
+                                        <h2>{{item.carTitle1}} <em>热门</em></h2>
+                                    </div>
+                                    <div class="aui-sale-price">
+                                        {{item.carPriceMin}}<em>万元</em>
+                                    </div>
+                                </div>
+                            </a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
+    </div>
 
 </div>
 
@@ -691,12 +729,12 @@
     // if (screen.width > 768) {   
     //     document.getElementById("right").style.height = document.getElementById("left").offsetHeight + "px";
     // }
-        function savePeople() { 
-            // jquery 表单提交 
-            $("#showDataForm").ajaxSubmit(function(message) { 
+    function savePeople() {
+        // jquery 表单提交 
+        $("#showDataForm").ajaxSubmit(function (message) {
             // 对于表单提交成功后处理，message为提交页面saveReport.htm的返回内容 
-            });
-            return false; // 必须返回false，否则表单会自己再做一次提交操作，并且页面跳转 
-            } 
+        });
+        return false; // 必须返回false，否则表单会自己再做一次提交操作，并且页面跳转 
+    }
 </script>
 {% endblock %}
