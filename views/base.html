@@ -25,8 +25,9 @@
             $("#PageCount").val();
         }
     </script>
+
     <style type="text/css">
-        html,
+    html,
         body {
             width: 100%;
             height: 100%;
@@ -42,7 +43,7 @@
             margin-bottom: 0px;
             display: table;
             width: 100%;
-            height: 100%;
+            height: 60%;
             padding: 100px 0;
             text-align: center;
             color: #fff;
@@ -75,11 +76,7 @@
         button.navbar-toggle>span.icon-bar {
             background-color: #dedede
         }
-    </style>
-
-<style type="text/css">
-            .menu-bar {
-            padding: 20px 0;
+        .menu-bar {
             transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
             width: 400px;
             position: absolute;
@@ -87,16 +84,18 @@
             left: 55%;
         }
 
-.menu-bar ul {
-  list-style-type:none;
-}
-.menu-bar a {
-  text-decoration: none;
-  color: black;
-  font-size: 3rem;
-}
+        .menu-bar ul {
+            list-style-type: none;
+            padding-inline-start: 0px;
+        }
 
-.menu-bar li {
+        .menu-bar a {
+            text-decoration: none;
+            color: black;
+            font-size: 3rem;
+        }
+
+        .menu-bar li {
             border: #d1c7c7bb solid 1px;
         }
 
@@ -116,54 +115,62 @@
             transition: color 0.5s ease-in-out;
         }
 
-.btn {
+        .btn {
+            padding: 0px;
 
-}
-.menu {
-  width: 400px;
-  display: none;
-  
-  opacity: 0.9;
-  background: #ebeaea;
-  color: gray !important;
-}
-.btn:hover + .menu, .menu:hover {
-  display: block;
-}
-/* 显示下拉菜单 */
-.menu-item {
-  width: 400px;
-  line-height: 30px;
-  padding: 0 10px;
-  border-bottom: 1px solid #ddd;
-  border-right: 1px solid #ddd;
-  border-left: 1px solid #ddd;
-  cursor: pointer;
-}
-.menu-item:first-child {
-  border-top: 1px solid #ddd;
-}
-.menu-item:hover {
-  background-color: #ddd;
-}
-</style>
+        }
+
+        .menu {
+            width: 400px;
+            display: none;
+
+            opacity: 0.9;
+            background: #ebeaea;
+            color: gray !important;
+        }
+
+        .btn:hover+.menu,
+        .menu:hover {
+            display: block;
+        }
+
+        /* 显示下拉菜单 */
+        .menu-item {
+            width: 400px;
+            line-height: 30px;
+            padding: 0 10px;
+            border-bottom: 1px solid #ddd;
+            border-right: 1px solid #ddd;
+            border-left: 1px solid #ddd;
+            cursor: pointer;
+        }
+
+        .menu-item:first-child {
+            border-top: 1px solid #ddd;
+        }
+
+        .menu-item:hover {
+            background-color: #ddd;
+        }
+    </style>
 </head>
 
 <body>
     <div class="bg">
-            <div class="menu-bar ">
-                    <a class="btn" href="#"><img src="/static/img/title.png" style="width:400px;background-color: #a40000" alt=""></a>
-                    <ul class="menu">
-                            <li class=""><a href="/ ">网站首页</a></li>
-                            <li class=""><a href="/cars">车型库</a></li>
-                            <li class=""><a href="/articles/1/1">车型文章</a></li>
-                            <li class=""><a href="/articles/2/1">车型视频</a></li>
-                            <li class=""><a href="/articles/4/1">旅行游记</a></li>
-                            <li class=""><a href="/testDrive">试驾预约</a></li>
-                            <li class=""><a href="/zhanhui">车友地带</a></li>
-                            <li class=""><a href="/contactUS">联系我们</a></li>
-                    </ul>
-            </div>
+        <div class="menu-bar ">
+            <a class="btn" href="#"><img src="/static/img/title.png" style="width:400px;background-color: #a40000"
+                    alt=""></a>
+            <ul class="menu">
+                <li class=""><a href="/ ">网站首页</a></li>
+                <li class=""><a href="/cars">车型库</a></li>
+                <li class=""><a href="/articles/1/1">车型文章</a></li>
+                <li class=""><a href="/articles/2/1">车型视频</a></li>
+                <li class=""><a href="/articles/4/1">旅行游记</a></li>
+                <li class=""><a href="/testDrive">试驾预约</a></li>
+                <li class=""><a href="/zhanhui">车友地带</a></li>
+                <li class=""><a href="/contactUS">联系我们</a></li>
+            </ul>
+        </div>
 
         <!-- <div class=" nav my-navbar">
             <li><img src="/static/img/title.png" style="width:400px;background-color: #a40000" alt=""></li>
@@ -177,14 +184,14 @@
             <li class=""><a href="/contactUS">联系我们</a></li>
         </div> -->
 
-        <div class="welcome">
+        <!-- <div class="welcome">
             <p></p>
             <p>WELCOME TO</p>
             <p>欢迎来到房车情报</p>
             <p>房车情报是专业的房车咨询、视频、图文为一体的媒体平台</p>
             <br>
 
-        </div>
+        </div> -->
 
         <!-- <p><a class="btn btn-danger btn-lg" href="/contactUS" role="button">联系我们</a></p>
         <section class="container">
