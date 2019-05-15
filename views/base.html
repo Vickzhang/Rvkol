@@ -52,34 +52,8 @@
             background-position: 0px 0px;
         }
 
-        .my-navbar {
-            padding: 20px 0;
-            transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
-            width: 400px;
-            position: absolute;
-            top: 0%;
-            left: 55%;
-        }
 
-        .my-navbar li {
-            border: #d1c7c7bb solid 1px;
-        }
 
-        .my-navbar a {
-            background: #ebeaea !important;
-            color: gray !important;
-            opacity: 0.9;
-        }
-
-        .my-navbar a:hover {
-            color: #25c6fc !important;
-            background: transparent;
-            outline: 0
-        }
-
-        .my-navbar a {
-            transition: color 0.5s ease-in-out;
-        }
 
         .welcome {
             width: 80%;
@@ -102,44 +76,106 @@
             background-color: #dedede
         }
     </style>
+
+<style type="text/css">
+            .menu-bar {
+            padding: 20px 0;
+            transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
+            width: 400px;
+            position: absolute;
+            top: 0%;
+            left: 55%;
+        }
+
+.menu-bar ul {
+  list-style-type:none;
+}
+.menu-bar a {
+  text-decoration: none;
+  color: black;
+  font-size: 3rem;
+}
+
+.menu-bar li {
+            border: #d1c7c7bb solid 1px;
+        }
+
+        .menu-bar a {
+            background: #ebeaea !important;
+            color: gray !important;
+            opacity: 0.9;
+        }
+
+        .menu-bar a:hover {
+            color: #25c6fc !important;
+            background: transparent;
+            outline: 0
+        }
+
+        .menu-bar a {
+            transition: color 0.5s ease-in-out;
+        }
+
+.btn {
+
+}
+.menu {
+  width: 400px;
+  display: none;
+  
+  opacity: 0.9;
+  background: #ebeaea;
+  color: gray !important;
+}
+.btn:hover + .menu, .menu:hover {
+  display: block;
+}
+/* 显示下拉菜单 */
+.menu-item {
+  width: 400px;
+  line-height: 30px;
+  padding: 0 10px;
+  border-bottom: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  cursor: pointer;
+}
+.menu-item:first-child {
+  border-top: 1px solid #ddd;
+}
+.menu-item:hover {
+  background-color: #ddd;
+}
+</style>
 </head>
 
 <body>
-
-    <!-- <nav class="navbar navbar-fixed-top my-navbar" role="navigation">
-        <!-- <div class="container-fluid"> -->
-    <!-- <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
-                <span class="sr-only">切换导航</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a style="margin: 0 10px;padding: 0 0;" class="navbar-brand" href="/"><img class="img-responsive"
-                    style="width:50px;" src="/static/img/logoTouming.png" alt=""></a>
-        </div> -->
-
-    <!-- 
-        <div class="" id="example-navbar-collapse">
-        </div> -->
-    <!-- </div> -->
-    <!-- </nav> -->
     <div class="bg">
+            <div class="menu-bar ">
+                    <a class="btn" href="#"><img src="/static/img/title.png" style="width:400px;background-color: #a40000" alt=""></a>
+                    <ul class="menu">
+                            <li class=""><a href="/ ">网站首页</a></li>
+                            <li class=""><a href="/cars">车型库</a></li>
+                            <li class=""><a href="/articles/1/1">车型文章</a></li>
+                            <li class=""><a href="/articles/2/1">车型视频</a></li>
+                            <li class=""><a href="/articles/4/1">旅行游记</a></li>
+                            <li class=""><a href="/testDrive">试驾预约</a></li>
+                            <li class=""><a href="/zhanhui">车友地带</a></li>
+                            <li class=""><a href="/contactUS">联系我们</a></li>
+                    </ul>
+            </div>
 
-        <div class=" nav my-navbar">
+        <!-- <div class=" nav my-navbar">
             <li><img src="/static/img/title.png" style="width:400px;background-color: #a40000" alt=""></li>
             <li class=""><a href="/ ">网站首页</a></li>
             <li class=""><a href="/cars">车型库</a></li>
             <li class=""><a href="/articles/1/1">车型文章</a></li>
             <li class=""><a href="/articles/2/1">车型视频</a></li>
-            <!-- <li class=""><a href="/articles/3/1">资讯</a></li> -->
             <li class=""><a href="/articles/4/1">旅行游记</a></li>
-            <!-- <li class=""><a href="/articles/5/1">用车</a></li> -->
             <li class=""><a href="/testDrive">试驾预约</a></li>
             <li class=""><a href="/zhanhui">车友地带</a></li>
-            <!-- <li class=""><a href="/">微信公众号</a></li> -->
             <li class=""><a href="/contactUS">联系我们</a></li>
-        </div>
+        </div> -->
 
         <div class="welcome">
             <p></p>
