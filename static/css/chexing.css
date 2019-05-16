@@ -7,7 +7,7 @@
 .chexinglist li{ width: 20%; float:left; text-align:center; margin:0;}
 .chexinglist a{display:block;width:auto;height:auto;color:#666; padding-top:10px;}
 .chexinglist li a:hover{ background-color:#f4f4f4; color:#C00}
-/*.chexinglist img{ width: 30px; height:auto;line-height:auto;}  */
+.chexinglist img{ display: inline; height:auto;line-height:auto;}  
 .chexinglist span{
     white-space: nowrap; 
     display:block;
@@ -144,9 +144,10 @@
 /*车型Logo*/
 
 .brand-logo{
-    /* float: right; */
+    /* float: right;*/
     border: 1px solid #e9e9e9; 
-    border-radius: 5px;
+    border-radius: 5px; 
+    margin:0;
 }
 
 .brand-logo img{

@@ -27,7 +27,7 @@
     </script>
 
     <style type="text/css">
-    html,
+        html,
         body {
             width: 100%;
             height: 100%;
@@ -53,9 +53,6 @@
             background-position: 0px 0px;
         }
 
-
-
-
         .welcome {
             width: 80%;
             position: absolute;
@@ -76,12 +73,14 @@
         button.navbar-toggle>span.icon-bar {
             background-color: #dedede
         }
+
         .menu-bar {
             transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
             width: 30%;
             position: absolute;
             top: 0%;
             left: 55%;
+            margin-top: 30px;
         }
 
         .menu-bar ul {
@@ -92,7 +91,7 @@
         .menu-bar a {
             text-decoration: none;
             color: black;
-            font-size: 3rem;
+            font-size: 2rem;
         }
 
         .menu-bar li {
@@ -115,29 +114,32 @@
             transition: color 0.5s ease-in-out;
         }
 
-        .btn {
-            width: 30%;
-            padding: 0px;
-
+        .menu-btn {
         }
+
+
 
         .menu {
             /* width: 30%; */
             display: none;
-
             opacity: 0.9;
             background: #ebeaea;
             color: gray !important;
         }
 
-        .btn:hover+.menu,
+                @media screen and (max-width: 1200px) {
+            .menu {
+                display: block;
+            }
+        }
+
+        .menu-btn:hover+.menu,
         .menu:hover {
             display: block;
         }
 
         /* 显示下拉菜单 */
         .menu-item {
-            width: 400px;
             line-height: 30px;
             padding: 0 10px;
             border-bottom: 1px solid #ddd;
@@ -159,8 +161,8 @@
 <body>
     <div class="bg">
         <div class="menu-bar ">
-            <a class="btn" href="#"><img src="/static/img/title.png" style="width:400px;background-color: #a40000"
-                    alt=""></a>
+            <a class="menu-btn" href="#"><img src="/static/img/title.png" class="img-responsive"
+                    style="background-color: #a40000" alt=""></a>
             <ul class="menu">
                 <li class=""><a href="/ ">网站首页</a></li>
                 <li class=""><a href="/cars">车型库</a></li>
@@ -183,30 +185,8 @@
 
         </div> -->
 
-        <!-- <p><a class="btn btn-danger btn-lg" href="/contactUS" role="button">联系我们</a></p>
-        <section class="container">
-            <form onsubmit="submitFn(this, event);">
-                <div class="search-wrapper">
-                    <div class="input-holder">
-                        <input type="text" class="search-input" placeholder="Type to search" />
-                        <button class="search-icon" onclick="searchToggle(this, event);"><span></span></button>
-                    </div>
-                    <span class="close" onclick="searchToggle(this, event);"></span>
-                    <div class="result-container">
-
-                    </div>
-                </div>
-            </form>
-        </section> -->
     </div>
     <script>
-        // $(window).scroll(function () {
-        //     if ($(".navbar").offset().top > 50) {
-        //         $(".navbar-fixed-top").addClass("top-nav");
-        //     } else {
-        //         $(".navbar-fixed-top").removeClass("top-nav");
-        //     }
-        // })
         $(function () {
             $("img.lazy").lazyload({
                 effect: "fadeIn",
