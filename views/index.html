@@ -1,7 +1,32 @@
 {% extends "base.html" %} {% block main %}
+<link rel="stylesheet" type="text/css" href="css/htmleaf-demo.css">
+<style type="text/css">
+    #carousel {
+        width: 100%;
+        /* border:1px solid #222; */
+        height: 300px;
+        position: relative;
+        clear: both;
+        overflow: hidden;
+        background: #FFF;
+    }
 
+    #carousel img {
+        visibility: hidden;
+        /* hide images until carousel can handle them */
+        cursor: pointer;
+        /* otherwise it's not as obvious items can be clicked */
+    }
 
-
+    #callback-output {
+        width: 100%;
+        min-height: 50px;
+        background: #fff;
+        padding: 8px;
+        height: 500px;
+        overflow-y: scroll;
+    }
+</style>
 
 <div class="container-fluid">
 
@@ -21,7 +46,7 @@
 
 
     <div class="row" style="margin-top:20px">
-        <div class="col-md-8" >
+        <div class="col-md-8">
             <div id="chexingPanel" class="panel panel-default">
                 <div class="panel-body" style="padding: 0 15px 0 15px;">
                     <div class="i_con2 hidden-xs row">
@@ -358,7 +383,7 @@
             </div>
         </div>
 
-        <div class="col-md-4" >
+        <div class="col-md-4">
             <div class="row brand-logo">
                 <ul class="list-unstyled">
                     <li class="col-md-4 col-xs-4">
@@ -437,9 +462,9 @@
 
     <div class="row">
         <div id="left" class="col-md-6">
-                <div class="row hotArticle">
-                        <a href="/" class="navbar-brand NewsBrand">热门车型</a>
-                    </div>
+            <div class="row hotArticle">
+                <a href="/" class="navbar-brand NewsBrand">热门车型</a>
+            </div>
             <div id="myCarousel" class="carousel slide ad-carousel">
                 <!-- 轮播（Carousel）指标 -->
                 <ol class="carousel-indicators" id="olnum">
@@ -508,16 +533,27 @@
             </div>
         </div>
     </div>
-    
-    
-    <div class="row" >
-        <div class="col-md-2 col-md-offset-5">
-                <div class="hotArticle" style="margin-top:20px;margin-bottom:20px;" >
-                        <a href="/" class="navbar-brand NewsBrand">热门视频</a>
-                    </div>
-        </div>
-           
 
+
+    <div class="row">
+        <div class="col-md-2 col-md-offset-5">
+            <div class="hotArticle" style="margin-top:20px;margin-bottom:20px;">
+                <a href="/" class="navbar-brand NewsBrand">热门视频</a>
+            </div>
+        </div>
+    </div>
+    <div class="row htmleaf-container">
+            <div id="carousel">
+                <img src="/static/img/images/1.jpg" id="item-1" />
+                <img src="/static/img/images/2.jpg" id="item-2" />
+                <img src="/static/img/images/3.jpg" id="item-3" />
+                <img src="/static/img/images/4.jpg" id="item-4" />
+                <img src="/static/img/images/5.jpg" id="item-5" />
+                <img src="/static/img/images/6.jpg" id="item-6" />
+                <img src="/static/img/images/7.jpg" id="item-7" />
+                <img src="/static/img/images/8.jpg" id="item-8" />
+                <img src="/static/img/images/9.jpg" id="item-9" />
+            </div>
     </div>
 
     <div class="row">
@@ -740,5 +776,30 @@
         });
         return false; // 必须返回false，否则表单会自己再做一次提交操作，并且页面跳转 
     }
+</script>
+<script type="text/javascript" src="/static/js/jquery.waterwheelCarousel.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var carousel = $("#carousel").waterwheelCarousel({
+            flankingItems: 3,
+        });
+
+        $('#prev').bind('click', function () {
+            carousel.prev();
+            return false
+        });
+
+        $('#next').bind('click', function () {
+            carousel.next();
+            return false;
+        });
+
+        $('#reload').bind('click', function () {
+            newOptions = eval("(" + $('#newoptions').val() + ")");
+            carousel.reload(newOptions);
+            return false;
+        });
+
+    });
 </script>
 {% endblock %}

@@ -25,8 +25,6 @@
 
 body, html { font-size: 100%; 	padding: 0; margin: 0;}
 
-
-
 /* Reset */
 *,
 *:after,
@@ -48,17 +46,10 @@ body, html { font-size: 100%; 	padding: 0; margin: 0;}
 }
 
 body{
-	background: -webkit-linear-gradient(#9400D3,#00BFFF); /* Safari 5.1 - 6.0 */
-    background: -o-linear-gradient(#9400D3, #00BFFF); /* Opera 11.1 - 12.0 */
-    background: -moz-linear-gradient(#9400D3, #00BFFF); /* Firefox 3.6 - 15 */
-    background: linear-gradient(#9400D3, #00BFFF); /* 标准的语法（必须放在最后） */
-	color: #D5D6E2;
-	font-weight: 500;
-	font-size: 1.05em;
 	font-family: "Microsoft YaHei","Segoe UI", "Lucida Grande", Helvetica, Arial,sans-serif;
 }
-a{ color: rgba(255, 255, 255, 0.6);outline: none;text-decoration: none;-webkit-transition: 0.2s;transition: 0.2s;}
-a:hover,a:focus{color:#74777b;text-decoration: none;}
+.htmleaf-links a{ color: rgba(255, 255, 255, 0.6);outline: none;text-decoration: none;-webkit-transition: 0.2s;transition: 0.2s;}
+.htmleaf-links a:hover,.htmleaf-links a:focus{color:#74777b;text-decoration: none;}
 .htmleaf-container{
 	margin: 0 auto;
 }
@@ -81,19 +72,18 @@ a:hover,a:focus{color:#74777b;text-decoration: none;}
 	padding: 1em 190px 1em;
 	letter-spacing: -1px;
 	text-align: center;
-	/* background: #00b4ef; */
-
+	background: #66677c;
 }
 .htmleaf-header h1 {
-	color:whitesmoke;
+	color: #D5D6E2;
 	font-weight: 600;
-	font-size: 3em;
+	font-size: 2em;
 	line-height: 1;
 	margin-bottom: 0;
 }
 .htmleaf-header h1 span {
 	display: block;
-	font-size: 50%;
+	font-size: 60%;
 	font-weight: 400;
 	padding: 0.8em 0 0.5em 0;
 	color: #c3c8cd;
@@ -121,6 +111,7 @@ a:hover,a:focus{color:#74777b;text-decoration: none;}
 	width: 2px;
 	height: 100%;
 	background: #dbdbdb;
+	content: '';
 	-webkit-transform: rotate3d(0,0,1,22.5deg);
 	transform: rotate3d(0,0,1,22.5deg);
 }
@@ -181,6 +172,7 @@ a:hover,a:focus{color:#74777b;text-decoration: none;}
 	-webkit-transition: opacity 0.3s;
 	transition: opacity 0.3s;
 	-webkit-backface-visibility: hidden;
+	text-decoration: none;
 }
 
 .related a:hover,
@@ -218,7 +210,7 @@ a:hover,a:focus{color:#74777b;text-decoration: none;}
 		padding: 2em 10% 2em;
 	}
 	.htmleaf-header h1 {
-        font-size:2em;
+        font-size:1.4em;
     }
     .htmleaf-links{font-size: 1.4em}
 }
@@ -228,7 +220,7 @@ a:hover,a:focus{color:#74777b;text-decoration: none;}
 		padding: 2em 10% 2em;
 	}
 	.htmleaf-header h1 {
-        font-size:2em;
+        font-size:1.2em;
     }
     .htmleaf-links{font-size: 1.2em}
     .related h3{font-size: 1em;}
@@ -239,7 +231,7 @@ a:hover,a:focus{color:#74777b;text-decoration: none;}
 
 @media screen and (max-width: 766px) {
 	.htmleaf-header h1 {
-        font-size:2em;
+        font-size:1.3em;
     }
     .htmleaf-links{font-size: 1.3em}
 }
@@ -249,7 +241,7 @@ a:hover,a:focus{color:#74777b;text-decoration: none;}
 		padding: 2em 10% 2em;
 	}
 	.htmleaf-header h1 {
-        font-size:2em;
+        font-size:1em;
     }
     .htmleaf-links{font-size: 1em}
     .related h3{font-size: 0.8em;}
