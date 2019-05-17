@@ -174,7 +174,7 @@ module.exports={
             title:'房车情报',
             subtitle:'全球房车领袖，最新最全的房车情报',
             carArticle:carArticle.slice(0,10),
-            carVedio:carVedio.slice(0,10),
+            carVedio:carVedio.slice(0,4),
             carNews:carNews.slice(0,10),
             carTravel:carTravel.slice(0,10),
             carUse:carUse.slice(0,10),

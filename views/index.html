@@ -543,26 +543,20 @@
         </div>
     </div>
     <div class="row">
+        {% for item in carVedio %}
         <div class="col-xs-6 col-md-3">
-          <a href="#" class="thumbnail">
-            <img src="/static//img/images/1.jpg" alt="...">
+          <a href="/articleDetails/{{item.articleID}}" class="thumbnail">
+            <img src="{{item.articleTitleImage}}" alt="...">
+            <span class="aui-tag-play"><i class="icon icon-play"></i></span>
+
+                    <div class="caption">
+                            <h3>{{item.articleTitle}}</h3>
+                          </div>
           </a>
         </div>
-        <div class="col-xs-6 col-md-3">
-            <a href="#" class="thumbnail">
-              <img src="/static//img/images/2.jpg" alt="...">
-            </a>
-          </div>
-          <div class="col-xs-6 col-md-3">
-            <a href="#" class="thumbnail">
-              <img src="/static//img/images/3.jpg" alt="...">
-            </a>
-          </div>
-          <div class="col-xs-6 col-md-3">
-            <a href="#" class="thumbnail">
-              <img src="/static//img/images/4.jpg" alt="...">
-            </a>
-          </div>
+        {% endfor %}
+
+
       </div>
 
     <div class="row">
