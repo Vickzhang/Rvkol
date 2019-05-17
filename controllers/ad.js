@@ -80,4 +80,49 @@ module.exports={
             code:'删除成功！',
         }
     },
+
+    'POST /adPublish/:id':async (ctx,next) => {
+        var id = ctx.params.id;
+
+        //数据库操作
+        const model = require('../model');
+        let AD = model.AD;
+
+        var result = await AD.update({
+            adPublish:1,
+        },{
+            where:{
+                carID:id,
+            }
+        }
+    );
+       // console.log('Publish: ' + JSON.stringify(result));
+
+        return ctx.body = {
+            code:'发布成功！',
+        }
+    },
+
+    'POST /adUnPublish/:id':async (ctx,next) => {
+        var id = ctx.params.id;
+
+        //数据库操作
+        const model = require('../model');
+        let AD = model.AD;
+
+        var result = await AD.update({
+            adPublish:0,
+        },{
+            where:{
+               carID:id,
+            }
+        }
+    );
+        //console.log('unPublish: ' + JSON.stringify(result));
+
+        return ctx.body = {
+            code:'操作成功！',
+        }
+    },
+
 }

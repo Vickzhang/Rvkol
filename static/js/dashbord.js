@@ -710,6 +710,44 @@ var adDel = function (id) {
 }
 
 
+var adPublish = function (id) {
+    var publishUrl = '/adPublish/' + id;
+    //alert(delUrl);
+    $.ajax({
+        type: 'POST',
+        url: publishUrl,
+        dataType: 'json',
+        data: {
+
+        },
+        success: function (data) {
+            alert(data.code);
+        },
+        error: function () {
+            alert("发布错误");
+        }
+    })
+}
+var adUnPublish = function (id) {
+    var UnpublishUrl = '/adUnPublish/' + id;
+    //alert(delUrl);
+    $.ajax({
+        type: 'POST',
+        url: UnpublishUrl,
+        dataType: 'json',
+        data: {
+
+        },
+        success: function (data) {
+            alert(data.code);
+        },
+        error: function () {
+            alert("取消发布失败");
+        }
+    })
+}
+
+
 //活动管理
 var zhanhuiChange = function () {
     var markup = $('#summernote').summernote('code');
