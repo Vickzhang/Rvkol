@@ -92,7 +92,7 @@ module.exports={
             adPublish:1,
         },{
             where:{
-                carID:id,
+                adID:id,
             }
         }
     );
@@ -114,7 +114,7 @@ module.exports={
             adPublish:0,
         },{
             where:{
-               carID:id,
+               adID:id,
             }
         }
     );
