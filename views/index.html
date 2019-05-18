@@ -1,32 +1,5 @@
 {% extends "base.html" %} {% block main %}
-<link rel="stylesheet" type="text/css" href="css/htmleaf-demo.css">
-<style type="text/css">
-    #carousel {
-        width: 100%;
-        /* border:1px solid #222; */
-        height: 300px;
-        position: relative;
-        clear: both;
-        overflow: hidden;
-        background: #FFF;
-    }
 
-    #carousel img {
-        visibility: hidden;
-        /* hide images until carousel can handle them */
-        cursor: pointer;
-        /* otherwise it's not as obvious items can be clicked */
-    }
-
-    #callback-output {
-        width: 100%;
-        min-height: 50px;
-        background: #fff;
-        padding: 8px;
-        height: 500px;
-        overflow-y: scroll;
-    }
-</style>
 
 <div class="container-fluid">
 
@@ -550,7 +523,7 @@
             <span class="aui-tag-play"><i class="icon icon-play"></i></span>
 
                     <div class="caption">
-                            <h3>{{item.articleTitle}}</h3>
+                            <h6>{{item.articleTitle}}</h6>
                           </div>
           </a>
         </div>

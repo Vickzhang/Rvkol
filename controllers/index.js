@@ -169,6 +169,14 @@ module.exports={
                     
                     },
                 });
+
+                var FirstAD=await AD.findAll({
+                    where: {
+                       adType:'首屏轮播',
+                       adPublish:1
+                    
+                    },
+                });
                 console.log(JSON.stringify(Lunbo));
         ctx.render('index.html',{
             title:'房车情报',
@@ -189,7 +197,8 @@ module.exports={
             carHotCarSuggest:SuggestCar.slice(0,5),
             banner1:Banner1,
             banner2:Banner2,
-            lunbo:Lunbo
+            lunbo:Lunbo,
+            FirstAD:FirstAD
         })
     }
 }
