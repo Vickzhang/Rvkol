@@ -1,4 +1,5 @@
 {% extends "base.html" %} {% block main %}
+
 <div class="container">
     <div class="col-md-12">
 
@@ -33,7 +34,7 @@
               <input type="hidden" id="PageSize" runat="server" value="20" />
               <input type="hidden" id="countindex" runat="server" value="8"/>
               <input type="hidden" id="currentPage" runat="server" value="{{currentPage}}"/>
-              <input type="hidden" id="leixing" runat="server" value="{{leixing}}"/>
+              <input type="hidden" id="dashbordType" runat="server" value="{{dashbordType}}"/>
               <!--设置最多显示的页码数 可以手动设置 默认为7-->
               <input type="hidden" id="visiblePages" runat="server" value="5" />
           </div>

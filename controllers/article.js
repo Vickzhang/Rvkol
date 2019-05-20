@@ -49,7 +49,7 @@ module.exports={
         let Article = model.Article;
         var result = await Article.findAndCountAll({
             attributes: ['articleID', 'articleZuozhe','articleTitleImage','articleTitle','updatedAt'],
-            order:[['articleID', 'ASC']],
+            order:[['createdAt', 'ASC']],
             offset:(page - 1) * pageSize,
             limit:pageSize,//每页限制返回的数据条数
             where:{
@@ -65,22 +65,28 @@ module.exports={
             leixing:l
         })
     },
-
-
-    'GET /article-dashbord':async (ctx,next) => {
+    'GET /article-dashbord/:id':async (ctx,next) => {
+        var page = ctx.params.id;
+        var pageSize = 20;
         if (!ctx.session.username) {
             ctx.response.redirect('/dashbord');
         }
         const model = require('../model');
         let Article = model.Article;
-        var result = await Article.findAll({
+        var result = await Article.findAndCountAll({
             attributes: ['articleID', 'articleZuozhe','articleWenzhangleixing','articleTitle','articlePublish','updatedAt'],
-            order:[['articleID', 'ASC']]
+            order:[['createdAt', 'ASC']],
+            offset:(page - 1) * pageSize,
+            limit:pageSize,//每页限制返回的数据条数
+            currentPage:page,
         });
         console.log(JSON.stringify(result));
         ctx.render('article-dashbord.html',{
             data:result,
+            dataCount:result.Count,
             title:'房车情报-文章/视频管理',
+            dashbordType:'article-dashbord',
+            currentPage:page,
         })
     },
     'GET /article-add':async (ctx,next) => {
