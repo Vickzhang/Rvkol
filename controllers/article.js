@@ -75,7 +75,7 @@ module.exports={
         let Article = model.Article;
         var result = await Article.findAndCountAll({
             attributes: ['articleID', 'articleZuozhe','articleWenzhangleixing','articleTitle','articlePublish','updatedAt'],
-            order:[['articleID', 'ASC']],
+            order:[['articleID', 'DESC']],
             offset:(page - 1) * pageSize,
             limit:pageSize,//每页限制返回的数据条数
             currentPage:page,
