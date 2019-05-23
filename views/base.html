@@ -48,6 +48,19 @@
             overflow: hidden;
         }
 
+
+		/*第一种*/
+		.row {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+}
+.row > [class*='col-'] {
+    display: flex;
+    flex-direction: column;}
+
         /*非常重要的样式让背景图片100%适应整个屏幕*/
         .bg {
             margin-bottom: 0px;
@@ -112,7 +125,7 @@
 
         .menu-bar li {
             border: #d1c7c7bb solid 1px;
-            line-height: 2.6rem;
+            line-height: 2.8rem;
         }
 
 
