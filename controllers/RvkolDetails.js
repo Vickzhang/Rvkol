@@ -194,6 +194,11 @@ function LogoJudge(l) {
                 return "卫航";
             }
             break;
+            case "31":
+            {
+                return "拓锐斯特";
+            }
+            break;
 
         default:
             {
