@@ -144,8 +144,8 @@ module.exports = db.defineModel('Cars', {
     carMeiqibaojingqi:db.STRING(20),
     carYiyanghuatanbaojingqi:db.STRING(20),
     carTitleImage:db.STRING(300),
-    carMoreImage:db.STRING(2000),
-    carMoreImage2:db.STRING(2000),
+    carMoreImage:db.STRING(4000),
+    carMoreImage2:db.STRING(4000),
     carPublish:db.BOOLEAN,
     carHot:db.INTEGER(10),
     isHot:db.BOOLEAN
